@@ -5,17 +5,19 @@
     --text-muted: #6c757d;
     --card-shadow: 0 10px 40px rgba(0,0,0,0.05);
     --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
+    --box-border: #eee;
     --footer-bg: #0a1322; /* Dark Navy from image */
     --footer-text: #b1b5bd;
     --footer-heading: #ffffff;
     --footer-bottom-border: rgba(255, 255, 255, 0.05);
     --transition-fast: all 0.3s ease;
+    --green: #00ff88;
+    --warning: #ffbd2e;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: var(--dark-navy);
     overflow-x: hidden;
 }
 

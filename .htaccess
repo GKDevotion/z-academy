@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Ignore real files/folders
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite service URL
+RewriteRule ^([^/]+)/?$ index.php?service=$1 [L,QSA]

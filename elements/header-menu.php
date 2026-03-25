@@ -33,11 +33,11 @@
                                 <div class="col-lg-4 col-md-6">
                                     <h6 class="mega-menu-title">Courses</h6>
                                     <ul class="mega-menu-list">
-                                        <li><a href="javascript:void(0)">Trader Academy</a></li>
-                                        <li><a href="javascript:void(0)">Beginner Courses</a></li>
-                                        <li><a href="javascript:void(0)">Intermidiate Courses</a></li>
-                                        <li><a href="javascript:void(0)">Advance Courses</a></li>
-                                        <li><a href="javascript:void(0)">Interactive Learning</a></li>
+                                        <li><a href="trader-academy">Trader Academy</a></li>
+                                        <li><a href="beginner-courses">Beginner Courses</a></li>
+                                        <li><a href="intermidiate-courses">Intermidiate Courses</a></li>
+                                        <li><a href="advance-courses">Advance Courses</a></li>
+                                        <li><a href="interactive-learning">Interactive Learning</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
