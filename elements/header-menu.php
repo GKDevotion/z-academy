@@ -45,19 +45,19 @@
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <ul class="mega-menu-list">
-                                                <li><a href="javascript:void(0)">Stocks</a></li>
-                                                <li><a href="javascript:void(0)">Futures</a></li>
-                                                <li><a href="javascript:void(0)">Crypto</a></li>
-                                                <li><a href="javascript:void(0)">Commodities</a></li>
-                                                <li><a href="javascript:void(0)">Metal</a></li>
+                                                <li><a href="course-topic-stock">Stocks</a></li>
+                                                <li><a href="course-topic-futures">Futures</a></li>
+                                                <li><a href="course-topic-crypto">Crypto</a></li>
+                                                <li><a href="course-topic-commodities">Commodities</a></li>
+                                                <li><a href="course-topic-metal">Metal</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <ul class="mega-menu-list">
-                                                <li><a href="javascript:void(0)">Economics</a></li>
-                                                <li><a href="javascript:void(0)">Bonds</a></li>
-                                                <li><a href="javascript:void(0)">Fundamental</a></li>
-                                                <li><a href="javascript:void(0)">Taxes</a></li>
+                                                <li><a href="course-topic-ecomonics">Economics</a></li>
+                                                <li><a href="course-topic-bonds">Bonds</a></li>
+                                                <li><a href="course-topic-fundamentals">Fundamentals</a></li>
+                                                <li><a href="course-topic-taxes">Taxes</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                         <span class="badge bg-danger mb-2">ONLINE WEBINAR</span>
                                         <h5 class="fw-bold">INTERNATIONAL DAY OF EDUCATION</h5>
                                         <p class="small mb-3">24TH JAN | AT 8AM - 10AM</p>
-                                        <a href="#" class="btn btn-sm btn-light">Join Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-sm btn-light">Join Now</a>
                                     </div>
                                 </div>
                             </div>

@@ -271,5 +271,17 @@
                 observer.observe(card);
             });
         </script>
+
+        <script>
+            const courses = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.fade-up').forEach(el => courses.observe(el));
+        </script>
     </body>
 </html>
