@@ -17,41 +17,63 @@ include_once ('elements/header.php');
 
     <div class="container py-5">
 
-        <!-- Introduction to U.S. Corporate Bonds -->
-        <div class="col-12">
-            <div class="course-card">
-                <span class="badge-level">Beginner</span>
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <img src="https://picsum.photos/400/300?2" class="course-img">
-                    </div>
-                    <div class="col-md-8">
-                        <h5 class="course-title"></h5>
-                        <p class="course-desc">
-                            
-                        </p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="course-list">
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="course-list">
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                    <li><i class="fa fa-chevron-right"></i></li>
-                                </ul>
+        <?php
+        $topicsArr = [
+            [
+                'topic' => '',
+                'level' => 'Beginner',
+                'description' => '',
+                'topicLeft' => [
+                    '',
+                ],
+                'topicRight' => [
+                    ''
+                ]
+            ],
+        ];
+        foreach( $topicsArr as $k => $val ){ ?>
+            <div class="col-12">
+                <div class="course-card">
+                    <span class="badge-level"><?=$val['level'] ?></span>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <img src="https://picsum.photos/400/200?<?=$k;?>" class="course-img">
+                        </div>
+                        <div class="col-md-8">
+                            <h5 class="course-title">
+                                <?=$val['topic'] ?>
+                            </h5>
+                            <p class="course-desc">
+                                <?=$val['description'] ?>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="course-list">
+                                        <?php foreach( $val['topicLeft'] as $left ){ ?>
+                                            <li>
+                                                <i class="fa fa-chevron-right"></i>
+                                                <?=$left ?>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="course-list">
+                                        <?php foreach( $val['topicRight'] as $right ){ ?>
+                                            <li>
+                                                <i class="fa fa-chevron-right"></i>
+                                                <?=$right ?>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <?php
+        } ?>
        
     </div>
     
