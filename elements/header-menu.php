@@ -86,9 +86,9 @@
                                 <div class="col-lg-4 col-md-6">
                                     <h6 class="mega-menu-title">Webinars</h6>
                                     <ul class="mega-menu-list">
-                                        <li><a href="javascript:void(0)">Upcoming</a></li>
-                                        <li><a href="javascript:void(0)">Aired</a></li>
-                                        <li><a href="javascript:void(0)">Contributor</a></li>
+                                        <li><a href="webinar-upcomings">Upcoming</a></li>
+                                        <li><a href="webinar-aired">Aired</a></li>
+                                        <li><a href="webinar-contributor">Contributor</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
@@ -96,22 +96,22 @@
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <ul class="mega-menu-list">
-                                                <li><a href="javascript:void(0)">AI & Machine Learning</a></li>
-                                                <li><a href="javascript:void(0)">Crypto Currency</a></li>
-                                                <li><a href="javascript:void(0)">Financial</a></li>
-                                                <li><a href="javascript:void(0)">Forex</a></li>
-                                                <li><a href="javascript:void(0)">Metal</a></li>
-                                                <li><a href="javascript:void(0)">Commodities</a></li>
+                                                <li><a href="webinar-topic-ai-machine-learning">AI & Machine Learning</a></li>
+                                                <li><a href="webinar-topic-crypto-currency">Crypto Currency</a></li>
+                                                <li><a href="webinar-topic-financial">Financial</a></li>
+                                                <li><a href="webinar-topic-forex">Forex</a></li>
+                                                <li><a href="webinar-topic-metal">Metal</a></li>
+                                                <li><a href="webinar-topic-commodities">Commodities</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <ul class="mega-menu-list">
-                                                <li><a href="javascript:void(0)">Tax</a></li>
-                                                <li><a href="javascript:void(0)">Technology</a></li>
-                                                <li><a href="javascript:void(0)">Investment</a></li>
-                                                <li><a href="javascript:void(0)">Energy Sector</a></li>
-                                                <li><a href="javascript:void(0)">Technical Analysis</a></li>
-                                                <li><a href="javascript:void(0)">Trading</a></li>
+                                                <li><a href="webinar-topic-tax">Tax</a></li>
+                                                <li><a href="webinar-topic-technology">Technology</a></li>
+                                                <li><a href="webinar-topic-investment">Investment</a></li>
+                                                <li><a href="webinar-topic-energy">Energy Sector</a></li>
+                                                <li><a href="webinar-topic-technical-analysis">Technical Analysis</a></li>
+                                                <li><a href="webinar-topic-trading">Trading</a></li>
                                             </ul>
                                         </div>
                                     </div>

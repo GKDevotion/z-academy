@@ -13,6 +13,13 @@
     --transition-fast: all 0.3s ease;
     --green: #00ff88;
     --warning: #ffbd2e;
+    --primary: #ff0000;
+    --dark: #000;
+    --muted: #6c757d;
+    --card: #ffffff;
+    --border: #eee;
+    --shadow: 0 15px 40px rgba(0,0,0,0.06);
+    --transition: all .4s cubic-bezier(.4,0,.2,1);
 }
 
 body {
@@ -1302,3 +1309,223 @@ body {
 /**
  * End Course Section
  */
+
+/**
+ * Start Webinard Events
+ */
+    .webinar .section-title{
+        font-size:48px;
+        font-weight:800;
+        color:var(--dark);
+        position:relative;
+        display:inline-block;
+        letter-spacing:0.5px;
+        max-width: 100%;
+    }
+
+    .webinar .section-title::after{
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:-10px;
+        width:100%;
+        height:4px;
+        background:linear-gradient(90deg,var(--primary),transparent);
+        border-radius:10px;
+    }
+
+    .webinar .section-title span{ color:var(--primary); }
+
+    /* typing cursor */
+    .webinar #typing-text::after{
+        content:"|";
+        margin-left:5px;
+        animation:blink 1s infinite;
+    }
+
+    @keyframes blink{
+        0%,100%{opacity:1}
+        50%{opacity:0}
+    }
+
+    .webinar .events-grid{ 
+        display:grid; 
+        grid-template-columns: repeat(2,1fr); 
+        gap:20px; 
+    }
+    @media(max-width:991px){ 
+        .webinar .events-grid{ 
+            grid-template-columns:1fr; 
+        } 
+    }
+
+    .webinar .event-card{
+        background:var(--card);
+        border:1px solid var(--border);
+        border-radius:20px;
+        padding:22px;
+        position:relative;
+        overflow:hidden;
+        box-shadow:var(--shadow);
+        transition:var(--transition);
+    }
+
+    .webinar .event-card::before{
+        content:"";
+        position:absolute;
+        top:0; left:0;
+        width:100%; height:3px;
+        background:linear-gradient(90deg,var(--primary),transparent);
+    }
+
+    .webinar .event-card:hover{
+        transform:translateY(-8px) scale(1.01);
+    }
+
+    .webinar .event-title{
+        font-size:20px;
+        font-weight:600;
+        color:var(--dark);
+        transition:.3s;
+    }
+
+    .webinar .event-card:hover .event-title{ 
+        color:var(--primary); 
+    }
+
+    .webinar .event-desc{
+        font-size:14px;
+        color:var(--muted);
+        margin-top:8px;
+    }
+
+    .webinar .meta-box{
+        border-left:1px dashed var(--border);
+        padding-left:15px;
+    }
+
+    .webinar .meta-item{
+        font-size:13px;
+        margin-bottom:8px;
+    }
+
+    .webinar .meta-item strong{ 
+        display:block; 
+        color:var(--primary); 
+    }
+
+    .webinar .badge-live{
+        position:absolute;
+        top:15px;
+        right:15px;
+        background:var(--primary-blur);
+        color:var(--primary);
+        font-size:11px;
+        padding:4px 10px;
+        border-radius:50px;
+    }
+
+    .webinar .btn-join{
+        border:none;
+        background:var(--primary);
+        color:#fff;
+        padding:6px 14px;
+        border-radius:30px;
+        font-size:12px;
+        transition:.3s;
+    }
+
+    .webinar .btn-join:hover{ 
+        background:var(--dark); 
+    }
+/**
+ * End Webinard Events
+ */
+
+/**
+ * Start Webinar Topics
+ */
+    /* 1. Box Hover: Change border color to red */
+    .webinar-topics .curriculum-card {
+        border: 1px solid #333;
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .webinar-topics .curriculum-card:hover {
+        border-color: var(--primary-teal) !important;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+    }
+
+    /* 2. Box Hover: Image zoom out and rotate 30 degrees */
+    .webinar-topics .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 7rem;
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        flex-shrink: 0;
+    }
+
+    .webinar-topics .curriculum-card:hover .icon-box {
+        /* Zoom out (scale down) and rotate 30 degrees */
+        transform: scale(0.85) rotate(30deg);
+    }
+
+    /* 3. Child Point Hover: Show transition arrow at left end with zoom */
+    .webinar-topics .topic-pill {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        padding: 6px 16px;
+        margin: 4px;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        transition: all 0.3s ease;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .webinar-topics .arrow-icon {
+        width: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        color: var(--primary-teal);
+    }
+
+    .webinar-topics .topic-pill:hover {
+        transform: scale(1.1);
+        background: var(--primary-blur);
+        border-color: rgba(255, 0, 0, 0.4);
+        color: var(--dark-navy);
+        padding-left: 5px;
+    }
+
+    .webinar-topics .topic-pill:hover .arrow-icon {
+        width: 18px;
+        opacity: 1;
+        margin-right: 6px;
+    }
+
+    .webinar-topics .card-title {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+    }
+
+    .webinar-topics .card-text {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+/**
+ * End Webinar Topics
