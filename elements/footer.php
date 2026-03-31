@@ -283,5 +283,21 @@
 
             document.querySelectorAll('.fade-up').forEach(el => courses.observe(el));
         </script>
+
+        <script>
+        // Lesson switching
+        document.querySelectorAll('.lesson-item').forEach((item, i) => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.lesson-item').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+                // update progress fill width
+                const pct = ((i + 1) / totalVideo * 100).toFixed(0);
+                document.querySelector('.progress-fill').style.width = pct + '%';
+                document.querySelector('.progress-num').innerHTML = `<span>${i + 1}</span> / ${totalVideo}`;
+                document.querySelector('.progress-sub').textContent = `${i + 1} of ${totalVideo} lessons completed — keep it up!`;
+            });
+        });
+    </script>
     </body>
 </html>

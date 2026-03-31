@@ -133,29 +133,29 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tutorials</a>
                     <ul class="dropdown-menu border-0 shadow-sm">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Forex</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Shares</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Commodities</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Crypto</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Stocks</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Metals</a></li>
+                        <li><a class="dropdown-item" href="tutorial-forex">Forex</a></li>
+                        <li><a class="dropdown-item" href="tutorial-shares">Shares</a></li>
+                        <li><a class="dropdown-item" href="tutorial-commodities">Commodities</a></li>
+                        <li><a class="dropdown-item" href="tutorial-crypto">Crypto</a></li>
+                        <li><a class="dropdown-item" href="tutorial-stocks">Stocks</a></li>
+                        <li><a class="dropdown-item" href="tutorial-metals">Metals</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Educators</a>
                     <ul class="dropdown-menu border-0 shadow-sm">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Learn</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Margin Rates</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Risk Management</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Begginer</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Intermediate</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Advance</a></li>
+                        <li><a class="dropdown-item" href="educator-learn">Learn</a></li>
+                        <li><a class="dropdown-item" href="educator-margin-rates">Margin Rates</a></li>
+                        <li><a class="dropdown-item" href="educator-risk-management">Risk Management</a></li>
+                        <li><a class="dropdown-item" href="educator-begginer">Begginer</a></li>
+                        <li><a class="dropdown-item" href="educator-intermediate">Intermediate</a></li>
+                        <li><a class="dropdown-item" href="educator-advance">Advance</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact-us">Contact</a></li>
                 
             </ul>
         </div>
