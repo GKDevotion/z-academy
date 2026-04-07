@@ -236,8 +236,8 @@ body {
 
     .hero-desc {
         color: var(--text-muted);
-        font-size: 18px;
-        max-width: 500px;
+        font-size: 20px;
+        max-width: 600px;
         margin-bottom: 40px;
     }
 
@@ -398,7 +398,7 @@ body {
     .category-card {
         background: white;
         border-radius: 20px;
-        padding: 25px;
+        padding: 20px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -442,7 +442,7 @@ body {
     
     .category-card-wrapper:nth-child(even) .category-content { padding: 0 0 20px 0; }
 
-    .cat-name { font-size: 19px; font-weight: 700; margin-bottom: 8px; color: #1a2332; }
+    .cat-name { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #1a2332; text-align: center; }
     .course-count { 
         display: inline-block; 
         padding: 4px 12px; 
