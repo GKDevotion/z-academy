@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)">
+        <a class="navbar-brand d-flex align-items-center" href="index">
             <div class="p-1 rounded d-inline-block me-2" style="background-color: var(--primary-teal);">
                 <i class="bi bi-file-music text-white fs-4" style="display: inline-block; transform: scaleX(-1);"></i>
             </div>
