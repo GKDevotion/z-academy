@@ -6,17 +6,14 @@ include_once ('elements/header.php');
         
         /* Next-Level Card Styling */
         .beginner-card {
-            border: 1px solid var(--box-border);
-            border-radius: 24px;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            background: #fff;
+            margin-top: 80px;
+            padding: 100px 0;
         }
 
         .beginner-card:hover {
             border-color: var(--primary-teal);
             transform: scale(1.03);
-            box-shadow: 0 25px 50px -12px var(--primary-blur);
+            box-shadow: 0 25px 50px -12px var(--zed-backgound-color);
         }
 
         .step-indicator {
@@ -36,7 +33,7 @@ include_once ('elements/header.php');
             width: 70px;
             height: 70px;
             background: linear-gradient(45deg, #fff, #fff5f5);
-            border: 1px solid var(--primary-blur);
+            border: 1px solid var(--zed-backgound-color);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -44,6 +41,9 @@ include_once ('elements/header.php');
             font-size: 2rem;
             margin-bottom: 25px;
             transition: 0.3s;
+            position: absolute;
+            right: 30px;
+            top: 100px;
         }
 
         .beginner-card:hover .icon-circle {
@@ -84,19 +84,21 @@ include_once ('elements/header.php');
         }
     </style>
 
-    <section class="py-5 text-center bg-light">
-        <div class="container">
-            <span class="badge rounded-pill text-bg-danger mb-3 px-3 py-2 animate__animated animate__fadeIn">ZERO TO HERO</span>
-            <h1 class="display-4 fw-800">Your Trading Journey <span style="color: var(--primary-teal);">Starts Here</span></h1>
-            <p class="text-muted mx-auto mt-3" style="max-width: 600px;">No experience? No problem. We’ve designed these foundational courses to take you from absolute beginner to market-ready.</p>
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">Your Trading Journey <span style="color: var(--trader-red);">Starts Here</span></h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">No experience? No problem. We've designed these foundational courses to take you from absolute beginner to market-ready.</p>
+            <div class="open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill">ZERO TO HERO</button>
+            </div>
         </div>
-    </section>
+    </header>
 
     <div class="container py-5">
         <div class="row g-4">
             
             <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp">
-                <div class="card h-100 p-4 beginner-card">
+                <div class="card p-4 beginner-card">
                     <div class="step-indicator">Level 01</div>
                     <div class="icon-circle">🌱</div>
                     <h4 class="fw-bold">Trading Fundamentals</h4>
@@ -118,7 +120,7 @@ include_once ('elements/header.php');
             </div>
 
             <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-1s">
-                <div class="card h-100 p-4 beginner-card">
+                <div class="card p-4 beginner-card">
                     <div class="step-indicator">Level 02</div>
                     <div class="icon-circle">📈</div>
                     <h4 class="fw-bold">Technical Analysis 101</h4>
@@ -140,7 +142,7 @@ include_once ('elements/header.php');
             </div>
 
             <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp animate__delay-2s">
-                <div class="card h-100 p-4 beginner-card">
+                <div class="card p-4 beginner-card">
                     <div class="step-indicator">Level 03</div>
                     <div class="icon-circle">🛡️</div>
                     <h4 class="fw-bold">Risk Management</h4>

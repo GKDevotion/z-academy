@@ -19,7 +19,7 @@ include_once ('elements/header.php');
             left: -100px;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, var(--primary-blur) 0%, transparent 65%);
+            background: radial-gradient(circle, var(--zed-backgound-color) 0%, transparent 65%);
             pointer-events: none;
         }
 
@@ -27,7 +27,7 @@ include_once ('elements/header.php');
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
             color: var(--primary);
             font-size: 0.7rem;
             font-weight: 700;
@@ -142,7 +142,7 @@ include_once ('elements/header.php');
         .btn-hero-outline:hover {
             border-color: var(--primary);
             color: var(--primary);
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
         }
 
         .hero-img-wrap {
@@ -453,7 +453,7 @@ include_once ('elements/header.php');
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -513,7 +513,7 @@ include_once ('elements/header.php');
         .btn-load-more:hover {
             border-color: var(--primary);
             color: var(--primary);
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
         }
 
         /* ── CTA BANNER ── */

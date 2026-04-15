@@ -9,7 +9,7 @@ include_once ('elements/header.php');
             border: 1px solid var(--dark-navy);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 20px 50px var(--primary-blur);
+            box-shadow: 0 20px 50px var(--zed-backgound-color);
         }
 
         .terminal-header {
@@ -38,12 +38,12 @@ include_once ('elements/header.php');
 
         .quiz-option:hover {
             border-color: var(--primary-teal);
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
         }
 
         .quiz-option.correct {
             border-color: var(--success-green);
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
             color: var(--success-green);
         }
 

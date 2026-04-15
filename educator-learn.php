@@ -40,7 +40,7 @@ include_once ('elements/header.php');
         .btn-primary-custom:hover {
             background-color: #d60000;
             transform: scale(1.05);
-            box-shadow: 0 10px 20px var(--primary-blur);
+            box-shadow: 0 10px 20px var(--zed-backgound-color);
         }
 
         .btn-yellow {
@@ -86,7 +86,7 @@ include_once ('elements/header.php');
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--card-shadow);
-            border-color: var(--primary-blur);
+            border-color: var(--zed-backgound-color);
         }
 
         .slant-bg {
@@ -104,7 +104,7 @@ include_once ('elements/header.php');
             content: '';
             position: absolute;
             width: 100%; height: 100%;
-            background: var(--primary-blur);
+            background: var(--zed-backgound-color);
             border-radius: 50%;
             z-index: -1;
             transform: scale(1.1);
@@ -128,7 +128,7 @@ include_once ('elements/header.php');
         .step-number {
             font-size: 3rem;
             font-weight: 900;
-            color: var(--primary-blur);
+            color: var(--zed-backgound-color);
             line-height: 1;
             transition: var(--transition);
         }
@@ -137,7 +137,7 @@ include_once ('elements/header.php');
             transform: scale(1.1);
         }
         .accordion-button:not(.collapsed) {
-            background-color: var(--primary-blur);
+            background-color: var(--zed-backgound-color);
             color: var(--primary);
         }
         .accordion-button:focus {

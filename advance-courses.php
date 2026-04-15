@@ -30,7 +30,7 @@ include_once ('elements/header.php');
 
         .advanced-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 0 40px var(--primary-blur);
+            box-shadow: 0 0 40px var(--zed-backgound-color);
         }
 
         .advanced-card:hover::after {
@@ -49,7 +49,7 @@ include_once ('elements/header.php');
         }
 
         @keyframes pulse-red {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--primary-blur); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--zed-backgound-color); }
             70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
         }

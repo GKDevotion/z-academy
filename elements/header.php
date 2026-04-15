@@ -1,40 +1,82 @@
+<?php
+include_once ('helper/Database.php');
+include_once ('helper/Custom.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academy - Online Education Platform</title>
-    
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
 
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Header Top Bar -->
-    <div class="top-bar d-none d-lg-block">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <span class="me-4"><i class="bi bi-telephone-fill me-2"></i> +4733378901</span>
-                    <span><i class="bi bi-envelope-fill me-2"></i> eduflk@info.com</span>
-                </div>
-                <div class="col-md-6 text-end">
-                    <span class="me-4"><img src="https://flagcdn.com/w20/gb.png" class="me-2" style="width: 18px;"> English <i class="bi bi-chevron-down small"></i></span>
-                    <span class="d-none"><i class="bi bi-person-fill me-2"></i> Admin</span>
-                </div>
+        <title>Academy - Online Education Platform</title>
+        <base href="http://127.0.0.1/core/zed-learn/">
+        <link rel="canonical" href="http://127.0.0.1/core/zed-learn/">
+
+        <meta name="description" content="">
+        <meta name="googlebot" content="index">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="author" content="ZedCapital">
+        <meta name="copyright" content="Copyright (c) 2026">
+        <meta name="generator" content="ZedCapital">
+
+        <meta name="google-site-verification" content="" />
+
+        <!--=============== favicons ===============-->
+        <link rel="shortcut icon" href="">
+
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="/">
+        <meta property="og:site_name" content="ZedCapital">
+        <meta property="og:image" content="">
+
+        <meta property="article:publisher" content="https://www.facebook.com">
+        <meta property="article:modified_time" content="26-01-2025">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@ZedCapital">
+        <meta name="twitter:label1" content="Est. reading time">
+        <meta name="twitter:data1" content="5 minutes">
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+
+        <!-- Bootstrap 5 CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Google Font: Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
+        <link href="assets/css/responsive.css" rel="stylesheet">
+        <link href="assets/css/keyframe.min.css" rel="stylesheet">
+
+        <!-- OwlCarousel CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </head>
+
+    <body data-load="" data-click-animation="" translate="no">
+
+        <!-- ✅ Start STICKY HEADER (Top bar + Navbar) -->
+        <section>
+            <div class="sticky-header">
+                <!-- Header Menu -->
+                <?php include_once ('elements/header-menu.php');?>
             </div>
-        </div>
-    </div>
-
-    <?php include_once ('elements/header-menu.php');?>
+        </section>
+        <!-- ✅ End STICKY HEADER (Top bar + Navbar) -->

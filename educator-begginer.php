@@ -33,7 +33,7 @@ include_once ('elements/header.php');
         }
 
         .btn-red { background: var(--primary); color: white; }
-        .btn-red:hover { background: #cc0000; transform: translateY(-5px); box-shadow: 0 10px 20px var(--primary-blur); }
+        .btn-red:hover { background: #cc0000; transform: translateY(-5px); box-shadow: 0 10px 20px var(--zed-backgound-color); }
 
         /* --- STEP ROADMAP --- */
         .step-card {

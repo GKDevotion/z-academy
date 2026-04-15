@@ -1,0 +1,39 @@
+:root {
+    --primary-teal: #ff0000;
+    --primary-blur: #ff000021;
+    --dark-navy: #000;
+    --text-muted: #6c757d;
+    --card-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --box-border: #eee;
+    --footer-bg: #0a1322;
+    --footer-text: #b1b5bd;
+    --footer-heading: #ffffff;
+    --footer-bottom-border: rgba(255, 255, 255, 0.05);
+    --transition-fast: all 0.3s ease;
+    --green: #00ff88;
+    --warning: #ffbd2e;
+    --primary: #ff0000;
+    --dark: #000;
+    --muted: #6c757d;
+    --card: #ffffff;
+    --border: #eee;
+    --shadow: 0 15px 40px rgba(0,0,0,0.06);
+    --transition: all .4s cubic-bezier(.4,0,.2,1);
+}
+
+.hero-section {
+    padding: 100px 0;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.create-account-btn button, .open-account-btn button {
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 25px;
+    margin: 5px 0;
+    border: 0px;
+    background-color: var(--zed-primary);
+    font-size: 1rem;
+}

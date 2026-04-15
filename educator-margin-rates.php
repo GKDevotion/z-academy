@@ -58,7 +58,7 @@ include_once ('elements/header.php');
     }
     .card-header-strip .strip-icon {
       width: 28px; height: 28px;
-      background: var(--primary-blur);
+      background: var(--zed-backgound-color);
       border-radius: var(--radius-sm);
       display: flex; align-items: center; justify-content: center;
       color: var(--primary); font-size: .8rem;
@@ -86,7 +86,7 @@ include_once ('elements/header.php');
     }
     .form-control:focus, .form-select:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-blur);
+      box-shadow: 0 0 0 3px var(--zed-backgound-color);
       outline: none;
     }
 
@@ -104,7 +104,7 @@ include_once ('elements/header.php');
     .pair-btn:hover {
       border-color: var(--primary);
       color: var(--primary);
-      background: var(--primary-blur);
+      background: var(--zed-backgound-color);
     }
     .pair-btn.active {
       border-color: var(--primary);
@@ -215,7 +215,7 @@ include_once ('elements/header.php');
     .margin-table tbody tr:last-child td { border-bottom: none; }
     .margin-table tbody tr:hover td { background: #fafafa; }
     .margin-table tbody tr.active-row td {
-      background: var(--primary-blur) !important;
+      background: var(--zed-backgound-color) !important;
       font-weight: 600;
     }
     .lev-label {
@@ -418,7 +418,7 @@ include_once ('elements/header.php');
       <div class="calc-card h-100">
         <div class="card-body-pad">
           <div class="d-flex align-items-center gap-2 mb-2">
-            <div class="strip-icon" style="width:28px;height:28px;background:var(--primary-blur);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:.8rem;flex-shrink:0"><i class="bi bi-shield-exclamation"></i></div>
+            <div class="strip-icon" style="width:28px;height:28px;background:var(--zed-backgound-color);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:.8rem;flex-shrink:0"><i class="bi bi-shield-exclamation"></i></div>
             <span style="font-weight:700;font-size:.85rem">Margin call</span>
           </div>
           <p style="font-size:.82rem;color:var(--muted);line-height:1.65;margin:0">Triggered when margin level drops to 100%. The broker warns you to deposit more funds or close positions to avoid stop-out.</p>
