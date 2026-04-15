@@ -16,8 +16,8 @@ include_once ('helper/Custom.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Academy - Online Education Platform</title>
-        <base href="<?php echo $base_url; ?>/">
-        <link rel="canonical" href="<?php echo $base_url; ?>/">
+        <base href="<?php echo $base_url; ?>">
+        <link rel="canonical" href="<?php echo $base_url; ?>">
 
         <meta name="description" content="">
         <meta name="googlebot" content="index">
