@@ -1,4 +1,10 @@
 <?php
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$path = dirname($_SERVER['SCRIPT_NAME']);
+
+$base_url = $protocol . $host . $path;
+
 include_once ('helper/Database.php');
 include_once ('helper/Custom.php');
 ?>
@@ -10,8 +16,8 @@ include_once ('helper/Custom.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Academy - Online Education Platform</title>
-        <base href="http://127.0.0.1/core/zed-learn/">
-        <link rel="canonical" href="http://127.0.0.1/core/zed-learn/">
+        <base href="<?php echo $base_url; ?>/">
+        <link rel="canonical" href="<?php echo $base_url; ?>/">
 
         <meta name="description" content="">
         <meta name="googlebot" content="index">
