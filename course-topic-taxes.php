@@ -2,16 +2,17 @@
 include_once ('elements/header.php');
 ?>
 
-    <header class="page-header">
-        <div class="container text-center">
-            <h1 class="display-3 fw-800 animate__animated animate__fadeIn">
-                <span style="color: var(--zed-primary)">
-                    Taxes
-                </span>
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">
+                Taxes <span style="color: var(--zed-primary)"></span>
             </h1>
-            <p class="lead opacity-75">
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
                 
             </p>
+            <div class="d-none open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill">ZERO TO HERO</button>
+            </div>
         </div>
     </header>
 

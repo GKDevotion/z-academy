@@ -19,133 +19,145 @@ include_once ('elements/header.php');
     <div class="container py-5">
 
         <div class="row g-4">
+  <?php
+            $topicsArr = [
+                [
+                    'topic' => 'Introduction to Stocks',
+                    'level' => 'Beginner',
+                    'description' => 'Understand stock market basics, cycles, and sectors.',
+                    'topicLeft' => [
+                        'Intro to Stock Market',
+                        'Business Cycle',
+                        'Sector Investing'
+                    ],
+                    'topicRight' => [
+                        
+                    ]
+                ],[
+                    'topic' => 'Introduction to Dividends',
+                    'level' => 'Beginner',
+                    'description' => 'Learn dividend income and compounding strategies.',
+                    'topicLeft' => [
+                        'Dividend Types',
+                        'Compounding',
+                        'Dividend Dates'
+                    ],
+                    'topicRight' => [
+                    ]
+                ],[
+                    'topic' => 'Metal Trading Basics',
+                    'level' => 'Beginner',
+                    'description' => 'Learn how to trade metals in different financial markets.',
+                    'topicLeft' => [
+                        'Futures & Spot Trading',
+                        'Commodity Exchanges (MCX, LME)',
+                        'Trading Hours & Liquidity'
+                    ],
+                    'topicRight' => [
+                        'Order Types',
+                        'Margin & Leverage'
+                    ]
+                ],[
+                    'topic' => 'Sector Investing',
+                    'level' => 'Beginner',
+                    'description' => 'Explore 11 sectors and their investment opportunities.',
+                    'topicLeft' => [
+                        'Energy Sector',
+                        'IT Sector',
+                        'Healthcare'
+                    ],
+                    'topicRight' => [
+                    ]
+                ],[
+                    'topic' => 'Value Investing',
+                    'level' => 'Beginner',
+                    'description' => 'Identify undervalued stocks using proven strategies.',
+                    'topicLeft' => [
+                        'Margin of Safety',
+                        'Intrinsic Value',
+                        'Economic Moats'
+                    ],
+                    'topicRight' => [
+                    ]
+                ],[
+                    'topic' => 'Growth Investing',
+                    'level' => 'Beginner',
+                    'description' => 'Invest in companies with high growth potential.',
+                    'topicLeft' => [
+                        'Growth Metrics',
+                        'Risk Management',
+                        'Long-Term Trends'
+                    ],
+                    'topicRight' => [
+                    ]
+                ],[
+                    'topic' => 'Hedging & Risk Management',
+                    'level' => 'Beginner',
+                    'description' => 'Learn how industries and traders manage risk using metals.',
+                    'topicLeft' => [
+                        'Hedging with Futures',
+                        'Portfolio Diversification',
+                        'Risk-Reward Ratio'
+                    ],
+                    'topicRight' => [
+                        'Stop Loss Strategies',
+                        'Volatility Management'
+                    ]
+                ],[
+                    'topic' => 'Securities Lending',
+                    'level' => 'Beginner',
+                    'description' => 'Learn short selling, margin, and lending strategies.',
+                    'topicLeft' => [
+                        'Short Selling',
+                        'Margin Trading',
+                        'Stock Lending'
+                    ],
+                    'topicRight' => [
+                    ]
+                ]
+            ];
+              foreach( $topicsArr as $k => $val ){ ?>
+                <div class="col-md-6 col-12 mb-4 m-auto">
+                    <div class="course-card">
+                        <span class="badge-level"><?=$val['level'] ?></span>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h5 class="course-title">
+                                    <?=$val['topic'] ?>
+                                </h5>
+                                <p class="course-desc">
+                                    <?=$val['description'] ?>
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="https://picsum.photos/300/300?<?=$k;?>" class="course-img">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <ul class="course-list">
+                                            <?php foreach( $val['topicLeft'] as $left ){ ?>
+                                                <li>
+                                                    <i class="fa fa-chevron-right"></i>
+                                                    <?=$left ?>
+                                                </li>
+                                            <?php }
 
-            <!-- Card 1 -->
-            <div class="col-lg-6">
-                <div class="course-card">
-                    <span class="badge-level">Beginner</span>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/300/200?1" class="course-img">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="course-title">Introduction to Stocks</h5>
-                            <p class="course-desc">Understand stock market basics, cycles, and sectors.</p>
-                            <ul class="course-list">
-                                <li><i class="fa fa-chevron-right"></i>Intro to Stock Market</li>
-                                <li><i class="fa fa-chevron-right"></i>Business Cycle</li>
-                                <li><i class="fa fa-chevron-right"></i>Sector Investing</li>
-                            </ul>
+                                            foreach( $val['topicRight'] as $right ){ ?>
+                                                <li>
+                                                    <i class="fa fa-chevron-right"></i>
+                                                    <?=$right ?>
+                                                </li>
+                                            <?php } ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-lg-6">
-                <div class="course-card">
-                    <span class="badge-level">Beginner</span>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/300/200?2" class="course-img">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="course-title">Introduction to Dividends</h5>
-                            <p class="course-desc">Learn dividend income and compounding strategies.</p>
-                            <ul class="course-list">
-                                <li><i class="fa fa-chevron-right"></i>Dividend Types</li>
-                                <li><i class="fa fa-chevron-right"></i>Compounding</li>
-                                <li><i class="fa fa-chevron-right"></i>Dividend Dates</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-lg-6">
-                <div class="course-card">
-                    <span class="badge-level">Beginner</span>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/300/200?3" class="course-img">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="course-title">Sector Investing</h5>
-                            <p class="course-desc">Explore 11 sectors and their investment opportunities.</p>
-                            <ul class="course-list">
-                                <li><i class="fa fa-chevron-right"></i>Energy Sector</li>
-                                <li><i class="fa fa-chevron-right"></i>IT Sector</li>
-                                <li><i class="fa fa-chevron-right"></i>Healthcare</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-lg-6">
-                <div class="course-card">
-                    <span class="badge-level">Beginner</span>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/300/200?4" class="course-img">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="course-title">Value Investing</h5>
-                            <p class="course-desc">Identify undervalued stocks using proven strategies.</p>
-                            <ul class="course-list">
-                                <li><i class="fa fa-chevron-right"></i>Margin of Safety</li>
-                                <li><i class="fa fa-chevron-right"></i>Intrinsic Value</li>
-                                <li><i class="fa fa-chevron-right"></i>Economic Moats</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-lg-6">
-                <div class="course-card">
-                    <span class="badge-level">Beginner</span>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/300/200?5" class="course-img">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="course-title">Growth Investing</h5>
-                            <p class="course-desc">Invest in companies with high growth potential.</p>
-                            <ul class="course-list">
-                                <li><i class="fa fa-chevron-right"></i>Growth Metrics</li>
-                                <li><i class="fa fa-chevron-right"></i>Risk Management</li>
-                                <li><i class="fa fa-chevron-right"></i>Long-Term Trends</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="col-lg-6">
-                <div class="course-card">
-                    <span class="badge-level">Advanced</span>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/300/200?6" class="course-img">
-                        </div>
-                        <div class="col-md-8">
-                            <h5 class="course-title">Securities Lending</h5>
-                            <p class="course-desc">Learn short selling, margin, and lending strategies.</p>
-                            <ul class="course-list">
-                                <li><i class="fa fa-chevron-right"></i>Short Selling</li>
-                                <li><i class="fa fa-chevron-right"></i>Margin Trading</li>
-                                <li><i class="fa fa-chevron-right"></i>Stock Lending</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+                <?php
+            } ?>
+         
+?>
         </div>
 
     </div>
