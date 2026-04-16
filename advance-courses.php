@@ -80,18 +80,21 @@ include_once ('elements/header.php');
         }
     </style>
 
-    <section class="py-5 mt-5">
-        <div class="container text-center">
-            <h1 class="heading-font display-4 animate__animated animate__glitch">Institutional <span style="color: var(--primary-teal);">Elite</span></h1>
-            <p class="text-secondary small fw-light">Access high-frequency data, algo-tracking, and central bank sentiment analysis.</p>
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">Institutional <span style="color: var(--zed-primary);">Elite</span></h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Access high-frequency data, algo-tracking, and central bank sentiment analysis.</p>
+            <div class="d-none open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill">ZERO TO HERO</button>
+            </div>
         </div>
-    </section>
+    </header>
 
     <div class="container pb-5">
         <div class="row g-4">
             
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 p-4 advanced-card">
+                <div class="card p-4 advanced-card">
                     <div class="d-flex align-items-center mb-3">
                         <span class="status-dot"></span>
                         <span class="small fw-bold text-uppercase">Phase 07</span>
@@ -111,7 +114,7 @@ include_once ('elements/header.php');
             </div>
 
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 p-4 advanced-card">
+                <div class="card p-4 advanced-card">
                     <div class="d-flex align-items-center mb-3">
                         <span class="status-dot"></span>
                         <span class="small fw-bold text-uppercase">Phase 08</span>
@@ -131,7 +134,67 @@ include_once ('elements/header.php');
             </div>
 
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 p-4 advanced-card">
+                <div class="card p-4 advanced-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="status-dot"></span>
+                        <span class="small fw-bold text-uppercase">Phase 09</span>
+                    </div>
+                    <h3 class="heading-font fs-5 mb-4">Prop Firm Mastery</h3>
+                    <p class="text-secondary small">Specific strategies designed to pass $100k+ funding challenges with strict drawdown rules.</p>
+                    <div class="mb-4">
+                        <code class="text-danger small">// Risk: 0.25% Per Trade</code><br>
+                        <code class="text-muted small">// Drawdown Limit: 5%</code>
+                    </div>
+                    <button class="btn-elite">Access Terminal</button>
+                    <div class="advanced-stat mt-4 d-flex justify-content-between">
+                        <span>EST. ROI: FUNDED</span>
+                        <span>DURATION: 4 WEEKS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-4 advanced-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="status-dot"></span>
+                        <span class="small fw-bold text-uppercase">Phase 07</span>
+                    </div>
+                    <h3 class="heading-font fs-5 mb-4">Algorithmic Tracking</h3>
+                    <p class="text-secondary small">Identify "Iceberg Orders" and high-frequency trading (HFT) footprints in the order book.</p>
+                    <div class="mb-4">
+                        <code class="text-danger small">// Data Stream: Enabled</code><br>
+                        <code class="text-muted small">// Latency: 0.04ms</code>
+                    </div>
+                    <button class="btn-elite">Access Terminal</button>
+                    <div class="advanced-stat mt-4 d-flex justify-content-between">
+                        <span>EST. ROI: HIGH</span>
+                        <span>DURATION: 8 WEEKS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-4 advanced-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="status-dot"></span>
+                        <span class="small fw-bold text-uppercase">Phase 08</span>
+                    </div>
+                    <h3 class="heading-font fs-5 mb-4">Macro Fund Strategy</h3>
+                    <p class="text-secondary small">Fundamental mastery: Interest rate differentials, COT reports, and Bond Yield correlations.</p>
+                    <div class="mb-4">
+                        <code class="text-danger small">// Correlation Matrix</code><br>
+                        <code class="text-muted small">// COT Data: Updated</code>
+                    </div>
+                    <button class="btn-elite">Access Terminal</button>
+                    <div class="advanced-stat mt-4 d-flex justify-content-between">
+                        <span>EST. ROI: SCALE</span>
+                        <span>DURATION: 12 WEEKS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card p-4 advanced-card">
                     <div class="d-flex align-items-center mb-3">
                         <span class="status-dot"></span>
                         <span class="small fw-bold text-uppercase">Phase 09</span>

@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '../../app/Helpers/UrlHelper.php';
 
-// include_once ('helper/Database.php');
-// include_once ('helper/Custom.php');
+require_once __DIR__ . '../../app/Helpers/Database.php';
+require_once __DIR__ . '../../app/Helpers/Custom.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
