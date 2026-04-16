@@ -71,24 +71,31 @@ include_once ('elements/header.php');
         }
     </style>
 
-    <div class="container py-5">
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-4 fw-800">The <span style="color: var(--primary-teal);">Execution</span> Lab</h1>
-                <p class="text-muted">Stop watching. Start doing. Test your market reflexes in real-time.</p>
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">
+                The <span style="color: var(--primary-teal);">Execution</span> Lab
+            </h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                Stop watching. Start doing. Test your market reflexes in real-time.
+            </p>
+            <div class="d-none open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill">ZERO TO HERO</button>
             </div>
         </div>
+    </header>
 
+    <div class="container py-5">
         <div class="row g-4">
             <div class="col-lg-3">
                 <div class="list-group list-group-flush border-0">
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white active border-0 mb-2 p-3 rounded" style="background: var(--primary-teal) !important;">
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action bg-dark text-white active border-0 mb-2 p-3 rounded" style="background: var(--primary-teal) !important;">
                         1. Candle Pattern ID
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 mb-2 p-3 rounded">
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action bg-dark text-white border-0 mb-2 p-3 rounded">
                         2. Risk Calculator Pro
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-0 mb-2 p-3 rounded">
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action bg-dark text-white border-0 mb-2 p-3 rounded">
                         3. News Impact Sim
                     </a>
                 </div>

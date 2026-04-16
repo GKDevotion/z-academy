@@ -5,7 +5,7 @@ include_once ('elements/header.php');
     <header class="page-header">
         <div class="container text-center">
             <h1 class="display-3 fw-800 animate__animated animate__fadeIn">
-                <span style="color: var(--brand-red)">Bonds</span>
+                <span style="color: var(--zed-primary)">Bonds</span>
             </h1>
             <p class="lead opacity-75">
                 A broad array of fixed-income courses is available through IBKR’s Traders’ Academy for traders and investors to make more informed investment decisions about U.S. Treasuries, U.S. corporate bonds, U.S. municipal bonds, and Eurodollar markets. Interactive Brokers, along with CME Group, provide a wide range of educational material about fixed-income asset classes and concepts. Including primary market bond issuance, secondary market trading, credit ratings, default risk, bond prices and yields, hedging strategies, the yield curve, short-term interest rates (STIR) markets, the secured overnight financing rate (SOFR), and much more.

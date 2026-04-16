@@ -2,12 +2,17 @@
 include_once ('elements/header.php');
 ?>
 
-    <header class="page-header">
-        <div class="container text-center">
-            <h1 class="display-3 fw-800 animate__animated animate__fadeIn"><span style="color: var(--brand-red)">Futures</span></h1>
-            <p class="lead opacity-75">
-                Learn about securities futures and commodities futures through Interactive Brokers and CME Group's vast selection of educational courses, including defining what these financial products are, as well as how to trade and invest in them. These courses explore introductory concepts such as 'contango' and 'backwardation', futures margin, mechanics of the futures market, as well as futures pricing. Also available are courses that focus on futures fundamental analyses for a variety of futures-related products such as interest rate futures, energy futures, agricultural futures, and metal futures. More specialized courses center on CME Micro WTI Crude Oil Futures, South American soybean futures, as well as an introduction to grains and oilseeds.
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">
+                <span style="color: var(--zed-primary)">Futures</span>
+            </h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                Learn about securities futures and commodities futures through Interactive Brokers and CME Group's vast selection of educational courses, including defining what these financial products are, as well as how to trade and invest in them.
             </p>
+            <div class="d-none open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill">ZERO TO HERO</button>
+            </div>
         </div>
     </header>
 
