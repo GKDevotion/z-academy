@@ -34,4 +34,6 @@ function getConfigurationField($key)
 
     return $result['config_value'] ?? false;
 }
+
+
 ?>
