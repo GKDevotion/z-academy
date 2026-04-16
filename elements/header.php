@@ -1,12 +1,8 @@
 <?php
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-$host = $_SERVER['HTTP_HOST'];
-$path = dirname($_SERVER['SCRIPT_NAME']);
+require_once __DIR__ . '../../app/Helpers/UrlHelper.php';
 
-$base_url = $protocol . $host . $path;
-
-include_once ('helper/Database.php');
-include_once ('helper/Custom.php');
+// include_once ('helper/Database.php');
+// include_once ('helper/Custom.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +10,9 @@ include_once ('helper/Custom.php');
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <title>Academy - Online Education Platform</title>
-        <base href="<?php echo $base_url; ?>">
-        <link rel="canonical" href="<?php echo $base_url; ?>">
+        <base href="<?php echo UrlHelper::baseUrl(); ?>">
+        <link rel="canonical" href="<?php echo UrlHelper::baseUrl(); ?>">
 
         <meta name="description" content="">
         <meta name="googlebot" content="index">
@@ -51,7 +46,7 @@ include_once ('helper/Custom.php');
         <meta name="twitter:image" content="" />
 
         <!-- Bootstrap 5 CSS -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo UrlHelper::asset('css/bootstrap.min.css'); ?>" rel="stylesheet">
 
         <!-- Google Font: Inter -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -60,10 +55,10 @@ include_once ('helper/Custom.php');
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
-        <link href="assets/css/responsive.css" rel="stylesheet">
-        <link href="assets/css/keyframe.min.css" rel="stylesheet">
+        <link href="<?php echo UrlHelper::asset('css/style.css'); ?>" rel="stylesheet">
+        <link href="<?php echo UrlHelper::asset('css/custom.css'); ?>" rel="stylesheet">
+        <link href="<?php echo UrlHelper::asset('css/responsive.css'); ?>" rel="stylesheet">
+        <link href="<?php echo UrlHelper::asset('css/keyframe.min.css'); ?>" rel="stylesheet">
 
         <!-- OwlCarousel CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
