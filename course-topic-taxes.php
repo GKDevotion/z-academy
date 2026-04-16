@@ -5,7 +5,7 @@ include_once ('elements/header.php');
     <header class="page-header">
         <div class="container text-center">
             <h1 class="display-3 fw-800 animate__animated animate__fadeIn">
-                <span style="color: var(--brand-red)">
+                <span style="color: var(--zed-primary)">
                     Taxes
                 </span>
             </h1>
