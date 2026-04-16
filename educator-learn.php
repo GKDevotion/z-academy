@@ -146,6 +146,16 @@ include_once ('elements/header.php');
         }
     </style>
 
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">Educator <span style="color: var(--primary-teal);">Learn</span> </h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Learn from experienced educators and gain practical knowledge to succeed in trading.</p>
+            <div class="open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill d-none">ZERO TO HERO</button>
+            </div>
+        </div>
+    </header>
+
     <section class="py-4 bg-dark text-white overflow-hidden">
         <div class="container-fluid">
             <div class="d-flex align-items-center">

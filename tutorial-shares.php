@@ -1,6 +1,16 @@
 <?php 
 include_once ('elements/header.php');
 ?>    
+    <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">Share <span style="color: var(--primary-teal);"></span> </h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Build wealth through smart stock investments and strategic market decisions.</p>
+            <div class="open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill d-none">ZERO TO HERO</button>
+            </div>
+        </div>
+    </header>
+
     <!-- ── MAIN WRAPPER ── -->
     <div class="tutorial course-wrapper">
 

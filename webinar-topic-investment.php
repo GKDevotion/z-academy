@@ -1,14 +1,14 @@
 <?php 
 include_once ('elements/header.php');
 ?>
-    <header class="page-header">
-        <div class="webinar container text-center">
-            <h1 class="display-3 fw-800 animate__animated animate__fadeIn section-title mb-4">
-                <span id="typing-text"></span>
-            </h1>
-            <p class="lead opacity-75">
-                Gain practical knowledge and actionable strategies to grow your wealth through smart investing and disciplined decision-making.
-            </p>
+
+     <header class="container-fluid d-flex align-items-center justify-content-center text-center bg-light hero-section">
+        <div>
+            <h1 class="display-3 fw-800 animate__animated animate__fadeInDown">Webinar<span style="color: var(--primary-teal);"> Investments</span> </h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Gain practical knowledge and actionable strategies to grow your wealth through smart investing and disciplined decision-making.</p>
+            <div class="open-account-btn account-type-btn animate__animated animate__zoomIn animate__delay-1s">
+                <button class="rounded-pill d-none">ZERO TO HERO</button>
+            </div>
         </div>
     </header>
 

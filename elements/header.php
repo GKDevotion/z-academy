@@ -36,7 +36,7 @@ require_once __DIR__ . '../../app/Helpers/Custom.php';
 
         <meta property="article:publisher" content="https://www.facebook.com">
         <meta property="article:modified_time" content="26-01-2025">
-
+        
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@ZedCapital">
         <meta name="twitter:label1" content="Est. reading time">
@@ -50,9 +50,8 @@ require_once __DIR__ . '../../app/Helpers/Custom.php';
 
         <!-- Google Font: Inter -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link href="<?php echo UrlHelper::asset('css/style.css'); ?>" rel="stylesheet">
