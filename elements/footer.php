@@ -171,10 +171,10 @@
                     <div class="col-6 col-sm-4 col-md-2">
                         <h6>Financial Market</h6>
                         <ul>
-                            <li><a href="{{url('american-financial-market')}}" title="American Market">American Market</a></li>
-                            <li><a href="{{url('european-financial-market')}}" title="European Market">European Market</a></li>
-                            <li><a href="{{url('middle-eastern-financial-market')}}" title="Middle Eastern Market">Middle Eastern Market</a></li>
-                            <li><a href="{{url('asian-financial-market')}}" title="Asian Market">Asian Market</a></li>
+                            <li><a href="https://www.zedcapital.com/american-financial-market" target="_blank" title="American Market">American Market</a></li>
+                            <li><a href="https://www.zedcapital.com/european-financial-market" target="_blank" title="European Market">European Market</a></li>
+                            <li><a href="https://www.zedcapital.com/middle-eastern-financial-market" target="_blank" title="Middle Eastern Market">Middle Eastern Market</a></li>
+                            <li><a href="https://www.zedcapital.com/asian-financial-market" target="_blank" title="Asian Market">Asian Market</a></li>
                         </ul>
                     </div>
 
@@ -217,33 +217,33 @@
                     <div class="col-6 col-sm-4 col-md-2">
                         <h6>Products</h6>
                         <ul>
-                            <li><a href="{{url('stocks')}}" title="Stocks">Stocks</a></li>
-                            <li><a href="{{url('forex')}}" title="Forex">Forex</a></li>
-                            <li><a href="{{url('indices')}}" title="Indices">Indices</a></li>
-                            <li><a href="{{url('metal')}}" title="Metals">Metals</a></li>
-                            <li><a href="{{url('commodities')}}" title="Commodities">Commodities</a></li>
-                            <li><a href="{{url('crypto')}}" title="Crypto">Crypto</a></li>
+                            <li><a href="https://www.zedcapital.com/stocks" target="_blank" title="Stocks">Stocks</a></li>
+                            <li><a href="https://www.zedcapital.com/forex" target="_blank" title="Forex">Forex</a></li>
+                            <li><a href="https://www.zedcapital.com/indices" target="_blank" title="Indices">Indices</a></li>
+                            <li><a href="https://www.zedcapital.com/metal" target="_blank" title="Metals">Metals</a></li>
+                            <li><a href="https://www.zedcapital.com/commodities" target="_blank" title="Commodities">Commodities</a></li>
+                            <li><a href="https://www.zedcapital.com/crypto" target="_blank" title="Crypto">Crypto</a></li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-sm-4 col-md-2">
                         <h6>Company</h6>
                         <ul>
-                            <li><a href="{{url('about-us')}}" title="About Us">About Us</a></li>
-                            <li><a href="{{url('contact-us')}}" title="Contact Us">Contact Us</a></li>
-                            <li><a href="{{url('zed-academy')}}" title="Zed Academy">Zed Academy</a></li>
-                            <li><a href="{{url('faqs')}}" title="FAQ's">FAQ's</a></li>
-                            <li><a href="{{url('news')}}" title="News">News</a></li>
+                            <li><a href="https://www.zedcapital.com/about-us" target="_blank" title="About Us">About Us</a></li>
+                            <li><a href="https://www.zedcapital.com/contact-us" target="_blank" title="Contact Us">Contact Us</a></li>
+                            <li><a href="https://www.zedcapital.com/zed-academy" target="_blank" title="Zed Academy">Zed Academy</a></li>
+                            <li><a href="https://www.zedcapital.com/faqs" target="_blank" title="FAQ's">FAQ's</a></li>
+                            <li><a href="https://www.zedcapital.com/news" target="_blank" title="News">News</a></li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-sm-4 col-md-2">
                         <h6>Tools & Resources</h6>
                         <ul>
-                            <li><a href="{{url('economic-calendar')}}" title="Economic Calendar">Economic Calendar</a></li>
-                            <li><a href="{{url('pivot-point')}}" title="Pivot Point">Pivot Point</a></li>
-                            <li><a href="{{url('currency-convertor')}}" title="Currency Converter">Currency Converter</a></li>
-                            <li><a href="{{url('profit-calculator')}}" title="Profit Calculator">Profit Calculator</a></li>
+                            <li><a href="https://www.zedcapital.com/economic-calendar" target="_blank" title="Economic Calendar">Economic Calendar</a></li>
+                            <li><a href="https://www.zedcapital.com/pivot-point" target="_blank" title="Pivot Point">Pivot Point</a></li>
+                            <li><a href="https://www.zedcapital.com/currency-convertor" target="_blank" title="Currency Converter">Currency Converter</a></li>
+                            <li><a href="https://www.zedcapital.com/profit-calculator" target="_blank" title="Profit Calculator">Profit Calculator</a></li>
                         </ul>
                     </div>
                 </div>
@@ -262,30 +262,30 @@
                     <div class="col-md-3 col-sm-6">
                         <h6>Financial Market</h6>
                         <ul>
-                            <li><a href="{{url('american-financial-market')}}" title="American Market">American Market</a></li>
-                            <li><a href="{{url('european-financial-market')}}" title="European Market">European Market</a></li>
-                            <li><a href="{{url('middle-eastern-financial-market')}}" title="Middle Eastern Market">Middle Eastern Market</a></li>
-                            <li><a href="{{url('asian-financial-market')}}" title="Asian Market">Asian Market</a></li>
+                            <li><a href="https://www.zedcapital.com/american-financial-market" target="_blank" title="American Market">American Market</a></li>
+                            <li><a href="https://www.zedcapital.com/european-financial-market" target="_blank" title="European Market">European Market</a></li>
+                            <li><a href="https://www.zedcapital.com/middle-eastern-financial-market" target="_blank" title="Middle Eastern Market">Middle Eastern Market</a></li>
+                            <li><a href="https://www.zedcapital.com/asian-financial-market" target="_blank" title="Asian Market">Asian Market</a></li>
                         </ul>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                         <h6>Products</h6>
                         <ul>
-                            <li><a href="{{url('stocks')}}" title="Stocks">Stocks</a></li>
-                            <li><a href="{{url('forex')}}" title="Forex">Forex</a></li>
-                            <li><a href="{{url('indices')}}" title="Indices">Indices</a></li>
-                            <li><a href="{{url('metal')}}" title="Metals">Metals</a></li>
-                            <li><a href="{{url('commodities')}}" title="Commodities">Commodities</a></li>
-                            <li><a href="{{url('crypto')}}" title="Crypto">Crypto</a></li>
+                            <li><a href="https://www.zedcapital.com/stocks" target="_blank" title="Stocks">Stocks</a></li>
+                            <li><a href="https://www.zedcapital.com/forex" target="_blank" title="Forex">Forex</a></li>
+                            <li><a href="https://www.zedcapital.com/indices" target="_blank" title="Indices">Indices</a></li>
+                            <li><a href="https://www.zedcapital.com/metal" target="_blank" title="Metals">Metals</a></li>
+                            <li><a href="https://www.zedcapital.com/commodities" target="_blank" title="Commodities">Commodities</a></li>
+                            <li><a href="https://www.zedcapital.com/crypto" target="_blank" title="Crypto">Crypto</a></li>
                         </ul>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                         <h6>Company</h6>
                         <ul>
-                            <li><a href="{{url('about-us')}}" title="About Us">About Us</a></li>
-                            <li><a href="{{url('zed-academy')}}" title="Zed Academy">Zed Academy</a></li>
+                            <li><a href="https://www.zedcapital.com/about-us" target="_blank" title="About Us">About Us</a></li>
+                            <li><a href="https://www.zedcapital.com/zed-academy" target="_blank" title="Zed Academy">Zed Academy</a></li>
                             <li><a href="javascript:void(0)" title="News">News</a></li>
                             <li><a href="javascript:void(0)" title="Press and Media">Press and Media</a></li>
                             <li><a href="javascript:void(0)" title="Regulatory Reports">Regulatory Reports</a></li>
@@ -386,10 +386,10 @@
                 </div>
 
                 <div class="footer-meta">
-                    <a href="assets/pdf/Terms-condition-ZedCapital-com.pdf" download title="Terms & Condition">Terms & Condition</a> |
-                    <a href="assets/pdf/Privacy-Policy-ZedCapital-com.pdf" download title="Privacy Policy">Privacy Policy</a> |
-                    <a href="assets/pdf/Cookies-Policy-ZedCapital-com.pdf" download title="Cookie Policy">Cookie Policy</a> |
-                    <a href="assets/pdf/Arbitrage-Policy-ZedCapital-com.pdf" download title="Arbitrage Policy">Arbitrage Policy</a> |
+                    <a href="https://www.zedcapital.com/public/zedcapitalcom/pdf/Terms-condition-ZedCapital-com.pdf" download title="Terms & Condition">Terms & Condition</a> |
+                    <a href="https://www.zedcapital.com/public/zedcapitalcom/pdf/Privacy-Policy-ZedCapital-com.pdf" download title="Privacy Policy">Privacy Policy</a> |
+                    <a href="https://www.zedcapital.com/public/zedcapitalcom/pdf/Cookies-Policy-ZedCapital-com.pdf" download title="Cookie Policy">Cookie Policy</a> |
+                    <a href="https://www.zedcapital.com/public/zedcapitalcom/pdf/Arbitrage-Policy-ZedCapital-com.pdf" download title="Arbitrage Policy">Arbitrage Policy</a> |
                     <a href="risk-disclosure" title="Risk Disclosure">Risk Disclosure</a>
                 </div>
             </div>

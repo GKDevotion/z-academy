@@ -26,15 +26,15 @@
                         <li class="nav-item"><a class="nav-link dropdown-item" href="intermidiate-courses">Intermidiate Courses</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="advance-courses">Advance Courses</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="interactive-learning">Interactive Learning</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-stock">Stocks</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-futures">Futures</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-crypto">Crypto</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-commodities">Commodities</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-metal">Metal</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-ecomonics">Economics</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-bonds">Bonds</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-fundamentals">Fundamentals</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="course-topic-taxes">Taxes</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-stock">Stocks</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-futures">Futures</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-crypto">Crypto</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-commodities">Commodities</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-metal">Metal</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-ecomonics">Economics</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-bonds">Bonds</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-fundamentals">Fundamentals</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="course-topic-taxes">Taxes</a></li>
                     </ul>
                 </li>
 
@@ -49,9 +49,10 @@
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-ai-machine-learning">AI & Machine Learning</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-crypto-currency">Crypto Currency</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-financial">Financial</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-forex">Forex</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-metal">Metal</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-commodities">Commodities</a></li>
+                        <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-products">Products</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-forex">Forex</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-metal">Metal</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-commodities">Commodities</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-tax">Tax</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-technology">Technology</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-investment">Investment</a></li>

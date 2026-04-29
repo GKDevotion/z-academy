@@ -103,7 +103,8 @@ include_once ('elements/header.php');
         .img-wrapper::before {
             content: '';
             position: absolute;
-            width: 100%; height: 100%;
+            width: 50%; 
+            height: 90%;
             background: var(--zed-backgound-color);
             border-radius: 50%;
             z-index: -1;
