@@ -3,25 +3,9 @@ include_once ('elements/header.php');
 ?>
 
     <style>
-        :root {
-            --red:       #E8111A;
-            --red-dark:  #b80d14;
-            --red-light: rgba(232,17,26,.08);
-            --bg:        #f4f4ef;
-            --white:     #ffffff;
-            --dark:      #0f0f0f;
-            --mid:       #2e2e2e;
-            --muted:     #7a7a7a;
-            --border:    #e2e2da;
-            --green:     #22c55e;
-        }
-    
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-    
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ TICKER ━━━ */
         .ticker-bar {
-            background: var(--dark);
+            background: var(--zed-dark-text);
             overflow: hidden;
             padding: .42rem 0;
             user-select: none;
@@ -49,25 +33,22 @@ include_once ('elements/header.php');
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ HERO ━━━━ */
         .hero {
-            padding: 96px 0 72px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(ellipse 65% 55% at 50% -5%, rgba(232,17,26,.08) 0%, transparent 65%),
-                var(--bg);
+          padding: 100px 0 80px;
+          text-align: center;
+          background: radial-gradient(ellipse 60% 55% at 50% -10%, rgba(232, 17, 26, .07) 0%, transparent 65%), var(--zed-backgound-color);
+          position: relative;
+          overflow: hidden;
         }
         .hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background-image:
-                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,0,0,.028) 40px),
-                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,0,0,.028) 40px);
-            pointer-events: none;
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0, 0, 0, .03) 39px, rgba(0, 0, 0, .03) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0, 0, 0, .03) 39px, rgba(0, 0, 0, .03) 40px);
+          pointer-events: none;
         }
         .hero-pill {
             display: inline-flex; align-items: center; gap: .55rem;
-            background: var(--red); color: #fff;
+            background: var(--zed-primary); color: #fff;
             font-size: .72rem; font-weight: 800;
             letter-spacing: .15em; text-transform: uppercase;
             padding: .38rem 1.1rem; border-radius: 50px;
@@ -77,13 +58,13 @@ include_once ('elements/header.php');
         .hero h1 {
             font-size: clamp(2.6rem, 6.5vw, 5rem);
             font-weight: 800; line-height: 1.04;
-            letter-spacing: -.04em; color: var(--dark);
+            letter-spacing: -.04em; color: var(--zed-dark-text);
             animation: riseUp .7s .1s ease both;
         }
-        .hero h1 em { font-style: normal; color: var(--red); }
+        .hero h1 em { font-style: normal; color: var(--zed-primary); }
         .hero p.tagline {
             font-size: 1.05rem; 
-            color: var(--muted);
+            color: var(--zed-secondary);
             max-width: 580px; 
             margin: 1.1rem auto 2rem;
             font-weight: 400; 
@@ -92,7 +73,7 @@ include_once ('elements/header.php');
         }
         .hero-cta { animation: riseUp .7s .3s ease both; }
         .btn-hero {
-            background: var(--red); 
+            background: var(--zed-primary); 
             color: #fff;
             border: none; 
             border-radius: 50px;
@@ -106,7 +87,7 @@ include_once ('elements/header.php');
             text-decoration: none;
         }
         .btn-hero:hover {
-            background: var(--red-dark); 
+            background: var(--zed-primary-hover); 
             color: #fff;
             transform: translateY(-3px);
             box-shadow: 0 16px 40px rgba(232,17,26,.42);
@@ -122,13 +103,13 @@ include_once ('elements/header.php');
         .h-stat .num {
             font-size: 1.9rem; 
             font-weight: 800;
-            color: var(--dark);
+            color: var(--zed-dark-text);
         }
-        .h-stat .num span { color: var(--red); }
+        .h-stat .num span { color: var(--zed-primary); }
         .h-stat .lbl {
             font-size: .72rem; 
             font-weight: 600;
-            color: var(--muted); 
+            color: var(--zed-secondary); 
             letter-spacing: .08em;
             text-transform: uppercase;
         }
@@ -145,13 +126,13 @@ include_once ('elements/header.php');
             display: flex; 
             align-items: center; 
             gap: .6rem;
-            background: var(--white);
-            border: 1px solid var(--border);
+            background: var(--zed-light-bg);
+            border: 1px solid var(--zed-border-color);
             border-radius: 12px;
             padding: .65rem 1.1rem;
             font-size: .82rem; 
             font-weight: 600;
-            color: var(--mid);
+            color: var(--zed-dark-text);
             margin: .3rem;
             transition: border-color .25s, box-shadow .25s;
         }
@@ -162,7 +143,7 @@ include_once ('elements/header.php');
         .path-step .num {
             width: 22px; 
             height: 22px;
-            background: var(--red); 
+            background: var(--zed-primary); 
             color: #fff;
             border-radius: 50%;
             font-size: .68rem; 
@@ -173,7 +154,7 @@ include_once ('elements/header.php');
             flex-shrink: 0;
         }
         .path-arrow {
-            color: var(--muted); 
+            color: var(--zed-secondary); 
             font-size: .9rem;
             align-self: center; 
             margin: .3rem .2rem;
@@ -184,9 +165,9 @@ include_once ('elements/header.php');
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ SECTION BASE ━━━ */
         .sec { padding: 82px 0; }
-        .sec-white { background: var(--white); }
-        .sec-dark  { background: var(--dark); }
-        .sec-red   { background: var(--red); }
+        .sec-white { background: var(--zed-light-bg); }
+        .sec-dark  { background: var(--zed-dark-text); }
+        .sec-red   { background: var(--zed-primary); }
     
         .eyebrow {
             display: inline-block;
@@ -194,7 +175,7 @@ include_once ('elements/header.php');
             font-weight: 800;
             letter-spacing: .2em; 
             text-transform: uppercase;
-            color: var(--red); 
+            color: var(--zed-primary); 
             margin-bottom: .75rem;
         }
         .sec-dark .eyebrow { color: rgba(232,17,26,.75); }
@@ -203,13 +184,13 @@ include_once ('elements/header.php');
             font-size: clamp(1.8rem, 3.8vw, 2.7rem);
             font-weight: 800; 
             letter-spacing: -.035em;
-            color: var(--dark); 
+            color: var(--zed-dark-text); 
             line-height: 1.1;
         }
         .sec-dark .sec-h, .sec-red .sec-h { color: #fff; }
         .sec-p {
             font-size: .93rem; 
-            color: var(--muted);
+            color: var(--zed-secondary);
             font-weight: 400; 
             max-width: 470px;
             line-height: 1.65;
@@ -218,12 +199,12 @@ include_once ('elements/header.php');
         .sec-red  .sec-p { color: rgba(255,255,255,.72); }
     
         /* divider */
-        .hdiv { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+        .hdiv { height: 1px; background: linear-gradient(90deg, transparent, var(--zed-border-color), transparent); }
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ LEVEL CARDS ━━━ */
         .level-card {
-            background: var(--white);
-            border: 1.5px solid var(--border);
+            background: var(--zed-light-bg);
+            border: 1.5px solid var(--zed-border-color);
             border-radius: 22px;
             padding: 1.6rem;
             height: 100%;
@@ -244,7 +225,7 @@ include_once ('elements/header.php');
             left: 0; 
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--red), #ff6b6b);
+            background: linear-gradient(90deg, var(--zed-primary), #ff6b6b);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform .4s ease;
@@ -253,7 +234,7 @@ include_once ('elements/header.php');
     
         .level-tag {
             display: inline-block;
-            background: var(--red); 
+            background: var(--zed-primary); 
             color: #fff;
             font-size: .68rem; 
             font-weight: 800;
@@ -266,13 +247,13 @@ include_once ('elements/header.php');
         .level-card h4 {
             font-size: 1.3rem; 
             font-weight: 800;
-            color: var(--dark); 
+            color: var(--zed-dark-text); 
             margin-bottom: .5rem;
             letter-spacing: -.02em;
         }
         .level-card .desc {
             font-size: .84rem; 
-            color: var(--muted);
+            color: var(--zed-secondary);
             line-height: 1.65; 
             margin-bottom: 1.1rem;
         }
@@ -286,13 +267,13 @@ include_once ('elements/header.php');
         .check-list { list-style: none; padding: 0; margin: 0 0 1.3rem; }
         .check-list li {
             font-size: .84rem; 
-            color: var(--mid);
+            color: var(--zed-dark-text);
             padding: .32rem 0;
             display: flex; 
             align-items: center; 
             gap: .55rem;
         }
-        .check-list li i { color: var(--green); font-size: .85rem; flex-shrink: 0; }
+        .check-list li i { color: var(--zed-success-hover); font-size: .85rem; flex-shrink: 0; }
     
         .progress-row {
             display: flex; 
@@ -300,7 +281,7 @@ include_once ('elements/header.php');
             justify-content: space-between;
             font-size: .79rem; 
             font-weight: 600;
-            color: var(--muted); 
+            color: var(--zed-secondary); 
             margin-bottom: .4rem;
         }
         .prog-bar {
@@ -312,7 +293,7 @@ include_once ('elements/header.php');
         }
         .prog-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--red), #ff7070);
+            background: linear-gradient(90deg, var(--zed-primary), #ff7070);
             border-radius: 3px;
             width: 0;
             transition: width 1.2s cubic-bezier(.4,0,.2,1);
@@ -322,7 +303,7 @@ include_once ('elements/header.php');
         .btn-module {
             display: block; 
             width: 100%;
-            background: var(--red); 
+            background: var(--zed-primary); 
             color: #fff;
             border: none; 
             border-radius: 12px;
@@ -337,7 +318,7 @@ include_once ('elements/header.php');
             box-shadow: 0 6px 20px rgba(232,17,26,.22);
         }
         .btn-module:hover {
-            background: var(--red-dark); 
+            background: var(--zed-primary-hover); 
             color: #fff;
             transform: translateY(-2px);
             box-shadow: 0 10px 28px rgba(232,17,26,.33);
@@ -345,7 +326,7 @@ include_once ('elements/header.php');
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ MARQUEE ━━━━ */
         .marquee-band {
-            background: var(--dark);
+            background: var(--zed-dark-text);
             padding: 3rem 0;
             overflow: hidden;
         }
@@ -373,13 +354,13 @@ include_once ('elements/header.php');
             flex-shrink: 0;
             transition: background .25s;
         }
-        .mq-tag i { color: var(--red); font-size: .72rem; }
+        .mq-tag i { color: var(--zed-primary); font-size: .72rem; }
         @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ TOPIC CARDS ━━━ */
         .topic-card {
-            background: var(--white);
-            border: 1.5px solid var(--border);
+            background: var(--zed-light-bg);
+            border: 1.5px solid var(--zed-border-color);
             border-radius: 18px;
             padding: 1.5rem;
             height: 100%;
@@ -405,13 +386,13 @@ include_once ('elements/header.php');
         .topic-card h5 {
             font-size: 1.02rem; 
             font-weight: 800;
-            color: var(--dark); 
+            color: var(--zed-dark-text); 
             margin-bottom: .35rem;
             letter-spacing: -.015em;
         }
         .topic-card .tdesc {
             font-size: .81rem; 
-            color: var(--muted);
+            color: var(--zed-secondary);
             line-height: 1.6; 
             margin-bottom: .9rem;
         }
@@ -439,7 +420,7 @@ include_once ('elements/header.php');
         }
     
         /* color palette */
-        .ic-red    { background: rgba(232,17,26,.1);    color: var(--red); }
+        .ic-red    { background: rgba(232,17,26,.1);    color: var(--zed-primary); }
         .ic-blue   { background: rgba(59,130,246,.1);   color: #3b82f6; }
         .ic-green  { background: rgba(34,197,94,.1);    color: #16a34a; }
         .ic-gold   { background: rgba(234,179,8,.1);    color: #ca8a04; }
@@ -449,7 +430,7 @@ include_once ('elements/header.php');
         .ic-sky    { background: rgba(14,165,233,.1);   color: #0284c7; }
         .ic-rose   { background: rgba(244,63,94,.1);    color: #e11d48; }
     
-        .cp-red    { background: rgba(232,17,26,.08);   color: var(--red);   border:1px solid rgba(232,17,26,.18); }
+        .cp-red    { background: rgba(232,17,26,.08);   color: var(--zed-primary);   border:1px solid rgba(232,17,26,.18); }
         .cp-blue   { background: rgba(59,130,246,.08);  color: #3b82f6;  border:1px solid rgba(59,130,246,.18); }
         .cp-green  { background: rgba(34,197,94,.08);   color: #16a34a;  border:1px solid rgba(34,197,94,.18); }
         .cp-gold   { background: rgba(234,179,8,.08);   color: #ca8a04;  border:1px solid rgba(234,179,8,.18); }
@@ -461,22 +442,23 @@ include_once ('elements/header.php');
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ WHY DARK ━━━━ */
         .why-card {
-            background: rgba(255,255,255,.04);
-            border: 1px solid rgba(255,255,255,.07);
-            border-radius: 16px;
-            padding: 1.6rem;
-            transition: background .3s, border-color .3s, transform .3s;
+          background: rgba(255, 255, 255, .04);
+          border: 1px solid rgba(255, 255, 255, .07);
+          border-radius: 16px;
+          padding: 1.6rem;
+          transition: background .3s, border-color .3s, transform .3s
         }
+
         .why-card:hover {
-            background: rgba(255,255,255,.07);
-            border-color: rgba(232,17,26,.3);
-            transform: translateY(-4px);
+          background: rgba(255, 255, 255, .07);
+          border-color: var(--zed-primary-hover);
+          transform: translateY(-4px)
         }
         .why-icon {
             width: 46px; 
             height: 46px;
             background: rgba(232,17,26,.14);
-            color: var(--red); 
+            color: var(--zed-primary); 
             border-radius: 12px;
             display: flex; 
             align-items: center; 
@@ -493,18 +475,18 @@ include_once ('elements/header.php');
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ TESTIMONIALS ━━━ */
         .t-card {
-            background: var(--white);
-            border: 1.5px solid var(--border);
+            background: var(--zed-light-bg);
+            border: 1.5px solid var(--zed-border-color);
             border-radius: 18px;
             padding: 1.8rem;
             height: 100%;
             transition: transform .3s, box-shadow .3s;
         }
         .t-card:hover { transform: translateY(-5px); box-shadow: 0 18px 48px rgba(0,0,0,.08); }
-        .stars { color: var(--red); font-size: .88rem; margin-bottom: .8rem; }
+        .stars { color: var(--zed-primary); font-size: .88rem; margin-bottom: .8rem; }
         .t-card q {
             font-size: .88rem; 
-            color: var(--mid);
+            color: var(--zed-dark-text);
             line-height: 1.72; 
             font-style: italic;
             display: block; 
@@ -514,7 +496,7 @@ include_once ('elements/header.php');
         .t-av {
             width: 40px; 
             height: 40px;
-            background: var(--red); 
+            background: var(--zed-primary); 
             color: #fff;
             border-radius: 50%;
             display: flex; 
@@ -523,12 +505,12 @@ include_once ('elements/header.php');
             font-weight: 800; 
             font-size: .88rem;
         }
-        .t-name { font-weight: 700; font-size: .86rem; color: var(--dark); }
-        .t-role { font-size: .74rem; color: var(--muted); }
+        .t-name { font-weight: 700; font-size: .86rem; color: var(--zed-dark-text); }
+        .t-role { font-size: .74rem; color: var(--zed-secondary); }
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ CTA BAND ━━━━ */
         .cta-band {
-            background: var(--red);
+            background: var(--zed-primary);
             padding: 72px 0;
             text-align: center;
             position: relative; overflow: hidden;
@@ -551,7 +533,7 @@ include_once ('elements/header.php');
         .cta-band p { color: rgba(255,255,255,.72); max-width: 460px; margin: .9rem auto 2rem; position: relative; z-index:1; }
         .btn-white {
             background: #fff; 
-            color: var(--red);
+            color: var(--zed-primary);
             border: none; 
             border-radius: 50px;
             font-size: .95rem; 
@@ -561,11 +543,12 @@ include_once ('elements/header.php');
             transition: transform .2s, box-shadow .25s;
             position: relative; 
             z-index: 1;
+            text-decoration: none;
         }
         .btn-white:hover {
             transform: translateY(-3px);
             box-shadow: 0 14px 36px rgba(0,0,0,.2);
-            color: var(--red);
+            color: var(--zed-primary);
         }
     
         /* ━━━━━━━━━━━━━━━━━━━━━━━━━ SCROLL REVEAL ━━━ */
@@ -582,8 +565,8 @@ include_once ('elements/header.php');
     
         /* scrollbar */
         ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+        ::-webkit-scrollbar-track { background: var(--zed-banner-bg-start); }
+        ::-webkit-scrollbar-thumb { background: var(--zed-primary); border-radius: 3px; }
     </style>
 
     <!-- ─── HERO ─────────────────────────────────────────────── -->

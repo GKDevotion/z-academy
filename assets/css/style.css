@@ -1,7 +1,8 @@
 /* Define custom CSS variables for easy branding updates */
 :root {
     --zed-primary: #ff0000; /* Example Primary Blue - REPLACE with ZedCapital's Brand Primary Color */
-    --zed-primary-hover: #e70c0c;
+    --zed-primary-hover: #b80d14;
+    /* e70c0c; */
     --zed-light-red-hover: #ffb5b5;
     --zed-secondary: #777; /* Example Secondary Grey */
     --zed-backgound-color: #f7f7f7;
