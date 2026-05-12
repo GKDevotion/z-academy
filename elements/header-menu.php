@@ -49,7 +49,7 @@
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-ai-machine-learning">AI & Machine Learning</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-crypto-currency">Crypto Currency</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-financial">Financial</a></li>
-                        <li class="nav-item"><a class="nav-link dropdown-item" href="webinar-topic-products">Products</a></li>
+                        <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-products">Products</a></li>
                         <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-forex">Forex</a></li>
                         <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-metal">Metal</a></li>
                         <li class="nav-item d-none"><a class="nav-link dropdown-item" href="webinar-topic-commodities">Commodities</a></li>

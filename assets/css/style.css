@@ -21,12 +21,32 @@
     --zed-success-hover: #19b57c;
     --float-distance: 14px;   /* how far it moves up/down */
     --float-duration: 4.5s;   /* how slow/fast the loop is */
+    --gold: #c9a84c;
+    /* f0a500; */
+    --blue: #2563eb;
+    --purple: #7c3aed;
+    --teal: #0891b2;
+    --green: #10b981;
+    --navy: #1a2e5a;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: var(--zed-light-red-hover)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--zed-primary);
+    border-radius: 3px
 }
 
 .bg-danger{
