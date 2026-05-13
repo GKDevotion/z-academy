@@ -2,2471 +2,1556 @@
 include_once ('elements/header.php');
 ?>
  
-    <style>
-        :root {
-        --red: #E8111A;
-        --red-d: #c00d14;
-        --red-g: rgba(232, 17, 26, .12);
-        --dark: #111111;
-        --mid: #2a2a2a;
-        --muted: #888;
-        --bg: #ffffff;
-        --bg2: #f8f7f3;
-        --bg3: #f2f0eb;
-        --border: #e8e6e0;
-        --border2: #d4d0c8;
-        --green: #059669;
-        --blue: #2563eb;
-        --amber: #d97706;
-        --purple: #7c3aed;
-        --teal: #0891b2;
-        --serif: 'Poppins', serif;
-        --sans: 'Poppins', sans-serif;
-        }
-
-        /* ── NAVBAR ─────────────────────────────── */
-        .top-nav {
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            background: rgba(255, 255, 255, .96);
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid var(--border);
-            transition: box-shadow .3s
-        }
-
-        .top-nav.raised {
-        box-shadow: 0 4px 24px rgba(0, 0, 0, .07)
-        }
-
-        .brand {
-        font-family: var(--serif);
-        font-size: 1.4rem;
-        color: var(--dark) !important
-        }
-
-        .brand span {
-        color: var(--red)
-        }
-
-        .nav-link {
-        font-size: .83rem;
-        font-weight: 600;
-        color: var(--muted) !important;
-        padding: .45rem .8rem !important;
-        position: relative;
-        transition: color .2s
-        }
-
-        .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: .8rem;
-        right: .8rem;
-        height: 2px;
-        background: var(--red);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform .25s
-        }
-
-        .nav-link:hover {
-        color: var(--dark) !important
-        }
-
-        .nav-link:hover::after {
-        transform: scaleX(1)
-        }
-
-        /* page tabs in nav */
-        .page-nav {
-        display: flex;
-        gap: .25rem;
-        align-items: center
-        }
-
-        .pnav-btn {
-        background: transparent;
-        border: 1.5px solid var(--border);
-        color: var(--muted);
-        font-size: .78rem;
-        font-weight: 700;
-        padding: .38rem .9rem;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all .25s;
-        white-space: nowrap
-        }
-
-        .pnav-btn:hover {
-        border-color: rgba(232, 17, 26, .35);
-        color: var(--dark)
-        }
-
-        .pnav-btn.active {
-        background: var(--red);
-        border-color: var(--red);
-        color: #fff;
-        box-shadow: 0 4px 14px var(--red-g)
-        }
-
-        .pill-btn {
-        background: var(--red);
-        color: #fff;
-        border: none;
-        border-radius: 50px;
-        font-size: .8rem;
-        font-weight: 700;
-        padding: .5rem 1.3rem;
-        box-shadow: 0 5px 16px var(--red-g);
-        transition: background .25s, transform .15s
-        }
-
-        .pill-btn:hover {
-        background: var(--red-d);
-        color: #fff;
-        transform: translateY(-1px)
-        }
-
-        /* ── PAGES SYSTEM ───────────────────────── */
-        .page {
-        display: none
-        }
-
-        .page.active {
-        display: block
-        }
-
-        /* ── HERO ───────────────────────────────── */
-        .hero {
-        padding: 88px 0 64px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        background: var(--bg)
-        }
-
-        .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0, 0, 0, .022) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0, 0, 0, .022) 40px);
-        pointer-events: none
-        }
-
-        .hero-glow {
-        position: absolute;
-        top: -60px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 600px;
-        height: 320px;
-        background: radial-gradient(ellipse at center, rgba(232, 17, 26, .07) 0%, transparent 70%);
-        pointer-events: none
-        }
-
-        .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        background: rgba(232, 17, 26, .08);
-        border: 1px solid rgba(232, 17, 26, .22);
-        color: var(--red);
-        font-size: .68rem;
-        font-weight: 700;
-        letter-spacing: .15em;
-        text-transform: uppercase;
-        padding: .34rem 1rem;
-        border-radius: 50px;
-        margin-bottom: 1.4rem;
-        animation: dropIn .55s ease both
-        }
-
-        .hero h1 {
-        font-family: var(--serif);
-        font-size: clamp(2.6rem, 6.5vw, 5rem);
-        color: var(--dark);
-        line-height: 1.04;
-        animation: riseUp .7s .1s ease both
-        }
-
-        .hero h1 em {
-        font-style: normal;
-        color: var(--red)
-        }
-
-        .hero p.tagline {
-        font-size: 1.02rem;
-        color: var(--muted);
-        max-width: 580px;
-        margin: 1.1rem auto 2.1rem;
-        line-height: 1.65;
-        animation: riseUp .7s .2s ease both
-        }
-
-        .hero-btns {
-        animation: riseUp .7s .3s ease both
-        }
-
-        .btn-hero {
-        background: var(--red);
-        color: #fff;
-        border: none;
-        border-radius: 50px;
-        font-size: .92rem;
-        font-weight: 700;
-        padding: .9rem 2.6rem;
-        box-shadow: 0 8px 28px var(--red-g);
-        transition: background .25s, transform .2s
-        }
-
-        .btn-hero:hover {
-        background: var(--red-d);
-        color: #fff;
-        transform: translateY(-2px)
-        }
-
-        .btn-outline-hero {
-        background: transparent;
-        color: var(--mid);
-        border: 1.5px solid var(--border2);
-        border-radius: 50px;
-        font-size: .92rem;
-        font-weight: 600;
-        padding: .9rem 2.2rem;
-        transition: border-color .25s, background .25s, color .25s
-        }
-
-        .btn-outline-hero:hover {
-        border-color: var(--dark);
-        background: var(--dark);
-        color: #fff
-        }
-
-        /* stat strip */
-        .stat-strip {
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem;
-        flex-wrap: wrap;
-        margin-top: 2.6rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--border);
-        animation: riseUp .7s .4s ease both
-        }
-
-        .ss .num {
-        font-family: var(--serif);
-        font-size: 1.8rem;
-        color: var(--dark)
-        }
-
-        .ss .num span {
-        color: var(--red)
-        }
-
-        .ss .lbl {
-        font-size: .68rem;
-        font-weight: 600;
-        color: var(--muted);
-        letter-spacing: .09em;
-        text-transform: uppercase
-        }
-
-        /* page hero variants */
-        .hero-sm {
-        padding: 64px 0 44px
-        }
-
-        @keyframes dropIn {
-        from {
-            opacity: 0;
-            transform: translateY(-12px)
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0)
-        }
-        }
-
-        @keyframes riseUp {
-        from {
-            opacity: 0;
-            transform: translateY(26px)
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0)
-        }
-        }
-
-        /* ── SECTION ────────────────────────────── */
-        .sec {
-        padding: 80px 0;
-        position: relative;
-        z-index: 1
-        }
-
-        .sec-alt {
-        background: var(--bg2)
-        }
-
-        .sec-dark {
-        background: var(--dark)
-        }
-
-        .sec-red {
-        background: var(--red)
-        }
-
-        .hdiv {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--border), transparent)
-        }
-
-        .eyebrow {
-        display: inline-block;
-        font-size: .68rem;
-        font-weight: 700;
-        letter-spacing: .18em;
-        text-transform: uppercase;
-        color: var(--red);
-        margin-bottom: .6rem
-        }
-
-        .sec-h {
-        font-family: var(--serif);
-        font-size: clamp(1.75rem, 3.8vw, 2.7rem);
-        color: var(--dark);
-        line-height: 1.1
-        }
-
-        .sec-dark .sec-h {
-        color: #fff
-        }
-
-        .sec-red .sec-h {
-        color: #fff
-        }
-
-        .sec-p {
-        font-size: .9rem;
-        color: var(--muted);
-        max-width: 460px;
-        line-height: 1.68
-        }
-
-        .sec-dark .sec-p {
-        color: rgba(255, 255, 255, .45)
-        }
-
-        .sec-red .sec-p {
-        color: rgba(255, 255, 255, .75)
-        }
-
-        /* ── MODULE CARDS ───────────────────────── */
-        .mod-card {
-        background: var(--bg);
-        border: 1.5px solid var(--border);
-        border-radius: 16px;
-        padding: 1.6rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        overflow: hidden;
-        transition: transform .38s cubic-bezier(.2, .8, .2, 1), box-shadow .38s, border-color .3s;
-        }
-
-        .mod-card::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        background: var(--clr, var(--red));
-        transform: scaleY(0);
-        transform-origin: bottom;
-        transition: transform .35s ease
-        }
-
-        .mod-card:hover {
-        transform: translateY(-7px);
-        box-shadow: 0 20px 52px rgba(0, 0, 0, .08);
-        border-color: var(--clr-b, rgba(232, 17, 26, .25))
-        }
-
-        .mod-card:hover::before {
-        transform: scaleY(1)
-        }
-
-        .mod-icon-wrap {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        margin-bottom: .9rem;
-        flex-shrink: 0
-        }
-
-        .mod-card h5 {
-        font-family: var(--serif);
-        font-size: 1.08rem;
-        color: var(--dark);
-        margin-bottom: .35rem
-        }
-
-        .mod-card .mod-sub {
-        font-size: .81rem;
-        color: var(--muted);
-        line-height: 1.6;
-        margin-bottom: .95rem;
-        flex: 1
-        }
-
-        .mod-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 1.1rem
-        }
-
-        .mod-list li {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        font-size: .8rem;
-        color: #555;
-        padding: .28rem 0;
-        border-bottom: 1px solid rgba(0, 0, 0, .04)
-        }
-
-        .mod-list li:last-child {
-        border: none
-        }
-
-        .mod-list li i {
-        font-size: .58rem;
-        color: var(--red);
-        flex-shrink: 0
-        }
-
-        .mod-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: .75rem;
-        border-top: 1px solid var(--border);
-        margin-top: auto
-        }
-
-        .mod-badge {
-        font-size: .65rem;
-        font-weight: 700;
-        letter-spacing: .09em;
-        text-transform: uppercase;
-        padding: .2rem .65rem;
-        border-radius: 50px
-        }
-
-        .btn-mod {
-        font-size: .72rem;
-        font-weight: 700;
-        color: var(--red);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: .3rem;
-        transition: gap .2s
-        }
-
-        .btn-mod:hover {
-        gap: .6rem;
-        color: var(--red-d)
-        }
-
-        /* ── FULL-WIDTH CARD ────────────────────── */
-        .full-card {
-        background: linear-gradient(135deg, var(--bg2) 0%, rgba(232, 17, 26, .04) 100%);
-        border: 1.5px solid rgba(232, 17, 26, .18);
-        border-radius: 18px;
-        padding: 2.4rem 2.8rem;
-        position: relative;
-        overflow: hidden;
-        transition: transform .3s, box-shadow .3s
-        }
-
-        .full-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 52px rgba(0, 0, 0, .08)
-        }
-
-        .full-card::after {
-        content: '';
-        position: absolute;
-        bottom: -60px;
-        right: -60px;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(232, 17, 26, .08) 0%, transparent 70%)
-        }
-
-        .full-badge {
-        display: inline-block;
-        background: var(--red);
-        color: #fff;
-        font-size: .68rem;
-        font-weight: 700;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-        padding: .28rem .8rem;
-        border-radius: 50px;
-        margin-bottom: .9rem
-        }
-
-        /* ── MARQUEE ────────────────────────────── */
-        .mq-band {
-        background: var(--dark);
-        padding: 2.4rem 0;
-        overflow: hidden
-        }
-
-        .mq-row {
-        overflow: hidden
-        }
-
-        .mq-row+.mq-row {
-        margin-top: .7rem
-        }
-
-        .mq-track {
-        display: flex;
-        gap: 1rem;
-        width: max-content;
-        animation: mqRun 22s linear infinite
-        }
-
-        .mq-track.rev {
-        animation-direction: reverse;
-        animation-duration: 19s
-        }
-
-        .mq-tag {
-        display: flex;
-        align-items: center;
-        gap: .45rem;
-        background: rgba(255, 255, 255, .05);
-        border: 1px solid rgba(255, 255, 255, .07);
-        color: rgba(255, 255, 255, .55);
-        border-radius: 50px;
-        padding: .4rem 1.1rem;
-        font-size: .77rem;
-        font-weight: 600;
-        white-space: nowrap;
-        flex-shrink: 0
-        }
-
-        .mq-tag i {
-        color: var(--red);
-        font-size: .68rem
-        }
-
-        @keyframes mqRun {
-        from {
-            transform: translateX(0)
-        }
-
-        to {
-            transform: translateX(-50%)
-        }
-        }
-
-        /* ── FEATURE CARDS ─────────────────────── */
-        .feat-card {
-        background: var(--bg);
-        border: 1.5px solid var(--border);
-        border-radius: 14px;
-        padding: 1.5rem;
-        height: 100%;
-        transition: transform .3s, box-shadow .3s, border-color .3s
-        }
-
-        .feat-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 16px 44px rgba(0, 0, 0, .08);
-        border-color: rgba(232, 17, 26, .22)
-        }
-
-        .feat-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        margin-bottom: .85rem
-        }
-
-        .feat-card h6 {
-        font-family: var(--serif);
-        font-size: .97rem;
-        color: var(--dark);
-        margin-bottom: .3rem
-        }
-
-        .feat-card p {
-        font-size: .8rem;
-        color: var(--muted);
-        margin: 0;
-        line-height: 1.62
-        }
-
-        /* ── WHY DARK CARDS ─────────────────────── */
-        .why-card {
-        background: rgba(255, 255, 255, .04);
-        border: 1px solid rgba(255, 255, 255, .07);
-        border-radius: 14px;
-        padding: 1.5rem;
-        transition: background .3s, border-color .3s, transform .3s
-        }
-
-        .why-card:hover {
-        background: rgba(255, 255, 255, .07);
-        border-color: rgba(232, 17, 26, .25);
-        transform: translateY(-4px)
-        }
-
-        .why-icon {
-        width: 44px;
-        height: 44px;
-        background: rgba(232, 17, 26, .12);
-        color: var(--red);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        margin-bottom: .85rem
-        }
-
-        .why-card h6 {
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: .3rem;
-        font-size: .92rem
-        }
-
-        .why-card p {
-        font-size: .8rem;
-        color: rgba(255, 255, 255, .38);
-        margin: 0;
-        line-height: 1.62
-        }
-
-        /* ── TESTIMONIALS ───────────────────────── */
-        .t-card {
-        background: var(--bg);
-        border: 1.5px solid var(--border);
-        border-radius: 14px;
-        padding: 1.8rem;
-        height: 100%;
-        transition: transform .3s, box-shadow .3s
-        }
-
-        .t-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 16px 44px rgba(0, 0, 0, .08)
-        }
-
-        .stars {
-        color: var(--red);
-        font-size: .85rem;
-        margin-bottom: .75rem
-        }
-
-        .t-card q {
-        font-size: .87rem;
-        color: var(--mid);
-        line-height: 1.72;
-        font-style: italic;
-        display: block;
-        margin-bottom: 1.1rem
-        }
-
-        .t-av {
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-        background: var(--red);
-        color: #fff;
-        font-weight: 700;
-        font-size: .8rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0
-        }
-
-        .t-name {
-        font-weight: 700;
-        font-size: .84rem;
-        color: var(--dark)
-        }
-
-        .t-role {
-        font-size: .72rem;
-        color: var(--muted)
-        }
-
-        /* ── ACCORDION ──────────────────────────── */
-        .faq-item {
-        border: 1.5px solid var(--border);
-        border-radius: 12px;
-        margin-bottom: .6rem;
-        overflow: hidden;
-        transition: border-color .25s
-        }
-
-        .faq-item:hover {
-        border-color: rgba(232, 17, 26, .25)
-        }
-
-        .faq-q {
-        background: var(--bg);
-        border: none;
-        width: 100%;
-        text-align: left;
-        padding: 1.1rem 1.3rem;
-        font-family: var(--sans);
-        font-size: .9rem;
-        font-weight: 700;
-        color: var(--dark);
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: .8rem;
-        transition: background .2s
-        }
-
-        .faq-q:hover {
-        background: var(--bg2)
-        }
-
-        .faq-q i {
-        color: var(--red);
-        flex-shrink: 0;
-        transition: transform .3s
-        }
-
-        .faq-q[aria-expanded="true"] i {
-        transform: rotate(45deg)
-        }
-
-        .faq-body {
-        font-size: .84rem;
-        color: var(--muted);
-        line-height: 1.7;
-        padding: 0 1.3rem 1.1rem
-        }
-
-        /* ── TAX CALCULATOR ─────────────────────── */
-        .calc-wrap {
-        background: var(--bg2);
-        border: 1.5px solid var(--border);
-        border-radius: 16px;
-        padding: 2rem
-        }
-
-        .calc-label {
-        font-size: .72rem;
-        font-weight: 700;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: .4rem;
-        display: block
-        }
-
-        .calc-input,
-        .calc-select {
-        background: var(--bg);
-        border: 1.5px solid var(--border);
-        border-radius: 8px;
-        padding: .65rem .9rem;
-        font-size: .9rem;
-        color: var(--dark);
-        width: 100%;
-        outline: none;
-        transition: border-color .2s;
-        font-family: var(--sans)
-        }
-
-        .calc-input:focus,
-        .calc-select:focus {
-        border-color: var(--red);
-        box-shadow: 0 0 0 3px var(--red-g)
-        }
-
-        .calc-input::placeholder {
-        color: var(--muted)
-        }
-
-        .btn-calc {
-        background: var(--red);
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: .88rem;
-        padding: .8rem 2rem;
-        transition: background .25s, transform .15s;
-        cursor: pointer;
-        width: 100%
-        }
-
-        .btn-calc:hover {
-        background: var(--red-d);
-        transform: translateY(-1px)
-        }
-
-        .result-box {
-        background: var(--bg);
-        border: 1.5px solid var(--border);
-        border-radius: 10px;
-        padding: 1.2rem;
-        margin-top: 1.2rem
-        }
-
-        .result-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: .5rem 0;
-        border-bottom: 1px solid var(--border)
-        }
-
-        .result-row:last-child {
-        border: none
-        }
-
-        .result-row .label {
-        font-size: .82rem;
-        color: var(--muted)
-        }
-
-        .result-row .value {
-        font-size: .9rem;
-        font-weight: 700;
-        color: var(--dark)
-        }
-
-        .result-row .value.tax {
-        color: var(--red)
-        }
-
-        .result-row .value.net {
-        color: var(--green)
-        }
-
-        /* ── TIMELINE ───────────────────────────── */
-        .timeline {
-        position: relative;
-        padding-left: 2.5rem
-        }
-
-        .timeline::before {
-        content: '';
-        position: absolute;
-        left: .7rem;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(180deg, var(--red), rgba(232, 17, 26, .1))
-        }
-
-        .tl-item {
-        position: relative;
-        padding-bottom: 2rem
-        }
-
-        .tl-item:last-child {
-        padding-bottom: 0
-        }
-
-        .tl-dot {
-        position: absolute;
-        left: -1.8rem;
-        top: .2rem;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: var(--red);
-        border: 3px solid var(--bg);
-        box-shadow: 0 0 0 2px var(--red)
-        }
-
-        .tl-date {
-        font-size: .7rem;
-        font-weight: 700;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        color: var(--red);
-        margin-bottom: .35rem
-        }
-
-        .tl-title {
-        font-family: var(--serif);
-        font-size: 1rem;
-        color: var(--dark);
-        margin-bottom: .3rem
-        }
-
-        .tl-desc {
-        font-size: .82rem;
-        color: var(--muted);
-        line-height: 1.6
-        }
-
-        /* ── STEP CARDS ─────────────────────────── */
-        .step-card {
-        background: var(--bg);
-        border: 1.5px solid var(--border);
-        border-radius: 14px;
-        padding: 1.4rem;
-        position: relative;
-        transition: transform .3s, box-shadow .3s, border-color .3s
-        }
-
-        .step-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, .07);
-        border-color: rgba(232, 17, 26, .22)
-        }
-
-        .step-num {
-        position: absolute;
-        top: -14px;
-        left: 1.2rem;
-        width: 28px;
-        height: 28px;
-        background: var(--red);
-        color: #fff;
-        border-radius: 50%;
-        font-size: .75rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px var(--red-g)
-        }
-
-        .step-card h6 {
-        font-family: var(--serif);
-        font-size: .97rem;
-        color: var(--dark);
-        margin-bottom: .35rem
-        }
-
-        .step-card p {
-        font-size: .8rem;
-        color: var(--muted);
-        margin: 0;
-        line-height: 1.6
-        }
-
-        /* ── CTA ────────────────────────────────── */
-        .cta-band {
-        padding: 72px 0;
-        text-align: center;
-        position: relative;
-        overflow: hidden
-        }
-
-        .cta-band::before,
-        .cta-band::after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, .06)
-        }
-
-        .cta-band::before {
-        width: 400px;
-        height: 400px;
-        top: -150px;
-        left: -100px
-        }
-
-        .cta-band::after {
-        width: 320px;
-        height: 320px;
-        bottom: -120px;
-        right: -80px
-        }
-
-        .cta-band h2 {
-        font-family: var(--serif);
-        font-size: clamp(2rem, 5vw, 3.1rem);
-        color: #fff;
-        position: relative;
-        z-index: 1
-        }
-
-        .cta-band p {
-        color: rgba(255, 255, 255, .7);
-        max-width: 460px;
-        margin: .8rem auto 2rem;
-        position: relative;
-        z-index: 1
-        }
-
-        .btn-white {
-        background: #fff;
-        color: var(--red);
-        border: none;
-        border-radius: 50px;
-        font-size: .9rem;
-        font-weight: 700;
-        padding: .85rem 2.4rem;
-        transition: transform .2s, box-shadow .25s;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        position: relative;
-        z-index: 1
-        }
-
-        .btn-white:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, .2);
-        color: var(--red)
-        }
-
-        .btn-outline-white {
-        background: transparent;
-        color: #fff;
-        border: 1.5px solid rgba(255, 255, 255, .35);
-        border-radius: 50px;
-        font-size: .9rem;
-        font-weight: 600;
-        padding: .85rem 2rem;
-        transition: border-color .25s, background .25s;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        position: relative;
-        z-index: 1
-        }
-
-        .btn-outline-white:hover {
-        border-color: #fff;
-        background: rgba(255, 255, 255, .1);
-        color: #fff
-        }
-
-        /* ── FOOTER ─────────────────────────────── */
-        .footer {
-        background: #0a0a0a;
-        border-top: 1px solid rgba(255, 255, 255, .06);
-        padding: 3rem 0 2rem
-        }
-
-        .footer-brand {
-        font-family: var(--serif);
-        font-size: 1.5rem;
-        color: #fff
-        }
-
-        .footer-brand span {
-        color: var(--red)
-        }
-
-        .footer-p {
-        font-size: .82rem;
-        color: rgba(255, 255, 255, .32);
-        line-height: 1.7;
-        margin: .7rem 0 0
-        }
-
-        .footer-head {
-        font-size: .72rem;
-        font-weight: 700;
-        letter-spacing: .14em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, .45);
-        margin-bottom: .85rem
-        }
-
-        .footer-link {
-        font-size: .83rem;
-        color: rgba(255, 255, 255, .38);
-        text-decoration: none;
-        display: block;
-        margin-bottom: .45rem;
-        transition: color .2s
-        }
-
-        .footer-link:hover {
-        color: rgba(255, 255, 255, .75)
-        }
-
-        .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, .06);
-        padding-top: 1.5rem;
-        margin-top: 2rem;
-        font-size: .76rem;
-        color: rgba(255, 255, 255, .22);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: .5rem
-        }
-
-        .footer-bottom span {
-        color: var(--red)
-        }
-
-        /* ── REVEAL ─────────────────────────────── */
-        .rv {
+  <style>
+    
+    /* ── PAGE SYSTEM ── */
+    .page {
+      animation: fadeIn .35s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
         opacity: 0;
-        transform: translateY(24px);
-        transition: opacity .65s ease, transform .65s ease
-        }
+        transform: translateY(10px)
+      }
 
-        .rv.in {
+      to {
         opacity: 1;
         transform: translateY(0)
-        }
+      }
+    }
 
-        .rv-d1 {
-        transition-delay: .07s
-        }
+    /* ── HERO (shared) ── */
+    .page-hero {
+      padding: 72px 0 56px;
+      position: relative;
+      overflow: hidden;
+      background: var(--zed-card-bg);
+    }
 
-        .rv-d2 {
-        transition-delay: .14s
-        }
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--zed-banner-bg-end);
+      pointer-events: none;
+    }
 
-        .rv-d3 {
-        transition-delay: .21s
-        }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--zed-primary);
+      border: 1px solid rgba(224, 43, 32, .2);
+      border-radius: 20px;
+      padding: 5px 16px;
+      margin-bottom: 20px;
+    }
 
-        .rv-d4 {
-        transition-delay: .28s
-        }
+    .hero-tag .blink {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--zed-primary);
+      animation: blink 1.2s ease-in-out infinite;
+    }
 
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .3
+      }
+    }
+
+    .hero-h {
+      
+      font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--zed-dark-text);
+      margin-bottom: 18px;
+    }
+
+    .hero-h em {
+      font-style: italic;
+      color: var(--zed-primary);
+    }
+
+    .hero-sub {
+      font-size: .95rem;
+      color: var(--zed-secondary);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+
+    .stat-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      border: 1px solid var(--zed-banner-bg-end);
+      border-radius: 10px;
+      max-width: 680px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .sstat {
+      flex: 1;
+      min-width: 110px;
+      padding: 18px 12px;
+      text-align: center;
+      border-right: 1px solid var(--zed-banner-bg-end);
+      transition: background .2s;
+    }
+
+    .sstat:last-child {
+      border-right: none;
+    }
+
+    .sstat:hover {
+      background: var(--zed-light-red-hover);
+    }
+
+    .sstat-n {
+      
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--zed-primary);
+      line-height: 1;
+    }
+
+    .sstat-l {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--zed-secondary);
+      margin-top: 3px;
+    }
+
+    /* ── SECTION LABELS ── */
+    .s-over {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--zed-primary);
+      margin-bottom: 6px;
+    }
+
+    .s-h {
+      
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--zed-dark-text);
+    }
+
+    .s-h em {
+      font-style: italic;
+      color: var(--zed-primary);
+    }
+
+    .s-rule {
+      width: 40px;
+      height: 2px;
+      background: var(--zed-primary);
+      margin: 12px auto 0;
+    }
+
+    /* ── MODULE CARDS ── */
+    .mcard {
+      background: var(--zed-card-bg);
+      border: 1px solid var(--zed-banner-bg-end);
+      border-radius: 14px;
+      padding: 28px 24px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      height: 100%;
+    }
+
+    .mcard::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--ac-glow, var(--zed-light-red-hover)) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .mcard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .08);
+      border-color: var(--ac, var(--zed-primary));
+    }
+
+    .mcard-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--ac, var(--zed-primary));
+      border-radius: 14px 14px 0 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .mcard:hover .mcard-accent {
+      transform: scaleX(1);
+    }
+
+    .mcard-num {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--zed-banner-bg-end);
+      line-height: 1;
+      transition: color .3s;
+      user-select: none;
+    }
+
+    .mcard:hover .mcard-num {
+      color: var(--ac-glow, var(--zed-light-red-hover));
+    }
+
+    .mcard-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      background: var(--icon-bg, var(--zed-primary-hover));
+      color: var(--ac, var(--zed-primary));
+    }
+
+    .mcard-tag {
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ac, var(--zed-primary));
+      margin-bottom: 5px;
+    }
+
+    .mcard-title {
+      
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--zed-dark-text);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .mcard-desc {
+      font-size: .79rem;
+      color: var(--zed-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .topic-li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: .78rem;
+      color: var(--zed-dark-text);
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--zed-banner-bg-end);
+      transition: gap .2s;
+    }
+
+    .topic-li:last-child {
+      border-bottom: none;
+    }
+
+    .mcard:hover .topic-li {
+      gap: 12px;
+    }
+
+    .tdot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--ac, var(--zed-primary));
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .h-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      padding: 4px 12px;
+      border-radius: 4px;
+      border: 1px solid var(--ac, var(--zed-primary));
+      color: var(--ac, var(--zed-primary));
+      background: var(--icon-bg, var(--zed-primary-hover));
+      margin-top: 4px;
+    }
+
+    .prog-wrap {
+      height: 4px;
+      border-radius: 2px;
+      background: var(--zed-banner-bg-end);
+      margin-top: 14px;
+      overflow: hidden;
+    }
+
+    .prog-bar {
+      height: 100%;
+      border-radius: 2px;
+      background: var(--ac, var(--zed-primary));
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: progFill 1.3s .2s ease forwards;
+    }
+
+    @keyframes progFill {
+      to {
+        transform: scaleX(1)
+      }
+    }
+
+    .mcard-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--zed-banner-bg-end);
+      margin-top: 16px;
+    }
+
+    .foot-chips {
+      display: flex;
+      gap: 10px;
+    }
+
+    .fchip {
+      font-size: .67rem;
+      color: var(--zed-secondary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .fchip i {
+      font-size: .6rem;
+      color: var(--ac, var(--zed-primary));
+    }
+
+    .btn-go {
+      
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 5px;
+      background: var(--ac, var(--zed-primary));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity .2s, transform .15s;
+      white-space: nowrap;
+    }
+
+    .btn-go:hover {
+      opacity: .85;
+      transform: scale(.97);
+    }
+
+    /* ── DETAIL PAGE ── */
+    .detail-hero {
+      padding: 60px 0 50px;
+      background: var(--zed-card-back);
+      border-bottom: 1px solid var(--zed-banner-bg-end);
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--zed-secondary);
+      background: transparent;
+      border: 1px solid var(--zed-banner-bg-end);
+      border-radius: 5px;
+      padding: 7px 16px;
+      cursor: pointer;
+      transition: all .2s;
+      margin-bottom: 28px;
+    }
+
+    .back-btn:hover {
+      color: var(--zed-primary);
+      border-color: var(--zed-primary);
+    }
+
+    .detail-badge {
+      display: inline-block;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .detail-h {
+      
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--zed-dark-text);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .detail-h em {
+      font-style: italic;
+    }
+
+    .detail-desc {
+      font-size: .95rem;
+      color: var(--zed-secondary);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    /* Video grid */
+    .vcard {
+      background: var(--zed-card-bg);
+      border: 1px solid var(--zed-banner-bg-end);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+      cursor: pointer;
+    }
+
+    .vcard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .09);
+    }
+
+    .vthumb {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: var(--zed-banner-bg-start);
+      overflow: hidden;
+    }
+
+    .vanim {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      padding: 16px 12px 0;
+    }
+
+    .vbar {
+      flex: 1;
+      border-radius: 2px 2px 0 0;
+      animation: vbarAnim 2s ease-in-out infinite alternate;
+      min-height: 6px;
+    }
+
+    @keyframes vbarAnim {
+      from {
+        transform: scaleY(1)
+      }
+
+      to {
+        transform: scaleY(.35)
+      }
+    }
+
+    .voverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(255, 255, 255, .4));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vplay {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--ac, var(--zed-primary));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 28px var(--ac-glow, var(--zed-light-red-hover));
+      transition: transform .2s;
+    }
+
+    .vcard:hover .vplay {
+      transform: scale(1.12);
+    }
+
+    .vdur {
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      background: rgba(0, 0, 0, .65);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 12px;
+    }
+
+    .vstatus {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      padding: 3px 10px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .vbody {
+      padding: 16px;
+    }
+
+    .vcat {
+      font-size: .63rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .vtitle {
+      
+      font-size: .98rem;
+      font-weight: 700;
+      color: var(--zed-dark-text);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .vmeta {
+      font-size: .72rem;
+      color: var(--zed-secondary);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      transform: translateY(26px);
+      transition: opacity .48s ease, transform .48s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MISC */
+    section {
+      padding: 72px 0;
+    }
+
+    .bg2 {
+      background: var(--zed-card-back);
+    }
+
+
+    @media(max-width:576px) {
+      .stat-strip {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+      }
+
+      .sstat {
+        border-right: none;
+        border-bottom: 1px solid var(--zed-banner-bg-end);
+      }
+
+      .sstat:last-child {
+        border-bottom: none;
+      }
+
+      .nav-links {
+        gap: 2px;
+      }
+
+      .nav-link {
+        padding: 6px 8px;
+        font-size: .65rem;
+      }
+    }
   </style>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg top-nav py-2" id="mainNav">
-        <div class="container">
-        <a class="navbar-brand brand" href="#">Trader<span>Pro</span></a>
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navMenu"><i class="bi bi-list fs-3"></i></button>
-        <div class="collapse navbar-collapse" id="navMenu">
-            <!-- PAGE TABS -->
-            <div class="page-nav mx-auto flex-wrap gap-1 d-flex mt-3 mt-lg-0">
-            <button class="pnav-btn active" data-page="home"><i class="bi bi-house-fill me-1"></i>Home</button>
-            <button class="pnav-btn" data-page="basics"><i class="bi bi-book-fill me-1"></i>Tax Basics</button>
-            <button class="pnav-btn" data-page="modules"><i class="bi bi-grid-3x3-gap-fill me-1"></i>Modules</button>
-            <button class="pnav-btn" data-page="calculator"><i class="bi bi-calculator-fill me-1"></i>Calculator</button>
-            <button class="pnav-btn" data-page="itr"><i class="bi bi-file-earmark-text-fill me-1"></i>ITR Guide</button>
-            <button class="pnav-btn" data-page="faq"><i class="bi bi-question-circle-fill me-1"></i>FAQ</button>
-            </div>
-            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 ms-lg-3">
-            <a href="#" class="pill-btn" onclick="showPage('calculator')">Try Calculator</a>
-            </div>
-        </div>
-        </div>
-    </nav>
-  <!-- ════════════════════════════════════════ -->
-  <!-- PAGE 1: HOME ════════════════════════════ -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════ -->
   <div class="page active" id="page-home">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="container position-relative" style="z-index:1">
-        <div class="hero-badge"><i class="bi bi-receipt-cutoff"></i> Trading Tax Education 2026</div>
-        <h1>Webinar <em>Tax</em></h1>
-        <p class="tagline">Understand how taxes apply to trading and investing across different asset classes — stocks,
-          crypto, forex, F&O and commodities. Simplified for Indian traders.</p>
-        <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
-          <button class="btn-hero" onclick="showPage('modules')"><i class="bi bi-play-circle-fill me-2"></i>Explore
-            Modules</button>
-          <button class="btn-outline-hero" onclick="showPage('calculator')"><i class="bi bi-calculator me-2"></i>Tax
-            Calculator</button>
-        </div>
+    <!-- Hero -->
+    <div class="page-hero">
+      <div class="hero-ring" style="width:500px;height:500px;top:-200px;right:-150px;"></div>
+      <div class="hero-ring" style="width:250px;height:250px;top:-30px;right:100px;"></div>
+      <div class="container text-center position-relative">
+        <div class="hero-tag"><span class="blink"></span> FinTech Education · 2026</div>
+        <h1 class="hero-h">Webinar <em>Technology</em></h1>
+        <p class="hero-sub">Understand how modern technology powers trading platforms, financial markets, and the future
+          of FinTech.</p>
         <div class="stat-strip">
-          <div class="ss">
-            <div class="num">9<span>+</span></div>
-            <div class="lbl">Modules</div>
+          <div class="sstat">
+            <div class="sstat-n">9</div>
+            <div class="sstat-l">Modules</div>
           </div>
-          <div class="ss">
-            <div class="num">₹0<span>*</span></div>
-            <div class="lbl">Free Access</div>
+          <div class="sstat">
+            <div class="sstat-n">45+</div>
+            <div class="sstat-l">Topics</div>
           </div>
-          <div class="ss">
-            <div class="num">Live<span>.</span></div>
-            <div class="lbl">Q&A Sessions</div>
+          <div class="sstat">
+            <div class="sstat-n">24h</div>
+            <div class="sstat-l">Content</div>
           </div>
-          <div class="ss">
-            <div class="num">CA<span>+</span></div>
-            <div class="lbl">Expert Led</div>
+          <div class="sstat">
+            <div class="sstat-n">Live</div>
+            <div class="sstat-l">Sessions</div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="hdiv"></div>
-
-    <!-- FEATURED MODULES PREVIEW -->
-    <section class="sec">
-      <div class="container">
-        <div class="row align-items-end mb-5">
-          <div class="col-lg-7 rv">
-            <span class="eyebrow">What You'll Learn</span>
-            <h2 class="sec-h">Tax Modules Covered</h2>
-            <p class="sec-p">From capital gains to crypto taxation — every module is taught by qualified CAs with real
-              trader examples.</p>
+          <div class="sstat">
+            <div class="sstat-n">Free</div>
+            <div class="sstat-l">Access</div>
           </div>
-          <div class="col-lg-5 text-lg-end mt-3 mt-lg-0 rv">
-            <button class="btn btn-outline-danger rounded-pill px-4 fw-bold" onclick="showPage('modules')">All Modules
-              <i class="bi bi-arrow-right ms-1"></i></button>
-          </div>
-        </div>
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-6 col-xl-4 rv">
-            <div class="mod-card" style="--clr:var(--blue);--clr-b:rgba(37,99,235,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(37,99,235,.1);color:var(--blue)"><i
-                  class="bi bi-bar-chart-fill"></i></div>
-              <h5>Basics of Taxation</h5>
-              <p class="mod-sub">Learn the foundation of how profits and losses are taxed in financial markets.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>What is Capital Gain?</li>
-                <li><i class="bi bi-chevron-right"></i>Tax Slabs & Applicable Rates</li>
-                <li><i class="bi bi-chevron-right"></i>Income Classification</li>
-                <li><i class="bi bi-chevron-right"></i>Taxable vs Non-Taxable Income</li>
-                <li><i class="bi bi-chevron-right"></i>Introduction to ITR Forms</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(37,99,235,.1);color:var(--blue);border:1px solid rgba(37,99,235,.2)">Beginner</span>
-                <button class="btn-mod" onclick="showPage('basics')">Learn More <i
-                    class="bi bi-arrow-right"></i></button>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-md-6 col-xl-4 rv rv-d1">
-            <div class="mod-card" style="--clr:var(--green);--clr-b:rgba(5,150,105,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(5,150,105,.1);color:var(--green)"><i
-                  class="bi bi-graph-up-arrow"></i></div>
-              <h5>Stock Market Taxation</h5>
-              <p class="mod-sub">Understand tax rules for equity investors and traders — STCG, LTCG, F&O and intraday.
-              </p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>STCG Tax (15%)</li>
-                <li><i class="bi bi-chevron-right"></i>LTCG Tax (10% above ₹1L)</li>
-                <li><i class="bi bi-chevron-right"></i>Intraday — Speculative Income</li>
-                <li><i class="bi bi-chevron-right"></i>F&O — Non-Speculative Income</li>
-                <li><i class="bi bi-chevron-right"></i>Dividend Taxation</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(5,150,105,.1);color:var(--green);border:1px solid rgba(5,150,105,.2)">Beginner</span>
-                <button class="btn-mod" onclick="showPage('modules')">Learn More <i
-                    class="bi bi-arrow-right"></i></button>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-md-6 col-xl-4 rv rv-d2">
-            <div class="mod-card" style="--clr:#f97316;--clr-b:rgba(249,115,22,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(249,115,22,.1);color:#f97316"><i
-                  class="bi bi-currency-bitcoin"></i></div>
-              <h5>Crypto Taxation</h5>
-              <p class="mod-sub">Learn how cryptocurrencies are taxed under current Indian regulations — 30% flat rule.
-              </p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>30% Flat Tax Rule (India)</li>
-                <li><i class="bi bi-chevron-right"></i>1% TDS on Transactions</li>
-                <li><i class="bi bi-chevron-right"></i>Loss Adjustment Rules</li>
-                <li><i class="bi bi-chevron-right"></i>Gift Tax on Crypto</li>
-                <li><i class="bi bi-chevron-right"></i>Reporting in ITR</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(249,115,22,.1);color:#f97316;border:1px solid rgba(249,115,22,.2)">Intermediate</span>
-                <button class="btn-mod" onclick="showPage('modules')">Learn More <i
-                    class="bi bi-arrow-right"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="mq-band">
-      <div class="mq-row">
-        <div class="mq-track">
-          <span class="mq-tag"><i class="bi bi-graph-up-arrow"></i>Stock Taxation</span>
-          <span class="mq-tag"><i class="bi bi-currency-bitcoin"></i>Crypto Tax 30%</span>
-          <span class="mq-tag"><i class="bi bi-globe2"></i>Forex Tax</span>
-          <span class="mq-tag"><i class="bi bi-bar-chart-steps"></i>F&O Taxation</span>
-          <span class="mq-tag"><i class="bi bi-droplet-fill"></i>Commodity Tax</span>
-          <span class="mq-tag"><i class="bi bi-file-earmark-text"></i>ITR Filing</span>
-          <span class="mq-tag"><i class="bi bi-shield-check"></i>Tax Planning</span>
-          <span class="mq-tag"><i class="bi bi-receipt"></i>Advance Tax</span>
-          <span class="mq-tag"><i class="bi bi-bank2"></i>Capital Gains</span>
-          <span class="mq-tag"><i class="bi bi-scale"></i>DTAA</span>
-          <span class="mq-tag"><i class="bi bi-graph-up-arrow"></i>Stock Taxation</span>
-          <span class="mq-tag"><i class="bi bi-currency-bitcoin"></i>Crypto Tax 30%</span>
-          <span class="mq-tag"><i class="bi bi-globe2"></i>Forex Tax</span>
-          <span class="mq-tag"><i class="bi bi-bar-chart-steps"></i>F&O Taxation</span>
-          <span class="mq-tag"><i class="bi bi-droplet-fill"></i>Commodity Tax</span>
-          <span class="mq-tag"><i class="bi bi-file-earmark-text"></i>ITR Filing</span>
-          <span class="mq-tag"><i class="bi bi-shield-check"></i>Tax Planning</span>
-          <span class="mq-tag"><i class="bi bi-receipt"></i>Advance Tax</span>
-          <span class="mq-tag"><i class="bi bi-bank2"></i>Capital Gains</span>
-          <span class="mq-tag"><i class="bi bi-scale"></i>DTAA</span>
-        </div>
-      </div>
-      <div class="mq-row">
-        <div class="mq-track rev">
-          <span class="mq-tag"><i class="bi bi-file-code"></i>Section 44AD</span>
-          <span class="mq-tag"><i class="bi bi-person-badge"></i>CA Verified</span>
-          <span class="mq-tag"><i class="bi bi-calendar-check"></i>July 31 Deadline</span>
-          <span class="mq-tag"><i class="bi bi-cash-coin"></i>Tax Loss Harvesting</span>
-          <span class="mq-tag"><i class="bi bi-building"></i>GST on Trading</span>
-          <span class="mq-tag"><i class="bi bi-journal-richtext"></i>Tax Audit</span>
-          <span class="mq-tag"><i class="bi bi-diagram-3"></i>Income Classification</span>
-          <span class="mq-tag"><i class="bi bi-percent"></i>Presumptive Taxation</span>
-          <span class="mq-tag"><i class="bi bi-file-code"></i>Section 44AD</span>
-          <span class="mq-tag"><i class="bi bi-person-badge"></i>CA Verified</span>
-          <span class="mq-tag"><i class="bi bi-calendar-check"></i>July 31 Deadline</span>
-          <span class="mq-tag"><i class="bi bi-cash-coin"></i>Tax Loss Harvesting</span>
-          <span class="mq-tag"><i class="bi bi-building"></i>GST on Trading</span>
-          <span class="mq-tag"><i class="bi bi-journal-richtext"></i>Tax Audit</span>
-          <span class="mq-tag"><i class="bi bi-diagram-3"></i>Income Classification</span>
-          <span class="mq-tag"><i class="bi bi-percent"></i>Presumptive Taxation</span>
         </div>
       </div>
     </div>
 
-    <!-- WHY SECTION -->
-    <section class="sec sec-dark">
+    <!-- Featured 3-up cards -->
+    <section class="bg2">
       <div class="container">
-        <div class="text-center mb-5">
-          <span class="eyebrow rv">Why This Webinar</span>
-          <h2 class="sec-h rv" style="color:#fff">Why Traders Must Know Tax</h2>
-          <p class="sec-p mx-auto rv" style="color:rgba(255,255,255,.42)">Tax errors cost traders lakhs in penalties and
-            missed savings. This webinar is your complete defence.</p>
-        </div>
-        <div class="row g-3">
-          <div class="col-sm-6 col-xl-3 rv">
-            <div class="why-card">
-              <div class="why-icon"><i class="bi bi-shield-lock-fill"></i></div>
-              <h6>Avoid Penalties</h6>
-              <p>Understand filing deadlines, advance tax rules and audit triggers before the taxman knocks.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 rv rv-d1">
-            <div class="why-card">
-              <div class="why-icon" style="background:rgba(5,150,105,.12);color:var(--green)"><i
-                  class="bi bi-piggy-bank-fill"></i></div>
-              <h6>Legal Tax Savings</h6>
-              <p>Use loss harvesting, Section 80C, and carry-forward rules to legally reduce your tax liability.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 rv rv-d2">
-            <div class="why-card">
-              <div class="why-icon" style="background:rgba(37,99,235,.12);color:var(--blue)"><i
-                  class="bi bi-file-earmark-check-fill"></i></div>
-              <h6>File Correctly</h6>
-              <p>Know exactly which ITR form — ITR-2 or ITR-3 — applies to your trading activity and income type.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 rv rv-d3">
-            <div class="why-card">
-              <div class="why-icon" style="background:rgba(124,58,237,.12);color:var(--purple)"><i
-                  class="bi bi-person-badge-fill"></i></div>
-              <h6>CA Expert Led</h6>
-              <p>Taught by qualified Chartered Accountants with live case studies from real trader portfolios.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="sec sec-alt">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="eyebrow rv">Student Reviews</span>
-          <h2 class="sec-h rv">What Traders Are Saying</h2>
+        <div class="text-center mb-5 reveal">
+          <div class="s-over">Start Here</div>
+          <h2 class="s-h">Featured <em>Modules</em></h2>
+          <div class="s-rule mx-auto"></div>
         </div>
         <div class="row g-4">
-          <div class="col-md-4 rv">
-            <div class="t-card">
-              <div class="stars">★★★★★</div><q>"I had no idea F&O was treated as business income. After this webinar I
-                filed ITR-3 correctly, offset losses against salary income and saved ₹42,000 in tax."</q>
-              <div class="d-flex align-items-center gap-2 mt-3">
-                <div class="t-av">RK</div>
-                <div>
-                  <div class="t-name">Rahul Kothari</div>
-                  <div class="t-role">F&O Trader · Mumbai</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 rv rv-d1">
-            <div class="t-card">
-              <div class="stars">★★★★★</div><q>"The crypto tax module is the most honest explanation of the 30% flat
-                rule I've found. Learned about 1% TDS and how to report VDA income correctly in ITR-2."</q>
-              <div class="d-flex align-items-center gap-2 mt-3">
-                <div class="t-av">SP</div>
-                <div>
-                  <div class="t-name">Sneha Patel</div>
-                  <div class="t-role">Crypto Investor · Ahmedabad</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 rv rv-d2">
-            <div class="t-card">
-              <div class="stars">★★★★☆</div><q>"Tax Planning module saved me. I was paying 30% on STCG because I didn't
-                know about the 12-month holding rule. Now I plan my exits around LTCG thresholds."</q>
-              <div class="d-flex align-items-center gap-2 mt-3">
-                <div class="t-av">AM</div>
-                <div>
-                  <div class="t-name">Arjun Mehta</div>
-                  <div class="t-role">Equity Investor · Surat</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="cta-band sec-red">
-      <div class="container">
-        <h2>Start Learning Tax Today — Free</h2>
-        <p>Join 8,000+ traders who learned to file correctly, save legally and avoid penalties through our CA-led
-          webinar series.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <button class="btn-white" onclick="showPage('modules')"><i class="bi bi-play-circle-fill"></i>Explore All
-            Modules</button>
-          <button class="btn-outline-white" onclick="showPage('calculator')"><i class="bi bi-calculator"></i>Tax
-            Calculator</button>
-        </div>
-      </div>
-    </section>
-
-  </div><!-- /page-home -->
-
-  <!-- ════════════════════════════════════════ -->
-  <!-- PAGE 2: TAX BASICS ══════════════════════ -->
-  <!-- ════════════════════════════════════════ -->
-  <div class="page" id="page-basics">
-    <section class="hero hero-sm sec-alt">
-      <div class="container text-center">
-        <div class="hero-badge"><i class="bi bi-book-fill"></i> Foundation Module</div>
-        <h1 class="mb-3" style="font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem)">Tax <em>Basics</em></h1>
-        <p class="tagline mx-auto">Everything a trader must know about income classification, tax slabs, and how the tax
-          system works before filing a single return.</p>
-      </div>
-    </section>
-    <div class="hdiv"></div>
-
-    <!-- KEY CONCEPTS -->
-    <section class="sec">
-      <div class="container">
-        <div class="row align-items-end mb-5">
-          <div class="col-lg-6 rv">
-            <span class="eyebrow">Core Concepts</span>
-            <h2 class="sec-h">Tax Foundations for Traders</h2>
-            <p class="sec-p">Before you file, you need to understand these fundamentals — every tax decision flows from
-              these concepts.</p>
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-6 rv">
-            <div class="feat-card">
-              <div class="feat-icon" style="background:rgba(37,99,235,.1);color:var(--blue)"><i
-                  class="bi bi-bar-chart-line-fill"></i></div>
-              <h6>Capital Gain — Short vs Long Term</h6>
-              <p>Profit from selling an asset held <strong>under 12 months</strong> = Short-Term Capital Gain (STCG)
-                taxed at 15%. Held <strong>over 12 months</strong> = Long-Term Capital Gain (LTCG) taxed at 10% above ₹1
-                lakh exemption. The holding period defines everything.</p>
-            </div>
-          </div>
-          <div class="col-md-6 rv rv-d1">
-            <div class="feat-card">
-              <div class="feat-icon" style="background:rgba(5,150,105,.1);color:var(--green)"><i
-                  class="bi bi-diagram-3-fill"></i></div>
-              <h6>Income Classification</h6>
-              <p>Trading income falls into four categories: <strong>Capital Gains</strong> (delivery equity),
-                <strong>Speculative Business Income</strong> (intraday), <strong>Non-Speculative Business
-                  Income</strong> (F&O, commodity), and <strong>Other Income</strong> (dividends, interest). Each has
-                different tax treatment and ITR forms.</p>
-            </div>
-          </div>
-          <div class="col-md-6 rv">
-            <div class="feat-card">
-              <div class="feat-icon" style="background:rgba(217,119,6,.1);color:var(--amber)"><i
-                  class="bi bi-percent"></i></div>
-              <h6>Tax Slabs & Applicable Rates</h6>
-              <p>Under the New Regime (FY 2025-26): income up to ₹3L = nil, ₹3–7L = 5%, ₹7–10L = 10%, ₹10–12L = 15%,
-                ₹12–15L = 20%, above ₹15L = 30%. STCG on equity is always 15% regardless of slab. LTCG is always 10%
-                above ₹1L.</p>
-            </div>
-          </div>
-          <div class="col-md-6 rv rv-d1">
-            <div class="feat-card">
-              <div class="feat-icon" style="background:rgba(232,17,26,.1);color:var(--red)"><i
-                  class="bi bi-file-earmark-text-fill"></i></div>
-              <h6>ITR Forms for Traders</h6>
-              <p><strong>ITR-1</strong>: Salary + interest only (no trading). <strong>ITR-2</strong>: Salary + capital
-                gains from equity/MF. <strong>ITR-3</strong>: F&O, intraday, options (business income). <strong>ITR-4
-                  (Sugam)</strong>: Presumptive taxation under Section 44AD. Wrong form = defective return notice.</p>
-            </div>
-          </div>
-          <div class="col-md-6 rv">
-            <div class="feat-card">
-              <div class="feat-icon" style="background:rgba(124,58,237,.1);color:var(--purple)"><i
-                  class="bi bi-arrow-repeat"></i></div>
-              <h6>Loss Set-Off & Carry Forward</h6>
-              <p>STCL can offset STCG and LTCG. LTCL can only offset LTCG. Speculative loss (intraday) can only offset
-                speculative income. Non-speculative loss (F&O) can offset any income except salary. Unabsorbed losses
-                carry forward for 8 years (file timely return to avail this).</p>
-            </div>
-          </div>
-          <div class="col-md-6 rv rv-d1">
-            <div class="feat-card">
-              <div class="feat-icon" style="background:rgba(8,145,178,.1);color:var(--teal)"><i
-                  class="bi bi-calendar-event-fill"></i></div>
-              <h6>Advance Tax Schedule</h6>
-              <p>If tax liability exceeds ₹10,000, pay advance tax in installments: <strong>15%</strong> by Jun 15,
-                <strong>45%</strong> by Sep 15, <strong>75%</strong> by Dec 15, <strong>100%</strong> by Mar 15. Missing
-                instalments attracts 1% per month interest under Sections 234B and 234C.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tax Rate Comparison Table -->
-        <div class="mt-5 rv">
-          <h5 class="mb-3" style="font-family:var(--serif)">Quick Tax Rate Reference</h5>
-          <div class="table-responsive">
-            <table class="table table-bordered" style="font-size:.86rem">
-              <thead style="background:var(--dark);color:#fff">
-                <tr>
-                  <th>Income Type</th>
-                  <th>Tax Rate</th>
-                  <th>ITR Form</th>
-                  <th>Set-Off Allowed With</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>STCG (Equity/MF)</strong></td>
-                  <td><span style="color:var(--amber);font-weight:700">15%</span></td>
-                  <td>ITR-2</td>
-                  <td>STCG, LTCG</td>
-                </tr>
-                <tr>
-                  <td><strong>LTCG (Equity/MF)</strong></td>
-                  <td><span style="color:var(--green);font-weight:700">10% (above ₹1L)</span></td>
-                  <td>ITR-2</td>
-                  <td>LTCG only</td>
-                </tr>
-                <tr>
-                  <td><strong>Intraday (Speculative)</strong></td>
-                  <td>Slab rate</td>
-                  <td>ITR-3</td>
-                  <td>Speculative income only</td>
-                </tr>
-                <tr>
-                  <td><strong>F&O (Non-Speculative)</strong></td>
-                  <td>Slab rate</td>
-                  <td>ITR-3</td>
-                  <td>Any income except salary</td>
-                </tr>
-                <tr>
-                  <td><strong>Crypto / VDA</strong></td>
-                  <td><span style="color:var(--red);font-weight:700">30% flat</span></td>
-                  <td>ITR-2 / ITR-3</td>
-                  <td>No set-off allowed</td>
-                </tr>
-                <tr>
-                  <td><strong>Forex (Business)</strong></td>
-                  <td>Slab rate</td>
-                  <td>ITR-3</td>
-                  <td>Non-speculative income</td>
-                </tr>
-                <tr>
-                  <td><strong>Commodity Futures</strong></td>
-                  <td>Slab rate</td>
-                  <td>ITR-3</td>
-                  <td>Non-speculative income</td>
-                </tr>
-                <tr>
-                  <td><strong>Dividend</strong></td>
-                  <td>Slab rate</td>
-                  <td>ITR-2</td>
-                  <td>Interest on loan for investment</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TIMELINE: Key Deadlines -->
-    <section class="sec sec-alt">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 rv">
-            <span class="eyebrow">Annual Calendar</span>
-            <h2 class="sec-h mb-4">Tax Deadlines Every Trader Must Know</h2>
-            <p class="sec-p">Missing these dates costs money. Mark them now.</p>
-          </div>
-          <div class="col-lg-7 rv rv-d1">
-            <div class="timeline">
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-date">April 1</div>
-                <div class="tl-title">New Financial Year Begins</div>
-                <div class="tl-desc">Start fresh books. Review previous year's P&L for loss carry-forward planning.
-                </div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-date">June 15</div>
-                <div class="tl-title">Advance Tax — 1st Instalment (15%)</div>
-                <div class="tl-desc">Pay 15% of estimated annual tax. Applicable if total tax liability exceeds ₹10,000.
-                </div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-date">September 15</div>
-                <div class="tl-title">Advance Tax — 2nd Instalment (45%)</div>
-                <div class="tl-desc">Cumulative 45% of annual tax due. Reassess income mid-year for accuracy.</div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-date">December 15</div>
-                <div class="tl-title">Advance Tax — 3rd Instalment (75%)</div>
-                <div class="tl-desc">75% cumulative. Most traders see clarity on annual P&L by December.</div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-date">March 15</div>
-                <div class="tl-title">Advance Tax — Final Instalment (100%)</div>
-                <div class="tl-desc">Full advance tax cleared. Also the last chance for tax-saving investments under
-                  80C.</div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-date">July 31</div>
-                <div class="tl-title">ITR Filing Deadline (Non-Audit)</div>
-                <div class="tl-desc">File your return without audit. F&O traders with turnover above ₹10 Cr require
-                  audit by October 31.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band sec-red">
-      <div class="container">
-        <h2>Ready to File Correctly This Year?</h2>
-        <p>Jump to the full module list or try our tax calculator to estimate your liability right now.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <button class="btn-white" onclick="showPage('modules')"><i class="bi bi-grid-3x3-gap-fill"></i>All
-            Modules</button>
-          <button class="btn-outline-white" onclick="showPage('calculator')"><i class="bi bi-calculator"></i>Try
-            Calculator</button>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ════════════════════════════════════════ -->
-  <!-- PAGE 3: ALL MODULES ═════════════════════ -->
-  <!-- ════════════════════════════════════════ -->
-  <div class="page" id="page-modules">
-    <section class="hero hero-sm sec-alt">
-      <div class="container text-center">
-        <div class="hero-badge"><i class="bi bi-grid-3x3-gap-fill"></i> 9 Modules</div>
-        <h1 style="font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem)">All Tax <em>Modules</em></h1>
-        <p class="tagline mx-auto">Complete curriculum covering every asset class, tax type and filing requirement for
-          Indian traders and investors.</p>
-      </div>
-    </section>
-    <div class="hdiv"></div>
-
-    <section class="sec">
-      <div class="container">
-        <div class="row g-4">
-
-          <!-- 1 -->
-          <div class="col-md-6 col-xl-4 rv">
-            <div class="mod-card" style="--clr:var(--blue);--clr-b:rgba(37,99,235,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(37,99,235,.1);color:var(--blue)"><i
-                  class="bi bi-bar-chart-fill"></i></div>
-              <h5>Basics of Taxation in Financial Markets</h5>
-              <p class="mod-sub">Learn the foundation of how profits and losses are taxed across all market types.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>What is Capital Gain? (Short-term vs Long-term)</li>
-                <li><i class="bi bi-chevron-right"></i>Tax Slabs & Applicable Rates</li>
-                <li><i class="bi bi-chevron-right"></i>Income Classification (Business vs Investment)</li>
-                <li><i class="bi bi-chevron-right"></i>Taxable vs Non-Taxable Income</li>
-                <li><i class="bi bi-chevron-right"></i>Introduction to ITR Forms</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(37,99,235,.1);color:var(--blue);border:1px solid rgba(37,99,235,.2)">Beginner</span>
-                <button class="btn-mod" onclick="showPage('basics')">Details <i class="bi bi-arrow-right"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2 -->
-          <div class="col-md-6 col-xl-4 rv rv-d1">
-            <div class="mod-card" style="--clr:var(--green);--clr-b:rgba(5,150,105,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(5,150,105,.1);color:var(--green)"><i
-                  class="bi bi-graph-up-arrow"></i></div>
-              <h5>Stock Market Taxation</h5>
-              <p class="mod-sub">Understand tax rules for equity investors and traders across delivery, intraday, F&O.
+          <div class="col-md-4 reveal">
+            <div class="mcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover);--icon-bg:var(--zed-primary-hover)">
+              <div class="mcard-accent"></div>
+              <span class="mcard-num">01</span>
+              <div class="mcard-icon"><i class="fas fa-robot"></i></div>
+              <div class="mcard-tag">Algorithmic Trading</div>
+              <div class="mcard-title">Algorithmic Trading Basics</div>
+              <p class="mcard-desc">Learn how automated systems execute trades using predefined rules at machine speed.
               </p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>STCG (Short-Term Capital Gains) Tax</li>
-                <li><i class="bi bi-chevron-right"></i>LTCG (Long-Term Capital Gains) Tax</li>
-                <li><i class="bi bi-chevron-right"></i>Intraday Trading Taxation (Speculative Income)</li>
-                <li><i class="bi bi-chevron-right"></i>F&O Trading (Non-Speculative Income)</li>
-                <li><i class="bi bi-chevron-right"></i>Dividend Taxation</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(5,150,105,.1);color:var(--green);border:1px solid rgba(5,150,105,.2)">Beginner</span>
-                <a href="#" class="btn-mod">Details <i class="bi bi-arrow-right"></i></a>
+              <div class="mcard-foot mt-3">
+                <div class="foot-chips">
+                  <span class="fchip"><i class="fas fa-play-circle"></i> 7 videos</span>
+                  <span class="fchip"><i class="fas fa-clock"></i> 3h 40m</span>
+                </div>
+                <button class="btn-go" onclick="openDetail('algo')"><i class="fas fa-arrow-right"></i> Explore</button>
               </div>
             </div>
           </div>
 
-          <!-- 3 -->
-          <div class="col-md-6 col-xl-4 rv rv-d2">
-            <div class="mod-card" style="--clr:var(--teal);--clr-b:rgba(8,145,178,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(8,145,178,.1);color:var(--teal)"><i
-                  class="bi bi-globe2"></i></div>
-              <h5>Forex & Commodity Taxation</h5>
-              <p class="mod-sub">Tax treatment for forex and commodity trading under Indian income tax laws.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>Forex Trading Tax Rules</li>
-                <li><i class="bi bi-chevron-right"></i>Commodity Gains Classification</li>
-                <li><i class="bi bi-chevron-right"></i>Turnover Calculation</li>
-                <li><i class="bi bi-chevron-right"></i>Presumptive Taxation (Section 44AD)</li>
-                <li><i class="bi bi-chevron-right"></i>Audit Requirements</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(8,145,178,.1);color:var(--teal);border:1px solid rgba(8,145,178,.2)">Intermediate</span>
-                <a href="#" class="btn-mod">Details <i class="bi bi-arrow-right"></i></a>
+          <div class="col-md-4 reveal">
+            <div class="mcard" style="--ac:var(--purple);--ac-glow:rgba(109,40,217,.1);--icon-bg:#f5f3ff">
+              <div class="mcard-accent"></div>
+              <span class="mcard-num">02</span>
+              <div class="mcard-icon" style="background:#f5f3ff;color:var(--purple)"><i class="fas fa-brain"></i></div>
+              <div class="mcard-tag" style="color:var(--purple)">AI & Machine Learning</div>
+              <div class="mcard-title">Artificial Intelligence in Trading</div>
+              <p class="mcard-desc">How AI and machine learning are transforming trading strategies and market
+                prediction.</p>
+              <div class="mcard-foot mt-3">
+                <div class="foot-chips">
+                  <span class="fchip"><i class="fas fa-play-circle" style="color:var(--purple)"></i> 8 videos</span>
+                  <span class="fchip"><i class="fas fa-clock" style="color:var(--purple)"></i> 4h 20m</span>
+                </div>
+                <button class="btn-go" style="background:var(--purple)" onclick="openDetail('ai')"><i
+                    class="fas fa-arrow-right"></i> Explore</button>
               </div>
             </div>
           </div>
 
-          <!-- 4 -->
-          <div class="col-md-6 col-xl-4 rv">
-            <div class="mod-card" style="--clr:#f97316;--clr-b:rgba(249,115,22,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(249,115,22,.1);color:#f97316"><i
-                  class="bi bi-currency-bitcoin"></i></div>
-              <h5>Crypto Taxation</h5>
-              <p class="mod-sub">Learn how cryptocurrencies are taxed under current Indian regulations.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>30% Flat Tax Rule (India)</li>
-                <li><i class="bi bi-chevron-right"></i>1% TDS on Transactions</li>
-                <li><i class="bi bi-chevron-right"></i>Loss Adjustment Rules</li>
-                <li><i class="bi bi-chevron-right"></i>Gift Tax on Crypto</li>
-                <li><i class="bi bi-chevron-right"></i>Reporting in ITR</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(249,115,22,.1);color:#f97316;border:1px solid rgba(249,115,22,.2)">Intermediate</span>
-                <a href="#" class="btn-mod">Details <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5 -->
-          <div class="col-md-6 col-xl-4 rv rv-d1">
-            <div class="mod-card" style="--clr:var(--purple);--clr-b:rgba(124,58,237,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(124,58,237,.1);color:var(--purple)"><i
-                  class="bi bi-lightbulb-fill"></i></div>
-              <h5>Tax Planning Strategies</h5>
-              <p class="mod-sub">Optimize your taxes legally with smart planning strategies used by professional
-                traders.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>Tax Harvesting Techniques</li>
-                <li><i class="bi bi-chevron-right"></i>Offset Gains with Losses</li>
-                <li><i class="bi bi-chevron-right"></i>Deductions under Section 80C</li>
-                <li><i class="bi bi-chevron-right"></i>Advance Tax Planning</li>
-                <li><i class="bi bi-chevron-right"></i>Choosing Right Income Category</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(124,58,237,.1);color:var(--purple);border:1px solid rgba(124,58,237,.2)">Intermediate</span>
-                <a href="#" class="btn-mod">Details <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6 -->
-          <div class="col-md-6 col-xl-4 rv rv-d2">
-            <div class="mod-card" style="--clr:var(--amber);--clr-b:rgba(217,119,6,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(217,119,6,.1);color:var(--amber)"><i
-                  class="bi bi-file-earmark-text-fill"></i></div>
-              <h5>Filing Income Tax Returns (ITR)</h5>
-              <p class="mod-sub">Step-by-step guide to filing taxes for traders — from form selection to submission.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>Choosing Correct ITR Form (ITR-2, ITR-3)</li>
-                <li><i class="bi bi-chevron-right"></i>Reporting Capital Gains</li>
-                <li><i class="bi bi-chevron-right"></i>Reporting Business Income</li>
-                <li><i class="bi bi-chevron-right"></i>Filing Deadlines</li>
-                <li><i class="bi bi-chevron-right"></i>Common Mistakes to Avoid</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(217,119,6,.1);color:var(--amber);border:1px solid rgba(217,119,6,.2)">Practical</span>
-                <button class="btn-mod" onclick="showPage('itr')">Details <i class="bi bi-arrow-right"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 7 -->
-          <div class="col-md-6 col-xl-4 rv">
-            <div class="mod-card" style="--clr:var(--red);--clr-b:rgba(232,17,26,.25)">
-              <div class="mod-icon-wrap" style="background:rgba(232,17,26,.1);color:var(--red)"><i
-                  class="bi bi-shield-fill-check"></i></div>
-              <h5>Compliance & Legal Requirements</h5>
-              <p class="mod-sub">Stay compliant with tax laws and avoid penalties, notices and audits.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>Tax Audit Applicability</li>
-                <li><i class="bi bi-chevron-right"></i>Maintaining Trading Records</li>
-                <li><i class="bi bi-chevron-right"></i>GST Applicability (if any)</li>
-                <li><i class="bi bi-chevron-right"></i>Penalties for Non-Compliance</li>
-                <li><i class="bi bi-chevron-right"></i>Notices & How to Handle Them</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(232,17,26,.1);color:var(--red);border:1px solid rgba(232,17,26,.2)">Essential</span>
-                <a href="#" class="btn-mod">Details <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 8 -->
-          <div class="col-md-6 col-xl-4 rv rv-d1">
-            <div class="mod-card" style="--clr:var(--dark);--clr-b:rgba(0,0,0,.2)">
-              <div class="mod-icon-wrap" style="background:rgba(0,0,0,.06);color:var(--dark)"><i
-                  class="bi bi-briefcase-fill"></i></div>
-              <h5>Advanced Tax Concepts</h5>
-              <p class="mod-sub">Deep dive into professional-level tax strategies for active traders and HNIs.</p>
-              <ul class="mod-list">
-                <li><i class="bi bi-chevron-right"></i>Turnover Calculation in F&O</li>
-                <li><i class="bi bi-chevron-right"></i>Presumptive vs Regular Taxation</li>
-                <li><i class="bi bi-chevron-right"></i>Carry Forward & Set-off of Losses</li>
-                <li><i class="bi bi-chevron-right"></i>International Trading Taxation</li>
-                <li><i class="bi bi-chevron-right"></i>Double Taxation Avoidance (DTAA)</li>
-              </ul>
-              <div class="mod-footer">
-                <span class="mod-badge"
-                  style="background:rgba(0,0,0,.06);color:var(--dark);border:1px solid rgba(0,0,0,.12)">Advanced</span>
-                <a href="#" class="btn-mod">Details <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 9 Full Width -->
-          <div class="col-12 rv rv-d2">
-            <div class="full-card">
-              <div class="full-badge"><i class="bi bi-rocket-takeoff-fill me-1"></i> Module 09 — Capstone</div>
-              <div class="row align-items-center g-4">
-                <div class="col-lg-5">
-                  <h4 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:.5rem">Real Case Studies &amp;
-                    Practical Demo</h4>
-                  <p style="font-size:.88rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.65">Apply tax
-                    concepts through real examples and live demos — from sample calculations to actual ITR walkthroughs.
-                  </p>
-                  <button class="btn-hero" onclick="showPage('itr')"><i class="bi bi-play-fill me-1"></i>Start This
-                    Module</button>
+          <div class="col-md-4 reveal">
+            <div class="mcard" style="--ac:var(--cyan);--ac-glow:rgba(8,145,178,.1);--icon-bg:#ecfeff">
+              <div class="mcard-accent"></div>
+              <span class="mcard-num">04</span>
+              <div class="mcard-icon" style="background:#ecfeff;color:var(--cyan)"><i class="fas fa-link"></i></div>
+              <div class="mcard-tag" style="color:var(--cyan)">Blockchain & DeFi</div>
+              <div class="mcard-title">Blockchain &amp; FinTech Innovation</div>
+              <p class="mcard-desc">How blockchain is reshaping financial ecosystems through DeFi, smart contracts, and
+                Web3.</p>
+              <div class="mcard-foot mt-3">
+                <div class="foot-chips">
+                  <span class="fchip"><i class="fas fa-play-circle" style="color:var(--cyan)"></i> 6 videos</span>
+                  <span class="fchip"><i class="fas fa-clock" style="color:var(--cyan)"></i> 3h 10m</span>
                 </div>
-                <div class="col-lg-7">
-                  <div class="row g-2">
-                    <div class="col-sm-6">
-                      <div class="step-card">
-                        <div class="step-num">1</div>
-                        <h6>Sample Tax Calculation</h6>
-                        <p>Live calculation with a real trader's P&L — stock, F&O and crypto combined.</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="step-card">
-                        <div class="step-num">2</div>
-                        <h6>Portfolio-Based Tax Example</h6>
-                        <p>How to report multi-asset portfolio in one ITR — gains, losses, carry-forward.</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="step-card">
-                        <div class="step-num">3</div>
-                        <h6>Filing Demo Walkthrough</h6>
-                        <p>Screen-share demo of filing ITR-3 on Income Tax portal step by step.</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="step-card">
-                        <div class="step-num">4</div>
-                        <h6>Audit Case Example</h6>
-                        <p>Real audit notice case study — what triggered it, how it was resolved.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ════════════════════════════════════════ -->
-  <!-- PAGE 4: TAX CALCULATOR ══════════════════ -->
-  <!-- ════════════════════════════════════════ -->
-  <div class="page" id="page-calculator">
-    <section class="hero hero-sm sec-alt">
-      <div class="container text-center">
-        <div class="hero-badge"><i class="bi bi-calculator-fill"></i> Free Tool</div>
-        <h1 style="font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem)">Tax <em>Calculator</em></h1>
-        <p class="tagline mx-auto">Estimate your trading tax liability across stocks, F&O, crypto and forex instantly —
-          no login required.</p>
-      </div>
-    </section>
-    <div class="hdiv"></div>
-
-    <section class="sec">
-      <div class="container">
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-6 rv">
-            <h3 style="font-family:var(--serif);margin-bottom:1.5rem">Trading Tax Estimator</h3>
-            <div class="calc-wrap">
-              <div class="row g-3">
-                <div class="col-12">
-                  <label class="calc-label">Asset Class</label>
-                  <select class="calc-select" id="assetClass">
-                    <option value="equity_stcg">Equity — Short-Term (STCG 15%)</option>
-                    <option value="equity_ltcg">Equity — Long-Term (LTCG 10%)</option>
-                    <option class="calc-select" value="intraday">Intraday — Speculative Income (Slab)</option>
-                    <option value="fno">F&O / Options — Non-Speculative (Slab)</option>
-                    <option value="crypto">Crypto / VDA — 30% Flat</option>
-                    <option value="forex">Forex — Business Income (Slab)</option>
-                    <option value="commodity">Commodity — Business Income (Slab)</option>
-                  </select>
-                </div>
-                <div class="col-sm-6">
-                  <label class="calc-label">Total Profit / Gain (₹)</label>
-                  <input class="calc-input" type="number" id="profitInput" placeholder="e.g. 250000" min="0" />
-                </div>
-                <div class="col-sm-6">
-                  <label class="calc-label">Total Loss (₹) — if any</label>
-                  <input class="calc-input" type="number" id="lossInput" placeholder="e.g. 50000" min="0" />
-                </div>
-                <div class="col-sm-6">
-                  <label class="calc-label">Annual Salary / Other Income (₹)</label>
-                  <input class="calc-input" type="number" id="salaryInput" placeholder="e.g. 600000" min="0" />
-                </div>
-                <div class="col-sm-6">
-                  <label class="calc-label">Tax Regime</label>
-                  <select class="calc-select" id="regime">
-                    <option value="new">New Regime (FY 2025-26)</option>
-                    <option value="old">Old Regime</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <button class="btn-calc" onclick="calculateTax()"><i class="bi bi-calculator me-2"></i>Calculate
-                    Tax</button>
-                </div>
-              </div>
-              <div class="result-box" id="calcResult" style="display:none">
-                <div class="result-row"><span class="label">Net Trading Income</span><span class="value"
-                    id="res-net-income">—</span></div>
-                <div class="result-row"><span class="label">Applicable Tax Rate</span><span class="value"
-                    id="res-rate">—</span></div>
-                <div class="result-row"><span class="label">Tax on Trading Income</span><span class="value tax"
-                    id="res-tax">—</span></div>
-                <div class="result-row"><span class="label">Estimated Advance Tax (Quarterly)</span><span class="value"
-                    id="res-advance">—</span></div>
-                <div class="result-row"><span class="label">Net Take-Home from Trades</span><span class="value net"
-                    id="res-takehome">—</span></div>
-                <div class="result-row"><span class="label">Recommended ITR Form</span><span class="value"
-                    id="res-itr">—</span></div>
-              </div>
-            </div>
-            <p style="font-size:.74rem;color:var(--muted);margin-top:.75rem">* This is an estimate for educational
-              purposes only. Consult a CA for accurate filing.</p>
-          </div>
-
-          <div class="col-lg-6 rv rv-d1">
-            <h3 style="font-family:var(--serif);margin-bottom:1.5rem">Tax Rate Quick Reference</h3>
-            <div class="row g-3">
-              <div class="col-12">
-                <div class="feat-card" style="flex-direction:row;align-items:center;gap:1rem">
-                  <div class="feat-icon" style="background:rgba(37,99,235,.1);color:var(--blue);flex-shrink:0"><i
-                      class="bi bi-graph-up-arrow"></i></div>
-                  <div>
-                    <h6 class="mb-1">STCG on Equity</h6>
-                    <p>15% flat — for shares/ETFs held under 12 months. No slab benefit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="feat-card" style="flex-direction:row;align-items:center;gap:1rem">
-                  <div class="feat-icon" style="background:rgba(5,150,105,.1);color:var(--green);flex-shrink:0"><i
-                      class="bi bi-graph-up-arrow"></i></div>
-                  <div>
-                    <h6 class="mb-1">LTCG on Equity</h6>
-                    <p>10% on gains above ₹1 lakh — for shares held over 12 months. First ₹1L is tax-free.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="feat-card" style="flex-direction:row;align-items:center;gap:1rem">
-                  <div class="feat-icon" style="background:rgba(249,115,22,.1);color:#f97316;flex-shrink:0"><i
-                      class="bi bi-currency-bitcoin"></i></div>
-                  <div>
-                    <h6 class="mb-1">Crypto / VDA Tax</h6>
-                    <p>30% flat on all gains. No deduction except cost of acquisition. 1% TDS deducted at source.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="feat-card" style="flex-direction:row;align-items:center;gap:1rem">
-                  <div class="feat-icon" style="background:rgba(232,17,26,.1);color:var(--red);flex-shrink:0"><i
-                      class="bi bi-bar-chart-steps"></i></div>
-                  <div>
-                    <h6 class="mb-1">F&O / Forex / Commodity</h6>
-                    <p>Taxed as business income at your slab rate. Losses can be set off against most other income.</p>
-                  </div>
-                </div>
+                <button class="btn-go" style="background:var(--cyan)" onclick="openDetail('blockchain')"><i
+                    class="fas fa-arrow-right"></i> Explore</button>
               </div>
             </div>
           </div>
         </div>
+        <div class="text-center mt-5">
+          <button class="btn-go mx-auto" style="width:fit-content;font-size:.78rem;padding:12px 32px;"
+            onclick="showPage('modules')">
+            <i class="fas fa-th-large"></i> View All 9 Modules
+          </button>
+        </div>
       </div>
     </section>
-  </div>
 
-  <!-- ════════════════════════════════════════ -->
-  <!-- PAGE 5: ITR GUIDE ═══════════════════════ -->
-  <!-- ════════════════════════════════════════ -->
-  <div class="page" id="page-itr">
-    <section class="hero hero-sm sec-alt">
-      <div class="container text-center">
-        <div class="hero-badge"><i class="bi bi-file-earmark-text-fill"></i> Step-by-Step Guide</div>
-        <h1 style="font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem)">ITR Filing <em>Guide</em></h1>
-        <p class="tagline mx-auto">A complete walkthrough for traders — choose the right form, report all income types,
-          and file without errors.</p>
-      </div>
-    </section>
-    <div class="hdiv"></div>
-
-    <section class="sec">
+    <!-- Quick video preview -->
+    <section>
       <div class="container">
-        <div class="text-center mb-5 rv">
-          <span class="eyebrow">Step by Step</span>
-          <h2 class="sec-h">How to File ITR as a Trader</h2>
-          <p class="sec-p mx-auto">Follow these 8 steps in order — don't skip any, especially if you have F&O or crypto
-            income.</p>
+        <div class="text-center mb-5 reveal">
+          <div class="s-over">Latest Releases</div>
+          <h2 class="s-h">Recent <em>Video Sessions</em></h2>
+          <div class="s-rule mx-auto"></div>
         </div>
         <div class="row g-4">
-          <div class="col-md-6 col-xl-3 rv">
-            <div class="step-card">
-              <div class="step-num">1</div><br /><br />
-              <h6>Collect All Statements</h6>
-              <p>Download P&L from each broker. Get Form 26AS, AIS and TIS from income tax portal. Include crypto
-                exchange reports.</p>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="vcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover);">
+              <div class="vthumb" style="background:linear-gradient(135deg,#fff5f5,#ffe0df)">
+                <div class="vanim" id="hv1"></div>
+                <div class="voverlay">
+                  <div class="vplay"><i class="fas fa-play ms-1"></i></div>
+                </div>
+                <div class="vstatus" style="background:rgba(0,0,0,.6);color:#fff">REPLAY</div>
+                <div class="vdur">44:12</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--zed-primary)">Algo Trading</div>
+                <div class="vtitle">Backtesting Your First Automated Strategy</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Dr. Chen</span><span><i class="fas fa-eye"></i>
+                    4.1K</span></div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv rv-d1">
-            <div class="step-card">
-              <div class="step-num">2</div><br /><br />
-              <h6>Classify Your Income</h6>
-              <p>Separate delivery equity (capital gains), intraday (speculative), F&O (non-speculative), and crypto.
-                Wrong classification = wrong ITR form.</p>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="vcard" style="--ac:var(--purple);--ac-glow:rgba(109,40,217,.15);">
+              <div class="vthumb" style="background:linear-gradient(135deg,#f5f3ff,#ede8ff)">
+                <div class="vanim" id="hv2"></div>
+                <div class="voverlay">
+                  <div class="vplay" style="background:var(--purple)"><i class="fas fa-play ms-1"></i></div>
+                </div>
+                <div class="vstatus" style="background:#6d28d9;color:#fff"><span class="blink"
+                    style="background:#fff"></span> NEW</div>
+                <div class="vdur">58:34</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--purple)">AI Trading</div>
+                <div class="vtitle">Predictive Analytics with Machine Learning Models</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Aisha Patel</span><span><i class="fas fa-eye"></i>
+                    7.2K</span></div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv rv-d2">
-            <div class="step-card">
-              <div class="step-num">3</div><br /><br />
-              <h6>Calculate Turnover</h6>
-              <p>For F&O: absolute sum of all profits + all losses = turnover. If above ₹10 Cr — audit required. Check
-                audit applicability under 44AB.</p>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="vcard" style="--ac:var(--cyan);--ac-glow:rgba(8,145,178,.15);">
+              <div class="vthumb" style="background:linear-gradient(135deg,#ecfeff,#cffafe)">
+                <div class="vanim" id="hv3"></div>
+                <div class="voverlay">
+                  <div class="vplay" style="background:var(--cyan)"><i class="fas fa-play ms-1"></i></div>
+                </div>
+                <div class="vstatus" style="background:rgba(0,0,0,.6);color:#fff">REPLAY</div>
+                <div class="vdur">51:07</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--cyan)">Blockchain</div>
+                <div class="vtitle">Smart Contracts &amp; DeFi Protocol Deep Dive</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Lena Zhao</span><span><i class="fas fa-eye"></i>
+                    5.8K</span></div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv rv-d3">
-            <div class="step-card">
-              <div class="step-num">4</div><br /><br />
-              <h6>Choose ITR Form</h6>
-              <p>Only capital gains? → ITR-2. F&O / intraday / forex? → ITR-3. Presumptive taxation? → ITR-4. Multiple
-                assets? → Usually ITR-3.</p>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="vcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover);">
+              <div class="vthumb" style="background:linear-gradient(135deg,#fff5f5,#ffe8e8)">
+                <div class="vanim" id="hv4"></div>
+                <div class="voverlay">
+                  <div class="vplay"><i class="fas fa-broadcast-tower"></i></div>
+                </div>
+                <div class="vstatus" style="background:var(--zed-primary);color:#fff"><span class="blink"
+                    style="background:#fff"></span> LIVE</div>
+                <div class="vdur" style="background:var(--zed-primary)">LIVE</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--zed-primary)">Cybersecurity</div>
+                <div class="vtitle">Protecting Your Trading System from Cyber Threats</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> James Okafor</span><span><i
+                      class="fas fa-calendar"></i> Jun 11</span></div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv">
-            <div class="step-card">
-              <div class="step-num">5</div><br /><br />
-              <h6>Set Off Losses</h6>
-              <p>Offset STCL against STCG and LTCG. F&O loss against non-speculative income. Note: crypto losses cannot
-                be set off against any other income.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-3 rv rv-d1">
-            <div class="step-card">
-              <div class="step-num">6</div><br /><br />
-              <h6>Claim Deductions</h6>
-              <p>Under old regime: claim 80C (₹1.5L), 80D health insurance, home loan interest. Under new regime:
-                standard deduction only. Don't miss 80TTA for savings interest.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-3 rv rv-d2">
-            <div class="step-card">
-              <div class="step-num">7</div><br /><br />
-              <h6>Pay Remaining Tax</h6>
-              <p>After TDS and advance tax, pay any balance as self-assessment tax using Challan 280 before filing.
-                Include interest u/s 234A, 234B, 234C if applicable.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-3 rv rv-d3">
-            <div class="step-card">
-              <div class="step-num">8</div><br /><br />
-              <h6>File & Verify</h6>
-              <p>File on incometax.gov.in. E-verify within 30 days using Aadhaar OTP, net banking, or DSC. Unverified
-                return = no return filed.</p>
-            </div>
-          </div>
+        </div>
+        <div class="text-center mt-5">
+          <button class="btn-go mx-auto" style="width:fit-content;padding:12px 32px;" onclick="showPage('videos')">
+            <i class="fas fa-film"></i> Browse All Videos
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- ITR Form Selection Guide -->
-    <section class="sec sec-alt">
+  </div><!-- /page home -->
+
+
+  <!-- ══════════════════════════════════
+     PAGE: MODULES
+══════════════════════════════════ -->
+  <div class="page" id="page-modules">
+
+    <div class="page-hero">
+      <div class="hero-ring" style="width:400px;height:400px;top:-180px;right:-100px;"></div>
+      <div class="container text-center position-relative">
+        <div class="hero-tag"><span class="blink"></span> Course Content</div>
+        <h1 class="hero-h">All <em>Modules</em></h1>
+        <p class="hero-sub">9 comprehensive technology modules covering the full spectrum of modern financial
+          technology.</p>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div
+      style="background:var(--zed-card-bg);border-bottom:1px solid var(--zed-banner-bg-end);padding:12px 0;position:sticky;top:80px;z-index:100;">
+      <div class="container d-flex gap-2 flex-wrap">
+        <button class="fpill active" data-f="all" onclick="filterMods(this,'all')">All</button>
+        <button class="fpill" data-f="algo" onclick="filterMods(this,'algo')">Algorithmic</button>
+        <button class="fpill" data-f="ai" onclick="filterMods(this,'ai')">AI & ML</button>
+        <button class="fpill" data-f="platform" onclick="filterMods(this,'platform')">Platforms</button>
+        <button class="fpill" data-f="blockchain" onclick="filterMods(this,'blockchain')">Blockchain</button>
+        <button class="fpill" data-f="hft" onclick="filterMods(this,'hft')">HFT</button>
+        <button class="fpill" data-f="cyber" onclick="filterMods(this,'cyber')">Cybersecurity</button>
+        <button class="fpill" data-f="data" onclick="filterMods(this,'data')">Data</button>
+        <button class="fpill" data-f="cloud" onclick="filterMods(this,'cloud')">Cloud</button>
+        <button class="fpill" data-f="future" onclick="filterMods(this,'future')">Future Tech</button>
+      </div>
+    </div>
+
+    <section class="bg2">
       <div class="container">
-        <div class="text-center mb-5 rv">
-          <span class="eyebrow">Which Form?</span>
-          <h2 class="sec-h">ITR Form Selection Guide</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-3 rv">
-            <div class="feat-card h-100" style="border-top:3px solid var(--blue)">
-              <div class="feat-icon" style="background:rgba(37,99,235,.1);color:var(--blue)"><i
-                  class="bi bi-1-circle-fill"></i></div>
-              <h6>ITR-1 (Sahaj)</h6>
-              <p>Salary + one house property + other sources (interest). <strong>NOT for anyone with trading
-                  income.</strong> Max income ₹50L.</p>
+        <div class="row g-4" id="modgrid">
+
+          <!-- M1 Algo -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="algo">
+            <div class="mcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover);--icon-bg:var(--zed-primary-hover)">
+              <div class="mcard-accent"></div><span class="mcard-num">01</span>
+              <div class="mcard-icon"><i class="fas fa-robot"></i></div>
+              <div class="mcard-tag">Module 01 · Algorithmic</div>
+              <div class="mcard-title">Algorithmic Trading Basics</div>
+              <p class="mcard-desc">Learn how automated trading systems execute trades using predefined rules and risk
+                controls.</p>
+              <div class="topic-li">
+                <div class="tdot"></div>What is Algo Trading?
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Strategy Building Basics
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Backtesting Concepts
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Execution Speed &amp; Latency
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Risk Controls in Automation
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:80%"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle"></i> 7 videos</span><span
+                    class="fchip"><i class="fas fa-clock"></i> 3h 40m</span></div>
+                <button class="btn-go" onclick="openDetail('algo')"><i class="fas fa-arrow-right"></i> Start</button>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv rv-d1">
-            <div class="feat-card h-100" style="border-top:3px solid var(--green)">
-              <div class="feat-icon" style="background:rgba(5,150,105,.1);color:var(--green)"><i
-                  class="bi bi-2-circle-fill"></i></div>
-              <h6>ITR-2</h6>
-              <p>Salary + capital gains from equity/MF/property + crypto. For <strong>delivery investors</strong> with
-                no business income. Most retail investors use this.</p>
+
+          <!-- M2 AI -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="ai">
+            <div class="mcard" style="--ac:var(--purple);--ac-glow:rgba(109,40,217,.1);--icon-bg:#f5f3ff">
+              <div class="mcard-accent"></div><span class="mcard-num">02</span>
+              <div class="mcard-icon" style="background:#f5f3ff;color:var(--purple)"><i class="fas fa-brain"></i></div>
+              <div class="mcard-tag" style="color:var(--purple)">Module 02 · AI & ML</div>
+              <div class="mcard-title">Artificial Intelligence in Trading</div>
+              <p class="mcard-desc">Explore how AI and machine learning are transforming trading strategies and market
+                prediction.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--purple)"></div>AI vs Traditional Trading
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--purple)"></div>Machine Learning Models
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--purple)"></div>Predictive Analytics
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--purple)"></div>Sentiment Analysis
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--purple)"></div>AI Trading Bots
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:65%;background:var(--purple)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle"
+                      style="color:var(--purple)"></i> 8 videos</span><span class="fchip"><i class="fas fa-clock"
+                      style="color:var(--purple)"></i> 4h 20m</span></div>
+                <button class="btn-go" style="background:var(--purple)" onclick="openDetail('ai')"><i
+                    class="fas fa-arrow-right"></i> Start</button>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv rv-d2">
-            <div class="feat-card h-100" style="border-top:3px solid var(--red)">
-              <div class="feat-icon" style="background:rgba(232,17,26,.1);color:var(--red)"><i
-                  class="bi bi-3-circle-fill"></i></div>
-              <h6>ITR-3</h6>
-              <p>For <strong>F&O traders, intraday traders, forex, commodity</strong> — anyone with business income from
-                trading. Also covers capital gains simultaneously.</p>
+
+          <!-- M3 Platforms -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="platform">
+            <div class="mcard" style="--ac:var(--blue);--ac-glow:rgba(24,68,168,.1);--icon-bg:#eff4ff">
+              <div class="mcard-accent"></div><span class="mcard-num">03</span>
+              <div class="mcard-icon" style="background:#eff4ff;color:var(--blue)"><i class="fas fa-desktop"></i></div>
+              <div class="mcard-tag" style="color:var(--blue)">Module 03 · Platforms</div>
+              <div class="mcard-title">Trading Platforms &amp; Tools</div>
+              <p class="mcard-desc">Master popular trading platforms and professional tools used by institutional
+                traders worldwide.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>MetaTrader (MT4/MT5) Basics
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>TradingView Charting
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Order Execution Systems
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Indicators &amp; Tools
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Mobile Trading Apps
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:55%;background:var(--blue)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle" style="color:var(--blue)"></i>
+                    9 videos</span><span class="fchip"><i class="fas fa-clock" style="color:var(--blue)"></i> 4h
+                    50m</span></div>
+                <button class="btn-go" style="background:var(--blue)"><i class="fas fa-arrow-right"></i> Start</button>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-3 rv rv-d3">
-            <div class="feat-card h-100" style="border-top:3px solid var(--amber)">
-              <div class="feat-icon" style="background:rgba(217,119,6,.1);color:var(--amber)"><i
-                  class="bi bi-4-circle-fill"></i></div>
-              <h6>ITR-4 (Sugam)</h6>
-              <p>For <strong>presumptive taxation</strong> under Section 44AD (8% of turnover as income). F&O turnover
-                under ₹2 Cr. Cannot claim actual expenses.</p>
+
+          <!-- M4 Blockchain -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="blockchain">
+            <div class="mcard" style="--ac:var(--cyan);--ac-glow:rgba(8,145,178,.1);--icon-bg:#ecfeff">
+              <div class="mcard-accent"></div><span class="mcard-num">04</span>
+              <div class="mcard-icon" style="background:#ecfeff;color:var(--cyan)"><i class="fas fa-link"></i></div>
+              <div class="mcard-tag" style="color:var(--cyan)">Module 04 · Blockchain</div>
+              <div class="mcard-title">Blockchain &amp; FinTech Innovation</div>
+              <p class="mcard-desc">Understand how blockchain is reshaping financial ecosystems through DeFi, smart
+                contracts, and Web3.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--cyan)"></div>Blockchain Basics
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--cyan)"></div>Smart Contracts
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--cyan)"></div>
+                <span>Decentralized Finance (DeFi) <span class="h-chip ms-1"
+                    style="--ac:var(--cyan);background:#ecfeff;font-size:.58rem;padding:2px 8px"><i
+                      class="fas fa-arrow-right"></i> Featured</span></span>
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--cyan)"></div>Crypto Trading Platforms
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--cyan)"></div>Web3 Applications
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:45%;background:var(--cyan)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle" style="color:var(--cyan)"></i>
+                    6 videos</span><span class="fchip"><i class="fas fa-clock" style="color:var(--cyan)"></i> 3h
+                    10m</span></div>
+                <button class="btn-go" style="background:var(--cyan)" onclick="openDetail('blockchain')"><i
+                    class="fas fa-arrow-right"></i> Start</button>
+              </div>
             </div>
           </div>
+
+          <!-- M5 HFT -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="hft">
+            <div class="mcard" style="--ac:var(--amber);--ac-glow:rgba(180,83,9,.1);--icon-bg:#fffbeb">
+              <div class="mcard-accent"></div><span class="mcard-num">05</span>
+              <div class="mcard-icon" style="background:#fffbeb;color:var(--amber)"><i class="fas fa-bolt"></i></div>
+              <div class="mcard-tag" style="color:var(--amber)">Module 05 · HFT</div>
+              <div class="mcard-title">High-Frequency Trading (HFT)</div>
+              <p class="mcard-desc">Dive into ultra-fast trading systems used by institutions to capture micro-second
+                market opportunities.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--amber)"></div>What is HFT?
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--amber)"></div>Low Latency Systems
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--amber)"></div>Market Making Strategies
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--amber)"></div>Infrastructure Requirements
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--amber)"></div>Risks &amp; Regulations
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:35%;background:var(--amber)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle"
+                      style="color:var(--amber)"></i> 7 videos</span><span class="fchip"><i class="fas fa-clock"
+                      style="color:var(--amber)"></i> 3h 50m</span></div>
+                <button class="btn-go" style="background:var(--amber)"><i class="fas fa-arrow-right"></i> Start</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- M6 Cybersecurity -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="cyber">
+            <div class="mcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover);--icon-bg:var(--zed-primary-hover)">
+              <div class="mcard-accent"></div><span class="mcard-num">06</span>
+              <div class="mcard-icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="mcard-tag">Module 06 · Cybersecurity</div>
+              <div class="mcard-title">Cybersecurity in Trading</div>
+              <p class="mcard-desc">Protect trading systems and digital assets from cyber threats, phishing, and
+                platform vulnerabilities.</p>
+              <div class="topic-li">
+                <div class="tdot"></div>Common Security Threats
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Secure Trading Practices
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Two-Factor Authentication
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Data Encryption Basics
+              </div>
+              <div class="topic-li">
+                <div class="tdot"></div>Avoiding Scams &amp; Phishing
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:28%"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle"></i> 6 videos</span><span
+                    class="fchip"><i class="fas fa-clock"></i> 3h 00m</span></div>
+                <button class="btn-go"><i class="fas fa-arrow-right"></i> Start</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- M7 Data Analytics -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="data">
+            <div class="mcard" style="--ac:var(--green);--ac-glow:rgba(21,128,61,.1);--icon-bg:#f0fdf4">
+              <div class="mcard-accent"></div><span class="mcard-num">07</span>
+              <div class="mcard-icon" style="background:#f0fdf4;color:var(--green)"><i
+                  class="fas fa-satellite-dish"></i></div>
+              <div class="mcard-tag" style="color:var(--green)">Module 07 · Data Analytics</div>
+              <div class="mcard-title">Data Analytics &amp; Market Insights</div>
+              <p class="mcard-desc">Use data-driven approaches and real-time feeds to improve trading decisions and KPI
+                tracking.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--green)"></div>Big Data in Trading
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--green)"></div>Data Visualization Tools
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--green)"></div>Market Sentiment Analysis
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--green)"></div>Real-time Data Feeds
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--green)"></div>KPI Tracking
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:22%;background:var(--green)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle"
+                      style="color:var(--green)"></i> 8 videos</span><span class="fchip"><i class="fas fa-clock"
+                      style="color:var(--green)"></i> 4h 10m</span></div>
+                <button class="btn-go" style="background:var(--green)"><i class="fas fa-arrow-right"></i> Start</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- M8 Cloud -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="cloud">
+            <div class="mcard" style="--ac:var(--blue);--ac-glow:rgba(24,68,168,.1);--icon-bg:#eff4ff">
+              <div class="mcard-accent"></div><span class="mcard-num">08</span>
+              <div class="mcard-icon" style="background:#eff4ff;color:var(--blue)"><i class="fas fa-cloud"></i></div>
+              <div class="mcard-tag" style="color:var(--blue)">Module 08 · Cloud</div>
+              <div class="mcard-title">Cloud Computing in Finance</div>
+              <p class="mcard-desc">Understand how cloud technology supports scalable, secure, and high-performance
+                trading systems.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Cloud Infrastructure Basics
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>SaaS in Trading Platforms
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Data Storage &amp; Processing
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Scalability &amp; Performance
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--blue)"></div>Cloud Security
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:18%;background:var(--blue)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle" style="color:var(--blue)"></i>
+                    6 videos</span><span class="fchip"><i class="fas fa-clock" style="color:var(--blue)"></i> 3h
+                    20m</span></div>
+                <button class="btn-go" style="background:var(--blue)"><i class="fas fa-arrow-right"></i> Start</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- M9 Future Trends -->
+          <div class="col-md-6 col-xl-4 reveal" data-cat="future">
+            <div class="mcard" style="--ac:var(--rose);--ac-glow:rgba(190,24,93,.1);--icon-bg:#fff1f7">
+              <div class="mcard-accent"></div><span class="mcard-num">09</span>
+              <div class="mcard-icon" style="background:#fff1f7;color:var(--rose)"><i class="fas fa-rocket"></i></div>
+              <div class="mcard-tag" style="color:var(--rose)">Module 09 · Future Tech · Pro</div>
+              <div class="mcard-title">Future Trends in Trading Technology</div>
+              <p class="mcard-desc">Stay ahead with emerging innovations shaping the next generation of financial
+                markets and platforms.</p>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--rose)"></div>AI + Blockchain Integration
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--rose)"></div>Quantum Computing Potential
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--rose)"></div>Metaverse &amp; Trading
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--rose)"></div>Automation Evolution
+              </div>
+              <div class="topic-li">
+                <div class="tdot" style="background:var(--rose)"></div>Next-gen Trading Platforms
+              </div>
+              <div class="prog-wrap">
+                <div class="prog-bar" style="width:10%;background:var(--rose)"></div>
+              </div>
+              <div class="mcard-foot">
+                <div class="foot-chips"><span class="fchip"><i class="fas fa-play-circle" style="color:var(--rose)"></i>
+                    10 videos</span><span class="fchip"><i class="fas fa-clock" style="color:var(--rose)"></i> 5h
+                    30m</span></div>
+                <button class="btn-go" style="background:var(--rose)"><i class="fas fa-lock-open"></i> Unlock</button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+  </div><!-- /page modules -->
 
-    <section class="cta-band sec-red">
+
+  <!-- ══════════════════════════════════
+     PAGE: VIDEOS
+══════════════════════════════════ -->
+  <div class="page" id="page-videos">
+    <div class="page-hero">
+      <div class="hero-ring" style="width:400px;height:400px;top:-200px;right:-100px;"></div>
+      <div class="container text-center position-relative">
+        <div class="hero-tag"><span class="blink"></span> On-Demand Library</div>
+        <h1 class="hero-h">Video <em>Sessions</em></h1>
+        <p class="hero-sub">Watch recorded webinars, live replays, and exclusive sessions at your own pace.</p>
+      </div>
+    </div>
+    <section class="bg2">
       <div class="container">
-        <h2>Practise Filing with Our Demo Module</h2>
-        <p>Watch a screen-share walkthrough of filing ITR-3 for an F&O trader — live on our portal demo.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <button class="btn-white" onclick="showPage('modules')"><i class="bi bi-play-fill"></i>Watch Demo
-            Module</button>
-          <button class="btn-outline-white" onclick="showPage('faq')"><i class="bi bi-question-circle"></i>Filing
-            FAQs</button>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ════════════════════════════════════════ -->
-  <!-- PAGE 6: FAQ ═════════════════════════════ -->
-  <!-- ════════════════════════════════════════ -->
-  <div class="page" id="page-faq">
-    <section class="hero hero-sm sec-alt">
-      <div class="container text-center">
-        <div class="hero-badge"><i class="bi bi-question-circle-fill"></i> Common Questions</div>
-        <h1 style="font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem)">Tax <em>FAQ</em></h1>
-        <p class="tagline mx-auto">The most common questions traders ask about taxation — answered in plain language by
-          our CA experts.</p>
-      </div>
-    </section>
-    <div class="hdiv"></div>
-
-    <section class="sec">
-      <div class="container">
-        <div class="row g-5">
-          <!-- General FAQs -->
-          <div class="col-lg-6 rv">
-            <h4 style="font-family:var(--serif);margin-bottom:1.4rem"><i class="bi bi-bar-chart-fill me-2"
-                style="color:var(--red)"></i>General Trading Tax</h4>
-            <div id="faq1">
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f1"
-                  aria-expanded="false">Do I need to pay tax if I only do intraday trading?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f1" class="collapse">
-                  <p class="faq-body">Yes. Intraday profits are classified as speculative business income and taxed at
-                    your applicable slab rate. Even if your F&O or delivery trades are at a loss, intraday profits must
-                    be reported. File ITR-3 to report this correctly.</p>
+        <div class="row g-4" id="vgrid">
+          <!-- 6 video cards -->
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="vcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover)">
+              <div class="vthumb" style="background:linear-gradient(135deg,#fff5f5,#ffe0df)">
+                <div class="vanim" id="v1"></div>
+                <div class="voverlay">
+                  <div class="vplay"><i class="fas fa-play ms-1"></i></div>
                 </div>
+                <div class="vstatus" style="background:rgba(0,0,0,.6);color:#fff">REPLAY</div>
+                <div class="vdur">44:12</div>
               </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f2"
-                  aria-expanded="false">Can I set off F&O losses against my salary income?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f2" class="collapse">
-                  <p class="faq-body">No, you cannot set off F&O losses directly against salary. However, F&O is
-                    non-speculative business income and can be set off against any other income except salary (e.g.,
-                    rental income, interest income, other business income). Unabsorbed losses carry forward for 8 years.
-                  </p>
-                </div>
-              </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f3"
-                  aria-expanded="false">What is the turnover limit for tax audit in F&O?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f3" class="collapse">
-                  <p class="faq-body">For F&O: if turnover exceeds ₹10 Crore, a tax audit under Section 44AB is
-                    mandatory. However, if your turnover is under ₹10 Cr and you opt for Section 44AD presumptive
-                    taxation (declaring 6–8% profit), no audit is needed. Audit must be completed by October 31.</p>
-                </div>
-              </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f4"
-                  aria-expanded="false">Is dividend income taxable for shareholders?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f4" class="collapse">
-                  <p class="faq-body">Yes. Since FY 2020-21, dividends are fully taxable in the hands of the shareholder
-                    at their applicable slab rate. There is no TDS for dividends up to ₹5,000 per company, but TDS
-                    applies at 10% above that threshold. Report in Schedule OS.</p>
-                </div>
-              </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f5"
-                  aria-expanded="false">Can trading losses be carried forward if I miss the filing deadline?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f5" class="collapse">
-                  <p class="faq-body">No. To carry forward any trading loss (capital or business), you MUST file your
-                    return on time (by July 31 for non-audit, October 31 for audit cases). If you file a belated return
-                    after the deadline, you lose the right to carry forward losses — an extremely costly mistake.</p>
-                </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--zed-primary)"><i class="fas fa-robot me-1"></i>Algo Trading</div>
+                <div class="vtitle">Backtesting Your First Automated Strategy</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Dr. Chen</span><span><i class="fas fa-eye"></i>
+                    4.1K</span><span><i class="fas fa-clock"></i> 44min</span></div>
               </div>
             </div>
           </div>
 
-          <!-- Crypto FAQs -->
-          <div class="col-lg-6 rv rv-d1">
-            <h4 style="font-family:var(--serif);margin-bottom:1.4rem"><i class="bi bi-currency-bitcoin me-2"
-                style="color:#f97316"></i>Crypto & Advanced Tax</h4>
-            <div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f6"
-                  aria-expanded="false">Is crypto taxed at 30% even if I made a small profit?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f6" class="collapse">
-                  <p class="faq-body">Yes. Under Section 115BBH, all gains from Virtual Digital Assets (VDA) including
-                    crypto are taxed at a flat 30% regardless of the amount, your income slab, or how long you held the
-                    asset. There is no basic exemption, no deduction except cost of acquisition, and no set-off against
-                    any other income.</p>
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="vcard" style="--ac:var(--purple);--ac-glow:rgba(109,40,217,.15)">
+              <div class="vthumb" style="background:linear-gradient(135deg,#f5f3ff,#ede8ff)">
+                <div class="vanim" id="v2"></div>
+                <div class="voverlay">
+                  <div class="vplay" style="background:var(--purple)"><i class="fas fa-play ms-1"></i></div>
                 </div>
+                <div class="vstatus" style="background:var(--purple);color:#fff"><span class="blink"
+                    style="background:#fff"></span> NEW</div>
+                <div class="vdur">58:34</div>
               </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f7"
-                  aria-expanded="false">What is 1% TDS on crypto transactions?<i class="bi bi-plus-lg"></i></button>
-                <div id="f7" class="collapse">
-                  <p class="faq-body">Under Section 194S, the buyer of crypto must deduct 1% TDS on the transaction
-                    value if total transactions exceed ₹50,000 (₹10,000 for non-specified persons) in a year. Indian
-                    exchanges like Zerodha, CoinDCX etc. automatically deduct and deposit this. The TDS is credited to
-                    your 26AS and can be claimed as tax credit while filing.</p>
-                </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--purple)"><i class="fas fa-brain me-1"></i>AI & ML</div>
+                <div class="vtitle">Predictive Analytics with ML Models</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Aisha Patel</span><span><i class="fas fa-eye"></i>
+                    7.2K</span><span><i class="fas fa-clock"></i> 58min</span></div>
               </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f8"
-                  aria-expanded="false">Can I claim expenses like electricity for crypto mining?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f8" class="collapse">
-                  <p class="faq-body">The Income Tax Act allows deduction of only the "cost of acquisition" for VDAs.
-                    Mining expenses like electricity and hardware are generally not considered cost of acquisition. The
-                    Central Board of Direct Taxes (CBDT) has not yet clarified this specifically — consult a CA for the
-                    latest guidance on mining tax treatment.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="vcard" style="--ac:var(--cyan);--ac-glow:rgba(8,145,178,.15)">
+              <div class="vthumb" style="background:linear-gradient(135deg,#ecfeff,#cffafe)">
+                <div class="vanim" id="v3"></div>
+                <div class="voverlay">
+                  <div class="vplay" style="background:var(--cyan)"><i class="fas fa-play ms-1"></i></div>
                 </div>
+                <div class="vstatus" style="background:rgba(0,0,0,.6);color:#fff">REPLAY</div>
+                <div class="vdur">51:07</div>
               </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f9"
-                  aria-expanded="false">What is DTAA and does it apply to forex trading?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f9" class="collapse">
-                  <p class="faq-body">The Double Taxation Avoidance Agreement (DTAA) is a treaty between India and other
-                    countries to prevent the same income being taxed twice. If you earn income abroad through
-                    international forex brokers and it's already taxed there, you can claim credit under DTAA. File Form
-                    67 before filing your ITR to claim foreign tax credit under Section 90/91.</p>
-                </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--cyan)"><i class="fas fa-link me-1"></i>Blockchain</div>
+                <div class="vtitle">Smart Contracts &amp; DeFi Protocol Deep Dive</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Lena Zhao</span><span><i class="fas fa-eye"></i>
+                    5.8K</span><span><i class="fas fa-clock"></i> 51min</span></div>
               </div>
-              <div class="faq-item"><button class="faq-q" data-bs-toggle="collapse" data-bs-target="#f10"
-                  aria-expanded="false">What happens if I receive a notice from the Income Tax Department?<i
-                    class="bi bi-plus-lg"></i></button>
-                <div id="f10" class="collapse">
-                  <p class="faq-body">Don't panic. Most notices are for routine verification under Sections 143(1) or
-                    148. Read the notice carefully, note the deadline, and respond through the income tax portal. Common
-                    reasons: mismatch between broker P&L and ITR data, high-value transactions not reported, or AIS
-                    mismatches. Always respond within the given time — ignoring a notice leads to ex-parte assessment
-                    and penalties.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="vcard" style="--ac:var(--amber);--ac-glow:rgba(180,83,9,.15)">
+              <div class="vthumb" style="background:linear-gradient(135deg,#fffbeb,#fde68a55)">
+                <div class="vanim" id="v4"></div>
+                <div class="voverlay">
+                  <div class="vplay" style="background:var(--amber)"><i class="fas fa-play ms-1"></i></div>
                 </div>
+                <div class="vstatus" style="background:rgba(0,0,0,.6);color:#fff">REPLAY</div>
+                <div class="vdur">39:20</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--amber)"><i class="fas fa-bolt me-1"></i>HFT</div>
+                <div class="vtitle">Low Latency Infrastructure for HFT Systems</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Marco Ricci</span><span><i class="fas fa-eye"></i>
+                    3.4K</span><span><i class="fas fa-clock"></i> 39min</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="vcard" style="--ac:var(--green);--ac-glow:rgba(21,128,61,.15)">
+              <div class="vthumb" style="background:linear-gradient(135deg,#f0fdf4,#bbf7d0)">
+                <div class="vanim" id="v5"></div>
+                <div class="voverlay">
+                  <div class="vplay" style="background:var(--green)"><i class="fas fa-play ms-1"></i></div>
+                </div>
+                <div class="vstatus" style="background:rgba(0,0,0,.6);color:#fff">REPLAY</div>
+                <div class="vdur">47:55</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--green)"><i class="fas fa-satellite-dish me-1"></i>Data Analytics
+                </div>
+                <div class="vtitle">Real-Time Market Sentiment &amp; Big Data Analysis</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> Priya Mehta</span><span><i class="fas fa-eye"></i>
+                    6.1K</span><span><i class="fas fa-clock"></i> 47min</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal">
+            <div class="vcard" style="--ac:var(--zed-primary);--ac-glow:var(--zed-light-red-hover);border-color:rgba(224,43,32,.3)">
+              <div class="vthumb" style="background:linear-gradient(135deg,#fff5f5,#fecaca)">
+                <div class="vanim" id="v6"></div>
+                <div class="voverlay" style="background:rgba(224,43,32,.08)">
+                  <div class="vplay"><i class="fas fa-broadcast-tower"></i></div>
+                </div>
+                <div class="vstatus" style="background:var(--zed-primary);color:#fff"><span class="blink"
+                    style="background:#fff"></span> LIVE SOON</div>
+                <div class="vdur" style="background:var(--zed-primary)">LIVE</div>
+              </div>
+              <div class="vbody">
+                <div class="vcat" style="color:var(--zed-primary)"><i class="fas fa-shield-halved me-1"></i>Cybersecurity</div>
+                <div class="vtitle">Protecting Your Trading System — Live with James Okafor</div>
+                <div class="vmeta"><span><i class="fas fa-user"></i> James Okafor</span><span><i
+                      class="fas fa-calendar"></i> Jun 11, 2026</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </div><!-- /page videos -->
 
-    <section class="cta-band sec-red">
-      <div class="container">
-        <h2>Have More Questions?</h2>
-        <p>Join our live Q&A webinar sessions where our CA experts answer your trading tax questions in real-time.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <button class="btn-white" onclick="showPage('home')"><i class="bi bi-play-fill"></i>Join Live Webinar</button>
-          <button class="btn-outline-white" onclick="showPage('calculator')"><i class="bi bi-calculator"></i>Calculate
-            My Tax</button>
-        </div>
-      </div>
-    </section>
-  </div>
+  <style>
+    .fpill {
+      background: transparent;
+      border: 1px solid var(--zed-banner-bg-end);
+      color: var(--zed-secondary);
+      border-radius: 5px;
+      padding: 6px 16px;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      
+      white-space: nowrap;
+    }
+
+    .fpill:hover {
+      border-color: var(--zed-primary);
+      color: var(--zed-primary);
+    }
+
+    .fpill.active {
+      background: var(--zed-primary);
+      border-color: var(--zed-primary);
+      color: #fff;
+    }
+  </style>
 
   <script>
-    // ── NAVBAR SCROLL ────────────────────────
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => nav.classList.toggle('raised', scrollY > 40));
-
-    // ── SCROLL REVEAL ────────────────────────
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.09 });
-    function observeReveal() { document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el)); }
-    observeReveal();
-
-    // ── PAGE SWITCHING ───────────────────────
+    // ── PAGE SYSTEM ──
+    const pages = ['home', 'modules', 'videos', 'curriculum', 'detail'];
     function showPage(id) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.pnav-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('page-' + id).classList.add('active');
-      document.querySelector(`[data-page="${id}"]`).classList.add('active');
+      pages.forEach(p => {
+        const el = document.getElementById('page-' + p);
+        const nav = document.getElementById('nav-' + p);
+        if (el) el.classList.toggle('active', p === id);
+        if (nav) nav.classList.toggle('active', p === id);
+      });
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      setTimeout(observeReveal, 100);
+      setTimeout(triggerReveal, 80);
+      if (id === 'curriculum') buildCurriculum();
     }
 
-    document.querySelectorAll('.pnav-btn').forEach(btn => {
-      btn.addEventListener('click', () => showPage(btn.dataset.page));
-    });
+    // ── ANIMATED BARS ──
+    const palettes = {
+      red: '#E02B20', purple: '#6d28d9', cyan: '#0891b2',
+      amber: '#b45309', green: '#15803d', blue: '#1844a8', rose: '#be185d'
+    };
+    function buildBars(id, color) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.innerHTML = '';
+      const hts = [35, 60, 28, 80, 45, 70, 30, 90, 50, 40, 75, 55, 85, 38, 65, 30, 80, 48, 72, 42];
+      hts.forEach((h, i) => {
+        const b = document.createElement('div');
+        b.className = 'vbar';
+        b.style.cssText = `height:${h}%;background:${color};opacity:.55;animation-delay:${i * .1}s;animation-duration:${1.6 + Math.random() * 1.2}s;`;
+        el.appendChild(b);
+      });
+    }
 
-    // ── TAX CALCULATOR ───────────────────────
-    function calculateTax() {
-      const assetClass = document.getElementById('assetClass').value;
-      const profit = parseFloat(document.getElementById('profitInput').value) || 0;
-      const loss = parseFloat(document.getElementById('lossInput').value) || 0;
-      const salary = parseFloat(document.getElementById('salaryInput').value) || 0;
+    // Build all bars
+    const barDefs = [
+      ['hv1', '#E02B20'], ['hv2', '#6d28d9'], ['hv3', '#0891b2'], ['hv4', '#E02B20'],
+      ['v1', '#E02B20'], ['v2', '#6d28d9'], ['v3', '#0891b2'],
+      ['v4', '#b45309'], ['v5', '#15803d'], ['v6', '#E02B20'],
+    ];
+    function initBars() { barDefs.forEach(([id, col]) => buildBars(id, col)); }
+    document.addEventListener('DOMContentLoaded', initBars);
 
-      const net = Math.max(profit - loss, 0);
-      let rate = 0, itrForm = '', rateLabel = '';
+    // ── SCROLL REVEAL ──
+    function triggerReveal() {
+      const revs = document.querySelectorAll('.page.active .reveal');
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) { setTimeout(() => e.target.classList.add('in'), i * 65); obs.unobserve(e.target); }
+        });
+      }, { threshold: .08 });
+      revs.forEach(r => { r.classList.remove('in'); obs.observe(r); });
+    }
+    triggerReveal();
 
-      if (assetClass === 'equity_stcg') {
-        rate = 0.15; rateLabel = '15% (STCG)'; itrForm = 'ITR-2';
-      } else if (assetClass === 'equity_ltcg') {
-        const exemption = 100000;
-        const taxable = Math.max(net - exemption, 0);
-        const tax = taxable * 0.10;
-        const advance = tax / 4;
-        showResult(net, '10% (LTCG, above ₹1L exempt)', tax, advance, net - tax, 'ITR-2');
-        return;
-      } else if (assetClass === 'crypto') {
-        rate = 0.30; rateLabel = '30% (Crypto/VDA Flat)'; itrForm = 'ITR-2 / ITR-3';
-      } else {
-        // Slab-based
-        const totalIncome = net + salary;
-        const slabTax = calcSlabTax(totalIncome) - calcSlabTax(salary);
-        rate = net > 0 ? slabTax / net : 0;
-        rateLabel = 'Slab Rate (approx ' + (rate * 100).toFixed(1) + '%)';
-        itrForm = 'ITR-3';
-        const advance = slabTax / 4;
-        showResult(net, rateLabel, slabTax, advance, net - slabTax, itrForm);
-        return;
+    // ── FILTER ──
+    function filterMods(el, f) {
+      document.querySelectorAll('.fpill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('#modgrid>[data-cat]').forEach(c => {
+        c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+      });
+    }
+
+    // ── DETAIL DATA ──
+    const detailData = {
+      algo: {
+        color: '#E02B20', badgeBg: '#fef3f2', label: 'Module 01 · Algorithmic Trading',
+        title: 'Algorithmic <em>Trading Basics</em>', desc: 'Learn how automated trading systems execute trades using predefined rules, from strategy building and backtesting to live execution and risk controls.',
+        topics: ['What is Algo Trading?', 'Strategy Building Basics', 'Backtesting Concepts', 'Execution Speed & Latency', 'Risk Controls in Automation'],
+        videos: 7, duration: '3h 40m', level: 'Intermediate',
+        vids: [
+          { title: 'What is Algorithmic Trading?', dur: '18:20', status: 'REPLAY', color: '#E02B20', bg: '#fff5f5,#ffe0df' },
+          { title: 'Building Your First Strategy in Python', dur: '42:15', status: 'NEW', color: '#E02B20', bg: '#fff5f5,#fecaca' },
+          { title: 'Backtesting: Theory vs Practice', dur: '38:44', status: 'REPLAY', color: '#E02B20', bg: '#fff5f5,#ffe0df' },
+        ]
+      },
+      ai: {
+        color: '#6d28d9', badgeBg: '#f5f3ff', label: 'Module 02 · Artificial Intelligence',
+        title: 'AI in <em>Trading</em>', desc: 'Explore how machine learning and AI are transforming trading strategies, market prediction, and sentiment analysis for modern algorithmic systems.',
+        topics: ['AI vs Traditional Trading', 'Machine Learning Models', 'Predictive Analytics', 'Sentiment Analysis', 'AI Trading Bots'],
+        videos: 8, duration: '4h 20m', level: 'Intermediate',
+        vids: [
+          { title: 'Machine Learning for Market Prediction', dur: '52:10', status: 'NEW', color: '#6d28d9', bg: '#f5f3ff,#ede8ff' },
+          { title: 'Building Sentiment Analysis Pipelines', dur: '44:33', status: 'REPLAY', color: '#6d28d9', bg: '#f5f3ff,#e9d8ff' },
+          { title: 'AI Trading Bots: Architecture & Risk', dur: '61:07', status: 'REPLAY', color: '#6d28d9', bg: '#f5f3ff,#ede8ff' },
+        ]
+      },
+      blockchain: {
+        color: '#0891b2', badgeBg: '#ecfeff', label: 'Module 04 · Blockchain & DeFi',
+        title: 'Blockchain &amp; <em>FinTech Innovation</em>', desc: 'Understand how blockchain technology is reshaping financial ecosystems through decentralized finance, smart contracts, and Web3 applications.',
+        topics: ['Blockchain Basics', 'Smart Contracts', 'Decentralized Finance (DeFi)', 'Crypto Trading Platforms', 'Web3 Applications'],
+        videos: 6, duration: '3h 10m', level: 'Beginner',
+        vids: [
+          { title: 'Blockchain Fundamentals for Traders', dur: '31:40', status: 'REPLAY', color: '#0891b2', bg: '#ecfeff,#cffafe' },
+          { title: 'DeFi Protocols & Yield Strategies', dur: '55:12', status: 'NEW', color: '#0891b2', bg: '#ecfeff,#a5f3fc' },
+          { title: 'Smart Contracts in Financial Markets', dur: '47:58', status: 'REPLAY', color: '#0891b2', bg: '#ecfeff,#cffafe' },
+        ]
       }
+    };
 
-      const tax = net * rate;
-      const advance = tax / 4;
-      showResult(net, rateLabel, tax, advance, net - tax, itrForm);
+    function openDetail(key) {
+      const d = detailData[key];
+      if (!d) return;
+      document.getElementById('d-badge').textContent = d.label;
+      document.getElementById('d-badge').style.cssText = `background:${d.badgeBg};color:${d.color};border:1px solid ${d.color}33;border-radius:20px;padding:5px 16px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;`;
+      document.getElementById('d-title').innerHTML = d.title;
+      document.getElementById('d-title').style.color = 'var(--zed-dark-text)';
+      document.querySelectorAll('#d-title em').forEach(e => e.style.color = d.color);
+      document.getElementById('d-desc').textContent = d.desc;
+      document.getElementById('d-btn').style.background = d.color;
+
+      // Topics
+      const tp = document.getElementById('d-topics');
+      tp.innerHTML = d.topics.map(t => `<div class="topic-li"><div class="tdot" style="background:${d.color}"></div>${t}</div>`).join('');
+
+      // Meta
+      document.getElementById('d-videos-count').innerHTML = `<i class="fas fa-play-circle" style="color:${d.color}"></i> ${d.videos} videos`;
+      document.getElementById('d-duration').innerHTML = `<i class="fas fa-clock" style="color:${d.color}"></i> ${d.duration}`;
+      document.getElementById('d-level').innerHTML = `<i class="fas fa-signal" style="color:${d.color}"></i> ${d.level}`;
+
+      // Video cards
+      const vc = document.getElementById('d-videos');
+      vc.innerHTML = d.vids.map((v, i) => `
+    <div class="vcard mb-4">
+      <div class="vthumb" style="background:linear-gradient(135deg,${v.bg})">
+        <div class="vanim" id="dv${key}${i}"></div>
+        <div class="voverlay"><div class="vplay" style="background:${v.color}"><i class="fas fa-play ms-1"></i></div></div>
+        <div class="vstatus" style="background:${v.status === 'NEW' ? v.color : 'rgba(0,0,0,.6)'};color:#fff">${v.status === 'NEW' ? '<span class="blink" style="background:#fff"></span>' : ''} ${v.status}</div>
+        <div class="vdur">${v.dur}</div>
+      </div>
+      <div class="vbody">
+        <div class="vtitle">${v.title}</div>
+      </div>
+    </div>
+  `).join('');
+
+      d.vids.forEach((_, i) => buildBars(`dv${key}${i}`, d.color));
+      showPage('detail');
     }
 
-    function calcSlabTax(income) {
-      // New Regime FY 2025-26
-      if (income <= 300000) return 0;
-      if (income <= 700000) return (income - 300000) * 0.05;
-      if (income <= 1000000) return 20000 + (income - 700000) * 0.10;
-      if (income <= 1200000) return 50000 + (income - 1000000) * 0.15;
-      if (income <= 1500000) return 80000 + (income - 1200000) * 0.20;
-      return 140000 + (income - 1500000) * 0.30;
+    // ── CURRICULUM ──
+    const currData = [
+      { n: '01', title: 'Algorithmic Trading Basics', color: '#E02B20', topics: ['What is Algo Trading?', 'Strategy Building Basics', 'Backtesting Concepts', 'Execution Speed & Latency', 'Risk Controls in Automation'] },
+      { n: '02', title: 'Artificial Intelligence in Trading', color: '#6d28d9', topics: ['AI vs Traditional Trading', 'Machine Learning Models', 'Predictive Analytics', 'Sentiment Analysis', 'AI Trading Bots'] },
+      { n: '03', title: 'Trading Platforms & Tools', color: '#1844a8', topics: ['MetaTrader (MT4/MT5) Basics', 'TradingView Charting', 'Order Execution Systems', 'Indicators & Tools', 'Mobile Trading Apps'] },
+      { n: '04', title: 'Blockchain & FinTech Innovation', color: '#0891b2', topics: ['Blockchain Basics', 'Smart Contracts', 'Decentralized Finance (DeFi)', 'Crypto Trading Platforms', 'Web3 Applications'] },
+      { n: '05', title: 'High-Frequency Trading (HFT)', color: '#b45309', topics: ['What is HFT?', 'Low Latency Systems', 'Market Making Strategies', 'Infrastructure Requirements', 'Risks & Regulations'] },
+      { n: '06', title: 'Cybersecurity in Trading', color: '#E02B20', topics: ['Common Security Threats', 'Secure Trading Practices', 'Two-Factor Authentication', 'Data Encryption Basics', 'Avoiding Scams & Phishing'] },
+      { n: '07', title: 'Data Analytics & Market Insights', color: '#15803d', topics: ['Big Data in Trading', 'Data Visualization Tools', 'Market Sentiment Analysis', 'Real-time Data Feeds', 'KPI Tracking'] },
+      { n: '08', title: 'Cloud Computing in Finance', color: '#1844a8', topics: ['Cloud Infrastructure Basics', 'SaaS in Trading Platforms', 'Data Storage & Processing', 'Scalability & Performance', 'Cloud Security'] },
+      { n: '09', title: 'Future Trends in Trading Technology', color: '#be185d', topics: ['AI + Blockchain Integration', 'Quantum Computing Potential', 'Metaverse & Trading', 'Automation Evolution', 'Next-gen Trading Platforms'] },
+    ];
+
+    function buildCurriculum() {
+      const list = document.getElementById('curriculum-list');
+      if (list.innerHTML.trim()) return;
+      list.innerHTML = currData.map((m, mi) => `
+    <div class="curr-item" style="--ac:${m.color}">
+      <div class="curr-head" onclick="toggleCurr(${mi})">
+        <div class="curr-head-left">
+          <span class="curr-idx" style="color:${m.color}">${m.n}</span>
+          <span class="curr-name">${m.title}</span>
+        </div>
+        <span class="curr-badge" style="color:${m.color};background:${m.color}18">${m.topics.length} topics <i class="fas fa-chevron-down ms-1" id="curr-icon-${mi}" style="font-size:.55rem;transition:transform .2s"></i></span>
+      </div>
+      <div class="curr-body" id="curr-body-${mi}">
+        ${m.topics.map(t => `<p class="mb-0" style="font-size:.8rem;color:var(--zed-secondary);padding:5px 0;border-bottom:1px dashed var(--zed-banner-bg-end)">
+          <span style="color:${m.color};margin-right:8px">›</span>${t}</p>`).join('')}
+      </div>
+    </div>
+  `).join('');
     }
 
-    function showResult(net, rate, tax, advance, takehome, itr) {
-      const fmt = v => '₹' + Math.round(v).toLocaleString('en-IN');
-      document.getElementById('res-net-income').textContent = fmt(net);
-      document.getElementById('res-rate').textContent = rate;
-      document.getElementById('res-tax').textContent = fmt(tax);
-      document.getElementById('res-advance').textContent = fmt(advance) + ' / quarter';
-      document.getElementById('res-takehome').textContent = fmt(takehome);
-      document.getElementById('res-itr').textContent = itr;
-      document.getElementById('calcResult').style.display = 'block';
+    function toggleCurr(i) {
+      const body = document.getElementById('curr-body-' + i);
+      const icon = document.getElementById('curr-icon-' + i);
+      body.classList.toggle('open');
+      icon.style.transform = body.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0)';
     }
   </script>
 <?php
