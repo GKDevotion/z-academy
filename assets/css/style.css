@@ -23,7 +23,7 @@
     --float-duration: 4.5s;   /* how slow/fast the loop is */
     --gold: #c9a84c;
     /* f0a500; */
-    --blue: #2563eb;
+    --blue: #1551a0;
     --purple: #7c3aed;
     --teal: #0891b2;
     --green: #166534;
@@ -32,12 +32,13 @@
     --cyan: #0891b2;
     --amber: #b45309;
     --amber-s: #fffbeb;
-    --rose: #be185d;
+    --rose: #a01a45;
     --orange: #c2540a;
     --orange-s: #fff7ed;
     --teal-s: #ecfeff;
     --navy-s: #eff6ff;
     --purple-s: #faf5ff;
+    --emerald: #0a7c52;
 }
 
 body {

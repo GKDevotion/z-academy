@@ -10,7 +10,7 @@ include_once ('elements/header.php');
             display: flex;
             align-items: center;
             background: #fff;
-            padding-top: 60px;
+            padding-top: 100px;
             overflow: hidden;
         }
 

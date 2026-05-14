@@ -254,6 +254,7 @@ include_once ('elements/header.php');
         @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
     </style>
+
     <div class="marquee-band">
         <div class="mq-row">
             <div class="mq-track" id="mq1">
@@ -776,6 +777,7 @@ include_once ('elements/header.php');
             line-height: 1.65;
         }
     </style>
+
     <section class="sec sec-2" style="background-color: var(--zed-dark-text);" id="terminal">
         <div class="container">
             <div class="text-center mb-5">
@@ -879,6 +881,7 @@ include_once ('elements/header.php');
             color: var(--zed-secondary);
         }
     </style>
+
     <section class="sec sec-off" id="reviews">
         <div class="container">
             <div class="text-center mb-5">
@@ -1024,6 +1027,7 @@ include_once ('elements/header.php');
             color: var(--zed-primary);
         }
     </style>
+    
     <section class="cta-band" id="enroll">
         <div class="container">
             <h2>Access the<br><em>Institutional Elite</em> Terminal</h2>
