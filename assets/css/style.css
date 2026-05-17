@@ -25,7 +25,9 @@
     /* f0a500; */
     --blue: #1551a0;
     --purple: #7c3aed;
+    --purple-s: #faf5ff;
     --teal: #0891b2;
+    --teal-s: #ecfeff;
     --green: #166534;
     --green-s: #f0fdf4;
     --navy: #1a2e5a;
@@ -35,9 +37,7 @@
     --rose: #a01a45;
     --orange: #c2540a;
     --orange-s: #fff7ed;
-    --teal-s: #ecfeff;
     --navy-s: #eff6ff;
-    --purple-s: #faf5ff;
     --emerald: #0a7c52;
 }
 

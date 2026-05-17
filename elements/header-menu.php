@@ -47,6 +47,11 @@
                     </ul>
                 </li>
 
+                <!-- Types of Trader -->
+                <li class="nav-item">
+                    <a class="nav-link" href="types-of-trader">Types of Trader</a>
+                </li>
+
                 <!-- Tools & Resources -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="educators" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,6 +68,10 @@
                 </li>
                 <!-- Tools & Resources -->
 
+                <!-- How to -->
+                <li class="nav-item">
+                    <a class="nav-link" href="how-to">How to</a>
+                </li>
             </ul>
 
             <div class="d-flex">
