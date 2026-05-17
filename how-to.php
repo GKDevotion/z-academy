@@ -794,30 +794,30 @@ include_once ('elements/header.php');
                     v.badge === 'new' ? `<div class="vt-badge new">NEW</div>` : '';
                 const isActive = v.id === activeVid.id;
                 return `
-    <div class="col-6 col-md-4 col-lg-3 reveal">
-      <div class="vid-card${isActive ? ' active-card' : ''}" onclick="selectVid(${v.id})" data-id="${v.id}">
-        <div class="vid-thumb">
-          <div class="vt-canvas" id="vtc${v.id}"></div>
-          <div class="vt-overlay"></div>
-          <div class="vt-brand">ZedCapital</div>
-          <div class="vt-htitle">
-            <div class="vt-how">HOW TO</div>
-            <div class="vt-main">${v.main}</div>
-            ${v.sub ? `<div class="vt-sub">${platIcon} ${v.sub}</div>` : ''}
-          </div>
-          ${badgeHtml}
-          <div class="vt-play"><i class="fas fa-play ms-1"></i></div>
-          <div class="vt-dur">${v.dur}</div>
-        </div>
-        <div class="vid-body">
-          <div class="vid-title">${v.title}</div>
-          <div class="vid-meta">
-            <span><i class="fas fa-calendar"></i> ${v.date}</span>
-            <span><i class="fas fa-clock"></i> ${v.dur}</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
+                    <div class="col-6 col-md-4 col-lg-3 reveal">
+                    <div class="vid-card${isActive ? ' active-card' : ''}" onclick="selectVid(${v.id})" data-id="${v.id}">
+                        <div class="vid-thumb">
+                        <div class="vt-canvas" id="vtc${v.id}"></div>
+                        <div class="vt-overlay"></div>
+                        <div class="vt-brand">ZedCapital</div>
+                        <div class="vt-htitle">
+                            <div class="vt-how">HOW TO</div>
+                            <div class="vt-main">${v.main}</div>
+                            ${v.sub ? `<div class="vt-sub">${platIcon} ${v.sub}</div>` : ''}
+                        </div>
+                        ${badgeHtml}
+                        <div class="vt-play"><i class="fas fa-play ms-1"></i></div>
+                        <div class="vt-dur">${v.dur}</div>
+                        </div>
+                        <div class="vid-body">
+                        <div class="vid-title">${v.title}</div>
+                        <div class="vid-meta">
+                            <span><i class="fas fa-calendar"></i> ${v.date}</span>
+                            <span><i class="fas fa-clock"></i> ${v.dur}</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>`;
             }).join('');
 
             // Build bars
