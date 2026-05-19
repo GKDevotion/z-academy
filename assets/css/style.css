@@ -21,6 +21,7 @@
     --zed-success-hover: #19b57c;
     --float-distance: 14px;   /* how far it moves up/down */
     --float-duration: 4.5s;   /* how slow/fast the loop is */
+    --shadow: 0 4px 24px rgba(10, 22, 40, 0.08);
     --gold: #c9a84c;
     /* f0a500; */
     --blue: #1551a0;

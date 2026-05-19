@@ -64,6 +64,7 @@
                         <li class="nav-item"><a class="nav-link dropdown-item" href="educator-begginer">Begginer</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="educator-intermediate">Intermediate</a></li>
                         <li class="nav-item"><a class="nav-link dropdown-item" href="educator-advance">Advance</a></li>
+                        <li class="nav-item"><a class="nav-link dropdown-item" href="educator-metatrader-5">MetaTrader 5</a></li>
                     </ul>
                 </li>
                 <!-- Tools & Resources -->

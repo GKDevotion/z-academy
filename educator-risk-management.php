@@ -181,15 +181,228 @@ include_once ('elements/header.php');
 
     <section class="section-padding container">
         <div class="row align-items-center">
-            <div class="col-lg-5">
-                <h2 class="fw-bold">The Deadly <span class="text-danger">Drawdown</span></h2>
-                <p class="text-muted">Mathematical reality: Recovering from a loss is harder than making a profit. Protect your capital at all costs.</p>
+             <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">
+                    The Deadly <span class="text-danger">Drawdown</span>
+                </h2>
+                <p class="text-muted">
+                    Mathematical reality: Recovering from a loss is harder than making a profit. Protect your capital at all costs.
+                </p>
+
+                <p class="text-muted">
+                    Recovery Formula — Why protecting capital is CRITICAL
+                </p>
+                
                 <div class="p-4 bg-dark text-white rounded-4 mt-4">
-                    <h3 class="fw-bold text-danger">50% Loss</h3>
-                    <p class="mb-0">Requires a <strong>100% Return</strong> just to break even.</p>
+                    <h4 class="fw-bold text-danger">
+                        Recovery % = Loss% ÷ (1 - Loss%) X 100
+                    </h4>
+                    <p class="mb-0">
+                        The math is brutal. Small losses are easy to recover. Big losses can permanently end your trading career.
+                    </p>
+                </div>
+            </div>           
+        </div>
+
+        <style>
+            /* ── SUBSECTION ── */
+            .sub-title {
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--navy);
+                margin: 32px 0 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .sub-title::after {
+                content: '';
+                flex: 1;
+                height: 1px;
+                background: var(--zed-border-color);
+            }
+
+            /* ── CALCULATOR ── */
+            .calc-box {
+                background: var(--zed-light-bg);
+                border-radius: 14px;
+                border: 1px solid var(--zed-border-color);
+                padding: 24px;
+                margin-bottom: 20px;
+                box-shadow: var(--shadow);
+            }
+
+            .calc-box h3 {
+                font-size: 15px;
+                font-weight: 600;
+                color: var(--navy);
+                margin-bottom: 18px;
+            }
+
+            .calc-row {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 12px;
+                flex-wrap: wrap;
+            }
+
+            .calc-label {
+                font-size: 13px;
+                color: var(--zed-green-text);
+                min-width: 160px;
+            }
+
+            .calc-input,
+            .calc-select {
+                padding: 8px 12px;
+                font-size: 13px;
+                border-radius: 8px;
+                border: 1px solid var(--zed-border-color);
+                background: var( --zed-card-bg);
+                color: var(--zed-dark-text);
+            }
+
+            .calc-input {
+                width: 120px;
+            }
+
+            .calc-btn {
+                background: var(--navy);
+                color: var(--gold);
+                border: none;
+                border-radius: 8px;
+                padding: 8px 20px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            .calc-btn:hover {
+                background: var(--navy);
+            }
+
+            .result-box {
+                background: linear-gradient(135deg, var(--emerald), #f0fff8);
+                border-radius: 10px;
+                padding: 14px 18px;
+                margin-top: 14px;
+                border: 1px solid #b2e8d4;
+                font-size: 14px;
+                color: var(--zed-dark-text);
+                line-height: 1.8;
+            }
+
+            .rh {
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--teal);
+            }
+
+            .rw {
+                color: var(--zed-primary);
+                font-weight: 600;
+            }
+
+            .slider-wrap {
+                margin-bottom: 14px;
+            }
+
+            .slider-label-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 6px;
+            }
+
+            .slider-label {
+                font-size: 13px;
+                color: var(--zed-green-text);
+            }
+
+            .slider-val {
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--navy);
+            }
+
+            input[type=range] {
+                width: 100%;
+                accent-color: var(--navy);
+            }
+
+            .risk-track {
+                height: 14px;
+                border-radius: 20px;
+                background: var(--zed-border-color);
+                overflow: hidden;
+                margin: 8px 0;
+            }
+
+            .risk-fill {
+                height: 100%;
+                border-radius: 20px;
+                transition: all 0.4s;
+            }
+
+            .rf-safe {
+                background: linear-gradient(90deg, var(--teal), #4ecb9e);
+            }
+
+            .rf-warn {
+                background: linear-gradient(90deg, #f0b429, #f6d860);
+            }
+
+            .rf-danger {
+                background: linear-gradient(90deg, var(--zed-primary), #f08070);
+            }
+        </style>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="sub-title">🎚️ Risk Simulator — Interactive</div>
+                <div class="calc-box">
+                    <div class="slider-wrap">
+                        <div class="slider-label-row">
+                            <span class="slider-label">Account Size ($)</span>
+                            <span class="slider-val" id="s-acc-val">$10,000</span>
+                        </div>
+                        <input type="range" min="500" max="100000" step="500" value="10000" id="s-acc" oninput="updateSim()">
+                    </div>
+                    <div class="slider-wrap">
+                        <div class="slider-label-row">
+                            <span class="slider-label">Risk Per Trade (%)</span>
+                            <span class="slider-val" id="s-risk-val">1%</span>
+                        </div>
+                        <input type="range" min="0.5" max="15" step="0.5" value="1" id="s-risk" oninput="updateSim()">
+                    </div>
+                    <div class="slider-wrap">
+                        <div class="slider-label-row">
+                            <span class="slider-label">Consecutive Losses</span>
+                            <span class="slider-val" id="s-loss-val">5</span>
+                        </div>
+                            <input type="range" min="1" max="20" step="1" value="5" id="s-loss" oninput="updateSim()">
+                    </div>
+                    <div style="margin-top:16px;">
+                        <div style="display:flex; justify-content:space-between; font-size:13px; color:var(--zed-green-text); margin-bottom:6px;">
+                            <span>Account remaining</span>
+                            <span id="s-remain" style="font-weight:600;">$9,510</span>
+                        </div>
+                        <div class="risk-track">
+                            <div class="risk-fill rf-safe" id="s-bar" style="width:95%"></div>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--zed-secondary);">
+                            <span>Drawdown</span>
+                            <span id="s-dd">4.9%</span>
+                        </div>
+                    </div>
+                    <div class="result-box" id="s-verdict" style="margin-top:12px;">Loading…</div>
                 </div>
             </div>
-            <div class="col-lg-7 mt-5 mt-lg-0">
+
+            <div class="col-lg-6 mt-5 mt-lg-0">
                 <table class="table table-hover border">
                     <thead class="table-dark">
                         <tr><th>Loss</th><th>Recovery Needed</th></tr>
@@ -201,6 +414,63 @@ include_once ('elements/header.php');
                         <tr class="bg-dark text-white"><td>90%</td><td>900%</td></tr>
                     </tbody>
                 </table>
+            </div> 
+        </div>
+
+        <style>
+            .blist {
+                list-style: none;
+            }
+
+            .blist li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 11px 0;
+                border-bottom: 1px solid var(--border);
+                font-size: 14px;
+                color: var(--text);
+                line-height: 1.6;
+            }
+
+            .bi {
+                font-size: 18px;
+                flex-shrink: 0;
+                margin-top: 1px;
+            }
+
+            .blist strong {
+                font-weight: 600;
+            }
+        </style>
+        <div class="row align-items-center">
+            <div class="col-lg-6 offset-3">
+                <div class="sub-title">🎯 Stop Loss Placement Strategies</div>
+                <ul class="blist">
+                    <li><span class="bi">📏</span>
+                        <div>
+                            <strong>ATR-Based SL</strong> — Place SL at 1.5–2× ATR(14) from your entry price. This adapts to current
+                        market volatility automatically. <em>Formula: SL = Entry ± (1.5 × ATR)</em></div>
+                    </li>
+                    <li><span class="bi">🏗️</span>
+                    <div><strong>Structure-Based SL</strong> — Place SL just below the last significant swing low (for buy trades)
+                        or above the last swing high (for sell trades). This is the most logical placement — if structure breaks,
+                        your thesis is wrong.</div>
+                    </li>
+                    <li><span class="bi">🔄</span>
+                    <div><strong>Trailing Stop</strong> — Move SL by a fixed pip amount or % as price moves in your favour. Allows
+                        you to "let winners run" while protecting accumulated profits.</div>
+                    </li>
+                    <li><span class="bi">⚖️</span>
+                    <div><strong>Break-Even Stop</strong> — Once your trade is +1R (full risk amount) in profit, move SL to your
+                        entry price. Now you have a "free trade" — worst case is breakeven. Best practice for all trades.</div>
+                    </li>
+                    <li><span class="bi">🚫</span>
+                    <div><strong style="color:var(--red);">NEVER Move SL Further Away</strong> — The #1 mistake of losing traders.
+                        If price is approaching your SL, do NOT widen it. Accept the loss. Widening SL destroys all risk management
+                        logic.</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -237,7 +507,39 @@ include_once ('elements/header.php');
         </div>
     </footer>
   
-    
+    <script>
+
+        // ── Risk Simulator ──        
+        function updateSim() {
+            const acc = parseFloat(document.getElementById('s-acc').value);
+            const risk = parseFloat(document.getElementById('s-risk').value);
+            const losses = parseInt(document.getElementById('s-loss').value);
+            document.getElementById('s-acc-val').textContent = '$' + acc.toLocaleString();
+            document.getElementById('s-risk-val').textContent = risk + '%';
+            document.getElementById('s-loss-val').textContent = losses;
+            let rem = acc;
+
+            for (let i = 0; i < losses; i++) rem *= (1 - risk / 100);
+
+            const dd = (acc - rem) / acc * 100;
+            const pct = rem / acc * 100;
+            document.getElementById('s-remain').textContent = '$' + rem.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            document.getElementById('s-dd').textContent = dd.toFixed(1) + '%';
+            const bar = document.getElementById('s-bar');
+            bar.style.width = pct + '%';
+            bar.className = 'risk-fill ' + (dd < 10 ? 'rf-safe' : dd < 25 ? 'rf-warn' : 'rf-danger');
+            const v = document.getElementById('s-verdict');
+            if (dd < 10) 
+                v.innerHTML = '<span class="rh">✅ Account is safe</span> — This is professional risk management. Keep this discipline.';
+            else if (dd < 25) 
+                v.innerHTML = '<span style="color:var(--amber); font-weight:600;">⚠️ Moderate Drawdown of ' + dd.toFixed(1) + '%</span> — Consider reducing your risk % per trade to 1–2%.';
+            else 
+                v.innerHTML = '<span class="rw">🚨 DANGEROUS Drawdown of ' + dd.toFixed(1) + '%!</span> — Reduce risk to 1% immediately. At this rate you will blow your account.';
+        }
+
+        // ── Init ──
+        updateSim();
+    </script>
 <?php
 include_once ('elements/footer.php');
 ?>

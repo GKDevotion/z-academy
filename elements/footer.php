@@ -401,9 +401,6 @@
             <i class="fa fa-arrow-up"></i>
         </a>
 
-        <span id="contact_submit_url" class="d-none">{{ route('contact-submit.form') }}</span>
-        <span id="request_callback_submit_url" class="d-none">{{ route('contact-submit.form') }}</span>
-
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

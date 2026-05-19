@@ -448,9 +448,9 @@ include_once ('elements/header.php');
     <!-- ─── HERO ───────────────────────────────────────────── -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
+            <div class="hero-badge mt-4"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
             <h1>
-                Trade Like<br>a <em>Pro</em>
+                Trade Like a <em>Pro</em>
             </h1>
             <p class="sub">
                 Master technical analysis, risk management, and market psychology across every asset class.
