@@ -2,7 +2,6 @@
 :root {
     --zed-primary: #ff0000; /* Example Primary Blue - REPLACE with ZedCapital's Brand Primary Color */
     --zed-primary-hover: #b80d14;
-    /* e70c0c; */
     --zed-light-red-hover: #ffb5b5;
     --zed-secondary: #7b7b7b; /* Example Secondary Grey */
     --zed-backgound-color: #f7f7f7;
@@ -23,7 +22,6 @@
     --float-duration: 4.5s;   /* how slow/fast the loop is */
     --shadow: 0 4px 24px rgba(10, 22, 40, 0.08);
     --gold: #c9a84c;
-    /* f0a500; */
     --blue: #1551a0;
     --purple: #7c3aed;
     --purple-s: #faf5ff;
@@ -40,6 +38,10 @@
     --orange-s: #fff7ed;
     --navy-s: #eff6ff;
     --emerald: #0a7c52;
+    --ink: #0d0d0d;
+    --ink2: #1e1e1e;
+    --muted: #6a6a6a;
+    --faint: #aaaaaa;
 }
 
 body {

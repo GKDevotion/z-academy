@@ -497,34 +497,6 @@ include_once ('elements/header.php');
     </div>
 </section>
 
-<?php
-if( false ){
-    $paramArr = [
-        'name' => "Stock"
-    ];
-
-    $videoArr = [
-        [
-            'id' => "iBZcDvw8Fi8",
-            "title" => "Forex Trading for Beginners (Full Course)",
-            "description" => "Forex trading is a massively profitable skill that can bring you time, location & financial freedom when mastered.",
-        ],
-        [
-            'id' => "9tCR16dsb6M",
-            "title" => "Forex Course for Beginners 2025",
-            "description" => "Beginner to Profitable: Full Trading Roadmap (Step-by-Step Guide).",
-        ],
-        [
-            'id' => "eynxyoKgpng",
-            "title" => "The Only Technical Analysis Video You Will Ever Need...",
-            "description" => "Understanding how to implement technical analysis correctly in your trading is one of the most important things you need to create a profitable trading career. ",
-        ]
-    ];
-
-    include_once ('elements/explore-more-about.php');
-}
-?>
-
 <style>
     .video-thumbnail {
         position: relative;
@@ -608,6 +580,7 @@ if( false ){
     </script>
 
 </div>
+
 <div class="position-relative set-diamond-image" data-aos="fade-up" data-aos-duration="850">
     <img src="assets/img/diamonds/silver-diamond.png" alt="Corner Image" class="position-absolute bottom-0 end-0 float-y" style="width: 80px; height: 50px; margin: -30px 200px;">
 </div>
