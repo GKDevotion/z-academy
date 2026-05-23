@@ -457,7 +457,7 @@ include_once ('elements/header.php');
       <div class="container">
       <div class="row align-items-center g-4">
           <div class="col-lg-7">
-          <div class="zed-hero-eyebrow"><i class="fas fa-rocket me-1"></i> Beginner Forex Course · Zero to Hero</div>
+          <div class="zed-hero-eyebrow"><i class="fas fa-rocket me-1"></i> Technical Analysis Masterclass · Advanced Trading</div>
           <h1 class="zed-hero-title">Technical<span class="gold">Trading</span><br>Analysis</h1>
               
           </div>
