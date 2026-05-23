@@ -191,7 +191,7 @@ include_once ('elements/header.php');
           color: var(--zed-border-color);
           position: absolute;
           right: 3rem;
-          top: -0.5rem;
+          top: 1.5rem;
           line-height: 1;
           pointer-events: none;
           user-select: none;
