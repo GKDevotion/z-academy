@@ -50,7 +50,7 @@ include_once ('elements/header.php');
         }
 
         .zed-hero-title .gold {
-            color: var(--gold);
+            color: var(--zed-primary);
             font-style: italic;
         }
 
