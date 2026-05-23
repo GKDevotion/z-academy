@@ -959,6 +959,7 @@ include_once ('elements/header.php');
 
 <!-- ================= FAQ SECTION START ================= -->
 <section class="zed-faq-section">
+  <div class="container">
     <div class="zed-faq-header">
         <span class="faq-label">FREQUENTLY ASKED QUESTIONS</span>
         <h2>Risk Management — FAQ</h2>
@@ -1172,6 +1173,7 @@ include_once ('elements/header.php');
         </div>
 
     </div>
+  </div>
 </section>
 <!-- ================= FAQ SECTION END ================= -->
  <style>
