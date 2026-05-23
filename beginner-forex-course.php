@@ -1236,7 +1236,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 col-lg-3 reveal">
-            <div class="zed-dark-card h-100" style="--dc:var(--zed-primary)">
+            <div class="zed-dark-card" style="--dc:var(--zed-primary)">
                 <div
                 style="font-family:'Poppins',monospace;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--zed-primary);margin-bottom:12px;">
                 🏆 Best Times to Trade</div>
@@ -1517,7 +1517,7 @@ include_once ('elements/header.php');
             <div class="zed-sec-rule"></div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-9">
+            <div class="col-lg-12">
             <div class="step-wrap">
                 <div class="step-line"></div>
                 <div class="step-item reveal">
