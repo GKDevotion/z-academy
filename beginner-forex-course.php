@@ -761,7 +761,7 @@ include_once ('elements/header.php');
         .mindset-chip {
             background: rgba(255, 255, 255, .06);
             border: 1px solid rgba(255, 255, 255, .1);
-            color: var(--zed-secondary) !important; 
+            color: #fff !important;
             font-family: 'Poppins', monospace;
             font-size: 1rem;
             font-weight: 600;
@@ -1553,6 +1553,7 @@ include_once ('elements/header.php');
         <div class="container">
             <div class="zed-sec-head reveal"> 
                 <h2 class="zed-sec-title">Market Sessions — Full Infographic</h2> 
+                <div class="underline"></div>
             </div>
 
             <p class="reveal" style=" color:var(--muted); margin-bottom:24px;">Forex is open <strong>24 hours a
@@ -1634,7 +1635,8 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Core Terminology — Every Term Explained</h2> 
+            <h2 class="zed-sec-title">Core Terminology — Every Term Explained</h2>
+            <div class="underline"></div> 
         </div>
         <div class="row g-4 mb-4">
             <div class="col-md-6 reveal">
@@ -1753,7 +1755,8 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Broker Types — Which One Should You Use?</h2> 
+            <h2 class="zed-sec-title">Broker Types — Which One Should You Use?</h2>
+            <div class="underline"></div> 
         </div>
         <div class="row g-3">
             <div class="col-sm-6 col-lg-3 reveal">
@@ -1802,6 +1805,7 @@ include_once ('elements/header.php');
         <div class="container">
         <div class="zed-sec-head reveal"> 
             <h2 class="zed-sec-title">Currency Pairs — Full Classification</h2> 
+            <div class="underline"></div>
         </div>
         <div class="table-responsive reveal">
             <table class="cp-table"
@@ -1884,6 +1888,7 @@ include_once ('elements/header.php');
         <div class="container">
         <div class="zed-sec-head reveal"> 
             <h2 class="zed-sec-title">How a Forex Trade Works — Step by Step</h2> 
+            <div class="underline"></div>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -1929,6 +1934,7 @@ include_once ('elements/header.php');
         <div class="container">
         <div class="zed-sec-head reveal"> 
             <h2 class="zed-sec-title">Order Types — Complete Guide with When to Use Each</h2> 
+            <div class="underline"></div>
         </div>
         <div class="row g-3">
             <div class="col-md-6 col-lg-4 reveal">
@@ -1995,6 +2001,7 @@ include_once ('elements/header.php');
         <div class="container">
         <div class="zed-sec-head reveal"> 
             <h2 class="zed-sec-title">Trading Styles — Which One Suits You?</h2> 
+            <div class="underline"></div>
         </div>
         <div class="table-responsive reveal">
             <table class="style-table"
