@@ -455,7 +455,7 @@ include_once ('elements/header.php');
         <div class="container">
             <div class="hero-badge mt-4 d-none"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
             <h1>
-                Technical Analysis <em>Masterclass</em>
+                Technical Analysis <em><br>Masterclass</em>
             </h1>
             <p class="sub">
                 Complete guide to chart reading and price action.
@@ -534,7 +534,8 @@ include_once ('elements/header.php');
     background:var(--white);
     border-bottom:1px solid var(--g2);
     overflow-x:auto;
-    gap: 45px;
+    justify-content: center;
+    gap: 10px;
   }
   .nav-btn{
     font-family: 'Poppins', serif;
@@ -641,8 +642,17 @@ include_once ('elements/header.php');
   /* PATTERN */
   .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;}
   .pattern{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;text-align:center;}
-  .pattern-name{font-family: 'Poppins', serif;font-size:11px;color:var(--g6);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
-  .pattern-sig{font-size:0.82rem;color:var(--g5);margin-top:0.4rem;}
+  .pattern-name{
+    font-family: 'Poppins', serif;
+    color:var(--g6);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:0.5rem;
+  }
+  .pattern-sig{ 
+    color:var(--g5);
+    margin-top:0.4rem;
+  }
 
   /* R:R */
   .rr-visual{background:var(--g1);border:1px solid var(--g2);padding:1.5rem;border-radius:2px;margin-bottom:1rem;}
