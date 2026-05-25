@@ -3,7 +3,7 @@ include_once ('elements/header.php');
 ?>
 
     <style>
-        
+     
         /* ─── TYPOGRAPHY ─── */
         .font-serif {
             font-family: 'Poppins', serif;
@@ -29,141 +29,14 @@ include_once ('elements/header.php');
             color: var(--muted) !important;
         }
 
-        /* ─── HERO BANNER ─── */
-        .zed-hero {
-            background: linear-gradient(135deg, var(--zed-banner-bg-start) 0%, var(--zed-banner-bg-end) 100%);
-            position: relative;
-            overflow: hidden;
-            padding: 100px 0 48px;
-            border-bottom: 1px solid var(--zed-border-color);
-        }
-
-        .zed-hero::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -120px;
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 0, 0, .07) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .zed-hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: 'Poppins', monospace;
-            font-size: .6rem;
-            font-weight: 600;
-            letter-spacing: .2em;
-            text-transform: uppercase;
-            color: var(--zed-primary);
-            border-bottom: 1.5px solid var(--zed-primary);
-            padding-bottom: 4px;
-            margin-bottom: 14px;
-        }
-
-        .zed-hero-title {
-            font-family: 'Poppins', serif;
-            font-size: clamp(2rem, 5vw, 3.6rem);
-            font-weight: 900;
-            color: var(--ink);
-            line-height: 1.05;
-            margin-bottom: 10px;
-        }
-
-        .zed-hero-title .gold {
-            color: var(--gold);
-            font-style: italic;
-        }
-
-        .zed-hero-subtitle {
-            font-size: .9rem;
-            color: var(--muted);
-            max-width: 520px;
-            line-height: 1.8;
-            margin-bottom: 24px;
-        }
-
-        .zed-hero-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .zed-tag {
-            background: var(--zed-card-bg);
-            border: 1px solid var(--zed-border-color);
-            color: var(--muted);
-            font-size: .75rem;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 20px;
-            transition: all .2s;
-            cursor: default;
-        }
-
-        .zed-tag:hover {
-            border-color: var(--zed-primary);
-            color: var(--zed-primary);
-        }
-
-        /* ─── STAT BAND ─── */
-        .zed-stat-band {
-            display: flex;
-            flex-wrap: wrap;
-            background: var(--zed-card-bg);
-            border: 1px solid var(--zed-border-color);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            margin-top: 28px;
-        }
-
-        .zed-stat {
-            flex: 1;
-            min-width: 110px;
-            padding: 18px 14px;
-            text-align: center;
-            border-right: 1px solid var(--zed-border-color);
-            transition: background .2s;
-        }
-
-        .zed-stat:last-child {
-            border-right: none;
-        }
-
-        .zed-stat:hover {
-            background: rgba(255, 0, 0, .03);
-        }
-
-        .zed-stat-n {
-            font-family: 'Poppins', serif;
-            font-size: 1.7rem;
-            font-style: italic;
-            color: var(--zed-primary);
-            line-height: 1;
-        }
-
-        .zed-stat-l {
-            font-family: 'Poppins', monospace;
-            font-size: .56rem;
-            font-weight: 600;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            color: var(--faint);
-            margin-top: 3px;
-        }
-
+      
         /* ─── SECTION HEADS ─── */
-        .zed-sec-head {
+        /* .zed-sec-head {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-bottom: 28px;
-        }
+        } */
 
         .zed-sec-icon {
             width: 32px;
@@ -183,8 +56,9 @@ include_once ('elements/header.php');
 
         .zed-sec-title {
             font-family: 'Poppins', serif;
-            font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+            font-size: 2.5rem;
             font-weight: 700;
+            margin-bottom: 25px;
             color: var(--ink);
         }
 
@@ -195,12 +69,12 @@ include_once ('elements/header.php');
         }
 
         .zed-eyebrow {
-            font-family: 'Poppins', monospace;
-            font-size: .7rem;
+            font-family: 'Poppins';
+            font-size: 1rem;
             font-weight: 600;
             letter-spacing: .2em;
             text-transform: uppercase;
-            color: var(--faint);
+            color: var(--zed-secondary) !important; 
             margin-bottom: 4px;
         }
 
@@ -227,16 +101,15 @@ include_once ('elements/header.php');
 
         .zed-card-title {
             font-family: 'Poppins', serif;
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--ink);
             margin-bottom: 8px;
             line-height: 1.3;
         }
 
-        .zed-card-text {
-            font-size: .9rem;
-            color: var(--muted);
+        .zed-card-text { 
+            color: var(--zed-secondary) !important; 
             line-height: 1.75;
         }
 
@@ -408,17 +281,16 @@ include_once ('elements/header.php');
         }
 
         .timeline-year {
-            font-family: 'Poppins', monospace;
-            font-size: .75rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--zed-primary);
             min-width: 70px;
             padding-top: 2px;
         }
 
-        .timeline-text {
-            font-size: .9rem;
-            color: var(--muted);
+        .timeline-text { 
+            color: var(--zed-secondary) !important;
             line-height: 1.68;
         }
 
@@ -513,8 +385,8 @@ include_once ('elements/header.php');
         }
 
         .session-name {
-            font-family: 'Poppins', monospace;
-            font-size: .75rem;
+            font-family: 'Poppins', serif;
+            font-size: 1rem;
             font-weight: 700;
             letter-spacing: .14em;
             text-transform: uppercase;
@@ -522,15 +394,13 @@ include_once ('elements/header.php');
             margin-bottom: 4px;
         }
 
-        .session-time {
-            font-size: .78rem;
+        .session-time { 
             font-weight: 600;
             color: var(--ink);
             margin-bottom: 4px;
         }
 
-        .session-pairs {
-            font-size: .9rem;
+        .session-pairs { 
             color: var(--muted);
         }
 
@@ -572,7 +442,7 @@ include_once ('elements/header.php');
         .zed-table .highlight {
             color: var(--zed-primary);
             font-weight: 700;
-            font-family: 'Poppins', monospace;
+            font-family: 'Poppins', serif;
         }
 
         .zed-table .green-val {
@@ -591,19 +461,18 @@ include_once ('elements/header.php');
         }
 
         .cp-table th {
-            font-family: 'Poppins', monospace;
-            font-size: .7rem;
+            font-family: 'Poppins', serif;
+            font-size: 0.9rem;
             font-weight: 700;
             letter-spacing: .12em;
             text-transform: uppercase;
             padding: 10px 12px;
             border-bottom: 2px solid var(--zed-border-color);
             background: var(--zed-card-back);
-            color: var(--faint);
+            color: var(--zed-secondary) !important; 
         }
 
-        .cp-table td {
-            font-size: .9rem;
+        .cp-table td { 
             padding: 9px 12px;
             border-bottom: 1px dashed var(--zed-border-color);
         }
@@ -617,38 +486,34 @@ include_once ('elements/header.php');
         }
 
         .cp-pair {
-            font-family: 'Poppins', monospace;
+            font-family: 'Poppins', serif;
             font-weight: 700;
             color: var(--ink);
         }
 
         .cp-cat-major {
             color: var(--zed-primary);
-            font-weight: 700;
-            font-size: .75rem;
+            font-weight: 700; 
             letter-spacing: .1em;
             text-transform: uppercase;
         }
 
         .cp-cat-minor {
             color: var(--blue);
-            font-weight: 700;
-            font-size: .75rem;
+            font-weight: 700; 
             letter-spacing: .1em;
             text-transform: uppercase;
         }
 
         .cp-cat-exotic {
             color: var(--amber);
-            font-weight: 700;
-            font-size: .75rem;
+            font-weight: 700; 
             letter-spacing: .1em;
             text-transform: uppercase;
         }
 
         .cp-best {
-            display: inline-block;
-            font-size: .7rem;
+            display: inline-block; 
             font-weight: 700;
             padding: 2px 8px;
             border-radius: 10px;
@@ -661,8 +526,8 @@ include_once ('elements/header.php');
         }
 
         .style-table th {
-            font-family: 'Poppins', monospace;
-            font-size: .7rem;
+            font-family: 'Poppins', serif;
+            font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: .12em;
             text-transform: uppercase;
@@ -672,11 +537,10 @@ include_once ('elements/header.php');
             color: var(--faint);
         }
 
-        .style-table td {
-            font-size: .9rem;
+        .style-table td { 
             padding: 9px 12px;
             border-bottom: 1px dashed var(--zed-border-color);
-            color: var(--muted);
+            color: var(--zed-secondary) !important; 
         }
 
         .style-table tr:last-child td {
@@ -709,8 +573,8 @@ include_once ('elements/header.php');
         }
 
         .broker-label {
-            font-family: 'Poppins', monospace;
-            font-size: .7rem;
+            font-family: 'Poppins', serif;
+            font-size: 1rem;
             font-weight: 700;
             letter-spacing: .14em;
             text-transform: uppercase;
@@ -719,16 +583,14 @@ include_once ('elements/header.php');
         }
 
         .broker-title {
-            font-family: 'Poppins', serif;
-            font-size: .98rem;
+            font-family: 'Poppins', serif; 
             font-weight: 700;
             color: var(--ink);
             margin-bottom: 8px;
         }
 
-        .broker-text {
-            font-size: .9rem;
-            color: var(--muted);
+        .broker-text { 
+            color: var(--zed-secondary) !important; 
             line-height: 1.72;
         }
 
@@ -778,16 +640,15 @@ include_once ('elements/header.php');
             font-weight: 700;
             color: var(--ink);
             margin-bottom: 4px;
-            font-size: .9rem;
+            font-size: 1.25rem;
         }
 
         .step-title span {
             color: var(--zed-primary);
         }
 
-        .step-text {
-            font-size: .9rem;
-            color: var(--muted);
+        .step-text { 
+            color: var(--zed-secondary) !important; 
             line-height: 1.72;
         }
 
@@ -812,8 +673,8 @@ include_once ('elements/header.php');
         }
 
         .order-label {
-            font-family: 'Poppins', monospace;
-            font-size: .7rem;
+            font-family: 'Poppins', serif;
+            font-size: 1.25rem;
             font-weight: 700;
             letter-spacing: .16em;
             text-transform: uppercase;
@@ -826,15 +687,14 @@ include_once ('elements/header.php');
 
         .order-title {
             font-family: 'Poppins', serif;
-            font-size: .96rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--ink);
             margin-bottom: 8px;
         }
 
-        .order-text {
-            font-size: .9rem;
-            color: var(--muted);
+        .order-text { 
+            color: var(--zed-secondary) !important; 
             line-height: 1.72;
         }
 
@@ -901,9 +761,9 @@ include_once ('elements/header.php');
         .mindset-chip {
             background: rgba(255, 255, 255, .06);
             border: 1px solid rgba(255, 255, 255, .1);
-            color: rgba(255, 255, 255, .55);
+            color: var(--zed-secondary) !important; 
             font-family: 'Poppins', monospace;
-            font-size: .62rem;
+            font-size: 1rem;
             font-weight: 600;
             letter-spacing: .08em;
             padding: 7px 16px;
@@ -991,200 +851,698 @@ include_once ('elements/header.php');
         }
     </style>
     
-    <!-- ═══ HERO ═══ -->
-    <div class="zed-hero">
+   
+    <style>
+       
+        /* ─── HERO ────────────────────────────────────── */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+            background: radial-gradient(ellipse 60% 55% at 50% -10%, rgba(232,17,26,.07) 0%, transparent 65%),
+                var(--zed-backgound-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,0,0,.03) 39px, rgba(0,0,0,.03) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,0,0,.03) 39px, rgba(0,0,0,.03) 40px);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: var(--zed-primary);
+            color: #fff;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: .35rem 1.1rem;
+            border-radius: 50px;
+            margin-bottom: 1.6rem;
+            animation: fadeDown .6s ease both;
+        }
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1.0;
+            margin-top: 50px;
+            letter-spacing: -.04em;
+            color: var(--zed-dark-text);
+            animation: fadeUp .7s .1s ease both;
+        }
+        .hero h1 em { font-style: normal; color: var(--zed-primary); }
+        .hero p.sub {
+            font-size: 1.1rem;
+            color: var(--zed-secondary);
+            max-width: 520px;
+            margin: 1.2rem auto 2.2rem;
+            font-weight: 300;
+            animation: fadeUp .7s .2s ease both;
+        }
+        .hero-btns { animation: fadeUp .7s .3s ease both; }
+        .btn-red {
+            background: var(--zed-primary);
+            color: #fff;
+            border: none;
+            padding: .9rem 2.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: .95rem;
+            letter-spacing: .02em;
+            transition: background .25s, transform .2s, box-shadow .25s;
+            box-shadow: 0 8px 28px rgba(232,17,26,.3);
+        }
+        .btn-red:hover {
+            background: var(--primary-red-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 36px rgba(232,17,26,.4);
+            color: var(--zed-dark-text);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--zed-dark-text);
+            border: 1.5px solid var(--zed-border-color);
+            padding: .9rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: border-color .25s, background .25s, color .25s;
+        }
+        .btn-ghost:hover {
+            border-color: var(--zed-dark-text);
+            background: var(--zed-dark-text);
+            color: #fff;
+        }
+        .hero-floats {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 3.5rem;
+            flex-wrap: wrap;
+            animation: fadeUp .7s .4s ease both;
+        }
+        .float-stat {
+            background: var(--zed-light-bg);
+            border: 1px solid var(--zed-border-color);
+            border-radius: 14px;
+            padding: .8rem 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            box-shadow: 0 2px 16px rgba(0,0,0,.04);
+        }
+        .float-stat .ico {
+            width: 38px; height: 38px;
+            background: rgba(232,17,26,.08);
+            color: var(--zed-primary);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem;
+        }
+        .float-stat .val { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--zed-dark-text); }
+        .float-stat .lbl { font-size: .75rem; color: var(--zed-secondary); }
+    
+        /* ─── SECTION COMMON ──────────────────────────── */
+        .sec { padding: 80px 0; }
+        .sec-alt { background: var(--zed-light-bg); }
+        .sec-dark { background: var(--zed-dark-text); }
+        .sec-red  { background: var(--zed-primary); }
+    
+        .sec-label {
+            display: inline-block;
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--zed-primary);
+            margin-bottom: .8rem;
+        }
+        .sec-dark .sec-label { color: rgba(232,17,26,.8); }
+        .sec-title {
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -.03em;
+            color: var(--zed-dark-text);
+            margin-bottom: .5rem;
+        }
+        .sec-dark .sec-title { color: #fff; }
+        .sec-red  .sec-title { color: #fff; }
+        .sec-sub { color: var(--zed-secondary); font-size: .95rem; font-weight: 300; max-width: 480px; }
+        .sec-dark .sec-sub { color: rgba(255,255,255,.45); }
+        .sec-red  .sec-sub { color: rgba(255,255,255,.7); }
+    
+        /* ─── COURSE CARDS ────────────────────────────── */
+        .course-card {
+            background: var(--zed-light-bg);
+            border: 1px solid var(--zed-border-color);
+            border-radius: 20px;
+            padding: 1.6rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+        }
+        .course-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: var(--zed-primary);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform .35s ease;
+        }
+        .course-card:hover { transform: translateY(-8px); box-shadow: 0 24px 56px rgba(0,0,0,.1); }
+        .course-card:hover::before { transform: scaleY(1); }
+        .course-level {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--zed-secondary);
+            text-align: right;
+            margin-bottom: .8rem;
+        }
+        .course-icon {
+            width: 54px; 
+            height: 54px;
+            background: var(--zed-backgound-color);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.1rem;
+        }
+        .course-card h4 {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--zed-dark-text);
+            margin-bottom: .55rem;
+        }
+        .course-card p { font-size: .85rem; color: var(--zed-secondary); line-height: 1.6; margin-bottom: 1.4rem; }
+        .course-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--zed-border-color);
+        }
+        .course-price {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--zed-dark-text);
+        }
+        .enroll-link {
+            color: var(--zed-primary);
+            font-weight: 600;
+            font-size: .88rem;
+            text-decoration: none;
+            display: flex; align-items: center; gap: .3rem;
+            transition: gap .2s;
+        }
+        .enroll-link:hover { gap: .6rem; color: var(--primary-red-hover); }
+    
+        /* ─── TOPIC GRID ──────────────────────────────── */
+        .topic-card {
+            background: var(--zed-backgound-color);
+            border: 1px solid var(--zed-border-color);
+            border-radius: 18px;
+            padding: 1.5rem 1.4rem;
+            height: 100%;
+            transition: transform .3s ease, 
+            background .3s, border-color .3s, box-shadow .3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            background: var(--zed-light-bg);
+            border-color: rgba(232,17,26,.25);
+            box-shadow: 0 16px 44px rgba(0,0,0,.07);
+        }
+        .topic-card .t-icon {
+            width: 48px; 
+            height: 48px;
+            border-radius: 13px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        .topic-card h5 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--zed-dark-text);
+            margin-bottom: .4rem;
+        }
+        .topic-card p { font-size: .82rem; color: var(--zed-secondary); line-height: 1.6; margin: 0; }
+        .topic-chip {
+            display: inline-block;
+            font-size: .7rem;
+            font-weight: 600;
+            padding: .2rem .65rem;
+            border-radius: 50px;
+            margin-top: .9rem;
+        }
+        .ti-red    { background: rgba(232,17,26,.1);  color: var(--zed-primary); }
+        .ti-blue   { background: rgba(59,130,246,.1); color: #3b82f6; }
+        .ti-green  { background: rgba(34,197,94,.1);  color: #16a34a; }
+        .ti-gold   { background: rgba(234,179,8,.1);  color: #ca8a04; }
+        .ti-purple { background: rgba(139,92,246,.1); color: #7c3aed; }
+        .ti-teal   { background: rgba(20,184,166,.1); color: #0d9488; }
+        .ti-orange { background: rgba(249,115,22,.1); color: #ea580c; }
+        .ti-sky    { background: rgba(14,165,233,.1); color: #0284c7; }
+        .tc-red    { background: rgba(232,17,26,.08); color: var(--zed-primary); border: 1px solid rgba(232,17,26,.15); }
+        .tc-blue   { background: rgba(59,130,246,.08); color: #3b82f6; border: 1px solid rgba(59,130,246,.15); }
+        .tc-green  { background: rgba(34,197,94,.08); color: #16a34a; border: 1px solid rgba(34,197,94,.15); }
+        .tc-gold   { background: rgba(234,179,8,.08); color: #ca8a04; border: 1px solid rgba(234,179,8,.15); }
+        .tc-purple { background: rgba(139,92,246,.08); color: #7c3aed; border: 1px solid rgba(139,92,246,.15); }
+        .tc-teal   { background: rgba(20,184,166,.08); color: #0d9488; border: 1px solid rgba(20,184,166,.15); }
+        .tc-orange { background: rgba(249,115,22,.08); color: #ea580c; border: 1px solid rgba(249,115,22,.15); }
+        .tc-sky    { background: rgba(14,165,233,.08); color: #0284c7; border: 1px solid rgba(14,165,233,.15); }
+    
+        /* sub-topics list in topic-card */
+        .topic-list { list-style: none; padding: 0; margin: .8rem 0 0; }
+        .topic-list li {
+            font-size: .8rem;
+            color: #666;
+            padding: .28rem 0;
+            border-bottom: 1px solid rgba(0,0,0,.05);
+            display: flex; align-items: center; gap: .5rem;
+        }
+        .topic-list li:last-child { border: none; }
+        .topic-list li i { font-size: .6rem; opacity: .5; }
+    
+        /* ─── DARK MARQUEE ROW ────────────────────────── */
+        .marquee-section { background: var(--zed-dark-text); padding: 3.5rem 0; overflow: hidden; }
+        .marquee-track {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: marquee 22s linear infinite;
+        }
+        .marquee-track.rev { animation-direction: reverse; }
+        .marquee-tag {
+            display: flex; 
+            align-items: center; 
+            gap: .6rem;
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.07);
+            color: rgba(255,255,255,.6);
+            border-radius: 50px;
+            padding: .5rem 1.3rem;
+            font-size: .83rem;
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .marquee-tag i { color: var(--zed-primary); font-size: .75rem; }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    
+        /* ─── WHY US (dark section) ───────────────────── */
+        .why-card {
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 16px;
+            padding: 1.6rem;
+            transition: background .3s, border-color .3s;
+        }
+        .why-card:hover {
+            background: rgba(255,255,255,.07);
+            border-color: var(--zed-primary-hover);
+        }
+        .why-card .w-icon {
+            width: 46px; 
+            height: 46px;
+            background: rgba(232,17,26,.12);
+            color: var(--zed-primary);
+            border-radius: 12px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: .9rem;
+        }
+        .why-card h6 { font-family: 'Syne', sans-serif; font-weight: 700; color: #fff; margin-bottom: .35rem; }
+        .why-card p { font-size: .83rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.6; }
+    
+        /* ─── TESTIMONIALS ────────────────────────────── */
+        .testi-card {
+            background: var(--zed-light-bg);
+            border: 1px solid var(--zed-border-color);
+            border-radius: 18px;
+            padding: 1.8rem;
+            height: 100%;
+            transition: transform .3s, box-shadow .3s;
+        }
+        .testi-card:hover { transform: translateY(-5px); box-shadow: 0 18px 48px rgba(0,0,0,.08); }
+        .stars { color: var(--zed-primary); font-size: .85rem; letter-spacing: .05rem; margin-bottom: .8rem; }
+        .testi-card blockquote { font-size: .9rem; color: var(--zed-dark-text); line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
+        .testi-author { display: flex; align-items: center; gap: .7rem; }
+        .testi-avatar {
+            width: 40px; height: 40px;
+            background: var(--zed-primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: .9rem;
+        }
+        .testi-name { font-weight: 600; font-size: .88rem; color: var(--zed-dark-text); }
+        .testi-role { font-size: .75rem; color: var(--zed-secondary); }
+    
+        /* ─── CTA BANNER ──────────────────────────────── */
+        .cta-band {
+            background: var(--zed-primary);
+            padding: 70px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before, .cta-band::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,.07);
+        }
+        .cta-band::before { width: 400px; height: 400px; top: -150px; left: -100px; }
+        .cta-band::after  { width: 300px; height: 300px; bottom: -120px; right: -80px; }
+        .cta-band h2 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.03em;
+        }
+        .cta-band p { color: rgba(255,255,255,.75); max-width: 460px; margin: .8rem auto 2rem; }
+        .btn-white {
+            background: #fff;
+            color: var(--zed-primary);
+            border: none;
+            padding: .9rem 2.4rem;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform .2s, box-shadow .25s;
+            box-shadow: 0 8px 24px rgba(0,0,0,.15);
+        }
+        .btn-white:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 14px 36px rgba(0,0,0,.2); 
+            color: var(--zed-light-bg); 
+        }
+    
+        /* ─── DIVIDER ─────────────────────────────────── */
+        .hdiv { height: 1px; background: linear-gradient(90deg, transparent, var(--zed-border-color), transparent); margin: 0; }
+    
+        /* ─── SCROLL REVEAL ───────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: .1s; }
+        .reveal-delay-2 { transition-delay: .2s; }
+        .reveal-delay-3 { transition-delay: .3s; }
+        .reveal-delay-4 { transition-delay: .4s; }
+    
+        /* ─── HERO ANIMATIONS ─────────────────────────── */
+        @keyframes fadeUp   { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+    
+        /* ─── PULSE DOT ───────────────────────────────── */
+        .live-dot {
+            display: inline-block;
+            width: 8px; height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 1.8s infinite;
+            vertical-align: middle;
+        }
+        @keyframes pulse {
+        0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+        50%      { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+        }
+    
+        /* ─── SCROLLBAR ───────────────────────────────── */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--zed-backgound-color); }
+        ::-webkit-scrollbar-thumb { background: var(--zed-primary); border-radius: 3px; }
+    </style>
+    <!-- ─── HERO ───────────────────────────────────────────── -->
+    <section class="hero">
         <div class="container">
-        <div class="row align-items-center g-4">
-            <div class="col-lg-7">
-            <div class="zed-hero-eyebrow"><i class="fas fa-rocket me-1"></i> Beginner Forex Course · Zero to Hero</div>
-            <h1 class="zed-hero-title">Forex Trading <span class="gold">Academy</span><br>Zero to Hero</h1>
-            <p class="zed-hero-subtitle">Theory · Practical · Math · Infographics · Psychology · AI Trading — Everything
-                you need to trade like a professional from day one.</p>
-            <div class="zed-hero-tags">
-                <span class="zed-tag">📈 Forex Fundamentals</span>
-                <span class="zed-tag">📐 Maths & Lot Sizing</span>
-                <span class="zed-tag">🧠 Trading Psychology</span>
-                <span class="zed-tag">🤖 AI Trading</span>
-                <span class="zed-tag">📊 Indicators</span>
-                <span class="zed-tag">⚡ Order Types</span>
+            <div class="hero-badge mt-4 d-none"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
+            <h1>
+                Forex Trading <em>Academy</em> <br>Zero to Hero
+            </h1>
+            <p class="sub">
+                Theory · Practical · Math · Infographics · Psychology · AI Trading — Everything you need to trade like a professional.
+            </p>
+            <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#courses" class="btn btn-red">
+                    Start Learning Now <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+                <a href="#topics" class="btn btn-ghost">
+                    Explore Topics
+                </a>
             </div>
-            <div class="d-flex gap-3 flex-wrap mt-4">
-                <button class="btn-zed btn-zed-primary"><i class="fas fa-play-circle"></i> Start Learning Free</button>
-                <button class="btn-zed btn-zed-outline"><i class="fas fa-download"></i> Download Syllabus</button>
-            </div>
-            </div>
-            <div class="col-lg-5">
-            <div class="zed-stat-band">
-                <div class="zed-stat">
-                <div class="zed-stat-n">$7.5T</div>
-                <div class="zed-stat-l">Daily FX Volume</div>
+            <div class="hero-floats">
+                <div class="float-stat">
+                    <div class="ico"><i class="bi bi-people-fill"></i></div>
+                    <div>
+                        <div class="val">$7.5T</div>
+                        <div class="lbl">Daily FX Volume</div>
+                    </div>
                 </div>
-                <div class="zed-stat">
-                <div class="zed-stat-n">24/5</div>
-                <div class="zed-stat-l">Market Open</div>
+                <div class="float-stat">
+                    <div class="ico"><i class="bi bi-play-btn-fill"></i></div>
+                    <div>
+                        <div class="val">24/5</div>
+                        <div class="lbl">Market Open</div>
+                    </div>
                 </div>
-                <div class="zed-stat">
-                <div class="zed-stat-n">7+</div>
-                <div class="zed-stat-l">Modules</div>
+                <div class="float-stat">
+                    <div class="ico"><i class="bi bi-award-fill"></i></div>
+                    <div>
+                        <div class="val">7+</div>
+                        <div class="lbl">Modules</div>
+                    </div>
                 </div>
-                <div class="zed-stat">
-                <div class="zed-stat-n">100K</div>
-                <div class="zed-stat-l">Units of Base Currency</div>
+                <div class="float-stat">
+                    <div class="ico"><i class="bi bi-currency-dollar"></i></div>
+                    <div>
+                        <div class="val">100K</div>
+                        <div class="lbl">Units of Base Currency</div>
+                    </div>
                 </div>
-            </div>
-            <div class="zed-stat-band mt-2">
-                <div class="zed-stat">
-                <div class="zed-stat-n" style="font-size:1.2rem;color:var(--green)">~5%</div>
-                <div class="zed-stat-l">Retail Success Rate</div>
-                </div>
-                <div class="zed-stat">
-                <div class="zed-stat-n">180+</div>
-                <div class="zed-stat-l">Currency Pairs</div>
-                </div>
-            </div>
-            <!-- Progress bar -->
-            <div class="mt-3 p-3"
-                style="background:var(--zed-card-bg);border:1px solid var(--zed-border-color);border-radius:var(--border-radius-lg);">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                <span style="font-size:.7rem;font-weight:700;color:var(--ink);">Your Progress</span>
-                <span class="zed-badge zed-badge-red">0% Complete</span>
-                </div>
-                <div class="course-prog">
-                <div class="course-prog-fill" style="width:0%"></div>
-                </div>
-                <div style="font-size:.75rem;color:var(--faint);margin-top:6px;">
-                Module 1 of 9 — Not started</div>
-            </div>
             </div>
         </div>
-        </div>
-    </div>
+    </section>
+    
+    <div class="hdiv"></div>
+    
 
     <!-- ═══ SECTION 1: WHAT IS FOREX ═══ -->
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon"><i class="fas fa-globe"></i></div>
-            <h2 class="zed-sec-title">Forex Market Fundamentals — Complete Guide</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">Forex Market Fundamentals — Complete Guide</h2> 
+            <div class="underline"></div>
         </div>
+
+        <style>
+            .underline {
+                width: 75px;
+                height: 4px;
+                background-color: var(--zed-primary);
+                margin: 40px 0 40px 0;
+                padding: 4px;
+            }
+        </style>
 
         <!-- What is Forex -->
         <div class="row g-4 mb-5">
             <div class="col-lg-7 reveal">
+                
             <div class="zed-eyebrow">What is Forex? — The Complete Picture</div>
-            <h3 class="font-serif" style="font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:14px;">
-                Understanding the Foreign Exchange Market</h3>
-            <p style="font-size:.9rem;color:var(--muted);line-height:1.82;margin-bottom:14px;">
-                <strong>Forex (Foreign Exchange)</strong> is the global marketplace where one currency is exchanged for
-                another. Unlike stocks (which trade on centralised exchanges like NYSE), Forex is an <strong>OTC
-                (Over-The-Counter)</strong> market — meaning there is no single central exchange. Instead, trading happens
-                through a global network of banks, brokers, and electronic systems called the <strong>interbank
-                network.</strong>
-            </p>
-            <p style="font-size:.9rem;color:var(--muted);line-height:1.82;">
-                Every time a business imports goods from another country, a tourist converts money at an airport, or a
-                central bank adjusts its currency reserves — that is a Forex transaction. Retail traders (like you)
-                participate through brokers who give us access to this interbank market.
-            </p>
+                <h3 class="font-serif" style="font-size:1.8rem; font-weight:700; color:var(--ink); margin-bottom:14px;">
+                    Understanding the Foreign Exchange Market</h3>
+                <p style="color: var(--zed-secondary) !important; line-height:1.82; margin-bottom:14px;">
+                    <strong>Forex (Foreign Exchange)</strong> is the global marketplace where one currency is exchanged for
+                    another. Unlike stocks (which trade on centralised exchanges like NYSE), Forex is an <strong>OTC
+                    (Over-The-Counter)</strong> market — meaning there is no single central exchange. Instead, trading happens
+                    through a global network of banks, brokers, and electronic systems called the <strong>interbank
+                    network.</strong>
+                </p>
+                <p style="color: var(--zed-secondary) !important; line-height:1.82;">
+                    Every time a business imports goods from another country, a tourist converts money at an airport, or a
+                    central bank adjusts its currency reserves — that is a Forex transaction. Retail traders (like you)
+                    participate through brokers who give us access to this interbank market.
+                </p>
             </div>
-            <div class="col-lg-5 reveal">
-            <!-- Brief History Timeline -->
-            <div class="zed-eyebrow mb-2">Brief History of Forex</div>
-            <div class="timeline-item">
-                <div class="timeline-year">1944</div>
-                <div class="timeline-text"><strong>Bretton Woods:</strong> Countries pegged currencies to USD, which was
-                backed by gold (BW/GS).</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1971</div>
-                <div class="timeline-text"><strong>Nixon Shock:</strong> USA abandoned gold standard. Currencies began
-                floating freely against each other — Forex as we know it was born.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1973</div>
-                <div class="timeline-text"><strong>Free Float Era Major:</strong> Pairs began consistently fluctuating based
-                on supply/demand.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1990s</div>
-                <div class="timeline-text"><strong>Electronic Trading:</strong> Internet enabled retail traders to access
-                Forex markets for the first time.</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2000s–Now</div>
-                <div class="timeline-text"><strong>MT4/MT5</strong> platforms, ECN brokers, algorithmic trading, and mobile
-                apps democratised Forex globally.</div>
-            </div>
-            </div>
-        </div>
 
-        <!-- Who Trades Forex -->
-        <div class="zed-sec-head reveal" style="margin-top:12px">
-            <div class="zed-sec-icon" style="background:var(--navy)"><i class="fas fa-users"></i></div>
-            <h3 class="zed-sec-title">Who Trades Forex? — Market Participants</h3>
-            <div class="zed-sec-rule"></div>
-        </div>
-        <div class="row g-3">
-            <div class="col-sm-6 col-lg-3 reveal">
-            <div class="trader-card">
-                <div class="trader-icon" style="background:rgba(255,0,0,.08)"><i class="fas fa-university"
-                    style="color:var(--zed-primary)"></i></div>
-                <div class="zed-badge zed-badge-red mb-2">Tier 1 — Central Banks</div>
-                <div class="trader-title">Federal Reserve, ECB, BoJ…</div>
-                <p class="trader-text"><strong>What they do:</strong> Set interest rates and intervene directly in currency
-                markets. A single central bank statement can move EUR/USD 200–500+ pips in seconds.</p>
-                <div
-                style="margin-top:10px;font-size:.72rem;color:var(--muted);border-top:1px dashed var(--zed-border-color);padding-top:8px;">
-                Why it matters for you: FOMC, ECB, BOE and MPC decisions are the most important events on the economic
-                calendar. Learn to trade around them.</div>
-            </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 reveal">
-            <div class="trader-card">
-                <div class="trader-icon" style="background:rgba(21,81,160,.08)"><i class="fas fa-building-columns"
-                    style="color:var(--blue)"></i></div>
-                <div class="zed-badge zed-badge-navy mb-2">Tier 2 — Commercial Banks</div>
-                <div class="trader-title">JPMorgan, Citi, Deutsche Bank…</div>
-                <p class="trader-text"><strong>What they do:</strong> Provide liquidity by quoting bid/ask prices to other
-                banks and institutional clients. They hold huge inventories of currencies and profit from the bid–ask
-                spread across millions of transactions daily.</p>
-                <div
-                style="margin-top:10px;font-size:.72rem;color:var(--muted);border-top:1px dashed var(--zed-border-color);padding-top:8px;">
-                Interbank market: Banks trade directly with each other via platforms like EBS and Reuters Matching. Retail
-                traders cannot access this — we go through brokers.</div>
-            </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 reveal">
-            <div class="trader-card">
-                <div class="trader-icon" style="background:rgba(201,168,76,.1)"><i class="fas fa-briefcase"
-                    style="color:var(--gold)"></i></div>
-                <div class="zed-badge zed-badge-gold mb-2">Tier 3 — Hedge Funds</div>
-                <div class="trader-title">Bridgewater, Citadel, Renaissance</div>
-                <p class="trader-text"><strong>What they do:</strong> Speculate for profit using systematic macro models,
-                algorithmic strategies, and leverage. Often move markets on short timeframes.</p>
-                <div
-                style="margin-top:10px;font-size:.72rem;color:var(--muted);border-top:1px dashed var(--zed-border-color);padding-top:8px;">
-                Their positioning is reported in the COT (Commitment of Traders) report — a key tool for retail traders.
+            <div class="col-lg-5 reveal">
+                 <!-- Brief History Timeline -->
+                <div class="zed-eyebrow mb-2">Brief History of Forex</div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1944</div>
+                        <div class="timeline-text"><strong>Bretton Woods:</strong> Countries pegged currencies to USD, which was
+                        backed by gold (BW/GS).</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1971</div>
+                        <div class="timeline-text"><strong>Nixon Shock:</strong> USA abandoned gold standard. Currencies began
+                        floating freely against each other — Forex as we know it was born.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1973</div>
+                        <div class="timeline-text"><strong>Free Float Era Major:</strong> Pairs began consistently fluctuating based
+                        on supply/demand.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1990s</div>
+                        <div class="timeline-text"><strong>Electronic Trading:</strong> Internet enabled retail traders to access
+                        Forex markets for the first time.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000s–Now</div>
+                        <div class="timeline-text"><strong>MT4/MT5</strong> platforms, ECN brokers, algorithmic trading, and mobile
+                        apps democratised Forex globally.</div>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 reveal">
-            <div class="trader-card">
-                <div class="trader-icon" style="background:rgba(22,101,52,.08)"><i class="fas fa-user"
-                    style="color:var(--green)"></i></div>
-                <div class="zed-badge zed-badge-green mb-2">Retail Traders — You</div>
-                <div class="trader-title">Individual Traders Worldwide</div>
-                <p class="trader-text"><strong>What they do:</strong> Trade through brokers for speculation, income, or
-                portfolio hedging. ~5% consistently profitable. <strong>Edge comes from education, process, and
-                    discipline.</strong></p>
-                <div
-                style="margin-top:10px;font-size:.72rem;color:var(--muted);border-top:1px dashed var(--zed-border-color);padding-top:8px;">
-                Retail traders have access to leverage (up to 500:1 offshore) — amplifying both profits and losses
-                dramatically.</div>
-            </div>
-            </div>
+
         </div>
+    </section>
+
+    <style>
+        .professional-pricing{
+            background-color: var(--zed-backgound-color);
+        }
+
+        .pricing-box a {
+        color: var(--zed-primary);
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        margin: 10px 0;
+        }
+
+        .pricing-box a i {
+        margin-left: 6px;
+        font-size: 1.5rem;
+        }
+
+        .pricing-section {
+        padding: 80px 0;
+        }
+
+        .a-link-move-icon:hover i{
+            transition: transform 0.2s ease;
+            transform: translateX(10px);
+        }
+
+        @media (max-width: 767.98px) {
+            .learning-img{
+                width: 100% !important;
+            }
+
+            .learning-heading{
+                font-size: 2rem;
+            }
+
+            .learning-text{
+                width: 100% !important;
+            }
+
+            .zed-academy-header{
+                padding: 30px 0 !important;
+            }
+        }
+    </style>
+
+    <section class="professional-pricing">
+        <div class="container">
+            <div class="pricing-section">
+                <h2 class="h2 fw-bold">Who Trades Forex? — Market Participants</h2>
+                <div class="underline"></div>
+
+                <div class="row">
+                    <div class="col-md-6 pricing-box mb-4" data-aos="fade-up" data-aos-duration="800">
+                        <p class="fw-bold fs-4">
+                            Tier 1 — Central Banks (Most powerful)
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            Federal Reserve (USA), ECB (Europe), Bank of Japan, Bank of England, etc.
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            <strong>What they do :</strong> Set interest rates, conduct quantitative easing/tightening, and intervene directly in currency markets. A single central bank statement can move EUR/USD 200+ pips in seconds.
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            <strong>Why it matters for you : </strong> FOMC, ECB, and BOJ meetings are the most important events on the economic calendar. Learn to trade around them.
+                        </p>
+                        <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
+
+                        <p class="fw-bold fs-4">
+                            Tier 3 — Hedge Funds & Institutions
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            <strong> What they do : </strong> Trade currencies for speculation and portfolio hedging. Hedge funds are the most aggressive — they can move markets with massive position sizes ($100M+).
+
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            <strong>George Soros example : </strong> In 1992, Soros shorted the British Pound with $10 billion, forced the UK to exit the European Exchange Rate Mechanism, and made $1 billion in a single day.
+
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            Bridgewater, Renaissance Technologies, BlackRock, pension funds, sovereign wealth funds.
+                        </p>
+                        <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
+    
+                    
+                    </div>
+
+                    <div class="col-md-6 pricing-box mb-4" data-aos="fade-up" data-aos-duration="800">
+                
+
+                        <p class="fw-bold fs-4">
+                            Tier 2 — Commercial Banks
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            JPMorgan, Citibank, Deutsche Bank, HSBC, Barclays, Goldman Sachs.
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            <strong>What they do : </strong> Make markets by providing bid/ask quotes to other banks and institutional clients. They hold huge inventories of currencies and profit from the bid-ask spread across millions of transactions daily.
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            <strong>Interbank market : </strong> Banks trade directly with each other via platforms like EBS and Reuters Matching. Retail traders cannot access this — we go through brokers.
+                        </p>
+    
+                        <p class="fw-bold fs-4">
+                            Tier 4 — Corporations (Hedgers)
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            Apple, Toyota, Airbus, Saudi Aramco, any multinational company.
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                        <strong>What they do : </strong> Companies with international revenues hedge their currency exposure to protect profits. Apple earns billions in EUR but reports in USD — they buy USD/sell EUR forward contracts to lock in exchange rates.
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                        <strong> Why this creates opportunity : </strong> Corporate hedging creates predictable currency flows at month/quarter end. Smart traders watch these "flow" patterns.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1193,73 +1551,80 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 2: MARKET SESSIONS ═══ -->
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon" style="background:var(--navy)"><i class="fas fa-clock"></i></div>
-            <h2 class="zed-sec-title">Market Sessions — Full Infographic</h2>
-            <div class="zed-sec-rule"></div>
-        </div>
-        <p class="reveal" style="font-size:.9rem;color:var(--muted);margin-bottom:24px;">Forex is open <strong>24 hours a
-            day, 5 days a week.</strong> The market is a sequencing of sessions. Volatility and volume peak during the
-            London–NY overlap <strong>(13:00–17:00 GMT)</strong> — the golden trading window.</p>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3 reveal">
-            <div class="session-card" style="--ac:var(--zed-primary)">
-                <div class="session-name">🗾 Tokyo Session</div>
-                <div class="session-time">00:00–09:00 GMT</div>
-                <div class="session-pairs">Best pairs: AUD/USD, NZD/USD, USD/JPY, EUR/JPY</div>
-                <div style="margin-top:8px;font-size:.9rem;color:var(--muted);">Characteristics: Thin liquidity, price
-                spreads possible, mostly consolidation. Today's levels: Monitor NZD (Reserve Bank of Australia) statements
-                as key events.</div>
-                <span class="zed-badge zed-badge-red mt-2 d-inline-block">Asian Session</span>
+            <div class="zed-sec-head reveal"> 
+                <h2 class="zed-sec-title">Market Sessions — Full Infographic</h2> 
             </div>
-            </div>
-            <div class="col-md-6 col-lg-3 reveal">
-            <div class="session-card" style="--ac:var(--blue)">
-                <div class="session-name">🇬🇧 London Session</div>
-                <div class="session-time">08:00–17:00 GMT</div>
-                <div class="session-pairs">Best pairs: GBP/USD, EUR/USD, EUR/GBP, EUR/JPY</div>
-                <div style="margin-top:8px;font-size:.9rem;color:var(--muted);">Characteristics: <strong>Highest volatility
-                    session.</strong> Bank of Japan (BoJ) interventions happen. H4 structure breaks. TP move. Price often
-                sets the day's high or low. London sets key levels that often holds all week.</div>
-                <span class="zed-badge zed-badge-navy mt-2 d-inline-block">Most Active</span>
-            </div>
-            </div>
-            <div class="col-md-6 col-lg-3 reveal">
-            <div class="session-card" style="--ac:var(--gold)">
-                <div class="session-name">🗽 New York Session</div>
-                <div class="session-time">13:00–22:00 GMT</div>
-                <div class="session-pairs">Best pairs: EUR/USD, GBP/USD, USD/CAD, USD/CHF</div>
-                <div style="margin-top:8px;font-size:.9rem;color:var(--muted);">NFP, CPI, FOMC news drops here. Second most
-                liquid session. Overlapping with London 13:00–17:00 creates the highest volume window of the entire
-                trading week.</div>
-                <span class="zed-badge zed-badge-gold mt-2 d-inline-block">High Impact News</span>
-            </div>
-            </div>
-            <div class="col-md-6 col-lg-3 reveal">
-            <div class="zed-dark-card" style="--dc:var(--zed-primary)">
-                <div
-                style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--zed-primary);margin-bottom:12px;">
-                🏆 Best Times to Trade</div>
-                <div style="font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.8;">
-                <div
-                    style="margin-bottom:8px;color:rgba(255,255,255,.85);font-weight:600;">
-                    London Open: 08:00–10:00 GMT</div>
-                <div style="font-size:.72rem;margin-bottom:14px;color:rgba(255,255,255,.45);">EUR/USD, GBP/USD, Gold —
-                    highest breakout probability</div>
-                <div
-                    style="margin-bottom:8px;color:rgba(255,255,255,.85);font-weight:600;">
-                    NY Open: 13:00–16:00 GMT</div>
-                <div style="font-size:.72rem;color:rgba(255,255,255,.45);">Avoid: 22:00–00:00 GMT (thin, manipulated
-                    spreads)</div>
+
+            <p class="reveal" style=" color:var(--muted); margin-bottom:24px;">Forex is open <strong>24 hours a
+                day, 5 days a week.</strong> The market is a sequencing of sessions. Volatility and volume peak during the
+                London–NY overlap <strong>(13:00–17:00 GMT)</strong> — the golden trading window.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="session-card" style="--ac:var(--zed-primary)">
+                        <div class="session-name">🗾 Tokyo Session</div>
+                        <div class="session-time">00:00–09:00 GMT</div>
+                        <div class="session-pairs">Best pairs: AUD/USD, NZD/USD, USD/JPY, EUR/JPY</div>
+                        <div style="margin-top:8px; color:var(--muted);">Characteristics: Thin liquidity, price
+                        spreads possible, mostly consolidation. Today's levels: Monitor NZD (Reserve Bank of Australia) statements
+                        as key events.</div>
+                        <span class="zed-badge zed-badge-red mt-2 d-inline-block">Asian Session</span>
+                    </div>
                 </div>
-                <div
-                style="margin-top:14px;padding:10px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);border-radius:6px;font-size:.72rem;color:rgba(255,255,255,.55);">
-                <i class="fas fa-triangle-exclamation" style="color:var(--zed-primary);margin-right:5px"></i> Never trade
-                30 mins before major news releases.
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="session-card" style="--ac:var(--blue)">
+                        <div class="session-name">🇬🇧 London Session</div>
+                        <div class="session-time">08:00–17:00 GMT</div>
+                        <div class="session-pairs">Best pairs: GBP/USD, EUR/USD, EUR/GBP, EUR/JPY</div>
+                        <div style="margin-top:8px; color: var(--zed-secondary) !important; ">Characteristics: <strong>Highest volatility
+                            session.</strong> Bank of Japan (BoJ) interventions happen. H4 structure breaks. TP move. Price often
+                        sets the day's high or low. London sets key levels that often holds all week.</div>
+                        <span class="zed-badge zed-badge-navy mt-2 d-inline-block">Most Active</span>
+                    </div>
                 </div>
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="session-card" style="--ac:var(--gold)">
+                        <div class="session-name">🗽 New York Session</div>
+                        <div class="session-time">13:00–22:00 GMT</div>
+                        <div class="session-pairs">Best pairs: EUR/USD, GBP/USD, USD/CAD, USD/CHF</div>
+                        <div style="margin-top:8px; color: var(--zed-secondary) !important; ">NFP, CPI, FOMC news drops here. Second most
+                        liquid session. Overlapping with London 13:00–17:00 creates the highest volume window of the entire
+                        trading week.</div>
+                        <span class="zed-badge zed-badge-gold mt-2 d-inline-block">High Impact News</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-12 reveal">
+                    <div class="zed-dark-card" style="--dc:var(--zed-primary)">
+                        <div
+                        style="font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--zed-primary);margin-bottom:12px;">
+                        Best Times to Trade</div>
+                        <div style="font-size:.78rem; color: #fff !important;  line-height:1.8;">
+                        <div
+                            style="margin-bottom:8px; color: #fff !important;  font-weight:600;">
+                            London Open: 08:00–10:00 GMT</div>
+                        <div style=" margin-bottom:14px; color: #fff !important; ">EUR/USD, GBP/USD, Gold —
+                            highest breakout probability</div>
+                        <div
+                            style="margin-bottom:8px; color: #fff !important;  font-weight:600;">
+                            NY Open: 13:00–16:00 GMT</div>
+                        <div style="color: #fff !important; ">Avoid: 22:00–00:00 GMT (thin, manipulated
+                            spreads)</div>
+                        </div>
+                        <div
+                        style="margin-top:14px; padding:10px; background:rgba(255,0,0,.08); border:1px solid rgba(255,0,0,.15); border-radius:6px; color: #fff !important; ">
+                        <i class="fas fa-triangle-exclamation" style="color:var(--zed-primary);margin-right:5px"></i> Never trade
+                        30 mins before major news releases.
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            </div>
-        </div>
+
         </div>
     </section>
 
@@ -1268,10 +1633,8 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 3: CORE TERMINOLOGY ═══ -->
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon"><i class="fas fa-book-open"></i></div>
-            <h2 class="zed-sec-title">Core Terminology — Every Term Explained</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">Core Terminology — Every Term Explained</h2> 
         </div>
         <div class="row g-4 mb-4">
             <div class="col-md-6 reveal">
@@ -1280,16 +1643,16 @@ include_once ('elements/header.php');
                 <div class="zed-card-title">What is a Pip?</div>
                 <p class="zed-card-text">A pip is the <strong>smallest standardised unit</strong> in a currency pair. For
                 most pairs: <code
-                    style="background:var(--zed-card-back);padding:1px 5px;border-radius:3px;font-size:.78rem;">1 pip = 0.0001 (the 4th decimal place)</code>.
+                    style="background:var(--zed-card-back); padding:1px 5px; border-radius:3px; ">1 pip = 0.0001 (the 4th decimal place)</code>.
                 For JPY pairs: <code
-                    style="background:var(--zed-card-back);padding:1px 5px;border-radius:3px;font-size:.78rem;">1 pip = 0.01 (the 2nd decimal place)</code>.
+                    style="background:var(--zed-card-back); padding:1px 5px; border-radius:3px;">1 pip = 0.01 (the 2nd decimal place)</code>.
                 </p>
                 <div
-                style="margin-top:12px;background:var(--zed-card-back);border:1px solid var(--zed-border-color);padding:12px;border-radius:6px;">
+                style="margin-top:12px; background:var(--zed-card-back); border:1px solid var(--zed-border-color); padding:12px; border-radius:6px;">
                 <div
-                    style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:8px;">
+                    style="letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;">
                     Examples</div>
-                <div style="font-size:.9rem;color:var(--muted);line-height:1.8;">
+                <div style=" color:var(--muted); line-height:1.8;">
                     EUR/USD moves from 1.0800 → 1.0830 = <strong style="color:var(--zed-primary)">30 pips</strong><br>
                     GBP/JPY moves from 192.40 → 193.10 = <strong style="color:var(--zed-primary)">70 pips</strong><br>
                     Pip value (1 lot) = <strong>$10 per pip</strong> on EUR/USD
@@ -1389,10 +1752,8 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 4: BROKER TYPES ═══ -->
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon" style="background:var(--navy)"><i class="fas fa-building"></i></div>
-            <h2 class="zed-sec-title">Broker Types — Which One Should You Use?</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">Broker Types — Which One Should You Use?</h2> 
         </div>
         <div class="row g-3">
             <div class="col-sm-6 col-lg-3 reveal">
@@ -1439,10 +1800,8 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 5: CURRENCY PAIRS ═══ -->
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon" style="background:var(--gold)"><i class="fas fa-money-bill-wave"></i></div>
-            <h2 class="zed-sec-title">Currency Pairs — Full Classification</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">Currency Pairs — Full Classification</h2> 
         </div>
         <div class="table-responsive reveal">
             <table class="cp-table"
@@ -1465,11 +1824,11 @@ include_once ('elements/header.php');
                         <div class="cp-pair">USD/JPY · USD/CHF</div>
                         <div class="cp-pair">AUD/USD · USD/CAD · NZD/USD</div>
                     </td>
-                    <td style="font-size:.9rem;color:var(--muted);">Highest liquidity globally. Most analysed. Tightest
+                    <td style=" color: var(--zed-secondary) !important; ">Highest liquidity globally. Most analysed. Tightest
                         spreads.</td>
-                    <td style="color:var(--green);font-size:.75rem;font-weight:600;">
+                    <td style="color:var(--green); font-weight:600;">
                         0.5–1.5 pips</td>
-                    <td style="font-size:.9rem;">50–150 pips</td>
+                    <td style="">50–150 pips</td>
                     <td><span class="cp-best" style="background:var(--green-s);color:var(--green);">All traders</span></td>
                 </tr>
                 <tr>
@@ -1478,11 +1837,11 @@ include_once ('elements/header.php');
                         <div class="cp-pair">EUR/GBP · GBP/JPY</div>
                         <div class="cp-pair">EUR/JPY · AUD/JPY</div>
                     </td>
-                    <td style="font-size:.9rem;color:var(--muted);">Less liquidity, wider spreads. Offer unique
+                    <td style="color: var(--zed-secondary) !important; ">Less liquidity, wider spreads. Offer unique
                         opportunities.</td>
-                    <td style="color:var(--amber);font-size:.75rem;font-weight:600;">
+                    <td style="color:var(--amber); font-weight:600;">
                         1.5–3 pips</td>
-                    <td style="font-size:.9rem;">80–200 pips</td>
+                    <td style="">80–200 pips</td>
                     <td><span class="cp-best" style="background:var(--navy-s);color:var(--navy);">Intermediate</span></td>
                 </tr>
                 <tr>
@@ -1491,12 +1850,12 @@ include_once ('elements/header.php');
                         <div class="cp-pair">USD/TRY · USD/ZAR</div>
                         <div class="cp-pair">USD/MXN · EUR/NOK</div>
                     </td>
-                    <td style="font-size:.9rem;color:var(--muted);">Very low liquidity, very wide spreads. High risk. Prone
+                    <td style="color: var(--zed-secondary) !important; ">Very low liquidity, very wide spreads. High risk. Prone
                         to manipulation.</td>
                     <td
-                        style="color:var(--zed-primary);font-size:.75rem;font-weight:600;">
+                        style="color:var(--zed-primary); font-weight:600;">
                         5–50 pips</td>
-                    <td style="font-size:.9rem;">100–500+ pips</td>
+                    <td style="">100–500+ pips</td>
                     <td><span class="cp-best" style="background:rgba(255,0,0,.08);color:var(--zed-primary);">Advanced
                         only</span></td>
                 </tr>
@@ -1506,11 +1865,11 @@ include_once ('elements/header.php');
                         <div class="cp-pair">AUD/USD (gold) · USD/CAD (oil)</div>
                         <div class="cp-pair">NZD/USD (dairy)</div>
                     </td>
-                    <td style="font-size:.9rem;color:var(--muted);">These currencies are heavily influenced by commodity prices. Gold up → AUD up. Oil up → CAD up.</td>
+                    <td style="font-size:.9rem;color: var(--zed-secondary) !important; ">These currencies are heavily influenced by commodity prices. Gold up → AUD up. Oil up → CAD up.</td>
                     <td
-                        style="color:#3f7e56;font-size:.75rem;font-weight:600;">0.5–2 pips</td>
-                    <td style="font-size:.9rem;">40–100 pips</td>
-                    <td><span class="cp-best" style="background:#3f7e561f;color:#3f7e56;">All levels</span></td>
+                        style="color:#3f7e56; font-weight:600;">0.5–2 pips</td>
+                    <td style="">40–100 pips</td>
+                    <td><span class="cp-best" style="background:#3f7e561f; color:#3f7e56;">All levels</span></td>
                 </tr>
             </tbody>
             </table>
@@ -1523,10 +1882,8 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 6: HOW A TRADE WORKS ═══ -->
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon"><i class="fas fa-exchange-alt"></i></div>
-            <h2 class="zed-sec-title">How a Forex Trade Works — Step by Step</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">How a Forex Trade Works — Step by Step</h2> 
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -1570,10 +1927,8 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 7: ORDER TYPES ═══ -->
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon" style="background:var(--navy)"><i class="fas fa-list-check"></i></div>
-            <h2 class="zed-sec-title">Order Types — Complete Guide with When to Use Each</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">Order Types — Complete Guide with When to Use Each</h2> 
         </div>
         <div class="row g-3">
             <div class="col-md-6 col-lg-4 reveal">
@@ -1638,10 +1993,8 @@ include_once ('elements/header.php');
     <!-- ═══ SECTION 8: TRADING STYLES ═══ -->
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
-        <div class="zed-sec-head reveal">
-            <div class="zed-sec-icon" style="background:var(--emerald)"><i class="fas fa-sliders"></i></div>
-            <h2 class="zed-sec-title">Trading Styles — Which One Suits You?</h2>
-            <div class="zed-sec-rule"></div>
+        <div class="zed-sec-head reveal"> 
+            <h2 class="zed-sec-title">Trading Styles — Which One Suits You?</h2> 
         </div>
         <div class="table-responsive reveal">
             <table class="style-table"
@@ -1665,7 +2018,7 @@ include_once ('elements/header.php');
                 <td>Seconds – Minutes</td>
                 <td>20–100+ pips</td>
                 <td>5–15 pips</td>
-                <td style="font-size:.9rem;color:var(--muted);">Requires fast execution, ECN broker, VPS. High stress.
+                <td style=" color: var(--zed-secondary) !important; ">Requires fast execution, ECN broker, VPS. High stress.
                 </td>
                 </tr>
                 <tr>
@@ -1676,7 +2029,7 @@ include_once ('elements/header.php');
                 <td>Hours (closed daily)</td>
                 <td>1–5 pips</td>
                 <td>15–40 pips</td>
-                <td style="font-size:.9rem;color:var(--muted);">No overnight risk. Clear stop loss. Best for working
+                <td style="color: var(--zed-secondary) !important; ">No overnight risk. Clear stop loss. Best for working
                     traders.</td>
                 </tr>
                 <tr>
@@ -1687,7 +2040,7 @@ include_once ('elements/header.php');
                 <td>Days to weeks</td>
                 <td>1–10 pips</td>
                 <td>30–100 pips</td>
-                <td style="font-size:.9rem;color:var(--muted);">Less screen time, larger targets, psychological pressure
+                <td style="color: var(--zed-secondary) !important; ">Less screen time, larger targets, psychological pressure
                     from holding.</td>
                 </tr>
                 <tr>
@@ -1698,7 +2051,7 @@ include_once ('elements/header.php');
                 <td>Weeks to months</td>
                 <td>&lt;5 pips</td>
                 <td>100–300 pips</td>
-                <td style="font-size:.9rem;color:var(--muted);">Fundamental analysis focus (large S/R levels). Patient
+                <td style="color: var(--zed-secondary) !important; ">Fundamental analysis focus (large S/R levels). Patient
                     traders only.</td>
                 </tr>
             </tbody>
@@ -1713,7 +2066,7 @@ include_once ('elements/header.php');
     <div class="mindset-footer">
         <div class="container">
         <div
-            style="font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--zed-primary);text-align:center;margin-bottom:18px;">
+            style="font-size:1rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--zed-primary); text-align:center;margin-bottom:18px;">
             The Trading Mindset</div>
         <blockquote class="mindset-quote reveal">
             "Start with Demo Trading ONLY. You need time to think, analyse, and react without the stress of watching every
