@@ -151,7 +151,7 @@ include_once ('elements/header.php');
           .zed-topnav::-webkit-scrollbar { display: none; }
 
           .zed-tab {
-          font-size: 11px;
+          font-size: 13px;
           font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
@@ -223,7 +223,7 @@ include_once ('elements/header.php');
           .zed-content { padding: 2.5rem 3rem; }
 
           .zed-section-label {
-          font-size: 10px;
+          font-size: 15px;
           font-weight: 700;
           letter-spacing: 0.14em;
           text-transform: uppercase;
@@ -258,7 +258,7 @@ include_once ('elements/header.php');
           }
           .zed-def-cell:last-child { border-right: none; }
           .zed-def-cell-title {
-          font-size: 9px;
+          font-size: 10px;
           font-weight: 700;
           letter-spacing: 0.14em;
           text-transform: uppercase;
@@ -266,8 +266,8 @@ include_once ('elements/header.php');
           margin-bottom: 0.75rem;
           }
           .zed-def-cell p {
-          font-size: 13px;
-          line-height: 1.65;
+          font-size: 14px;
+          line-height: 1.5;
           color: var(--ink2);
           margin: 0;
           }
@@ -345,8 +345,8 @@ include_once ('elements/header.php');
           font-size: 16px;
           flex-shrink: 0;
           }
-          .zed-market-name { font-weight: 600; font-size: 13.5px; color: var(--ink); }
-          .zed-market-desc { font-size: 12.5px; color: var(--muted); }
+          .zed-market-name { font-weight: 600; font-size: 14px; color: var(--ink); }
+          .zed-market-desc { font-size: 13px; color: var(--muted); }
           .zed-market-arrow {
           margin-left: auto;
           color: var(--zed-border-color);
