@@ -39,3 +39,7 @@ RewriteRule ^webinars webinars.php?slug=$1 [L,QSA]
 RewriteRule ^types-of-trader types-of-trader.php?slug=$1 [L,QSA]
 RewriteRule ^how-to how-to.php?slug=$1 [L,QSA]
 RewriteRule ^educator-metatrader-5 educator-metatrader-5.php?slug=$1 [L,QSA]
+
+RewriteRule ^beginner-forex-course beginner-forex-course.php?slug=$1 [L,QSA]
+RewriteRule ^technical-analysis-masterclass technical-analysis-masterclass.php?slug=$1 [L,QSA]
+RewriteRule ^risk-management-course risk-management-course.php?slug=$1 [L,QSA]
