@@ -449,6 +449,7 @@ include_once ('elements/header.php');
           ::-webkit-scrollbar-thumb { background: var(--zed-primary); border-radius: 3px; }
 </style>
 
+
     <!-- ─── HERO ───────────────────────────────────────────── -->
     <section class="hero">
         <div class="container">
@@ -501,10 +502,7 @@ include_once ('elements/header.php');
     </section>
     
     <div class="hdiv"></div>
- 
-
-
-    
+  
 
 <style> 
 :root{
@@ -1486,9 +1484,7 @@ html{scroll-behavior:smooth}
 
             </aside>
         </div>
- 
-
-        
+  
 
         <div class="faq-wrap">
 
@@ -1549,10 +1545,7 @@ html{scroll-behavior:smooth}
     
     
     </div>
-
  
-
-
     <style>
         
         /* ── FAQ ── */
@@ -1620,6 +1613,23 @@ html{scroll-behavior:smooth}
         
         }
 
+        .underline {
+        width: 75px;
+        height: 4px;
+        background-color: var(--zed-primary);
+        margin: 10px 0  0;
+        padding: 4px;
+    }
+
+    .zed-sec-title {
+        font-family: 'Poppins', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: black;
+    }
+
+
     </style>
  
 <script>
@@ -1659,18 +1669,13 @@ function updSb(id){
   document.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));
   const si=document.querySelector(`.sb-item[data-for="${id}"]`);
   if(si)si.classList.add('active');
-}
-function faqOpen(qel){
-  const fi=qel.closest('.fi'),fa=fi.querySelector('.fa'),open=fa.classList.contains('open');
-  document.querySelectorAll('.fi').forEach(f=>{f.classList.remove('open');f.querySelector('.fa').classList.remove('open');});
-  if(!open){fi.classList.add('open');fa.classList.add('open');}
-} ;
+} 
 
-   function faqTog(qel){
-      const fi=qel.closest('.fi'), fa=fi.querySelector('.fa'), isOpen=fa.classList.contains('open');
-      document.querySelectorAll('.fi').forEach(f=>{ f.classList.remove('open'); f.querySelector('.fa').classList.remove('open'); });
-      if(!isOpen){ fi.classList.add('open'); fa.classList.add('open'); }
-    }
+function faqTog(qel){
+    const fi=qel.closest('.fi'), fa=fi.querySelector('.fa'), isOpen=fa.classList.contains('open');
+    document.querySelectorAll('.fi').forEach(f=>{ f.classList.remove('open'); f.querySelector('.fa').classList.remove('open'); });
+    if(!isOpen){ fi.classList.add('open'); fa.classList.add('open'); }
+}
 </script>
 
     
