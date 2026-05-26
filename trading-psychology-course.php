@@ -569,7 +569,8 @@ include_once ('elements/header.php');
         .mod-hd{display:flex;align-items:center;gap:12px;padding:.95rem 1.5rem;cursor:pointer;transition:background .15s;user-select:none}
         .mod-hd:hover{background:var(--G50)}
         .mn{
-            font-family: 'Poppins', serif;
+            /* font-family: 'Poppins', serif; */
+            font-family: 'Bebas Neue', sans-serif;
             font-size:2.5rem;
             color:var(--G200);
             min-width:24px;
