@@ -534,7 +534,7 @@ include_once ('elements/header.php');
         border-bottom:1px solid var(--g2);
         overflow-x:auto;
         justify-content: center;
-        gap: 10px;
+        gap: 0px;
       }
       .nav-btn{
         font-family: 'Poppins', serif;
@@ -675,7 +675,11 @@ include_once ('elements/header.php');
       }
       .check-mark{font-size:10px;color:white;display:none;}
       .check-item.checked .check-mark{display:block;}
-      .check-text{font-size:0.95rem;color:#333;line-height:1.5;}
+      .check-text{
+        font-size:0.95rem;
+        color:#333;
+        line-height:1.5;
+      }
       .check-cat{font-family: 'Poppins', serif;font-size:10px;color:var(--g5);text-transform:uppercase;letter-spacing:1px;margin-top:0.2rem;}
 
       /* FOOTER */
@@ -688,7 +692,9 @@ include_once ('elements/header.php');
         border:1px solid var(--zed-primary);
         color:#fff;
       }
-      .btn-next:hover{background:var(--g6);}
+      .btn-next:hover{
+        background:var(--zed-primary);
+      }
       .mod-indicator{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);}
 
       .chart-bg{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;margin-bottom:1rem;}

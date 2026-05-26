@@ -465,8 +465,8 @@ include_once ('elements/header.php');
               vertical-align: middle;
           }
           @keyframes pulse {
-          0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
-          50%      { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+            0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+            50%      { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
           }
       
           /* ─── SCROLLBAR ───────────────────────────────── */
@@ -527,399 +527,784 @@ include_once ('elements/header.php');
     </section>
     
     <div class="hdiv"></div>
- 
+
     <style>  
-    :root{ 
-        --Rd:#9B0E24;
-        --RL:#FEF0F2;
-        --BK:#0f0f0f;
-        --W:#fff;
-        --G50:#F7F7F7;
-        --G100:#EFEFEF;
-        --G200:#D5D5D5;
-        --G400:#999;
-        --G600:#555;
-        --G800:#222;
-        --GR:#16A34A;
-        --GRL:#F0FDF4;
-        --GRB:#BBF7D0;
-        --AM:#D97706;
-        --AML:#FFFBEB;
-        --AMB:#FDE68A;
-    } 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-    @keyframes barGrow{from{width:0}to{width:var(--w,100%)}}
-    @keyframes candleUp{from{transform:scaleY(0);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
-    @keyframes candleDown{from{transform:scaleY(0);transform-origin:top}to{transform:scaleY(1);transform-origin:top}}
-    @keyframes drawLine{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
-    @keyframes glowPulse{0%,100%{opacity:.6}50%{opacity:1}}
+            :root{ 
+                --Rd:#9B0E24;
+                --RL:#FEF0F2;
+                --BK:#0f0f0f;
+                --W:#fff;
+                --G50:#F7F7F7;
+                --G100:#EFEFEF;
+                --G200:#D5D5D5;
+                --G400:#999;
+                --G600:#555;
+                --G800:#222;
+                --GR:#16A34A;
+                --GRL:#F0FDF4;
+                --GRB:#BBF7D0;
+                --AM:#D97706;
+                --AML:#FFFBEB;
+                --AMB:#FDE68A;
+            } 
 
-    .fu{opacity:0;animation:fadeUp .6s ease forwards}
-    .d1{animation-delay:.07s}.d2{animation-delay:.15s}.d3{animation-delay:.23s}.d4{animation-delay:.31s}.d5{animation-delay:.39s}
+            @keyframes fadeUp{
+                from{
+                    opacity:0;
+                    transform:translateY(22px)
+                }to
+                {
+                    opacity:1;
+                    transform:translateY(0)
+                }
+            }
+            @keyframes pulse{
+                0%,100%{
+                    opacity:1;
+                }50%{
+                    opacity:.4;
+                }
+            }
+            @keyframes barGrow{
+                from{
+                    width:0;
+                }to{
+                    width:var(--w,100%)
+                }
+            }
+            @keyframes candleUp{
+                from{
+                    transform:scaleY(0);
+                    transform-origin:bottom
+                }to{
+                    transform:scaleY(1);
+                    transform-origin:bottom;
+                }
+            }
+            @keyframes candleDown{
+                from{
+                    transform:scaleY(0);
+                    transform-origin:top;
+                }to{
+                    transform:scaleY(1);
+                    transform-origin:top
+                }
+            }
+            @keyframes drawLine{
+                from{
+                    stroke-dashoffset:200;
+                }to{
+                    stroke-dashoffset:0;
+                }
+            }
+            @keyframes glowPulse{
+                0%,100%{
+                    opacity:.6
+                }50%{
+                    opacity:1;
+                }
+            }
 
-    /* HERO */
+            .fu{
+                opacity:0;
+                animation:fadeUp .6s ease forwards;
+            } 
+            .d1{
+                animation-delay:.07s;
+            }
+            .d2{
+                animation-delay:.15s;
+            }
+            .d3{
+                animation-delay:.23s;
+            }
+            .d4{
+                animation-delay:.31s;
+            }
+            .d5{
+                animation-delay:.39s;
+            }
+        
+            /* ── PROGRESS ── */
+            .prog{
+                background:#fff;
+                border-bottom:1px solid var(--G100);
+                padding:.85rem 2rem;
+                display:flex;
+                align-items:center;
+                gap:12px
+            }
+            .prog-bar{
+                flex:1;
+                height:3px;
+                background:var(--G100);
+                border-radius:2px;
+                overflow:hidden
+            }
+            .prog-fill{
+                height:100%;
+                background:var(--zed-primary);
+                width:0%;
+                transition:width .6s cubic-bezier(.4,0,.2,1)
+            }
+            .prog-lbl{
+                font-size:1rem;
+                color:var(--G400);
+                white-space:nowrap
+            }
+            .prog-pct{
+                font-size:1rem;
+                font-weight:600;
+                margin-bottom: 10px;
+                color:var(--zed-primary);
+                min-width:40px;
+                text-align:right
+            } 
 
-    /* ── PROGRESS ── */
-    .prog{
-    background:#fff;
-    border-bottom:1px solid var(--G100);
-    padding:.85rem 2rem;
-    display:flex;
-    align-items:center;
-    gap:12px
-    }
-    .prog-bar{
-    flex:1;
-    height:3px;
-    background:var(--G100);
-    border-radius:2px;
-    overflow:hidden
-    }
-    .prog-fill{height:100%;background:var(--zed-primary);width:0%;transition:width .6s cubic-bezier(.4,0,.2,1)}
-    .prog-lbl{
-    font-size:1rem;
-    color:var(--G400);
-    white-space:nowrap
-    }
-    .prog-pct{
-    font-size:1rem;
-    font-weight:600;
-    margin-bottom: 10px;
-    color:var(--zed-primary);
-    min-width:40px;
-    text-align:right
-    }
+            /* ── SECTION LABEL ── */
+            .slbl{
+                padding: .5rem 1.6rem;
+                font-family: 'Poppins', serif;
+                background:var(--G50);
+                border-top:1px solid var(--G100);
+                border-bottom:1px solid var(--G100);
+                font-size:1rem;
+                font-weight:600;
+                letter-spacing:.11em;
+                text-transform:uppercase;
+                color:var(--G400);
+                display:flex;
+                align-items:center;
+                gap:7px
+            }
+            .slbl i{
+                font-size:30px;
+                color:var(--zed-secondary); 
+            }
 
-    /* ── SECTION LABEL ── */
-    .slbl{
-    padding: .5rem 1.6rem;
-    font-family: 'Poppins', serif;
-    background:var(--G50);
-    border-top:1px solid var(--G100);
-    border-bottom:1px solid var(--G100);
-    font-size:1rem;
-    font-weight:600;
-    letter-spacing:.11em;
-    text-transform:uppercase;
-    color:var(--G400);
-    display:flex;
-    align-items:center;
-    gap:7px
-    }
-    .slbl i{
-    font-size:30px;
-    color:var(--zed-secondary); 
-    }
+            /* ── MODULE ── */
+            .mod{
+                background:#fff;
+                border-left:3px solid transparent;
+                transition:border-color .25s;
+            }
 
-    /* ── MODULE ── */
-    .mod{background:#fff;border-left:3px solid transparent;transition:border-color .25s}
-    .mod+.mod{border-top:1px solid var(--G100)}
-    .mod.active{border-left-color:var(--zed-primary)}
-    .mod.done{border-left-color:var(--G200)}
-    .mod-hd{display:flex;align-items:center;gap:12px;padding:.95rem 1.5rem;cursor:pointer;transition:background .15s;user-select:none}
-    .mod-hd:hover{background:var(--G50)}
-    .mn{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:2.5rem;
-    color:var(--G200);
-    min-width:24px;
-    line-height:1;
-    transition:color .2s;
-    flex-shrink:0;
-    }
-    .mod.active .mn{
-    color:var(--zed-primary);
-    }
-    .micon{
-    width:36px;
-    height:36px;
-    border-radius:4px;
-    background:var(--G50);
-    border:1px solid var(--G100);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    color:var(--zed-primary);
-    flex-shrink:0;
-    transition:all .25s;
-    }
-    .mod.active .micon{background:var(--zed-primary);border-color:var(--zed-primary);color:#fff}
-    .mod.done .micon{
-    background:var(--zed-primary);
-    border-color:var(--zed-primary);
-    color:var(--zed-primary)
-    }
-    .mmeta{flex:1;min-width:0}
-    .mt{
-    font-size: 1.5rem;
-    font-weight:500;
-    color:var(--BK);
-    line-height:1.3;
-    }
-    .ms{
-    font-size:0.8rem;
-    color:var(--G400);
-    margin-top:1px;
-    font-family: 'Poppins', serif;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    }
-    .mright{display:flex;align-items:center;gap:8px;flex-shrink:0}
-    .badge{
-    font-size:1rem;
-    font-weight:600;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    padding:3px 8px;
-    border-radius:2px;
-    }
-    .b-start{
-    background:var(--zed-primaryL);
-    color:var(--zed-primaryd)
-    }
-    .b-done{
-    background:var(--G100);
-    color:var(--G400)
-    }
-    .b-open{
-    background:var(--G50);
-    color:var(--G200);
-    border:1px solid var(--G100)
-    }
-    .b-final{
-    background: var(--zed-primary);
-    color:#fff;
-    }
-    .chev{font-size:16px;color:var(--G200);transition:transform .25s,color .2s}
-    .mod.open .chev{transform:rotate(90deg);color:var(--zed-primary)}
+            .mod+.mod{
+                border-top:1px solid var(--G100);
+            }
 
-    /* ── BODY ── */
-    .mbody{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.4,0,.2,1)}
-    .mbody.open{max-height:1400px}
-    .minner{padding:1.1rem 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--G50)}
-    .intro{ 
-    color:var(--zed-secondary);
-    line-height:1.8;
-    margin-bottom:1.2rem;
-    max-width:510px;
-    }
+            .mod.active{
+                border-left-color:var(--zed-primary);
+            }
 
-    /* ── FORMULA ── */
-    .fbox{display:flex;align-items:center;gap:12px;background:var(--BK);border-radius:4px;padding:.85rem 1.1rem;margin-bottom:1.2rem}
-    .flbl{font-size:10px;color:var(--G400);letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-    .fdiv{width:1px;height:18px;background:rgba(255,255,255,.12);flex-shrink:0}
-    .feq{font-size:12.5px;color:#fff;font-weight:400;line-height:1.5}
-    .feq b{color:var(--zed-primary)}
+            .mod.done{
+                border-left-color:var(--G200)
+            }
 
-    /* ── STAT GRID ── */
-    .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.2rem}
-    .sbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.7rem .8rem;text-align:center}
-    .sbox.hi{background:var(--zed-primaryL);border-color:#FACDD3}
-    .sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--BK);line-height:1}
-    .sv.r{color:var(--zed-primary)}
-    .sk{font-size:10px;color:var(--G400);letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
+            .mod-hd{
+                display:flex;
+                align-items:center;
+                gap:12px;
+                padding:.95rem 1.5rem;
+                cursor:pointer;
+                transition:background .15s;
+                user-select:none;
+            }
 
-    /* ── RULES CARD ── */
-    .rcard{background:var(--G50);border-left:3px solid var(--zed-primary);border-radius:0 4px 4px 0;padding:.85rem 1rem;margin-bottom:1.2rem}
-    .rtitle{
-    font-size:1rem;
-    font-weight:600;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--zed-primary);
-    margin-bottom:.65rem;
-    display:flex;
-    align-items:center;
-    gap:6px;
-    }
+            .mod-hd:hover{
+                background:var(--G50);
+            }
+            .mn{
+                font-family:'Bebas Neue',sans-serif;
+                font-size:2.5rem;
+                color:var(--G200);
+                min-width:24px;
+                line-height:1;
+                transition:color .2s;
+                flex-shrink:0;
+            }
+            .mod.active .mn{
+                color:var(--zed-primary);
+            }
+            .micon{
+                width:36px;
+                height:36px;
+                border-radius:4px;
+                background:var(--G50);
+                border:1px solid var(--G100);
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-size:22px;
+                color:var(--zed-primary);
+                flex-shrink:0;
+                transition:all .25s;
+            }
+            .mod.active .micon{
+                background:var(--zed-primary);
+                border-color:var(--zed-primary);
+                color:#fff;
+            }
+            .mod.done .micon{
+                background:var(--zed-primary);
+                border-color:var(--zed-primary);
+                color:#fff;
+            }
 
-    .rtitle i{
-    font-size:22px;
-    }
-    .rrow{
-    display:flex;
-    align-items:flex-start;
-    gap:8px;
-    padding:3px 0; 
-    color:var(--zed-secondary);
-    line-height:1.65;
-    }
-    .rdot{width:5px;height:5px;background:var(--zed-primary);border-radius:50%;flex-shrink:0;margin-top:6px;animation:pulse 2.5s ease infinite}
+            .mmeta{
+                flex:1;
+                min-width:0;
+            }
+            .mt{
+                font-size: 1.5rem;
+                font-weight:500;
+                color:var(--BK);
+                line-height:1.3;
+            }
+            .ms{
+                font-size:0.8rem;
+                color:var(--G400);
+                margin-top:1px;
+                font-family: 'Poppins', serif;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+            }
+            .mright{
+                display:flex;
+                align-items:center;
+                gap:8px;
+                flex-shrink:0;
+            }
+            .badge{
+                font-size:1rem;
+                font-weight:600;
+                letter-spacing:.06em;
+                text-transform:uppercase;
+                padding:3px 8px;
+                background: var(--G50);
+                color: var(--G200);
+                border: 1px solid var(--G100);
+                border-radius:2px;
+            }
+            .b-start{
+                background:var(--zed-primaryL);
+                color:var(--zed-primaryd)
+            }
+            .b-done{
+                background:var(--G100);
+                color:var(--G400)
+            }
+            .b-open{
+                background:var(--G50);
+                color:var(--G200);
+                border:1px solid var(--G100)
+            }
+            .b-final{
+                background: var(--zed-primary);
+                color:#fff;
+            }
+            .chev{
+                font-size:16px;
+                color:var(--G200);
+                transition:transform .25s,color .2s;
+            }
+            .mod.open .chev{
+                transform:rotate(90deg);
+                color:var(--zed-primary);
+            } 
+            /* ── BODY ── */
+            .mbody{
+                max-height:0;
+                overflow:hidden;
+                transition:max-height .42s cubic-bezier(.4,0,.2,1);
+            } 
+            .mbody.open{
+                max-height:1400px;
+            } 
+            .minner{
+                padding:1.1rem 1.5rem 1.5rem 4.5rem;
+                border-top:1px solid var(--G50);
+            }
+            .intro{ 
+                color:var(--zed-secondary);
+                line-height:1.8;
+                margin-bottom:1.2rem;
+                max-width:510px;
+            } 
+            /* ── FORMULA ── */
+            .fbox{
+                display:flex;
+                align-items:center;
+                gap:12px;
+                background:var(--BK);
+                border-radius:4px;
+                padding:.85rem 1.1rem;
+                margin-bottom:1.2rem;
+            } 
+            .flbl{
+                font-size:10px;
+                color:var(--G400);
+                letter-spacing:.09em;
+                text-transform:uppercase;
+                white-space:nowrap;
+                flex-shrink:0;
+            } 
+            .fdiv{
+                width:1px;
+                height:18px;
+                background:rgba(255,255,255,.12);
+                flex-shrink:0;
+            } 
+            .feq{
+                font-size:12.5px;
+                color:#fff;
+                font-weight:400;
+                line-height:1.5;
+            } 
+            .feq b{
+                color:var(--zed-primary);
+            } 
+            /* ── STAT GRID ── */
+            .sgrid{
+                display:grid;
+                grid-template-columns:repeat(3,1fr);
+                gap:8px;
+                margin-bottom:1.2rem;
+            } 
+            .sbox{
+                background:var(--G50);
+                border:1px solid var(--G100);
+                border-radius:4px;
+                padding:.7rem .8rem;
+                text-align:center;
+            } 
+            .sbox.hi{
+                background:var(--zed-primaryL);
+                border-color:#FACDD3;
+            } 
+            .sv{
+                font-family:'Bebas Neue',sans-serif;
+                font-size:1.6rem;
+                color:var(--BK);
+                line-height:1;
+            } 
+            .sv.r{
+                color:var(--zed-primary);
+            } 
+            .sk{
+                font-size:10px;
+                color:var(--G400);
+                letter-spacing:.05em;
+                text-transform:uppercase;
+                margin-top:3px;
+            } 
+            /* ── RULES CARD ── */
+            .rcard{
+                background:var(--G50);
+                border-left:3px solid var(--zed-primary);
+                border-radius:0 4px 4px 0;
+                padding:.85rem 1rem;
+                margin-bottom:1.2rem;
+            }
+            .rtitle{
+                font-size:1rem;
+                font-weight:600;
+                letter-spacing:.1em;
+                text-transform:uppercase;
+                color:var(--zed-primary);
+                margin-bottom:.65rem;
+                display:flex;
+                align-items:center;
+                gap:6px;
+            } 
+            .rtitle i{
+                font-size:22px;
+            }
+            .rrow{
+                display:flex;
+                align-items:flex-start;
+                gap:8px;
+                padding:3px 0; 
+                color:var(--zed-secondary);
+                line-height:1.65;
+            } 
+            .rdot{
+                width:5px;
+                height:5px;
+                background:var(--zed-primary);
+                border-radius:50%;
+                flex-shrink:0;
+                margin-top:6px;
+                animation:pulse 2.5s ease infinite;
+            } 
+            /* ── TWO COL ── */
+            .two{
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                gap:8px;
+                margin-bottom:1.2rem;
+            } 
+            .tbox{
+                background:var(--G50);
+                border:1px solid var(--G100);
+                border-radius:4px;
+                padding:.8rem 1rem;
+            } 
+            .tbox.danger{
+                background:var(--zed-primaryL);
+                border-color:#FACDD3;
+            }
+            .tbox-title{
+                font-size:1rem;
+                font-weight:600;
+                letter-spacing:.08em;
+                text-transform:uppercase; 
+                margin-bottom:.5rem;
+                display:flex;
+                align-items:center;
+                gap:5px;
+            }
+            .tbox.danger .tbox-title{
+                color:var(--zed-primary)
+            }
+            .tbox-row{ 
+                color:var(--zed-secondary);
+                padding:2px 0;
+                display:flex;
+                align-items:flex-start;
+                gap:6px;
+                line-height:1.5;
+            }
+            .tbox-row i{
+                font-size:13px;
+                flex-shrink:0;
+                margin-top:1px
+            }
+            .tbox.danger .tbox-row i{
+                color:var(--zed-primary);
+            }
+            .tbox-row i{
+                color:var(--zed-secondary)
+            } 
+            /* ── CHECKLIST ── */
+            .clwrap{
+                margin-bottom:1rem;
+            }
+            .clstat{
+                font-size: 1rem;
+                color: var(--G400);
+                font-weight:500;
+                padding: 4px 8px;
+                margin-bottom: 6px;
+                transition: color .3s;
+            }
+            .ci{
+                display:flex;
+                align-items:center;
+                gap:10px;
+                padding:5px 8px;
+                border-radius:4px;
+                cursor:pointer;
+                transition:background .15s; 
+                color:var(--G600);
+            }
+            .ci:hover{
+                background:var(--G50);
+            }
+            .cbox{
+                width:17px;
+                height:17px;
+                border:1.5px solid var(--G200);
+                border-radius:3px;
+                flex-shrink:0;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-size:11px;transition:all .2s;
+                color:#fff;
+            }
+            .ci.checked .cbox{
+                background:var(--zed-primary);
+                border-color:var(--zed-primary);
+            } 
+            .ci.checked .clbl{
+                text-decoration:line-through;
+                color:var(--G400);
+            } 
+            /* ── CTA ── */
+            .btndone{
+                display:inline-flex;
+                align-items:center;
+                gap:7px;
+                background:var(--zed-primary);
+                color:#fff;
+                font-size:11px;
+                font-weight:600;
+                letter-spacing:.07em;
+                text-transform:uppercase;
+                padding:9px 18px;
+                border-radius:2px;
+                border:none;
+                cursor:pointer;
+                transition:background .2s,transform .1s;
+                margin-top:.3rem;
+            } 
+            .btndone:hover{
+                background:var(--zed-primary);
+            }
+            .btndone:active{
+                transform:scale(.97);
+            }
+            .btndone i{
+                font-size:14px;
+            }
 
-    /* ── TWO COL ── */
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
-    .tbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.8rem 1rem}
-    .tbox.danger{background:var(--zed-primaryL);border-color:#FACDD3}
-    .tbox-title{
-    font-size:1rem;
-    font-weight:600;
-    letter-spacing:.08em;
-    text-transform:uppercase; 
-    margin-bottom:.5rem;
-    display:flex;
-    align-items:center;
-    gap:5px;
-    }
-    .tbox.danger .tbox-title{
-    color:var(--zed-primary)
-    }
-    .tbox-row{ 
-    color:var(--zed-secondary);
-    padding:2px 0;
-    display:flex;
-    align-items:flex-start;
-    gap:6px;
-    line-height:1.5;
-    }
-    .tbox-row i{
-    font-size:13px;
-    flex-shrink:0;
-    margin-top:1px
-    }
-    .tbox.danger .tbox-row i{color:var(--zed-primary)}
-    .tbox-row i{
-    color:var(--zed-secondary)
-    }
+            /* ── FAQ ── */
+            .faq-wrap{
+                background:#fff;
+                margin-top:1px;
+            }
+            .faq-top{
+                padding:1.4rem 2rem .9rem;
+                display:flex;
+                align-items:center;
+                gap:10px;
+                border-bottom:1px solid var(--G100);
+            }
+            .faq-top h2{
+                font-size:1rem;
+                font-weight:500;
+                color:var(--BK);
+            }
+            .faq-top i{
+                font-size:1.5rem;
+                color:var(--zed-primary);
+            }
+            .faq-note{
+                padding:.6rem 2rem .8rem;
+                font-size:1rem;
+                color:var(--G400);
+                line-height:1.6;
+                border-bottom:1px solid var(--G100)
+            }
+            .fi{
+                border-bottom:1px solid var(--G100);
+                display: flex;
+                flex-direction: column;
+            }
+            .fq{
+                display:flex;
+                align-items:flex-start;
+                justify-content:space-between;
+                padding:.9rem 2rem;
+                cursor:pointer;
+                gap:12px;
+                transition:background .15s;
+            }
+            /* .fq:hover{background:var(--G50)} */
+            .fq-txt{
+                font-size:1rem;
+                font-weight:500;
+                color:var(--BK);
+                flex:1;
+                line-height:1.5;
+            }
+            .fq-ic{
+                font-size:1.5rem;
+                color:var(--zed-secondary);
+                transition:transform .25s,color .2s;
+                flex-shrink:0;
+                margin-top:2px;
+            }
+            .fi.open .fq-ic{
+                transform:rotate(180deg);
+                color:var(--zed-primary);
+            } 
+            .fa{
+                max-height:0;
+                overflow:hidden;
+                transition:max-height .35s ease;
+            } 
+            .fa.open{
+                max-height:400px;
+            }
+            .fa-inner{
+                margin:0 2rem .9rem;
+                padding:.8rem 1rem;
+                font-family: 'Poppins', serif;
+                background:var(--G50);
+                border-left:3px solid var(--zed-primary);
+                border-radius:0 4px 4px 0; 
+                color:var(--zed-secondary);
+                font-weight: 400;
+                line-height:1.8;
+            }
+            .fa-inner b{
+                color:var(--BK);
+                font-weight:500; 
+            } 
+            .underline {
+                width: 75px;
+                height: 4px;
+                background-color: var(--zed-primary);
+                margin: 10px 0  0;
+                padding: 4px;
+            } 
+            .zed-sec-title {
+                font-family: 'Poppins', serif;
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 25px;
+                color: black;
+            }
 
-    /* ── CHECKLIST ── */
-    .clwrap{margin-bottom:1rem}
-    .clstat{
-    font-size: 1rem;
-    color: var(--G400);
-    font-weight:500;
-    padding: 4px 8px;
-    margin-bottom: 6px;
-    transition: color .3s;
-    }
-    .ci{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:5px 8px;
-    border-radius:4px;
-    cursor:pointer;
-    transition:background .15s; 
-    color:var(--G600);
-    }
-    .ci:hover{background:var(--G50)}
-    .cbox{width:17px;height:17px;border:1.5px solid var(--G200);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all .2s;color:#fff}
-    .ci.checked .cbox{background:var(--zed-primary);border-color:var(--zed-primary)}
-    .ci.checked .clbl{text-decoration:line-through;color:var(--G400)}
+              /* STEP FLOW */
+            .steps{
+                display:flex;
+                flex-direction:column;
+                gap:6px;
+                margin-bottom:1.2rem;
+            }
+            .step{
+                display:flex;
+                align-items:flex-start;
+                gap:12px;
+                padding:.7rem 1rem;
+                background:var(--G50);
+                border:1px solid var(--G100);
+                border-radius:4px;
+                transition:border-color .2s;
+            }
+            .step:hover{
+                border-color:var(--zed-secondary);
+            }
+            .step-num{
+                font-family: poppins, sans-serif;
+                font-size:1.5rem;
+                color:var(--zed-primary);
+                min-width:20px;
+                line-height:1.5;
+                flex-shrink:0;
+            }
+            .step-body{
+                flex:1;
+            }
+            .step-title{
+                font-size:1rem;
+                font-weight:500;
+                color:var(--BK);
+                margin-bottom:1px;
+            }
+            .step-desc{ 
+                color:var(--zed-secondary);
+                line-height:1.5;
+            }
 
-    /* ── CTA ── */
-    .btndone{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    background:var(--zed-primary);
-    color:#fff;
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:.07em;
-    text-transform:uppercase;
-    padding:9px 18px;
-    border-radius:2px;
-    border:none;
-    cursor:pointer;
-    transition:background .2s,transform .1s;
-    margin-top:.3rem;
-    }
+            /* LEVEL VISUAL */
+            .level-visual{
+                background:var(--BK);
+                border-radius:4px;
+                padding:1rem;
+                margin-bottom:1.2rem;
+            }
+            .lv-title{
+                font-size:10px;
+                color:var(--G400);
+                letter-spacing:.09em;
+                text-transform:uppercase;
+                margin-bottom:.8rem;
+            }
+            .lv-row{
+                display:flex;
+                align-items:center;
+                gap:8px;
+                margin-bottom:6px;
+            }
+            .lv-line{
+                flex:1;
+                height:2px;
+                border-radius:1px;
+            }
+            .lv-tag{
+                font-size:10px;
+                font-weight:600;
+                letter-spacing:.06em;
+                text-transform:uppercase;
+                padding:2px 7px;
+                border-radius:2px;
+                white-space:nowrap;
+            }
+            .lv-res{
+                background:rgba(200,16,46,.25);
+                color:var(--R)
+            }
+            .lv-res-line{
+                background:var(--R);
+            }
+            .lv-sup{
+                background:rgba(22,163,74,.25);
+                color:#16A34A
+            }
+            .lv-sup-line{
+                background:#16A34A;
+            }
+            .lv-zone{
+                background:rgba(217,119,6,.2);
+                color:var(--AM)
+            }
+            .lv-zone-line{
+                background:var(--AM);
+                height:6px;
+                opacity:.5;
+            }
+            .lv-price{
+                font-size:10px;
+                color:var(--G400);
+            }
 
-    .btndone:hover{
-    background:var(--zed-primary);
-    }
-    .btndone:active{
-    transform:scale(.97);
-    }
-    .btndone i{
-    font-size:14px;
-    }
+            /* TF GRID */
+            .tf-grid{
+                display:grid;
+                grid-template-columns:repeat(3,1fr);
+                gap:8px;margin-bottom:1.2rem;
+            }
+            .tf-box{
+                background:var(--G50);
+                border:1px solid var(--G100);
+                border-radius:4px;
+                padding:.8rem;
+            }
+            .tf-box.primary{
+                border-color:var(--zed-primary);
+                background:var(--RL);
+            }
+            .tf-name{
+                font-family:'Bebas Neue',sans-serif;
+                font-size:1.1rem;
+                color:var(--BK);
+                letter-spacing:.04em;
+                margin-bottom:3px;
+            }
+            .tf-box.primary .tf-name{
+                color:var(--zed-primary);
+            }
+            .tf-role{
+                font-size:1rem;
+                font-weight:600;
+                letter-spacing:.07em;
+                text-transform:uppercase;
+                color:var(--G400);
+                margin-bottom:6px;
+            }
+            .tf-box.primary .tf-role{
+                color:var(--zed-primarys);
+            }
+            .tf-desc{ 
+                color:var(--zed-secondary);
+                line-height:1.5;
+            }
 
-    /* ── FAQ ── */
-    .faq-wrap{background:#fff;margin-top:1px}
-    .faq-top{
-    padding:1.4rem 2rem .9rem;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    border-bottom:1px solid var(--G100);
-    }
-    .faq-top h2{
-    font-size:1rem;
-    font-weight:500;
-    color:var(--BK);
-    }
-    .faq-top i{
-    font-size:1.5rem;
-    color:var(--zed-primary);
-    }
-    .faq-note{
-    padding:.6rem 2rem .8rem;
-    font-size:1rem;
-    color:var(--G400);
-    line-height:1.6;
-    border-bottom:1px solid var(--G100)
-    }
-    .fi{
-    border-bottom:1px solid var(--G100);
-    display: flex;
-    flex-direction: column;
-    }
-    .fq{display:flex;align-items:flex-start;justify-content:space-between;padding:.9rem 2rem;cursor:pointer;gap:12px;transition:background .15s}
-    /* .fq:hover{background:var(--G50)} */
-    .fq-txt{
-    font-size:1rem;
-    font-weight:500;
-    color:var(--BK);
-    flex:1;
-    line-height:1.5;
-    }
-    .fq-ic{
-    font-size:1.5rem;
-    color:var(--zed-secondary);
-    transition:transform .25s,color .2s;
-    flex-shrink:0;
-    margin-top:2px;
-    }
-    .fi.open .fq-ic{transform:rotate(180deg);color:var(--zed-primary)}
-    .fa{max-height:0;overflow:hidden;transition:max-height .35s ease}
-    .fa.open{max-height:400px}
-    .fa-inner{
-    margin:0 2rem .9rem;
-    padding:.8rem 1rem;
-    font-family: 'Poppins', serif;
-    background:var(--G50);
-    border-left:3px solid var(--zed-primary);
-    border-radius:0 4px 4px 0; 
-    color:var(--zed-secondary);
-    font-weight: 400;
-    line-height:1.8;
-    }
-    .fa-inner b{
-    color:var(--BK);
-    font-weight:500;
-
-    }
-
-
-    .underline {
-            width: 75px;
-            height: 4px;
-            background-color: var(--zed-primary);
-            margin: 10px 0  0;
-            padding: 4px;
-        }
-
-    .zed-sec-title {
-        font-family: 'Poppins', serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 25px;
-        color: black;
-    }
     </style>
 
       <div class="container">  
@@ -937,122 +1322,144 @@ include_once ('elements/header.php');
             
             <!-- L1 -->
             <div class="mod active open" data-id="1">
-            <div class="mod-hd" onclick="tog(1)">
-                <div class="mn">01</div>
-                <div class="micon"><i class="ti ti-building" aria-hidden="true"></i></div>
-                <div class="mmeta"><div class="mt">Market Structure Strategy</div><div class="ms">Reading the market's blueprint before placing any trade</div></div>
-                <div class="mright"><span class="badge b-start">Start Here</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
-            </div>
-            <div class="mbody open">
-                <div class="minner">
-                <p class="intro">Market structure is the foundation of all price action trading. Before applying any strategy, you must understand whether the market is forming higher highs and higher lows (bullish), lower highs and lower lows (bearish), or ranging. Every professional entry is taken in the context of structure — never against it.</p>
-                <div class="chart-visual">
-                    <div class="chart-label"><i class="ti ti-chart-line" aria-hidden="true"></i> Bullish market structure — higher highs, higher lows</div>
-                    <svg viewBox="0 0 300 80" width="100%" height="70">
-                    <polyline points="10,70 50,50 70,58 110,35 130,43 170,20 190,28 230,10 250,16" stroke="#16A34A" stroke-width="2" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:drawLine 1.2s ease forwards .3s"/>
-                    <circle cx="10" cy="70" r="3" fill="#16A34A" opacity=".7"/>
-                    <circle cx="70" cy="58" r="3" fill="#16A34A" opacity=".7"/>
-                    <circle cx="130" cy="43" r="3" fill="#16A34A" opacity=".7"/>
-                    <circle cx="190" cy="28" r="3" fill="#16A34A" opacity=".7"/>
-                    <text x="12" y="78" fill="#16A34A" font-size="8" opacity=".8">HL</text>
-                    <text x="72" y="67" fill="#16A34A" font-size="8" opacity=".8">HL</text>
-                    <text x="132" y="52" fill="#16A34A" font-size="8" opacity=".8">HL</text>
-                    <circle cx="50" cy="50" r="3" fill="#C8102E" opacity=".7"/>
-                    <circle cx="110" cy="35" r="3" fill="#C8102E" opacity=".7"/>
-                    <circle cx="170" cy="20" r="3" fill="#C8102E" opacity=".7"/>
-                    <circle cx="230" cy="10" r="3" fill="#C8102E" opacity=".7"/>
-                    <text x="40" y="46" fill="#C8102E" font-size="8" opacity=".8">HH</text>
-                    <text x="100" y="31" fill="#C8102E" font-size="8" opacity=".8">HH</text>
-                    <text x="160" y="16" fill="#C8102E" font-size="8" opacity=".8">HH</text>
-                    </svg>
+                <div class="mod-hd" onclick="tog(1)">
+                    <div class="mn">01</div>
+                    <div class="micon"><i class="ti ti-building" aria-hidden="true"></i></div>
+                    <div class="mmeta"><div class="mt">Market Structure Strategy</div><div class="ms">Reading the market's blueprint before placing any trade</div></div>
+                    <div class="mright"><span class="badge b-start">Start Here</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
                 </div>
-                <div class="two">
-                    <div class="tbox good">
-                    <div class="tbox-title"><i class="ti ti-trending-up" aria-hidden="true"></i> Bullish structure</div>
-                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Higher highs (HH) and higher lows (HL)</div>
-                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Bias: look for long setups only</div>
-                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Enter at HL — not at HH breakouts</div>
+
+                <div class="mbody open">
+
+                    <div class="minner">
+                        <p class="intro">Market structure is the foundation of all price action trading. Before applying any strategy, you must understand whether the market is forming higher highs and higher lows (bullish), lower highs and lower lows (bearish), or ranging. Every professional entry is taken in the context of structure — never against it.</p>
+
+                        <div class="chart-visual">
+
+                            <div class="chart-label"><i class="ti ti-chart-line" aria-hidden="true"></i> Bullish market structure — higher highs, higher lows</div>
+                                <svg viewBox="0 0 300 80" width="100%" height="70">
+                                <polyline points="10,70 50,50 70,58 110,35 130,43 170,20 190,28 230,10 250,16" stroke="#16A34A" stroke-width="2" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:drawLine 1.2s ease forwards .3s"/>
+                                <circle cx="10" cy="70" r="3" fill="#16A34A" opacity=".7"/>
+                                <circle cx="70" cy="58" r="3" fill="#16A34A" opacity=".7"/>
+                                <circle cx="130" cy="43" r="3" fill="#16A34A" opacity=".7"/>
+                                <circle cx="190" cy="28" r="3" fill="#16A34A" opacity=".7"/>
+                                <text x="12" y="78" fill="#16A34A" font-size="8" opacity=".8">HL</text>
+                                <text x="72" y="67" fill="#16A34A" font-size="8" opacity=".8">HL</text>
+                                <text x="132" y="52" fill="#16A34A" font-size="8" opacity=".8">HL</text>
+                                <circle cx="50" cy="50" r="3" fill="#C8102E" opacity=".7"/>
+                                <circle cx="110" cy="35" r="3" fill="#C8102E" opacity=".7"/>
+                                <circle cx="170" cy="20" r="3" fill="#C8102E" opacity=".7"/>
+                                <circle cx="230" cy="10" r="3" fill="#C8102E" opacity=".7"/>
+                                <text x="40" y="46" fill="#C8102E" font-size="8" opacity=".8">HH</text>
+                                <text x="100" y="31" fill="#C8102E" font-size="8" opacity=".8">HH</text>
+                                <text x="160" y="16" fill="#C8102E" font-size="8" opacity=".8">HH</text>
+                                </svg>
+                            </div>
+
+                            <div class="two">
+
+                                <div class="tbox good">
+                                    <div class="tbox-title"><i class="ti ti-trending-up" aria-hidden="true"></i> Bullish structure</div>
+                                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Higher highs (HH) and higher lows (HL)</div>
+                                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Bias: look for long setups only</div>
+                                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Enter at HL — not at HH breakouts</div>
+                                </div>
+
+                                <div class="tbox danger">
+                                    <div class="tbox-title"><i class="ti ti-trending-down" aria-hidden="true"></i> Bearish structure</div>
+                                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Lower highs (LH) and lower lows (LL)</div>
+                                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Bias: look for short setups only</div>
+                                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Enter at LH — not at LL breakdowns</div>
+                                </div>
+                            </div>
+                            
+                            <div class="rcard">
+                                <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> Structure rules</div>
+                                <div class="rrow"><div class="rdot"></div>Always identify structure on the higher timeframe before entering on lower</div>
+                                <div class="rrow"><div class="rdot"></div>A break of structure (BOS) signals a potential trend change — never ignore it</div>
+                                <div class="rrow"><div class="rdot"></div>In a range, do not trade the middle — only trade from the extreme edges</div>
+                                <div class="rrow"><div class="rdot"></div>Structure is invalidated when a significant swing point is broken — exit or reassess</div>
+                            </div>
+
+                            <button class="btndone" onclick="markDone(1)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+                        </div>
+
                     </div>
-                    <div class="tbox danger">
-                    <div class="tbox-title"><i class="ti ti-trending-down" aria-hidden="true"></i> Bearish structure</div>
-                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Lower highs (LH) and lower lows (LL)</div>
-                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Bias: look for short setups only</div>
-                    <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Enter at LH — not at LL breakdowns</div>
-                    </div>
+
                 </div>
-                <div class="rcard">
-                    <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> Structure rules</div>
-                    <div class="rrow"><div class="rdot"></div>Always identify structure on the higher timeframe before entering on lower</div>
-                    <div class="rrow"><div class="rdot"></div>A break of structure (BOS) signals a potential trend change — never ignore it</div>
-                    <div class="rrow"><div class="rdot"></div>In a range, do not trade the middle — only trade from the extreme edges</div>
-                    <div class="rrow"><div class="rdot"></div>Structure is invalidated when a significant swing point is broken — exit or reassess</div>
-                </div>
-                <button class="btndone" onclick="markDone(1)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
-                </div>
-            </div>
-            </div>
 
             <!-- L2 -->
             <div class="mod" data-id="2">
-            <div class="mod-hd" onclick="tog(2)">
-                <div class="mn">02</div>
-                <div class="micon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
-                <div class="mmeta"><div class="mt">Breakout Strategy</div><div class="ms">Trading the moment price breaks a key level with momentum</div></div>
-                <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
-            </div>
-            <div class="mbody">
-                <div class="minner">
-                <p class="intro">A breakout occurs when price moves decisively beyond a significant level — a resistance zone, consolidation range, or prior swing high — with increased momentum and volume. Trading breakouts requires distinguishing between genuine breaks and false breaks (fakeouts) that trap impulsive traders.</p>
-                <div class="chart-visual">
-                    <div class="chart-label"><i class="ti ti-chart-line" aria-hidden="true"></i> Breakout above resistance — genuine vs false</div>
-                    <svg viewBox="0 0 300 80" width="100%" height="70">
-                    <line x1="10" y1="35" x2="280" y2="35" stroke="#C8102E" stroke-width="1" stroke-dasharray="4,3" opacity=".6"/>
-                    <text x="282" y="38" fill="#C8102E" font-size="8">Res</text>
-                    <polyline points="10,65 40,60 70,58 100,55 130,52 160,50 190,36 210,28 240,20 270,15" stroke="#16A34A" stroke-width="2" fill="none" stroke-dasharray="300" stroke-dashoffset="300" style="animation:drawLine 1.4s ease forwards .2s"/>
-                    <line x1="185" y1="35" x2="185" y2="28" stroke="#fff" stroke-width="1" stroke-dasharray="2,2" opacity=".4"/>
-                    <text x="140" y="47" fill="#999" font-size="8">Consolidation</text>
-                    <text x="196" y="33" fill="#16A34A" font-size="8">Break ↑</text>
-                    </svg>
+
+                <div class="mod-hd" onclick="tog(2)">
+                    <div class="mn">02</div>
+                    <div class="micon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
+                    <div class="mmeta"><div class="mt">Breakout Strategy</div><div class="ms">Trading the moment price breaks a key level with momentum</div></div>
+                    <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
                 </div>
-                <div class="sgrid">
-                    <div class="sbox ok"><div class="sv g">Real</div><div class="sk">Strong close beyond level</div></div>
-                    <div class="sbox hi"><div class="sv r">Fake</div><div class="sk">Wick beyond, closes back</div></div>
-                    <div class="sbox warn"><div class="sv a">Wait</div><div class="sk">Confirm with retest</div></div>
+
+                <div class="mbody">
+                    <div class="minner">
+                        <p class="intro">A breakout occurs when price moves decisively beyond a significant level — a resistance zone, consolidation range, or prior swing high — with increased momentum and volume. Trading breakouts requires distinguishing between genuine breaks and false breaks (fakeouts) that trap impulsive traders.</p>
+
+                        <div class="chart-visual">
+
+                            <div class="chart-label"><i class="ti ti-chart-line" aria-hidden="true"></i> Breakout above resistance — genuine vs false</div>
+                                <svg viewBox="0 0 300 80" width="100%" height="70">
+                                <line x1="10" y1="35" x2="280" y2="35" stroke="#C8102E" stroke-width="1" stroke-dasharray="4,3" opacity=".6"/>
+                                <text x="282" y="38" fill="#C8102E" font-size="8">Res</text>
+                                <polyline points="10,65 40,60 70,58 100,55 130,52 160,50 190,36 210,28 240,20 270,15" stroke="#16A34A" stroke-width="2" fill="none" stroke-dasharray="300" stroke-dashoffset="300" style="animation:drawLine 1.4s ease forwards .2s"/>
+                                <line x1="185" y1="35" x2="185" y2="28" stroke="#fff" stroke-width="1" stroke-dasharray="2,2" opacity=".4"/>
+                                <text x="140" y="47" fill="#999" font-size="8">Consolidation</text>
+                                <text x="196" y="33" fill="#16A34A" font-size="8">Break ↑</text>
+                                </svg>
+                            </div>
+
+                            <div class="sgrid">
+                                <div class="sbox ok"><div class="sv g">Real</div><div class="sk">Strong close beyond level</div></div>
+                                <div class="sbox hi"><div class="sv r">Fake</div><div class="sk">Wick beyond, closes back</div></div>
+                                <div class="sbox warn"><div class="sv a">Wait</div><div class="sk">Confirm with retest</div></div>
+                            </div>
+
+                            <div class="rcard">
+                                <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> Breakout entry rules</div>
+                                <div class="rrow"><div class="rdot"></div>Wait for a clean candle close beyond the level — not a wick</div>
+                                <div class="rrow"><div class="rdot"></div>Higher-than-average momentum on the breakout candle increases validity</div>
+                                <div class="rrow"><div class="rdot"></div>Stop loss: placed back inside the broken level, not beyond the candle low</div>
+                                <div class="rrow"><div class="rdot"></div>Target: measure the height of the prior range and project it from the breakout point</div>
+                                <div class="rrow"><div class="rdot"></div>Avoid breakout entries during low-liquidity sessions — fakeouts are more common</div>
+                            </div>
+
+                            <button class="btndone" onclick="markDone(2)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+
+                        </div>
+
+                    </div>
                 </div>
-                <div class="rcard">
-                    <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> Breakout entry rules</div>
-                    <div class="rrow"><div class="rdot"></div>Wait for a clean candle close beyond the level — not a wick</div>
-                    <div class="rrow"><div class="rdot"></div>Higher-than-average momentum on the breakout candle increases validity</div>
-                    <div class="rrow"><div class="rdot"></div>Stop loss: placed back inside the broken level, not beyond the candle low</div>
-                    <div class="rrow"><div class="rdot"></div>Target: measure the height of the prior range and project it from the breakout point</div>
-                    <div class="rrow"><div class="rdot"></div>Avoid breakout entries during low-liquidity sessions — fakeouts are more common</div>
-                </div>
-                <button class="btndone" onclick="markDone(2)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
-                </div>
-            </div>
-            </div>
 
             <!-- L3 -->
             <div class="mod" data-id="3">
-            <div class="mod-hd" onclick="tog(3)">
-                <div class="mn">03</div>
-                <div class="micon"><i class="ti ti-arrow-back-up" aria-hidden="true"></i></div>
-                <div class="mmeta"><div class="mt">Break and Retest Strategy</div><div class="ms">Entering after confirmation — the professional's breakout entry</div></div>
-                <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
-            </div>
-            <div class="mbody">
-                <div class="minner">
-                <p class="intro">The Break and Retest strategy eliminates the fakeout problem by waiting for price to break a level, pull back to that level (now flipped from resistance to support, or vice versa), and confirm rejection before entering. It provides a superior Risk-to-Reward entry compared to chasing the initial breakout.</p>
-                <div class="steps">
-                    <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Identify the key level</div><div class="step-desc">Mark a significant resistance (for longs) or support (for shorts) — the level must be clean and well-tested</div></div></div>
-                    <div class="step"><div class="step-num">02</div><div class="step-body"><div class="step-title">Wait for a clean break with close</div><div class="step-desc">Price must close convincingly beyond the level — a wick does not count as a break</div></div></div>
-                    <div class="step"><div class="step-num">03</div><div class="step-body"><div class="step-title">Wait for the retest</div><div class="step-desc">Price returns to the broken level — which has now flipped. Resistance becomes support. Support becomes resistance.</div></div></div>
-                    <div class="step"><div class="step-num">04</div><div class="step-body"><div class="step-title">Confirm rejection — then enter</div><div class="step-desc">Look for a rejection candle (pin bar, engulfing, or strong close) at the flipped level before placing the trade</div></div></div>
-                    <div class="step"><div class="step-num">05</div><div class="step-body"><div class="step-title">Set stop below the flipped level</div><div class="step-desc">If price breaks back below the flipped support — the setup is invalidated. Stop goes there.</div></div></div>
+                <div class="mod-hd" onclick="tog(3)">
+                    <div class="mn">03</div>
+                    <div class="micon"><i class="ti ti-arrow-back-up" aria-hidden="true"></i></div>
+                    <div class="mmeta"><div class="mt">Break and Retest Strategy</div><div class="ms">Entering after confirmation — the professional's breakout entry</div></div>
+                    <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
                 </div>
-                <button class="btndone" onclick="markDone(3)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+
+                <div class="mbody">
+                    <div class="minner">
+                        <p class="intro">The Break and Retest strategy eliminates the fakeout problem by waiting for price to break a level, pull back to that level (now flipped from resistance to support, or vice versa), and confirm rejection before entering. It provides a superior Risk-to-Reward entry compared to chasing the initial breakout.</p>
+                        <div class="steps">
+                            <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Identify the key level</div><div class="step-desc">Mark a significant resistance (for longs) or support (for shorts) — the level must be clean and well-tested</div></div></div>
+                            <div class="step"><div class="step-num">02</div><div class="step-body"><div class="step-title">Wait for a clean break with close</div><div class="step-desc">Price must close convincingly beyond the level — a wick does not count as a break</div></div></div>
+                            <div class="step"><div class="step-num">03</div><div class="step-body"><div class="step-title">Wait for the retest</div><div class="step-desc">Price returns to the broken level — which has now flipped. Resistance becomes support. Support becomes resistance.</div></div></div>
+                            <div class="step"><div class="step-num">04</div><div class="step-body"><div class="step-title">Confirm rejection — then enter</div><div class="step-desc">Look for a rejection candle (pin bar, engulfing, or strong close) at the flipped level before placing the trade</div></div></div>
+                            <div class="step"><div class="step-num">05</div><div class="step-body"><div class="step-title">Set stop below the flipped level</div><div class="step-desc">If price breaks back below the flipped support — the setup is invalidated. Stop goes there.</div></div></div>
+                        </div>
+                        <button class="btndone" onclick="markDone(3)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+                    </div>
                 </div>
-            </div>
+                
             </div>
 
             <!-- L4 -->
@@ -1480,16 +1887,7 @@ include_once ('elements/header.php');
         const fi=qel.closest('.fi'),fa=fi.querySelector('.fa'),isOpen=fa.classList.contains('open');
         document.querySelectorAll('.fi').forEach(f=>{f.classList.remove('open');f.querySelector('.fa').classList.remove('open');});
         if(!isOpen){fi.classList.add('open');fa.classList.add('open');}
-        }
-        (function(){
-        let n1=0,n2=0,t1=12,t2=75;
-        const iv=setInterval(()=>{
-            n1=Math.min(n1+1,t1);n2=Math.min(n2+2,t2);
-            document.getElementById('hk1').textContent=n1;
-            document.getElementById('hk2').textContent=n2;
-            if(n1>=t1&&n2>=t2)clearInterval(iv);
-        },40);
-        })();
+        };
 
     </script>
  
