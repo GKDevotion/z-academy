@@ -881,13 +881,7 @@ include_once ('elements/header.php');
   
 }
 
-/* ── FOOTER ── */
-.footer{background:var(--BK);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.brand{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:#fff}
-.brand span{color:var(--zed-primary)}
-.fbadge{font-size:10px;color:var(--G600);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(255,255,255,.08);border-radius:2px}
-.footer-copy{font-size:11px;color:var(--G600);width:100%;border-top:1px solid rgba(255,255,255,.07);padding-top:.8rem}
-
+ 
  
     .underline {
         width: 75px;
