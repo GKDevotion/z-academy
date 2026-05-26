@@ -2,9 +2,6 @@
 include_once ('elements/header.php');
 ?>
 
-
-
-
   <style>
        
         /* ─── HERO ────────────────────────────────────── */

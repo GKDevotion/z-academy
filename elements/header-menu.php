@@ -35,11 +35,11 @@
                         Trader Resources
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                        <li><a class="dropdown-item" href="forex-quick-guide">Forex Quick Guide</a></li>
+                        <li><a class="dropdown-item d-none" href="forex-quick-guide">Forex Quick Guide</a></li>
                         <li><a class="dropdown-item" href="trading-glossary">Trading Glossary</a></li>
                         <li><a class="dropdown-item" href="market-analysis">Market Analysis</a></li>
                         <li><a class="dropdown-item" href="economic-calendar-guide">Economic Calendar Guide</a></li>
-                        <li><a class="dropdown-item" href="risk-management-guide">Risk Management Guide</a></li>
+                        <li><a class="dropdown-item d-none" href="risk-management-guide">Risk Management Guide</a></li>
                         <li><a class="dropdown-item" href="trading-mindset-articles">Trading Mindset Articles</a></li>
                         <li><a class="dropdown-item" href="strategy-articles">Strategy Articles</a></li>
                     </ul>
