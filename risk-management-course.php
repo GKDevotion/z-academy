@@ -2,351 +2,6 @@
 include_once ('elements/header.php');
 ?>
 
-    <style>
-    
-      /* ── Topbar ── */
-      .zed-topbar {
-        background: #fff;
-        border-bottom: 1px solid var(--zed-border-color);
-        padding: 0 32px;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-shrink: 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-      .zed-breadcrumb {
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--zed-secondary);
-      }
-      .zed-breadcrumb .active { color: var(--zed-dark-text); }
-      .topbar-progress {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 11px;
-        font-weight: 600;
-        color: var(--zed-secondary);
-      }
-      .topbar-bar-track {
-        width: 120px;
-        height: 3px;
-        background: var(--zed-icon-color);
-        border-radius: 2px;
-      }
-      .topbar-bar-fill {
-        height: 3px;
-        background: var(--zed-primary);
-        border-radius: 2px;
-        transition: width 0.4s ease;
-      }
-  
-      /* ── Layout ── */
-      .zed-layout {
-        display: flex;
-        flex: 1;
-        overflow: hidden;
-      }
-  
-      /* ── Sidebar ── */
-      .zed-sidebar {
-        /* width: 288px; */
-        flex-shrink: 0;
-        background: #fff;
-        border-right: 1px solid var(--zed-border-color);
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-      }
-      .sidebar-header {
-        padding: 57px 24px 14px;
-        border-bottom: 1px solid var(--zed-border-color);
-        position: sticky;
-        top: 0;
-        background: #fff;
-        z-index: 10;
-      }
-      .sidebar-course-label {
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--zed-secondary);
-        margin-bottom: 4px;
-      }
-      .sidebar-course-title {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--zed-dark-text);
-        margin: 0;
-      }
-      .sidebar-lessons { padding: 8px 0; }
-      .zed-lesson-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 11px 20px 11px 18px;
-        cursor: pointer;
-        border-left: 3px solid transparent;
-        transition: background 0.13s, border-color 0.13s;
-        text-decoration: none;
-        color: inherit;
-        user-select: none;
-      }
-      .zed-lesson-item:hover { background: var(--zed-backgound-color); color: inherit; text-decoration: none; }
-      .zed-lesson-item.active { border-left-color: var(--zed-primary); background: #fff5f5; }
-      .zed-lesson-item.active .lesson-num { color: var(--zed-primary); }
-      .lesson-num {
-        font-size: 11px;
-        font-weight: 700;
-        color: var(--zed-secondary);
-        min-width: 18px;
-        padding-top: 3px;
-        letter-spacing: 0.04em;
-      }
-      .lesson-status-icon {
-        width: 19px; height: 19px;
-        border-radius: 50%;
-        border: 2px solid var(--zed-border-color);
-        display: flex; align-items: center; justify-content: center;
-        flex-shrink: 0;
-        margin-top: 3px;
-        font-size: 10px;
-        transition: background 0.2s, border-color 0.2s;
-      }
-      .lesson-status-icon.done { background: var(--zed-success); border-color: var(--zed-success); color: #fff; }
-      .lesson-status-icon.current { border-color: var(--zed-primary); background: #fff; position: relative; }
-      .lesson-status-icon.current::after {
-        content: ''; width: 7px; height: 7px; border-radius: 50%;
-        background: var(--zed-primary); position: absolute;
-      }
-      .lesson-meta { flex: 1; min-width: 0; }
-      .lesson-meta h6 {
-        font-size: 12.5px; font-weight: 600; margin: 0 0 2px;
-        color: var(--zed-dark-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      }
-      .lesson-meta p { font-size: 10.5px; color: var(--zed-secondary); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .lesson-tag {
-        font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-        padding: 2px 7px; border-radius: 3px; white-space: nowrap; flex-shrink: 0; margin-top: 3px;
-      }
-      .tag-active { background: var(--zed-primary); color: #fff; }
-      .tag-done { background: var(--green-s); color: var(--green); }
-      .tag-locked { background: var(--zed-icon-color); color: var(--zed-secondary); }
-  
-      /* ── Main content ── */
-      .zed-main {
-        flex: 1;
-        overflow-y: auto;
-        padding: 0;
-      }
-      .zed-content {
-        /* max-width: 760px; */
-        padding: 100px 52px 80px;
-        margin: 0 auto;
-      }
-  
-      /* ── Progress strip ── */
-      .zed-progress-strip {
-        display: flex; align-items: center; gap: 12px;
-        font-size: 11.5px; color: var(--zed-secondary); font-weight: 600;
-        margin-bottom: 30px;
-      }
-      .progress-track {
-        flex: 1; height: 4px; background: var(--zed-icon-color); border-radius: 2px;
-      }
-      .progress-fill {
-        height: 4px; background: var(--zed-primary); border-radius: 2px; transition: width 0.4s ease;
-      }
-  
-      /* ── Lesson header ── */
-      .lesson-header-row {
-        display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
-      }
-      .lesson-number-label {
-        font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
-        text-transform: uppercase; color: var(--zed-secondary);
-      }
-      .lesson-status-pill {
-        font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-        padding: 4px 10px; border-radius: 4px;
-      }
-      .pill-done { background: var(--green-s); color: var(--green); }
-      .pill-active { background: #fff0f0; color: var(--zed-primary); }
-      .lesson-title-main {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-size: 28px; font-weight: 700; color: var(--zed-dark-text);
-        letter-spacing: -0.01em; margin: 0 0 4px; line-height: 1.15;
-      }
-      .lesson-subtitle-main { font-size: 13px; color: var(--zed-secondary); margin-bottom: 0; }
-      .zed-divider { border: none; border-top: 1px solid var(--zed-border-color); margin: 22px 0; }
-  
-      /* ── Body text ── */
-      .lesson-body-text { font-size: 14.5px; line-height: 1.78; color: #222; margin-bottom: 26px; }
-  
-      /* ── Formula bar ── */
-      .zed-formula-bar {
-        background: #111; border-radius: 6px; padding: 14px 22px;
-        display: flex; align-items: center; gap: 16px; margin-bottom: 26px;
-      }
-      .formula-label {
-        font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-        color: #666; border-right: 1px solid #333; padding-right: 16px; white-space: nowrap;
-      }
-      .formula-expr { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 600; color: #fff; }
-      .formula-expr .hi { color: var(--zed-primary); }
-  
-      /* ── Risk calculator ── */
-      .risk-calculator {
-        background: #fff; border: 1px solid var(--zed-border-color);
-        border-radius: 8px; overflow: hidden; margin-bottom: 26px;
-      }
-      .risk-tiers {
-        display: grid; grid-template-columns: repeat(3,1fr);
-        border-bottom: 1px solid var(--zed-border-color);
-      }
-      .risk-tier-cell {
-        padding: 18px 12px; text-align: center; cursor: pointer;
-        border-right: 1px solid var(--zed-border-color);
-        transition: background 0.13s; user-select: none;
-      }
-      .risk-tier-cell:last-child { border-right: none; }
-      .risk-tier-cell:hover:not(.selected) { background: var(--zed-backgound-color); }
-      .risk-tier-cell.selected { background: #fff5f5; }
-      .risk-tier-pct {
-        font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 700;
-        color: #ccc; line-height: 1; transition: color 0.15s;
-      }
-      .risk-tier-cell.selected .risk-tier-pct { color: var(--zed-primary); }
-      .risk-tier-name {
-        font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
-        text-transform: uppercase; color: var(--zed-secondary); margin-top: 5px;
-      }
-      /* Calculator input area */
-      .calc-body { padding: 20px 24px; }
-      .calc-row {
-        display: flex; align-items: center; gap: 14px; margin-bottom: 14px;
-      }
-      .calc-row label {
-        font-size: 12px; font-weight: 600; color: var(--zed-secondary);
-        text-transform: uppercase; letter-spacing: 0.06em; min-width: 140px;
-      }
-      .calc-input {
-        flex: 1; border: 1px solid var(--zed-border-color);
-        border-radius: 5px; padding: 8px 12px; font-family: 'Barlow', sans-serif;
-        font-size: 14px; color: var(--zed-dark-text); outline: none;
-        transition: border-color 0.13s;
-      }
-      .calc-input:focus { border-color: var(--zed-primary); }
-      .calc-result-bar {
-        background: var(--zed-backgound-color); border-radius: 6px;
-        padding: 14px 18px; display: flex; align-items: center; justify-content: space-between;
-        margin-top: 4px;
-      }
-      .calc-result-label { font-size: 12px; font-weight: 600; color: var(--zed-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
-      .calc-result-value { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 700; color: var(--zed-primary); }
-  
-      /* ── Rules block ── */
-      .zed-rules-block { border-left: 3px solid var(--zed-primary); padding-left: 20px; margin-bottom: 34px; }
-      .rules-heading {
-        font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-        color: var(--zed-secondary); margin-bottom: 12px;
-      }
-      .rules-list { list-style: none; padding: 0; margin: 0; }
-      .rules-list li {
-        font-size: 13.5px; line-height: 1.65; color: #333;
-        padding: 5px 0; display: flex; align-items: flex-start; gap: 10px;
-      }
-      .rules-list li::before {
-        content: ''; width: 6px; height: 6px; border-radius: 50%;
-        background: var(--zed-primary); flex-shrink: 0; margin-top: 8px;
-      }
-  
-      /* ── Mark complete button ── */
-      .btn-mark-complete {
-        font-family: 'Barlow', sans-serif; font-size: 11.5px; font-weight: 700;
-        letter-spacing: 0.1em; text-transform: uppercase;
-        padding: 12px 26px; border-radius: 4px; border: none; cursor: pointer;
-        transition: background 0.15s, transform 0.1s;
-        display: inline-flex; align-items: center; gap: 8px;
-      }
-      .btn-mark-complete:active { transform: scale(0.97); }
-      .btn-mark-complete.pending { background: var(--zed-primary); color: #fff; }
-      .btn-mark-complete.pending:hover { background: var(--zed-primary-hover); }
-      .btn-mark-complete.done { background: var(--zed-success); color: #fff; }
-      .btn-mark-complete.done:hover { background: #15803d; }
-  
-      /* ── Nav buttons ── */
-      .lesson-nav {
-        display: flex; align-items: center; justify-content: space-between;
-        margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--zed-border-color);
-      }
-      .btn-nav {
-        display: inline-flex; align-items: center; gap: 8px;
-        font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700;
-        letter-spacing: 0.06em; padding: 10px 20px; border-radius: 5px;
-        border: 1px solid var(--zed-border-color); background: #fff;
-        color: var(--zed-secondary); cursor: pointer; transition: all 0.14s;
-      }
-      .btn-nav:hover:not(:disabled) { border-color: var(--zed-primary); color: var(--zed-primary); }
-      .btn-nav.btn-next { background: var(--zed-dark-text); color: #fff; border-color: var(--zed-dark-text); }
-      .btn-nav.btn-next:hover:not(:disabled) { background: var(--zed-primary); border-color: var(--zed-primary); color: #fff; }
-      .btn-nav:disabled { opacity: 0.35; cursor: not-allowed; }
-  
-      /* ── Up Next cards ── */
-      .upcoming-lessons { margin-top: 44px; }
-      .upcoming-title {
-        font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-        color: var(--zed-secondary); margin-bottom: 14px;
-      }
-      .upcoming-card {
-        display: flex; align-items: center; justify-content: space-between;
-        background: #fff; border: 1px solid var(--zed-border-color); border-radius: 8px;
-        padding: 14px 18px; margin-bottom: 8px; cursor: pointer;
-        transition: border-color 0.13s, box-shadow 0.13s;
-      }
-      .upcoming-card:hover { border-color: var(--zed-primary); box-shadow: 0 2px 10px rgba(255,0,0,0.07); }
-      .upcoming-card-left { display: flex; align-items: center; gap: 14px; }
-      .upcoming-num { font-size: 11px; font-weight: 700; color: var(--zed-secondary); min-width: 22px; }
-      .upcoming-card h6 { font-size: 13.5px; font-weight: 600; margin: 0 0 2px; }
-      .upcoming-card p { font-size: 11px; color: var(--zed-secondary); margin: 0; }
-      .upcoming-card .arrow-icon { color: var(--zed-secondary); font-size: 13px; }
-  
-      /* ── Toast ── */
-      .zed-toast {
-        position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(12px);
-        background: #111; color: #fff; padding: 11px 22px; border-radius: 6px;
-        font-size: 13px; font-weight: 600; opacity: 0; pointer-events: none;
-        transition: opacity 0.25s, transform 0.25s; z-index: 9999; white-space: nowrap;
-      }
-      .zed-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  
-      /* ── Content fade-in ── */
-      .zed-content { animation: fadeSlide 0.22s ease; }
-      @keyframes fadeSlide { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-      .content-animate { animation: fadeSlide 0.22s ease; }
-  
-      /* ── Scrollbar ── */
-      .zed-sidebar::-webkit-scrollbar, .zed-main::-webkit-scrollbar { width: 4px; }
-      .zed-sidebar::-webkit-scrollbar-thumb, .zed-main::-webkit-scrollbar-thumb { background: var(--zed-border-color); border-radius: 2px; }
-  
-      @media (max-width: 768px) {
-        .zed-sidebar { display: none; }
-        .zed-content { padding: 24px 20px 60px; }
-        .risk-tiers { grid-template-columns: 1fr; }
-        .risk-tier-cell { border-right: none; border-bottom: 1px solid var(--zed-border-color); }
-        .risk-tier-cell:last-child { border-bottom: none; }
-        .calc-row { flex-direction: column; align-items: flex-start; }
-        .calc-input { width: 100%; }
-      }
-    </style>
     
     <style>
         
@@ -847,731 +502,919 @@ include_once ('elements/header.php');
     
     <div class="hdiv"></div>
 
-    <!-- Topbar -->
-    <div class="zed-topbar">
-      <span class="zed-breadcrumb">Core Lessons — <span class="active">Risk Management</span></span>
-      <div class="topbar-progress">
-        <span id="topProgressText">1 / 6</span>
-        <div class="topbar-bar-track"><div class="topbar-bar-fill" id="topBarFill" style="width:16.6%"></div></div>
-      </div>
-    </div>
-  
-    <div class="zed-layout">
-      <!-- Sidebar -->
-      <aside class="zed-sidebar">
-        <div class="sidebar-header">
-          <div class="sidebar-course-label">Course</div>
-          <div class="sidebar-course-title">Risk Management</div>
-        </div>
-        <div class="sidebar-lessons" id="sidebarLessons">
-          <a class="zed-lesson-item" data-lesson="1" onclick="navigateTo(1)" href="javascript:void(0)">
-            <span class="lesson-num">01</span>
-            <div class="lesson-status-icon done"><i class="bi bi-check"></i></div>
-            <div class="lesson-meta">
-              <h6>What is Risk Management?</h6>
-              <p>The foundation of professional trading</p>
-            </div>
-            <span class="lesson-tag tag-done">Done</span>
-          </a>
-          <a class="zed-lesson-item active" data-lesson="2" onclick="navigateTo(2)" href="javascript:void(0)">
-            <span class="lesson-num">02</span>
-            <div class="lesson-status-icon current"></div>
-            <div class="lesson-meta">
-              <h6>Risk Per Trade</h6>
-              <p>Defining exactly how much you risk on each position</p>
-            </div>
-            <span class="lesson-tag tag-active">Active</span>
-          </a>
-          <a class="zed-lesson-item" data-lesson="3" onclick="navigateTo(3)" href="javascript:void(0)">
-            <span class="lesson-num">03</span>
-            <div class="lesson-status-icon"></div>
-            <div class="lesson-meta">
-              <h6>Lot Size Calculation</h6>
-              <p>Sizing every position with precision</p>
-            </div>
-            <span class="lesson-tag tag-locked">Lesson</span>
-          </a>
-          <a class="zed-lesson-item" data-lesson="4" onclick="navigateTo(4)" href="javascript:void(0)">
-            <span class="lesson-num">04</span>
-            <div class="lesson-status-icon"></div>
-            <div class="lesson-meta">
-              <h6>Position Sizing</h6>
-              <p>Scaling trade size to your account and risk tolerance</p>
-            </div>
-            <span class="lesson-tag tag-locked">Lesson</span>
-          </a>
-          <a class="zed-lesson-item" data-lesson="5" onclick="navigateTo(5)" href="javascript:void(0)">
-            <span class="lesson-num">05</span>
-            <div class="lesson-status-icon"></div>
-            <div class="lesson-meta">
-              <h6>Risk-to-Reward Ratio</h6>
-              <p>Building positive expectancy into every trade</p>
-            </div>
-            <span class="lesson-tag tag-locked">Lesson</span>
-          </a>
-          <a class="zed-lesson-item" data-lesson="6" onclick="navigateTo(6)" href="javascript:void(0)">
-            <span class="lesson-num">06</span>
-            <div class="lesson-status-icon"></div>
-            <div class="lesson-meta">
-              <h6>Stop Loss Placement</h6>
-              <p>Protecting capital intelligently</p>
-            </div>
-            <span class="lesson-tag tag-locked">Lesson</span>
-          </a>
-        </div>
-      </aside>
-  
-      <!-- Main -->
-      <main class="zed-main">
-        <div class="zed-content" id="mainContent">
-          <!-- Lesson panels (static HTML instead of JS data array) -->
-          <section class="lesson-panel" data-lesson="1" style="display:none">
-            <div class="zed-progress-strip">
-              <span id="progressLabel-1">0 / 6 complete</span>
-              <div class="progress-track"><div class="progress-fill" id="progressFill-1" style="width:0%"></div></div>
-              <span id="progressPct-1">0%</span>
-            </div>
-            <div class="lesson-header-row">
-              <span class="lesson-number-label">Lesson 01</span>
-              <span class="lesson-status-pill pill-active">● In Progress</span>
-            </div>
-            <h1 class="lesson-title-main">What is Risk Management?</h1>
-            <p class="lesson-subtitle-main">The foundation of professional trading</p>
-            <hr class="zed-divider" />
-            <p class="lesson-body-text">Risk management is the process of identifying, assessing, and controlling financial losses in every trade you take. Without a systematic approach to managing risk, even a profitable strategy will eventually wipe an account. Professional traders treat risk management as the single most important discipline — not an afterthought.</p>
-            <div class="zed-formula-bar">
-              <span class="formula-label">Core Principle</span>
-              <span class="formula-expr">Capital Preservation <span class="hi">&gt;</span> Profit Generation</span>
-            </div>
-            <div class="zed-rules-block">
-              <div class="rules-heading">Rules</div>
-              <ul class="rules-list">
-                <li>Never risk money you cannot afford to lose entirely</li>
-                <li>Define your maximum drawdown threshold before you begin trading</li>
-                <li>Risk management rules apply to every trade — no exceptions</li>
-                <li>A consistent process always beats emotionally driven decisions</li>
-              </ul>
-            </div>
-            <div class="lesson-nav">
-              <button class="btn-nav btn-prev" onclick="navigateTo(1)" disabled><i class="bi bi-arrow-left"></i> Previous</button>
-              <button class="btn-mark-complete pending mark-complete-btn" onclick="toggleComplete()"><i class="bi bi-circle"></i> Mark Complete</button>
-              <button class="btn-nav btn-next" onclick="navigateTo(2)">Risk Per Trade <i class="bi bi-arrow-right"></i></button>
-            </div>
-          </section>
 
-          <section class="lesson-panel" data-lesson="2">
-            <div class="zed-progress-strip">
-              <span id="progressLabel">1 / 6 complete</span>
-              <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:16.6%"></div></div>
-              <span id="progressPct">16%</span>
-            </div>
 
-            <div class="lesson-header-row">
-              <span class="lesson-number-label">Lesson 02</span>
-              <span class="lesson-status-pill pill-active">● In Progress</span>
-            </div>
+    
 
-            <h1 class="lesson-title-main">Risk Per Trade</h1>
-            <p class="lesson-subtitle-main">Defining exactly how much you risk on each position</p>
-            <hr class="zed-divider" />
+<style> 
+:root{
 
-            <p class="lesson-body-text">Risk per trade is the fixed percentage of your total account balance you are willing to lose on any single trade. This number must be decided in advance and never deviated from — regardless of how confident you feel about a setup.</p>
+  --zed-primaryL:#FEF0F2;
+  --BK:#0f0f0f;
+  --W:#fff;
+  --G50:#F7F7F7;
+  --G100:#EFEFEF;
+  --G200:#D5D5D5;
+  --G400:#999;
+  --G600:#555;
+  --G800:#222;
+} 
 
-            <div class="zed-formula-bar">
-              <span class="formula-label">Formula</span>
-              <span class="formula-expr">Risk Amount ($) = <span class="hi">Account Balance × Risk %</span></span>
-            </div>
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes barIn{from{width:0}to{width:100%}}
+@keyframes slideL{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
 
-            <div class="risk-calculator">
-              <div class="risk-tiers">
-                <div class="risk-tier-cell" data-value="1">
-                  <div class="risk-tier-pct">1%</div>
-                  <div class="risk-tier-name">Conservative</div>
-                </div>
-                <div class="risk-tier-cell selected" data-value="2">
-                  <div class="risk-tier-pct">2%</div>
-                  <div class="risk-tier-name">Standard</div>
-                </div>
-                <div class="risk-tier-cell" data-value="3">
-                  <div class="risk-tier-pct">3%+</div>
-                  <div class="risk-tier-name">Aggressive</div>
-                </div>
-              </div>
-              <div class="calc-body">
-                <div class="calc-row">
-                  <label>Account Balance</label>
-                  <input class="calc-input" type="number" id="calcBalanceInput" value="10000" min="0" placeholder="e.g. 10000" />
-                </div>
-                <div class="calc-result-bar">
-                  <span class="calc-result-label">Risk Amount</span>
-                  <span class="calc-result-value" id="calcResultValue">$0.00</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="zed-rules-block">
-              <div class="rules-heading">Rules</div>
-              <ul class="rules-list">
-                <li>Risk 1–2% per trade maximum — this is the professional standard</li>
-                <li>Calculate dollar risk before placing any trade — never estimate</li>
-                <li>Maintain the same % regardless of confidence level or recent wins</li>
-                <li>Small consistent risk keeps you alive through long losing streaks</li>
-              </ul>
-            </div>
-
-            <button class="btn-mark-complete pending mark-complete-btn" onclick="toggleComplete()">
-              <i class="bi bi-circle"></i> Mark Complete
-            </button>
-
-            <div class="lesson-nav">
-              <button class="btn-nav btn-prev" onclick="navigateTo(1)"><i class="bi bi-arrow-left"></i> What is Risk Management?</button>
-              <button class="btn-nav btn-next" onclick="navigateTo(3)">Lot Size Calculation <i class="bi bi-arrow-right"></i></button>
-            </div>
-
-            <div class="upcoming-lessons">
-              <div class="upcoming-title">Up Next</div>
-              <div class="upcoming-card" onclick="navigateTo(3)">
-                <div class="upcoming-card-left">
-                  <span class="upcoming-num">03</span>
-                  <div>
-                    <h6>Lot Size Calculation</h6>
-                    <p>Sizing every position with precision</p>
-                  </div>
-                </div>
-                <i class="bi bi-chevron-right arrow-icon"></i>
-              </div>
-              <div class="upcoming-card" onclick="navigateTo(4)">
-                <div class="upcoming-card-left">
-                  <span class="upcoming-num">04</span>
-                  <div>
-                    <h6>Position Sizing</h6>
-                    <p>Scaling trade size to your account and risk tolerance</p>
-                  </div>
-                </div>
-                <i class="bi bi-chevron-right arrow-icon"></i>
-              </div>
-            </div>
-          </section>
-
-          <!-- Additional static panels (3-6) -->
-          <section class="lesson-panel" data-lesson="3" style="display:none">
-            <div class="lesson-header-row">
-              <span class="lesson-number-label">Lesson 03</span>
-              <span class="lesson-status-pill pill-active">● In Progress</span>
-            </div>
-            <h1 class="lesson-title-main">Lot Size Calculation</h1>
-            <p class="lesson-subtitle-main">Sizing every position with precision</p>
-            <hr class="zed-divider" />
-            <p class="lesson-body-text">Lot size determines how many units you trade on any position. The correct lot size is calculated from your risk amount, your stop-loss distance in pips, and the pip value of the instrument. Getting this number right is non-negotiable — guessing leads to over-exposure.</p>
-            <div class="zed-formula-bar"><span class="formula-label">Formula</span><span class="formula-expr">Lot Size = <span class="hi">Risk Amount ÷ (Stop Pips × Pip Value)</span></span></div>
-            <div class="zed-rules-block"><div class="rules-heading">Rules</div><ul class="rules-list"><li>Always calculate lot size before entering — never size by feel</li><li>Recalculate for every trade — account balance changes constantly</li><li>Smaller stop = larger lot size; wider stop = smaller lot size</li><li>Use a pip calculator tool to verify before execution</li></ul></div>
-            <div class="lesson-nav">
-              <button class="btn-nav btn-prev" onclick="navigateTo(2)"><i class="bi bi-arrow-left"></i> Risk Per Trade</button>
-              <button class="btn-mark-complete pending mark-complete-btn" onclick="toggleComplete()"><i class="bi bi-circle"></i> Mark Complete</button>
-              <button class="btn-nav btn-next" onclick="navigateTo(4)">Position Sizing <i class="bi bi-arrow-right"></i></button>
-            </div>
-          </section>
-
-          <section class="lesson-panel" data-lesson="4" style="display:none">
-            <div class="lesson-header-row">
-              <span class="lesson-number-label">Lesson 04</span>
-              <span class="lesson-status-pill pill-active">● In Progress</span>
-            </div>
-            <h1 class="lesson-title-main">Position Sizing</h1>
-            <p class="lesson-subtitle-main">Scaling trade size to your account and risk tolerance</p>
-            <hr class="zed-divider" />
-            <p class="lesson-body-text">Position sizing ties together your account balance, risk percentage, stop-loss distance, and instrument pip value into a single precise unit count per trade. Correct position sizing means a stop-out on any given trade only ever costs you the pre-planned risk amount — not more.</p>
-            <div class="zed-formula-bar"><span class="formula-label">Formula</span><span class="formula-expr">Units = <span class="hi">(Balance × Risk%) ÷ Stop Distance</span></span></div>
-            <div class="zed-rules-block"><div class="rules-heading">Rules</div><ul class="rules-list"><li>Re-size every position based on current account balance — not original balance</li><li>Never average down by adding to a losing position</li><li>Scale position size down during losing streaks to reduce drawdown speed</li><li>Keep a position sizing spreadsheet or calculator open at all times</li></ul></div>
-            <div class="lesson-nav">
-              <button class="btn-nav btn-prev" onclick="navigateTo(3)"><i class="bi bi-arrow-left"></i> Lot Size Calculation</button>
-              <button class="btn-mark-complete pending mark-complete-btn" onclick="toggleComplete()"><i class="bi bi-circle"></i> Mark Complete</button>
-              <button class="btn-nav btn-next" onclick="navigateTo(5)">Risk-to-Reward Ratio <i class="bi bi-arrow-right"></i></button>
-            </div>
-          </section>
-
-          <section class="lesson-panel" data-lesson="5" style="display:none">
-            <div class="lesson-header-row">
-              <span class="lesson-number-label">Lesson 05</span>
-              <span class="lesson-status-pill pill-active">● In Progress</span>
-            </div>
-            <h1 class="lesson-title-main">Risk-to-Reward Ratio</h1>
-            <p class="lesson-subtitle-main">Building positive expectancy into every trade</p>
-            <hr class="zed-divider" />
-            <p class="lesson-body-text">The risk-to-reward ratio (RRR) compares potential loss to potential gain on a trade. A minimum 1:2 RRR means you risk $1 to make $2. At this ratio, you only need to win 34% of trades to break even — giving you a large margin for error and consistent long-term profitability.</p>
-            <div class="zed-formula-bar"><span class="formula-label">Formula</span><span class="formula-expr">RRR = <span class="hi">Potential Profit ÷ Potential Loss</span></span></div>
-            <div class="zed-rules-block"><div class="rules-heading">Rules</div><ul class="rules-list"><li>Never take a trade with less than 1:1.5 risk-to-reward</li><li>Mark your target level before entering — not after</li><li>Higher RRR allows profitability even with a low win rate</li><li>Avoid moving your target closer once a trade is live</li></ul></div>
-            <div class="lesson-nav">
-              <button class="btn-nav btn-prev" onclick="navigateTo(4)"><i class="bi bi-arrow-left"></i> Position Sizing</button>
-              <button class="btn-mark-complete pending mark-complete-btn" onclick="toggleComplete()"><i class="bi bi-circle"></i> Mark Complete</button>
-              <button class="btn-nav btn-next" onclick="navigateTo(6)">Stop Loss Placement <i class="bi bi-arrow-right"></i></button>
-            </div>
-          </section>
-
-          <section class="lesson-panel" data-lesson="6" style="display:none">
-            <div class="lesson-header-row">
-              <span class="lesson-number-label">Lesson 06</span>
-              <span class="lesson-status-pill pill-active">● In Progress</span>
-            </div>
-            <h1 class="lesson-title-main">Stop Loss Placement</h1>
-            <p class="lesson-subtitle-main">Protecting capital intelligently</p>
-            <hr class="zed-divider" />
-            <p class="lesson-body-text">A stop loss is the price level at which your trade automatically closes to limit your loss. Effective stop placement is based on market structure — not on a fixed pip count. Place stops beyond key support/resistance levels, swing highs/lows, or volatility buffers, so normal price movement doesn't trigger premature exits.</p>
-            <div class="zed-formula-bar"><span class="formula-label">Principle</span><span class="formula-expr">Stop = <span class="hi">Structure Level + Buffer (ATR)</span></span></div>
-            <div class="zed-rules-block"><div class="rules-heading">Rules</div><ul class="rules-list"><li>Base stop placement on market structure — not arbitrary pip counts</li><li>Never move a stop loss further away to avoid being stopped out</li><li>Always set the stop before calculating your position size</li><li>A wider, well-placed stop beats a tight stop that triggers on noise</li></ul></div>
-            <div class="lesson-nav">
-              <button class="btn-nav btn-prev" onclick="navigateTo(5)"><i class="bi bi-arrow-left"></i> Risk-to-Reward Ratio</button>
-              <button class="btn-mark-complete pending mark-complete-btn" onclick="toggleComplete()"><i class="bi bi-circle"></i> Mark Complete</button>
-              <button class="btn-nav btn-next" onclick="navigateTo(6)" disabled>Next</button>
-            </div>
-          </section>
-        </div>
-      </main>
-    </div>
+.fu{opacity:0;animation:fadeUp .55s ease forwards}
+.d1{animation-delay:.07s}.d2{animation-delay:.14s}.d3{animation-delay:.22s}.d4{animation-delay:.30s}.d5{animation-delay:.38s}.d6{animation-delay:.46s}
  
-    <!-- Toast -->
-    <div class="zed-toast" id="toast"></div> 
+.htag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:10px;padding:4px 11px;border-radius:20px;letter-spacing:.04em}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.07);margin:0 -2rem}
+.kpi{padding:1.1rem .5rem;text-align:center;border-right:1px solid rgba(255,255,255,.06)}
+.kpi:last-child{border-right:none}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1;letter-spacing:.04em}
+.kv.r{color:var(--zed-primary)}
+.kl{font-size:10px;color:var(--G400);letter-spacing:.09em;text-transform:uppercase;margin-top:3px}
+
+/* ── PROGRESS ── */
+.prog{
+  background:#fff;
+  border-bottom:1px solid var(--G100);
+  padding:.85rem 2rem;
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+.prog-bar{
+  flex:1;
+  height:3px;
+  background:var(--G100);
+  border-radius:2px;
+  overflow:hidden
+}
+.prog-fill{height:100%;background:var(--zed-primary);width:0%;transition:width .6s cubic-bezier(.4,0,.2,1)}
+.prog-lbl{
+  font-size:1rem;
+  color:var(--G400);
+  white-space:nowrap
+}
+.prog-pct{
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom: 10px;
+  color:var(--zed-primary);
+  min-width:40px;
+  text-align:right
+}
+
+/* ── SECTION LABEL ── */
+.slbl{
+  padding: .5rem 1.6rem;
+  font-family: 'Poppins', serif;
+  background:var(--G50);
+  border-top:1px solid var(--G100);
+  border-bottom:1px solid var(--G100);
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--G400);
+  display:flex;
+  align-items:center;
+  gap:7px
+}
+.slbl i{
+  font-size:30px;
+  color:var(--zed-secondary); 
+}
+
+/* ── MODULE ── */
+.mod{background:#fff;border-left:3px solid transparent;transition:border-color .25s}
+.mod+.mod{border-top:1px solid var(--G100)}
+.mod.active{border-left-color:var(--zed-primary)}
+.mod.done{border-left-color:var(--G200)}
+.mod-hd{display:flex;align-items:center;gap:12px;padding:.95rem 1.5rem;cursor:pointer;transition:background .15s;user-select:none}
+.mod-hd:hover{background:var(--G50)}
+.mn{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.5rem;
+  color:var(--G200);
+  min-width:24px;
+  line-height:1;
+  transition:color .2s;
+  flex-shrink:0;
+}
+.mod.active .mn{
+  color:var(--zed-primary);
+}
+.micon{
+  width:36px;
+  height:36px;
+  border-radius:4px;
+  background:var(--G50);
+  border:1px solid var(--G100);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:var(--zed-primary);
+  flex-shrink:0;
+  transition:all .25s;
+}
+.mod.active .micon{background:var(--zed-primary);border-color:var(--zed-primary);color:#fff}
+.mod.done .micon{
+  background:var(--zed-primary);
+  border-color:var(--zed-primary);
+  color:var(--zed-primary)
+}
+.mmeta{flex:1;min-width:0}
+.mt{
+  font-size: 1.5rem;
+  font-weight:500;
+  color:var(--BK);
+  line-height:1.3;
+}
+.ms{
+  font-size:0.8rem;
+  color:var(--G400);
+  margin-top:1px;
+  font-family: 'Poppins', serif;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.mright{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.badge{
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:2px;
+}
+.b-start{
+  background:var(--zed-primaryL);
+  color:var(--zed-primaryd)
+}
+.b-done{
+  background:var(--G100);
+  color:var(--G400)
+}
+.b-open{
+  background:var(--G50);
+  color:var(--G200);
+  border:1px solid var(--G100)
+}
+.b-final{
+  background: var(--zed-primary);
+  color:#fff;
+}
+.chev{font-size:16px;color:var(--G200);transition:transform .25s,color .2s}
+.mod.open .chev{transform:rotate(90deg);color:var(--zed-primary)}
+
+/* ── BODY ── */
+.mbody{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.4,0,.2,1)}
+.mbody.open{max-height:1400px}
+.minner{padding:1.1rem 1.5rem 1.5rem 4.5rem;border-top:1px solid var(--G50)}
+.intro{ 
+  color:var(--zed-secondary);
+  line-height:1.8;
+  margin-bottom:1.2rem;
+  max-width:510px;
+}
+
+/* ── FORMULA ── */
+.fbox{display:flex;align-items:center;gap:12px;background:var(--BK);border-radius:4px;padding:.85rem 1.1rem;margin-bottom:1.2rem}
+.flbl{font-size:10px;color:var(--G400);letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.fdiv{width:1px;height:18px;background:rgba(255,255,255,.12);flex-shrink:0}
+.feq{font-size:12.5px;color:#fff;font-weight:400;line-height:1.5}
+.feq b{color:var(--zed-primary)}
+
+/* ── STAT GRID ── */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.2rem}
+.sbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.7rem .8rem;text-align:center}
+.sbox.hi{background:var(--zed-primaryL);border-color:#FACDD3}
+.sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--BK);line-height:1}
+.sv.r{color:var(--zed-primary)}
+.sk{font-size:10px;color:var(--G400);letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
+
+/* ── RULES CARD ── */
+.rcard{background:var(--G50);border-left:3px solid var(--zed-primary);border-radius:0 4px 4px 0;padding:.85rem 1rem;margin-bottom:1.2rem}
+.rtitle{
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--zed-primary);
+  margin-bottom:.65rem;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.rtitle i{
+  font-size:22px;
+}
+.rrow{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:3px 0; 
+  color:var(--zed-secondary);
+  line-height:1.65;
+}
+.rdot{width:5px;height:5px;background:var(--zed-primary);border-radius:50%;flex-shrink:0;margin-top:6px;animation:pulse 2.5s ease infinite}
+
+/* ── TWO COL ── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
+.tbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.8rem 1rem}
+.tbox.danger{background:var(--zed-primaryL);border-color:#FACDD3}
+.tbox-title{
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase; 
+  margin-bottom:.5rem;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.tbox.danger .tbox-title{
+  color:var(--zed-primary)
+}
+.tbox-row{ 
+  color:var(--zed-secondary);
+  padding:2px 0;
+  display:flex;
+  align-items:flex-start;
+  gap:6px;
+  line-height:1.5;
+}
+.tbox-row i{
+  font-size:13px;
+  flex-shrink:0;
+  margin-top:1px
+}
+.tbox.danger .tbox-row i{color:var(--zed-primary)}
+.tbox-row i{
+  color:var(--zed-secondary)
+}
+
+/* ── CHECKLIST ── */
+.clwrap{margin-bottom:1rem}
+.clstat{
+  font-size: 1rem;
+  color: var(--G400);
+  font-weight:500;
+  padding: 4px 8px;
+  margin-bottom: 6px;
+  transition: color .3s;
+}
+.ci{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:5px 8px;
+  border-radius:4px;
+  cursor:pointer;
+  transition:background .15s; 
+  color:var(--G600);
+}
+.ci:hover{background:var(--G50)}
+.cbox{width:17px;height:17px;border:1.5px solid var(--G200);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all .2s;color:#fff}
+.ci.checked .cbox{background:var(--zed-primary);border-color:var(--zed-primary)}
+.ci.checked .clbl{text-decoration:line-through;color:var(--G400)}
+
+/* ── CTA ── */
+.btndone{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:var(--zed-primary);
+  color:#fff;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  padding:9px 18px;
+  border-radius:2px;
+  border:none;
+  cursor:pointer;
+  transition:background .2s,transform .1s;
+  margin-top:.3rem;
+}
+
+.btndone:hover{
+  background:var(--zed-primary);
+}
+.btndone:active{
+  transform:scale(.97);
+}
+.btndone i{
+  font-size:14px;
+}
+
+/* ── FAQ ── */
+.faq-wrap{background:#fff;margin-top:1px}
+.faq-top{
+  padding:1.4rem 2rem .9rem;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border-bottom:1px solid var(--G100);
+}
+.faq-top h2{
+  font-size:1rem;
+  font-weight:500;
+  color:var(--BK);
+}
+.faq-top i{
+  font-size:1.5rem;
+  color:var(--zed-primary);
+}
+.faq-note{
+  padding:.6rem 2rem .8rem;
+  font-size:1rem;
+  color:var(--G400);
+  line-height:1.6;
+  border-bottom:1px solid var(--G100)
+}
+.fi{
+  border-bottom:1px solid var(--G100);
+  display: flex;
+  flex-direction: column;
+}
+.fq{display:flex;align-items:flex-start;justify-content:space-between;padding:.9rem 2rem;cursor:pointer;gap:12px;transition:background .15s}
+/* .fq:hover{background:var(--G50)} */
+.fq-txt{
+  font-size:1rem;
+  font-weight:500;
+  color:var(--BK);
+  flex:1;
+  line-height:1.5;
+}
+.fq-ic{
+  font-size:1.5rem;
+  color:var(--zed-secondary);
+  transition:transform .25s,color .2s;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.fi.open .fq-ic{transform:rotate(180deg);color:var(--zed-primary)}
+.fa{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.fa.open{max-height:400px}
+.fa-inner{
+  margin:0 2rem .9rem;
+  padding:.8rem 1rem;
+   font-family: 'Poppins', serif;
+  background:var(--G50);
+  border-left:3px solid var(--zed-primary);
+  border-radius:0 4px 4px 0; 
+  color:var(--zed-secondary);
+  font-weight: 400;
+  line-height:1.8;
+}
+.fa-inner b{
+  color:var(--BK);
+  font-weight:500;
   
-    <script>
-          // Lightweight DOM-driven behavior using static panels (no JS data array)
-          const panels = Array.from(document.querySelectorAll('.lesson-panel'));
-          const sidebarItems = Array.from(document.querySelectorAll('.zed-lesson-item'));
-          const totalLessons = panels.length;
-          let currentLesson = 1; // start on lesson 1
-          const completed = new Set();
+}
 
-          function showToast(msg) {
-              const t = document.getElementById('toast');
-              t.textContent = msg;
-              t.classList.add('show');
-              clearTimeout(t._timer);
-              t._timer = setTimeout(() => t.classList.remove('show'), 2400);
-          }
+/* ── FOOTER ── */
+.footer{background:var(--BK);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.brand{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:#fff}
+.brand span{color:var(--zed-primary)}
+.fbadge{font-size:10px;color:var(--G600);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(255,255,255,.08);border-radius:2px}
+.footer-copy{font-size:11px;color:var(--G600);width:100%;border-top:1px solid rgba(255,255,255,.07);padding-top:.8rem}
 
-          function progressPct() { return Math.round((completed.size / totalLessons) * 100); }
+ 
+    .underline {
+        width: 75px;
+        height: 4px;
+        background-color: var(--zed-primary);
+        margin: 10px 0  0;
+        padding: 4px;
+    }
 
-          function renderSidebar() {
-              sidebarItems.forEach(item => {
-              const id = Number(item.getAttribute('data-lesson'));
-              const isCurrent = id === currentLesson;
-              const isDone = completed.has(id);
-              item.classList.toggle('active', isCurrent);
-              const icon = item.querySelector('.lesson-status-icon');
-              if (isDone) {
-                  icon.className = 'lesson-status-icon done';
-                  icon.innerHTML = '<i class="bi bi-check"></i>';
-              } else if (isCurrent) {
-                  icon.className = 'lesson-status-icon current';
-                  icon.innerHTML = '';
-              } else {
-                  icon.className = 'lesson-status-icon';
-                  icon.innerHTML = '';
-              }
-              const tag = item.querySelector('.lesson-tag');
-              if (isDone) { tag.className = 'lesson-tag tag-done'; tag.textContent = 'Done'; }
-              else if (isCurrent) { tag.className = 'lesson-tag tag-active'; tag.textContent = 'Active'; }
-              else { tag.className = 'lesson-tag tag-locked'; tag.textContent = 'Lesson'; }
-              });
-              // topbar
-              document.getElementById('topBarFill').style.width = progressPct() + '%';
-              document.getElementById('topProgressText').textContent = completed.size + ' / ' + totalLessons;
-          }
+    .zed-sec-title {
+        font-family: 'Poppins', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: black;
+    }
 
-          function calcRiskInPanel(panel) {
-              const tier = panel.querySelector('.risk-tier-cell.selected');
-              if (!tier) return;
-              const pct = Number(tier.getAttribute('data-value')) || 0;
-              const balInput = panel.querySelector('#calcBalanceInput');
-              const bal = parseFloat(balInput?.value || 0);
-              const result = (bal * pct / 100).toFixed(2);
-              const rv = panel.querySelector('#calcResultValue');
-              if (rv) rv.textContent = '$' + parseFloat(result).toLocaleString('en-US', { minimumFractionDigits: 2 });
-          }
+</style>
 
-          function attachCalculatorListeners(panel) {
-              const tierCells = Array.from(panel.querySelectorAll('.risk-tier-cell'));
-              tierCells.forEach(c => c.addEventListener('click', () => {
-              tierCells.forEach(x => x.classList.remove('selected'));
-              c.classList.add('selected');
-              calcRiskInPanel(panel);
-              }));
-              const balInput = panel.querySelector('#calcBalanceInput');
-              if (balInput) balInput.addEventListener('input', () => calcRiskInPanel(panel));
-          }
+  <div class="container">
+   
+ 
+    <div class="zed-sec-head mt-5 mb-3">  
+          <h2 class="zed-sec-title">Core Lessons — Risk Management</h2> 
+          <div class="underline"></div>
+    </div>
+        
+    <div class="prog">
+      <span class="prog-lbl">Course Progress</span>
+      <div class="prog-bar"><div class="prog-fill" id="pbar"></div></div>
+      <span class="prog-pct" id="ppct">0 / 12</span>
+    </div>
 
-          function renderContent() {
-              panels.forEach(p => p.style.display = 'none');
-              const active = panels.find(p => Number(p.getAttribute('data-lesson')) === currentLesson);
-              if (!active) return;
-              active.style.display = '';
-              // update progress widgets inside panel if present
-              const pfill = active.querySelector('.progress-fill');
-              if (pfill) pfill.style.width = progressPct() + '%';
-              const progressTextEls = active.querySelectorAll('[id^="progressPct"], [id^="progressLabel"]');
-              progressTextEls.forEach(el => {
-                  if (el.id.startsWith('progressPct')) el.textContent = progressPct() + '%';
-                  if (el.id.startsWith('progressLabel')) el.textContent = completed.size + ' / ' + totalLessons + ' complete';
-              });
-
-              // update mark complete button state
-              const markBtn = active.querySelector('.mark-complete-btn');
-              if (markBtn) {
-              if (completed.has(currentLesson)) {
-                  markBtn.classList.remove('pending'); markBtn.classList.add('done'); markBtn.innerHTML = '<i class="bi bi-check-circle"></i> Completed';
-              } else {
-                  markBtn.classList.remove('done'); markBtn.classList.add('pending'); markBtn.innerHTML = '<i class="bi bi-circle"></i> Mark Complete';
-              }
-              }
-
-              // attach calc listeners if present
-              if (active.querySelector('.risk-calculator')) attachCalculatorListeners(active);
-              if (active.querySelector('.risk-calculator')) calcRiskInPanel(active);
-          }
-
-          function toggleComplete() {
-              if (completed.has(currentLesson)) {
-              completed.delete(currentLesson);
-              showToast('Lesson marked as incomplete');
-              } else {
-              completed.add(currentLesson);
-              showToast('🎉 Lesson completed!');
-              // auto-advance
-              if (currentLesson < totalLessons) setTimeout(() => navigateTo(currentLesson + 1), 700);
-              }
-              renderAll();
-          }
-
-          function navigateTo(id) {
-              if (id < 1 || id > totalLessons) return;
-              currentLesson = id;
-              renderAll();
-              document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth', block: 'start' });
-              document.querySelector('.zed-main').scrollTo({ top: 0, behavior: 'smooth' });
-          }
-
-          function renderAll() {
-              renderSidebar();
-              renderContent();
-          }
-
-          // init
-          renderAll();
-    </script> 
-    <!-- ================= FAQ SECTION START ================= -->
-    <section class="zed-faq-section">
-      <div class="container">
-        <div class="zed-faq-header">
-            <span class="faq-label">FREQUENTLY ASKED QUESTIONS</span>
-            <h2>Risk Management — FAQ</h2>
-            <p>
-                Professional answers to the most common risk management questions —
-                optimised for search, voice, and AI discovery.
-            </p>
-        </div>
-
-        <div class="accordion zed-faq-accordion" id="riskFaqAccordion">
-
-            <!-- FAQ 1 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqOne">
-                    <button class="accordion-button" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true">
-                        What is risk management in trading and why is it important?
-                    </button>
-                </h2>
-
-                <div id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Risk management is the process of controlling how much money
-                        you risk on each trade. It protects your trading capital,
-                        reduces emotional decisions, and helps traders survive losing
-                        streaks while staying profitable long term.
-                    </div>
-                </div>
+    <!-- LESSON 1 -->
+    <div class="mod active open" data-id="1">
+      <div class="mod-hd" onclick="tog(1)">
+        <div class="mn">01</div>
+        <div class="micon"><i class="ti ti-help-circle" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">What is Risk Management?</div><div class="ms">The foundation of professional trading</div></div>
+        <div class="mright"><span class="badge b-start">Start Here</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody open">
+        <div class="minner">
+          <p class="intro">Risk management is the systematic process of identifying, measuring, and controlling the financial risk in every trade. It is not about avoiding losses — losses are inevitable. It is about ensuring no single loss, or series of losses, can end your trading career.</p>
+          <div class="two">
+            <div class="tbox">
+              <div class="tbox-title"><i class="ti ti-circle-check" aria-hidden="true"></i> What it IS</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>A structured set of rules applied before every trade</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Pre-defined limits on loss per trade and per day</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>A framework for long-term capital preservation</div>
             </div>
-
-            <!-- FAQ 2 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqTwo">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo">
-                        How much should a beginner risk per trade?
-                    </button>
-                </h2>
-
-                <div id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Most professional traders recommend risking only 1%–2% of
-                        your total account balance per trade. This keeps losses small
-                        and allows you to survive long periods of market volatility.
-                    </div>
-                </div>
+            <div class="tbox danger">
+              <div class="tbox-title"><i class="ti ti-circle-x" aria-hidden="true"></i> What it is NOT</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>A way to guarantee winning trades</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Optional or situational — it is always applied</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Something you figure out after a big loss</div>
             </div>
-
-            <!-- FAQ 3 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqThree">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree">
-                        What is the best Risk-to-Reward ratio for trading?
-                    </button>
-                </h2>
-
-                <div id="collapseThree"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        A commonly used professional standard is a minimum 1:2
-                        risk-to-reward ratio. This means risking $100 to potentially
-                        make $200 or more.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqFour">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour">
-                        What is drawdown in trading and how do I manage it?
-                    </button>
-                </h2>
-
-                <div id="collapseFour"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Drawdown refers to the reduction in your account balance
-                        after a series of losses. Traders manage drawdown by lowering
-                        position size, reducing trade frequency, and following strict
-                        risk limits.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqFive">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive">
-                        How do I calculate lot size for a trade?
-                    </button>
-                </h2>
-
-                <div id="collapseFive"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Lot size is calculated based on your account balance, risk
-                        percentage, and stop loss distance. Proper position sizing
-                        ensures you never risk more than your planned amount.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqSix">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix">
-                        What is overtrading and how do I stop it?
-                    </button>
-                </h2>
-
-                <div id="collapseSix"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Overtrading happens when traders take too many unnecessary
-                        trades due to emotions or impatience. Following a trading
-                        plan and setting daily trade limits can help prevent it.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 7 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqSeven">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSeven">
-                        Where should I place my stop loss?
-                    </button>
-                </h2>
-
-                <div id="collapseSeven"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Stop losses should be placed at logical technical levels
-                        where your trade setup becomes invalid — not based on emotion
-                        or random dollar amounts.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 8 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqEight">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseEight">
-                        What should a trading plan include for risk management?
-                    </button>
-                </h2>
-
-                <div id="collapseEight"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        A strong trading plan should include risk per trade, maximum
-                        daily loss, position sizing rules, entry confirmation,
-                        stop-loss strategy, and profit targets.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 9 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqNine">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseNine">
-                        What is Zed Capital and who is this course designed for?
-                    </button>
-                </h2>
-
-                <div id="collapseNine"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#riskFaqAccordion">
-
-                    <div class="accordion-body">
-                        Zed Capital is a professional trading education platform
-                        designed for beginner and intermediate traders who want to
-                        build disciplined and sustainable trading habits.
-                    </div>
-                </div>
-            </div>
-
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-award" aria-hidden="true"></i> Why it matters</div>
+            <div class="rrow"><div class="rdot"></div>Over 80% of retail traders lose money — poor risk management is the primary cause</div>
+            <div class="rrow"><div class="rdot"></div>A trader with an average strategy but great risk management outlasts a brilliant trader with none</div>
+            <div class="rrow"><div class="rdot"></div>Capital preservation is the number one objective — profit follows discipline</div>
+          </div>
+          <button class="btndone" onclick="markDone(1)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
         </div>
       </div>
-    </section>
-    <!-- ================= FAQ SECTION END ================= -->
-    <style>
-        /* ================= FAQ SECTION ================= */
+    </div>
 
-          .zed-faq-section{
-              /* margin-top:80px; */
-              padding:50px 100px;
-              border-top:1px solid var(--zed-border-color);
-          }
+    <!-- LESSON 2 -->
+    <div class="mod" data-id="2">
+      <div class="mod-hd" onclick="tog(2)">
+        <div class="mn">02</div>
+        <div class="micon"><i class="ti ti-percentage" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Risk Per Trade</div><div class="ms">Defining exactly how much you risk on each position</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Risk per trade is the fixed percentage of your total account balance you are willing to lose on any single trade. This number must be decided in advance and never deviated from — regardless of how confident you feel about a setup.</p>
+          <div class="fbox">
+            <span class="flbl">Formula</span><div class="fdiv"></div>
+            <span class="feq">Risk Amount ($) = <b>Account Balance × Risk %</b></span>
+          </div>
+          <div class="sgrid">
+            <div class="sbox hi"><div class="sv r">1%</div><div class="sk">Conservative</div></div>
+            <div class="sbox"><div class="sv">2%</div><div class="sk">Standard</div></div>
+            <div class="sbox"><div class="sv" style="color:var(--G400)">3%+</div><div class="sk">Aggressive</div></div>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> Rules</div>
+            <div class="rrow"><div class="rdot"></div>Risk 1–2% per trade maximum — this is the professional standard</div>
+            <div class="rrow"><div class="rdot"></div>Calculate dollar risk before placing any trade — never estimate</div>
+            <div class="rrow"><div class="rdot"></div>Maintain the same % regardless of confidence level or recent wins</div>
+            <div class="rrow"><div class="rdot"></div>Small consistent risk keeps you alive through long losing streaks</div>
+          </div>
+          <button class="btndone" onclick="markDone(2)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-header{
-              margin-bottom:30px;
-          }
+    <!-- LESSON 3 -->
+    <div class="mod" data-id="3">
+      <div class="mod-hd" onclick="tog(3)">
+        <div class="mn">03</div>
+        <div class="micon"><i class="ti ti-ruler-2" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Lot Size Calculation</div><div class="ms">Sizing every position with precision</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Lot size determines how much money moves per pip. Even the best trade setup fails if the lot size is wrong. Always calculate — never guess. This single skill prevents more blown accounts than any other.</p>
+          <div class="fbox">
+            <span class="flbl">Formula</span><div class="fdiv"></div>
+            <span class="feq">Lot Size = <b>Risk ($) ÷ (Stop Loss Pips × Pip Value)</b></span>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-table" aria-hidden="true"></i> Lot Reference</div>
+            <div class="rrow"><div class="rdot"></div>Standard Lot = 100,000 units — ~$10 per pip on major pairs</div>
+            <div class="rrow"><div class="rdot"></div>Mini Lot = 10,000 units — ~$1 per pip</div>
+            <div class="rrow"><div class="rdot"></div>Micro Lot = 1,000 units — ~$0.10 per pip</div>
+            <div class="rrow"><div class="rdot"></div>Example: $1,000 account, 1% risk ($10), 20 pip SL, $1 pip value → 0.05 lots</div>
+            <div class="rrow"><div class="rdot"></div>Always verify pip value per instrument — it varies across pairs and brokers</div>
+          </div>
+          <button class="btndone" onclick="markDone(3)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-header .faq-label{
-              font-size:11px;
-              letter-spacing:2px;
-              font-weight:700;
-              color:#999;
-              display:block;
-              margin-bottom:10px;
-          }
+    <!-- LESSON 4 -->
+    <div class="mod" data-id="4">
+      <div class="mod-hd" onclick="tog(4)">
+        <div class="mn">04</div>
+        <div class="micon"><i class="ti ti-adjustments-horizontal" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Position Sizing</div><div class="ms">Scaling trade size to your account and risk tolerance</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Position sizing is the process of determining exactly how large each trade should be relative to your account. It ties together your risk %, stop loss distance, and pip value into one precise number. It is the engine of disciplined trading.</p>
+          <div class="fbox">
+            <span class="flbl">Process</span><div class="fdiv"></div>
+            <span class="feq"><b>Step 1:</b> Define risk % → <b>Step 2:</b> Set SL → <b>Step 3:</b> Calculate lot size</span>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-settings" aria-hidden="true"></i> Key Principles</div>
+            <div class="rrow"><div class="rdot"></div>Position size must always be derived from your stop loss — not your opinion of the trade</div>
+            <div class="rrow"><div class="rdot"></div>Never increase position size to compensate for a wider stop loss</div>
+            <div class="rrow"><div class="rdot"></div>Reduce size during drawdown periods — protect remaining capital</div>
+            <div class="rrow"><div class="rdot"></div>Scale up only after consistent profitability over 50+ trades — not before</div>
+          </div>
+          <button class="btndone" onclick="markDone(4)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-header h2{
-              font-size:32px;
-              font-weight:700;
-              margin-bottom:14px;
-              color:#111;
-          }
+    <!-- LESSON 5 -->
+    <div class="mod" data-id="5">
+      <div class="mod-hd" onclick="tog(5)">
+        <div class="mn">05</div>
+        <div class="micon"><i class="ti ti-scale" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Risk-to-Reward Ratio</div><div class="ms">Building positive expectancy into every trade</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Risk-to-Reward ratio compares how much you stand to lose versus how much you stand to gain. A trader with a 40% win rate and a 1:2 R:R is profitable. A trader with a 60% win rate and a 1:0.5 R:R is losing money. The math is the edge.</p>
+          <div class="fbox">
+            <span class="flbl">R:R Ratio</span><div class="fdiv"></div>
+            <span class="feq">R:R = <b>Target Distance ÷ Stop Loss Distance</b></span>
+          </div>
+          <div class="sgrid">
+            <div class="sbox"><div class="sv" style="color:var(--G400)">1:1</div><div class="sk">Minimum</div></div>
+            <div class="sbox"><div class="sv">1:2</div><div class="sk">Standard</div></div>
+            <div class="sbox hi"><div class="sv r">1:3</div><div class="sk">Ideal</div></div>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-math" aria-hidden="true"></i> Key Rules</div>
+            <div class="rrow"><div class="rdot"></div>Never enter a trade with less than a 1:1.5 Risk-to-Reward ratio</div>
+            <div class="rrow"><div class="rdot"></div>At 1:2 R:R — you only need to win 34% of trades to break even</div>
+            <div class="rrow"><div class="rdot"></div>Place your target at the next logical structure level — not an arbitrary number</div>
+            <div class="rrow"><div class="rdot"></div>Calculate R:R before entry — if it does not qualify, skip the trade entirely</div>
+          </div>
+          <button class="btndone" onclick="markDone(5)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-header p{
-              color:#8a8a8a;
-              font-size:15px;
-              max-width:800px;
-              line-height:1.7;
-          }
+    <!-- LESSON 6 -->
+    <div class="mod" data-id="6">
+      <div class="mod-hd" onclick="tog(6)">
+        <div class="mn">06</div>
+        <div class="micon"><i class="ti ti-barrier-block" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Stop Loss Placement</div><div class="ms">Where to place your stop and why it matters</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Stop loss placement is both a risk control tool and a market structure decision. A stop placed at the wrong level gets triggered by normal price movement. A stop placed correctly only fires when your trade idea is actually wrong.</p>
+          <div class="two">
+            <div class="tbox">
+              <div class="tbox-title"><i class="ti ti-circle-check" aria-hidden="true"></i> Correct placement</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Behind a swing high or swing low</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Below key support or above key resistance</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Outside the structure — beyond the invalidation level</div>
+            </div>
+            <div class="tbox danger">
+              <div class="tbox-title"><i class="ti ti-circle-x" aria-hidden="true"></i> Wrong placement</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Flat $ or pip amount with no structure basis</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Too tight — hit by normal volatility</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Moved further away to avoid being stopped out</div>
+            </div>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> Stop Loss Rules</div>
+            <div class="rrow"><div class="rdot"></div>Set your stop loss BEFORE entering the trade — always</div>
+            <div class="rrow"><div class="rdot"></div>Never move a stop loss further away to avoid a loss</div>
+            <div class="rrow"><div class="rdot"></div>Trail your stop to protect profits as the trade moves in your favour</div>
+            <div class="rrow"><div class="rdot"></div>When your stop is triggered, accept the loss — your trade idea was invalidated</div>
+          </div>
+          <button class="btndone" onclick="markDone(6)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          /* Accordion */
+    <!-- LESSON 7 -->
+    <div class="mod" data-id="7">
+      <div class="mod-hd" onclick="tog(7)">
+        <div class="mn">07</div>
+        <div class="micon"><i class="ti ti-trending-down" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Drawdown Management</div><div class="ms">Surviving losing periods without destroying your account</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Drawdown is the reduction of your account from its peak to a trough. Every trader — including the best in the world — experiences drawdowns. The goal is not to eliminate them, but to manage their depth so recovery remains realistic.</p>
+          <div class="sgrid">
+            <div class="sbox hi"><div class="sv r">10%</div><div class="sk">Reduce Size</div></div>
+            <div class="sbox"><div class="sv">20%</div><div class="sk">Stop &amp; Review</div></div>
+            <div class="sbox"><div class="sv" style="color:var(--G400)">30%+</div><div class="sk">Critical Zone</div></div>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-chart-line" aria-hidden="true"></i> Drawdown Rules</div>
+            <div class="rrow"><div class="rdot"></div>At 10% drawdown — halve your position size immediately</div>
+            <div class="rrow"><div class="rdot"></div>At 20% drawdown — stop trading, review your strategy and journal</div>
+            <div class="rrow"><div class="rdot"></div>To recover a 50% drawdown you must make a 100% gain — avoid getting there</div>
+            <div class="rrow"><div class="rdot"></div>Drawdown is psychological — reduced size protects both capital and mindset</div>
+            <div class="rrow"><div class="rdot"></div>Never try to trade out of a drawdown by increasing risk — this compounds it</div>
+          </div>
+          <button class="btndone" onclick="markDone(7)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-accordion .accordion-item{
-              border:1px solid #ececec;
-              margin-bottom:14px;
-              border-radius:10px !important;
-              overflow:hidden;
-              background:#fff;
-          }
+    <!-- LESSON 8 -->
+    <div class="mod" data-id="8">
+      <div class="mod-hd" onclick="tog(8)">
+        <div class="mn">08</div>
+        <div class="micon"><i class="ti ti-clock-pause" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Overtrading Control</div><div class="ms">Why less trades often means more profit</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Overtrading is one of the most common — and most destructive — habits in retail trading. It is driven by boredom, revenge, FOMO, and the illusion that more trades equals more profit. It does not. Discipline means waiting for only A-grade setups.</p>
+          <div class="two">
+            <div class="tbox danger">
+              <div class="tbox-title"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Signs of overtrading</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Trading out of boredom or routine</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Entering trades to "make back" a loss</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Taking setups that do not meet your criteria</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Multiple trades open in the same direction</div>
+            </div>
+            <div class="tbox">
+              <div class="tbox-title"><i class="ti ti-circle-check" aria-hidden="true"></i> How to fix it</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Set a maximum daily trade limit (e.g. 3 trades)</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Only trade A-grade setups — define them in writing</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Stop trading after daily loss limit is hit</div>
+              <div class="tbox-row"><i class="ti ti-point" aria-hidden="true"></i>Journal every trade — track your emotional state</div>
+            </div>
+          </div>
+          <button class="btndone" onclick="markDone(8)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-accordion .accordion-button{
-              background:#fff;
-              font-weight:600;
-              font-size:16px;
-              padding:22px 24px;
-              box-shadow:none !important;
-              color:#111;
-          }
+    <!-- LESSON 9 -->
+    <div class="mod" data-id="9">
+      <div class="mod-hd" onclick="tog(9)">
+        <div class="mn">09</div>
+        <div class="micon"><i class="ti ti-shield" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Account Protection Rules</div><div class="ms">Hard limits that safeguard your entire trading career</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Account protection rules are non-negotiable boundaries that exist to ensure no single session, week, or emotional decision can end your trading career. They are the last line of defence between a bad day and a blown account.</p>
+          <div class="sgrid">
+            <div class="sbox hi"><div class="sv r">3%</div><div class="sk">Max Daily Loss</div></div>
+            <div class="sbox"><div class="sv">5%</div><div class="sk">Max Weekly Loss</div></div>
+            <div class="sbox"><div class="sv">10%</div><div class="sk">Max Monthly Loss</div></div>
+          </div>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-lock" aria-hidden="true"></i> Protection Rules</div>
+            <div class="rrow"><div class="rdot"></div>Stop trading the moment your daily loss limit is hit — no exceptions</div>
+            <div class="rrow"><div class="rdot"></div>Never trade capital you cannot afford to lose emotionally or financially</div>
+            <div class="rrow"><div class="rdot"></div>Withdraw a portion of profits regularly — do not let all gains sit at risk</div>
+            <div class="rrow"><div class="rdot"></div>After 3 consecutive losses — mandatory pause before next trade</div>
+            <div class="rrow"><div class="rdot"></div>Never add to a losing position — averaging down turns losses into disasters</div>
+          </div>
+          <button class="btndone" onclick="markDone(9)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-accordion .accordion-button:not(.collapsed){
-              background:#fff5f5;
-              color:#e10600;
-          }
+    <!-- LESSON 10 -->
+    <div class="mod" data-id="10">
+      <div class="mod-hd" onclick="tog(10)">
+        <div class="mn">10</div>
+        <div class="micon"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Risk Management Mistakes</div><div class="ms">The errors that silently destroy trading accounts</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">Most trading accounts are not blown by one catastrophic trade. They are slowly eroded by repeating the same small mistakes over and over. Recognising these patterns is the first step to eliminating them permanently.</p>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-x" aria-hidden="true"></i> The Most Costly Mistakes</div>
+            <div class="rrow"><div class="rdot"></div>Moving stop loss further away to avoid a loss — this removes your safety net</div>
+            <div class="rrow"><div class="rdot"></div>Increasing position size after a win — emotional sizing, not calculated sizing</div>
+            <div class="rrow"><div class="rdot"></div>Trading without a stop loss — one bad trade can wipe an entire account</div>
+            <div class="rrow"><div class="rdot"></div>Revenge trading after a loss — emotional decisions compound the damage</div>
+            <div class="rrow"><div class="rdot"></div>Risking more because the setup "feels certain" — all setups carry equal uncertainty</div>
+            <div class="rrow"><div class="rdot"></div>Ignoring daily loss limits — no rule means no protection</div>
+            <div class="rrow"><div class="rdot"></div>Not tracking trades in a journal — patterns cannot be fixed if they are unseen</div>
+          </div>
+          <button class="btndone" onclick="markDone(10)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-accordion .accordion-button:focus{
-              box-shadow:none;
-          }
+    <!-- LESSON 11 -->
+    <div class="mod" data-id="11">
+      <div class="mod-hd" onclick="tog(11)">
+        <div class="mn">11</div>
+        <div class="micon"><i class="ti ti-notebook" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Trading Plan Rules</div><div class="ms">The written rules every professional trader lives by</div></div>
+        <div class="mright"><span class="badge b-open">Lesson</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">A trading plan is a written document that defines exactly how you trade — before you are in a trade, before you are emotional, and before the market is moving. Without it, you are improvising. With it, you are executing a system.</p>
+          <div class="rcard">
+            <div class="rtitle"><i class="ti ti-file-text" aria-hidden="true"></i> Your Plan Must Include</div>
+            <div class="rrow"><div class="rdot"></div>The markets and timeframes you trade — and only those</div>
+            <div class="rrow"><div class="rdot"></div>Your exact entry criteria — what constitutes an A-grade setup</div>
+            <div class="rrow"><div class="rdot"></div>Your risk per trade % and maximum daily loss limit</div>
+            <div class="rrow"><div class="rdot"></div>Where stop losses are placed and under what conditions they are moved</div>
+            <div class="rrow"><div class="rdot"></div>Your target setting method and minimum R:R requirement</div>
+            <div class="rrow"><div class="rdot"></div>Your review process — weekly journal review and monthly performance audit</div>
+            <div class="rrow"><div class="rdot"></div>Conditions under which you will stop trading for the day, week, or month</div>
+          </div>
+          <button class="btndone" onclick="markDone(11)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
+        </div>
+      </div>
+    </div>
 
-          .zed-faq-accordion .accordion-body{
-              padding:20px 24px 26px;
-              color:#666;
-              line-height:1.8;
-              font-size:15px;
-          }
+    <!-- LESSON 12 -->
+    <div class="mod" data-id="12">
+      <div class="mod-hd" onclick="tog(12)">
+        <div class="mn">12</div>
+        <div class="micon"><i class="ti ti-clipboard-check" aria-hidden="true"></i></div>
+        <div class="mmeta"><div class="mt">Risk Checklist</div><div class="ms">Run through this before every single trade</div></div>
+        <div class="mright"><span class="badge b-final">Final</span><i class="ti ti-chevron-right chev" aria-hidden="true"></i></div>
+      </div>
+      <div class="mbody">
+        <div class="minner">
+          <p class="intro">This is your pre-trade protocol. Every box must be checked before entering a position. If even one box cannot be checked, the trade does not happen. Discipline at this stage is what separates consistent traders from gamblers.</p>
+          <div class="clstat" id="clstat">0 of 10 checked</div>
+          <div class="clwrap" id="clwrap">
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">I have defined my exact risk % for this trade</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">My lot size has been calculated — not estimated</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">My stop loss is placed at a logical market structure level</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">This trade has a minimum 1:1.5 Risk-to-Reward ratio</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">I have NOT reached my daily loss limit today</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">I am not over-leveraged across my current open positions</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">This setup meets my written A-grade criteria</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">I am not trading out of boredom, FOMO, or emotion</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">I have not had 3 consecutive losses today without a break</span></div>
+            <div class="ci" onclick="chk(this)"><div class="cbox"></div><span class="clbl">I will accept the outcome of this trade — win or loss</span></div>
+          </div>
+          <button class="btndone" onclick="markDone(12)"><i class="ti ti-trophy" aria-hidden="true"></i> Complete Course</button>
+        </div>
+      </div>
+    </div>
 
-          /* Responsive */
+  </div>
 
-          @media(max-width:768px){
+  <div class="container">
+ 
+      <div class="zed-sec-head mt-5 mb-5">  
+            <h2 class="zed-sec-title">Risk Management Frequently Asked Questions— FAQ</h2> 
+            <div class="underline"></div>
+      </div>
 
-              .zed-faq-section{
-                  margin-top:50px;
-                  padding-top:40px;
-              }
+      <div class="faq-wrap">
+        <div class="faq-top d-none">
+          <i class="ti ti-message-question" aria-hidden="true"></i>
+          <h2></h2>
+        </div>
+        <div class="faq-note">Professional answers to the most common risk management questions — optimised for search, voice, and AI discovery.</div>
 
-              .zed-faq-header h2{
-                  font-size:24px;
-              }
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is risk management in trading and why is it important?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">Risk management in trading is the structured practice of controlling financial exposure on every trade through predefined rules — including stop losses, position sizing, and daily loss limits. <b>It is important because over 80% of retail traders lose money, and poor risk management is the primary cause.</b> A trader with an average strategy but excellent risk management will outlast a talented trader with none.</div></div>
+        </div>
 
-              .zed-faq-accordion .accordion-button{
-                  font-size:14px;
-                  padding:18px;
-              }
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How much should a beginner risk per trade?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">Beginners should risk no more than <b>1% of their total account balance per trade.</b> This means that even after 10 consecutive losing trades, only 10% of the account is lost — preserving enough capital to continue, learn, and improve. As consistency improves over 50–100 documented trades, risk can be gradually increased to a maximum of 2%.</div></div>
+        </div>
 
-              .zed-faq-accordion .accordion-body{
-                  padding:18px;
-                  font-size:14px;
-              }
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the best Risk-to-Reward ratio for trading?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">The professional standard is a minimum of <b>1:2 Risk-to-Reward</b>, meaning you aim to gain twice what you risk. At 1:2 R:R, you only need a 34% win rate to be profitable. A 1:3 ratio is ideal. The critical rule is that no trade should be entered with less than a 1:1.5 ratio — if the target does not meet this threshold, the trade is skipped.</div></div>
+        </div>
 
-          }
-    </style>
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is drawdown in trading and how do I manage it?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">Drawdown is the percentage decline from an account's peak to its current value. <b>All traders experience drawdown — including professionals.</b> The key is managing its depth. At 10% drawdown, reduce position size by half. At 20%, stop trading and review your strategy. Recovering a 50% drawdown requires a 100% gain — which is why avoiding deep drawdowns is a primary objective, not an afterthought.</div></div>
+        </div>
+
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do I calculate lot size for a trade?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">The formula is: <b>Lot Size = Risk Amount ($) ÷ (Stop Loss in Pips × Pip Value).</b> Example: $2,000 account, 1% risk = $20 at risk. Stop loss = 20 pips. Pip value = $1 (mini lot on EUR/USD). Lot size = $20 ÷ (20 × $1) = 1.0 mini lots (0.10 standard lots). Always use a lot size calculator and verify pip value per instrument before entering the market.</div></div>
+        </div>
+
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is overtrading and how do I stop it?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">Overtrading is taking more trades than your strategy warrants — typically driven by boredom, FOMO, or the urge to recover losses. <b>It is one of the fastest ways to erode a trading account.</b> To stop it: define your A-grade setup criteria in writing, set a maximum of 2–3 trades per day, stop trading once the daily loss limit is reached, and journal every trade including your emotional state at entry.</div></div>
+        </div>
+
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Where should I place my stop loss?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">Stop losses should always be placed at a <b>logical market structure level</b> — behind a swing high or swing low, beyond a key support or resistance zone, or at the point where your trade idea is clearly invalidated. A stop should not be placed based on a fixed pip amount or dollar figure. The structure dictates the stop — the stop then dictates the lot size, not the other way around.</div></div>
+        </div>
+
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What should a trading plan include for risk management?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">A complete trading plan must include: <b>risk % per trade, maximum daily and weekly loss limits, entry criteria for A-grade setups, stop loss placement rules, minimum R:R requirement, position sizing method, conditions for stopping trading, and a weekly review process.</b> Without a written plan, every trading decision is made emotionally in real time — which is the definition of gambling.</div></div>
+        </div>
+
+        <div class="fi">
+          <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is Zed Capital and who is this course designed for?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+          <div class="fa"><div class="fa-inner">Zed Capital is a professional trading education platform focused on building disciplined, structured traders. <b>This Risk Management Course is Course 3 of the Core Trading Series</b> and is designed for traders at every level — from complete beginners building their first framework to intermediate traders looking to eliminate the emotional errors that are costing them money. All content reflects professional and institutional trading standards.</div></div>
+        </div>
+      </div>
+
+  </div>
+    
+<script>
+    const done = new Set();
+
+    function tog(id){
+      document.querySelectorAll('.mod').forEach(m=>{
+        const mid=+m.dataset.id, body=m.querySelector('.mbody');
+        if(mid===id){
+          const wasOpen=body.classList.contains('open');
+          body.classList.toggle('open',!wasOpen);
+          m.classList.toggle('open',!wasOpen);
+        } else {
+          body.classList.remove('open');
+          m.classList.remove('open');
+        }
+      });
+    }
+
+    function markDone(id){
+      done.add(id);
+      const m=document.querySelector(`.mod[data-id="${id}"]`);
+      if(m){
+        m.classList.add('done');
+        m.classList.remove('active','open');
+        m.querySelector('.mbody').classList.remove('open');
+        const b=m.querySelector('.badge');
+        b.className='badge b-done';
+        b.textContent='Done';
+      }
+      const pct=Math.round((done.size/12)*100);
+      document.getElementById('pbar').style.width=pct+'%';
+      document.getElementById('ppct').textContent=done.size+' / 12';
+      document.getElementById('hk3').textContent=done.size;
+      const next=id+1;
+      if(next<=12){
+        const nm=document.querySelector(`.mod[data-id="${next}"]`);
+        if(nm){ nm.classList.add('active'); tog(next); }
+      }
+      if(id===12) setTimeout(()=>sendPrompt('I have completed the Zed Capital Risk Management Course. Please summarise what I have learned and tell me what course I should take next.'),400);
+    }
+
+    function chk(el){
+      el.classList.toggle('checked');
+      el.querySelector('.cbox').textContent=el.classList.contains('checked')?'✓':'';
+      const all=document.querySelectorAll('#clwrap .ci').length;
+      const n=document.querySelectorAll('#clwrap .ci.checked').length;
+      const st=document.getElementById('clstat');
+      if(n===all){ st.textContent='All clear — you are ready to trade.'; st.style.color='var(--zed-primary)'; st.style.fontWeight='600'; }
+      else { st.textContent=n+' of '+all+' checked'; st.style.color='var(--G400)'; st.style.fontWeight='500'; }
+    }
+
+    function faqTog(qel){
+      const fi=qel.closest('.fi'), fa=fi.querySelector('.fa'), isOpen=fa.classList.contains('open');
+      document.querySelectorAll('.fi').forEach(f=>{ f.classList.remove('open'); f.querySelector('.fa').classList.remove('open'); });
+      if(!isOpen){ fi.classList.add('open'); fa.classList.add('open'); }
+    }
+
+    (function(){
+      let n1=0,n2=0,t1=12,t2=60;
+      const iv=setInterval(()=>{
+        n1=Math.min(n1+1,t1); n2=Math.min(n2+2,t2);
+        document.getElementById('hk1').textContent=n1;
+        document.getElementById('hk2').textContent=n2;
+        if(n1>=t1&&n2>=t2) clearInterval(iv);
+      },40);
+    })();
+</script>
+
  
 <?php
 include_once ('elements/footer.php');
