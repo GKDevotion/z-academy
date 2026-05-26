@@ -9,7 +9,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule ^solution-details/([^/]+)$ solution-details.php?slug=$1 [L,QSA]
 RewriteRule ^advance-courses advance-courses.php?slug=$1 [L,QSA]
 RewriteRule ^beginner-courses beginner-courses.php?slug=$1 [L,QSA]
+RewriteRule ^trading-glossary trading-glossary.php?slug=$1 [L,QSA]
 RewriteRule ^blog blog.php?slug=$1 [L,QSA]
+
+
 RewriteRule ^course-topic-bonds course-topic-bonds.php?slug=$1 [L,QSA]
 RewriteRule ^course-topic-commodities course-topic-commodities.php?slug=$1 [L,QSA]
 RewriteRule ^course-topic-crypto course-topic-crypto.php?slug=$1 [L,QSA]
