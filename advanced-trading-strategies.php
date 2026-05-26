@@ -920,6 +920,14 @@ include_once ('elements/header.php');
         margin-bottom: 25px;
         color: black;
     }
+
+    .chart-visual{
+        background-color: var(--zed-dark-text);
+        color: var(--zed-banner-bg-end);
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
     </style>
 
       <div class="container">  
