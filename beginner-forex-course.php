@@ -952,7 +952,8 @@ include_once ('elements/header.php');
             border-radius: 14px;
             padding: .8rem 1.4rem;
             display: flex;
-            align-items: center;
+            min-width: 190px;
+            align-items: center; 
             gap: .8rem;
             box-shadow: 0 2px 16px rgba(0,0,0,.04);
         }
@@ -1341,7 +1342,7 @@ include_once ('elements/header.php');
                     <div class="ico"><i class="bi bi-currency-dollar"></i></div>
                     <div>
                         <div class="val">100K</div>
-                        <div class="lbl">Units of Base Currency</div>
+                        <div class="lbl"> Base Currency</div>
                     </div>
                 </div>
             </div>

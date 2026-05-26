@@ -102,6 +102,7 @@ include_once ('elements/header.php');
               border-radius: 14px;
               padding: .8rem 1.4rem;
               display: flex;
+              min-width: 150px;
               align-items: center;
               gap: .8rem;
               box-shadow: 0 2px 16px rgba(0,0,0,.04);
@@ -453,7 +454,7 @@ include_once ('elements/header.php');
         <div class="container">
             <div class="hero-badge mt-4 d-none"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
             <h1>
-                Master Your<em> Mindset</em>
+                Master Your<em> <br>Mindset</em>
             </h1>
             <p class="sub">
                 The market does not destroy traders — their own emotions do. Fear, and ego are responsible for more losses than any bad strategy.  
@@ -484,7 +485,7 @@ include_once ('elements/header.php');
                 <div class="float-stat">
                     <div class="ico"><i class="bi bi-award-fill"></i></div>
                     <div>
-                        <div class="val d-none">0</div>
+                        <div class="val">5/12</div>
                         <div class="lbl">Completed</div>
                     </div>
                 </div>
@@ -866,21 +867,18 @@ include_once ('elements/header.php');
 </style>
 
     <div class="container">
-        <div class="prog">
+         
+         <div class="zed-sec-head mt-5 mb-5">  
+            <h2 class="zed-sec-title">Core Lessons — Trading Psychology</h2> 
+            <div class="underline"></div>
+        </div>
+
+        <div class="prog mb-3">
             <span class="prog-lbl">Course Progress</span>
             <div class="prog-bar"><div class="prog-fill" id="pbar"></div></div>
             <span class="prog-pct" id="ppct">0 / 12</span>
         </div>
 
-        <div class="slbl d-none"><i class="ti ti-brain" aria-hidden="true"></i>
-            Core Lessons — Trading Psychology
-        </div>
-
-         <div class="zed-sec-head mt-5 mb-5">  
-            <h2 class="zed-sec-title">Core Lessons — Trading Psychology</h2> 
-            <div class="underline"></div>
-        </div>
-        
         <!-- L1 -->
         <div class="mod active open" data-id="1">
         <div class="mod-hd" onclick="tog(1)">
