@@ -198,6 +198,21 @@
                     </p>
                     <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
 
+                     <p class="fw-bold fs-4">
+                             Tier 5 — Retail Brokers
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                           IC Markets, Pepperstone, XM, FXCM, IG, Oanda, etc. 
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                          <strong>What they do : </strong> Provide retail traders access to the interbank market. They aggregate liquidity from multiple banks and pass orders through to the market (ECN/STP) or trade against their clients internally (Market Maker).
+
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                           <strong>Revenue : </strong> Brokers earn from spreads, commissions, swap fees, and (for market makers) from client losses.
+                        </p>
+                        <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
+    
                 
                 </div>
 
@@ -229,6 +244,22 @@
                     <p class="text-gray" style="width: 90%;">
                     <strong> Why this creates opportunity : </strong> Corporate hedging creates predictable currency flows at month/quarter end. Smart traders watch these "flow" patterns.
                     </p>
+
+                       <p class="fw-bold fs-4">
+                            Tier 6 — Retail Traders 
+                        </p>
+                        <p class="text-gray" style="width: 90%;">
+                            Individual traders worldwide — day traders, swing traders, algorithmic traders.
+
+                        </p>
+                        
+                        <p class="text-gray" style="width: 90%;">
+                            <strong>Reality check :</strong> Retail traders represent only ~5% of total forex volume. We are the smallest fish in the ocean. This is why understanding how larger players operate (Smart Money Concepts) is critical for edge.
+                        </p>
+
+                        <p class="text-gray" style="width: 90%;">
+                           <strong> Our advantage : </strong> Small size = we can enter and exit without moving the market. A $10,000 account can achieve much better % returns than a $10 billion fund.
+                        </p>
                 </div>
             </div>
         </div>
