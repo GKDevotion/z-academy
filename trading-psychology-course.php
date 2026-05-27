@@ -1316,56 +1316,56 @@ include_once ('elements/header.php');
         </style>
 
         <div class="faq-wrap">
-        <div class="faq-top d-none">
-            <i class="ti ti-message-question" aria-hidden="true"></i>
-            <h2>Trading Psychology — FAQ</h2>
-        </div>
-        <div class="faq-note">Professional answers optimised for search engines, AI assistants, and voice search — covering the most common questions on trading mindset and emotion control.</div>
+            <div class="faq-top d-none">
+                <i class="ti ti-message-question" aria-hidden="true"></i>
+                <h2>Trading Psychology — FAQ</h2>
+            </div>
+            <div class="faq-note">Professional answers optimised for search engines, AI assistants, and voice search — covering the most common questions on trading mindset and emotion control.</div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is trading psychology and why does it matter?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Trading psychology refers to the emotional and mental factors that influence a trader's decisions in the market. <b>It matters because over 80% of trading mistakes are psychological in origin</b> — not analytical. A trader can have a statistically profitable strategy and still lose money by allowing fear, greed, or ego to override their planned execution at the moment of entry or exit.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is trading psychology and why does it matter?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Trading psychology refers to the emotional and mental factors that influence a trader's decisions in the market. <b>It matters because over 80% of trading mistakes are psychological in origin</b> — not analytical. A trader can have a statistically profitable strategy and still lose money by allowing fear, greed, or ego to override their planned execution at the moment of entry or exit.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do fear and greed affect trading decisions?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Fear causes traders to exit winning trades too early, hesitate on valid setups, and move stop losses to avoid being stopped out. Greed causes traders to hold winners past their targets, over-size positions after wins, and chase price entries they missed. <b>Both emotions bypass the rational, rule-based decision-making that profitable trading requires.</b> The antidote is a written plan that pre-defines every decision before emotion can interfere.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do fear and greed affect trading decisions?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Fear causes traders to exit winning trades too early, hesitate on valid setups, and move stop losses to avoid being stopped out. Greed causes traders to hold winners past their targets, over-size positions after wins, and chase price entries they missed. <b>Both emotions bypass the rational, rule-based decision-making that profitable trading requires.</b> The antidote is a written plan that pre-defines every decision before emotion can interfere.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is revenge trading and how do I stop it?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Revenge trading is placing trades immediately after a loss with the primary goal of recovering that money quickly — rather than waiting for a valid setup. <b>It is driven by emotional pain, not analysis.</b> To stop it: implement a mandatory 30-minute break after any loss, set a maximum of 3 trades per day, and close your trading platform when the daily loss limit is reached. Physical distance from the screen is the most effective circuit breaker.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is revenge trading and how do I stop it?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Revenge trading is placing trades immediately after a loss with the primary goal of recovering that money quickly — rather than waiting for a valid setup. <b>It is driven by emotional pain, not analysis.</b> To stop it: implement a mandatory 30-minute break after any loss, set a maximum of 3 trades per day, and close your trading platform when the daily loss limit is reached. Physical distance from the screen is the most effective circuit breaker.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do I build discipline as a trader?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Discipline is built through systems, not willpower. <b>Write a trading plan that defines every rule in advance</b> — entry criteria, stop loss rules, maximum daily loss, and position sizing. Use a pre-trade checklist before every session. Journal every trade including your emotional state. Discipline is the consistent application of these structures over time — it is a skill developed through repetition, not a personality trait you either have or do not.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do I build discipline as a trader?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Discipline is built through systems, not willpower. <b>Write a trading plan that defines every rule in advance</b> — entry criteria, stop loss rules, maximum daily loss, and position sizing. Use a pre-trade checklist before every session. Journal every trade including your emotional state. Discipline is the consistent application of these structures over time — it is a skill developed through repetition, not a personality trait you either have or do not.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Why do I keep making the same trading mistakes?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Repeated mistakes typically indicate that the behaviour is being driven by an unconscious emotional pattern — not a lack of knowledge. <b>The most effective solution is consistent journaling.</b> When you log every trade with its emotional context, patterns emerge clearly: you may always revenge trade after a Tuesday loss, or always over-size after a winning week. Once the pattern is visible, it can be addressed with a specific rule or circuit breaker.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Why do I keep making the same trading mistakes?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Repeated mistakes typically indicate that the behaviour is being driven by an unconscious emotional pattern — not a lack of knowledge. <b>The most effective solution is consistent journaling.</b> When you log every trade with its emotional context, patterns emerge clearly: you may always revenge trade after a Tuesday loss, or always over-size after a winning week. Once the pattern is visible, it can be addressed with a specific rule or circuit breaker.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What should I write in a trading journal?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Every journal entry should include: instrument, direction, entry/exit prices, lot size, stop loss and target levels, the specific reason for the trade, your emotional state at entry rated 1–10, whether you followed your plan exactly, the outcome and R:R achieved, and one lesson extracted. <b>A screenshot of the setup with annotations</b> is highly recommended. Reviewed weekly, this data reveals which setups are genuinely profitable and which emotional states predict your worst decisions.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What should I write in a trading journal?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Every journal entry should include: instrument, direction, entry/exit prices, lot size, stop loss and target levels, the specific reason for the trade, your emotional state at entry rated 1–10, whether you followed your plan exactly, the outcome and R:R achieved, and one lesson extracted. <b>A screenshot of the setup with annotations</b> is highly recommended. Reviewed weekly, this data reveals which setups are genuinely profitable and which emotional states predict your worst decisions.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the difference between confidence and ego in trading?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Confidence means trusting your process and executing valid setups without hesitation — including cutting losses quickly when the trade is wrong. Ego means holding a losing position because exiting requires admitting you were wrong. <b>Confidence builds accounts. Ego donates them to the market.</b> The key test: are you making a decision based on what the chart is showing — or based on what you need to be true?</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the difference between confidence and ego in trading?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">Confidence means trusting your process and executing valid setups without hesitation — including cutting losses quickly when the trade is wrong. Ego means holding a losing position because exiting requires admitting you were wrong. <b>Confidence builds accounts. Ego donates them to the market.</b> The key test: are you making a decision based on what the chart is showing — or based on what you need to be true?</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How does a trading routine improve psychology?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">A structured trading routine — pre-market preparation, session execution protocol, and post-market review — <b>removes the need to make decisions under emotional pressure.</b> When your actions are pre-decided through routine, emotion has fewer entry points to influence your behaviour. Traders with consistent routines report lower anxiety, fewer impulsive decisions, and more consistent execution compared to those who approach each session without structure.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How does a trading routine improve psychology?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">A structured trading routine — pre-market preparation, session execution protocol, and post-market review — <b>removes the need to make decisions under emotional pressure.</b> When your actions are pre-decided through routine, emotion has fewer entry points to influence your behaviour. Traders with consistent routines report lower anxiety, fewer impulsive decisions, and more consistent execution compared to those who approach each session without structure.</div></div>
+            </div>
 
-        <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is Zed Capital's Trading Psychology Course designed to achieve?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">This course — <b>Course 4 of Zed Capital's Core Trading Series</b> — is designed to give traders a complete framework for understanding and managing the psychological forces that drive trading decisions. It covers fear, greed, revenge trading, overconfidence, patience, loss handling, emotional risk control, journaling, and the daily psychology checklist. The goal is to help traders execute their strategy with consistency — removing emotion as a variable in their results.</div></div>
-        </div>
+            <div class="fi">
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is Zed Capital's Trading Psychology Course designed to achieve?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">This course — <b>Course 4 of Zed Capital's Core Trading Series</b> — is designed to give traders a complete framework for understanding and managing the psychological forces that drive trading decisions. It covers fear, greed, revenge trading, overconfidence, patience, loss handling, emotional risk control, journaling, and the daily psychology checklist. The goal is to help traders execute their strategy with consistency — removing emotion as a variable in their results.</div></div>
+            </div>
         </div>
 
     </div>

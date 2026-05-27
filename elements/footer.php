@@ -397,7 +397,7 @@
         <!-- End Footer Section -->
 
         <!-- Back to Top Button -->
-        <a href="#top" id="backToTop" class="btn btn-danger p-3 shadow" style="display:none;">
+        <a href="#top" id="backToTop" class="btn btn-danger p-3 shadow d-none" style="display:none;">
             <i class="fa fa-arrow-up"></i>
         </a>
 
