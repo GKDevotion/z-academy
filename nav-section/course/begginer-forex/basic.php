@@ -764,15 +764,123 @@
 </section>
 
 <hr class="zed-divider" />
+ 
+  <section class="zed-section" style="background:var(--zed-background-color)">
+        <div class="container">
+            <div class="zed-sec-head reveal"> 
+                <h2 class="zed-sec-title">Demo Account vs Live Account — A Critical Difference</h2> 
+                <div class="underline"></div>
+            </div> 
+ 
+            <div class="zed-section">
+            
+            <div class="two-col">
+                <div class="card">
+                <div class="card-header demo">
+                    <i class="ti ti-circle-check" aria-hidden="true"></i>
+                    Demo account — start here
+                </div>
+                <div class="card-body">
+                    <p>A demo account uses <strong style="color:var(--color-text-primary)">virtual money</strong> with real market prices. It is identical to a live account in terms of charts, indicators, and order types — but there is NO emotional weight because you cannot actually lose real money.</p>
+                    <div class="divider"></div>
+                    <p class="label">How long on demo?</p>
+                    <p>Until you are consistently profitable for at least 3 months. Not 3 weeks — 3 months. Track every trade in a journal.</p>
+                    <div class="divider"></div>
+                    <p class="label">Treat it like real money</p>
+                    <p>The biggest mistake beginners make on demo is overtaking risks they'd never take with real money. If you won't do it on live, don't do it on demo either.</p>
+                </div>
+                </div>
 
-<section class="zed-section" style="background:var(--zed-background-color)">
-    <div class="container">
-        <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Demo Account vs Live Account — A Critical Difference</h2> 
-            <div class="underline"></div>
-        </div> 
-    </div>
-</section>
+                <div class="card">
+                <div class="card-header live">
+                    <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+                    Live account — the psychological shift
+                </div>
+                <div class="card-body">
+                    <p>When you move to a live account with real money, <strong style="color:var(--color-text-primary)">everything changes psychologically</strong>. Winning strategies on demo often fail on live because fear and greed take over.</p>
+                    <div class="divider"></div>
+                    <p class="label">How to transition</p>
+                    <ol class="step-list">
+                    <li><span class="step-num">1</span>Start with the smallest amount you can deposit (some brokers allow $50–$100)</li>
+                    <li><span class="step-num">2</span>Trade micro lots (0.01) only</li>
+                    <li><span class="step-num">3</span>Maintain exact same rules as demo</li>
+                    <li><span class="step-num">4</span>Scale up only after 3 months of live profitability</li>
+                    </ol>
+                    <div class="callout">
+                    <strong style="color:var(--color-text-primary)">Reality:</strong> Most traders blow their first live account. It's almost a rite of passage. The lesson is always the same: risk management and psychology, not the strategy.
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+ 
+        </div>
+    </section>
+<style>
+     .zed-section { padding: 2rem 0; font-family: var(--font-sans); }
+        .zed-title { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 1.5rem; display: flex; align-items: center; gap: 10px; }
+        .zed-title-icon { width: 32px; height: 32px; background: #0f2a3c; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+        .zed-title-icon i { font-size: 18px; color: #c9a84c; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .card { background: var(--color-background-primary); border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); overflow: hidden; }
+        .card-header { 
+            padding: 12px 16px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            font-size: 1rem; 
+            font-weight: 500; 
+            letter-spacing: 0.06em; 
+            text-transform: uppercase; 
+        }
+        .card-header.demo { 
+            background: #e8f5ef; 
+            color: #0f6e56; 
+            border-bottom: 1px solid #9FE1CB; 
+        }
+        .card-header.live { 
+            background: #faeeda; 
+            color: #854F0B; 
+            border-bottom: 1px solid #FAC775; 
+        }
+        .card-body { 
+            padding: 16px; 
+        }
+        .card-body p {  
+            color: var(--zed-secondary); 
+            line-height: 1.65; 
+            margin: 0 0 14px; 
+        }
+        .card-body p:last-child { margin-bottom: 0; }
+        .label { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+        .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 14px 0; }
+        .step-list { list-style: none; margin: 0; padding: 0; }
+        .step-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 8px; }
+        .step-num { 
+            min-width: 25px; 
+            height: 25px; 
+            border-radius: 50%; 
+            background: var(--zed-light-bg); 
+            color: var(--zed-primary); 
+            font-size: 15px; 
+            font-weight: 600; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-top: 1px; 
+        }
+        .callout { 
+            background: var(--color-background-secondary); 
+            border-radius: var(--border-radius-md); 
+            padding: 10px 12px; 
+            font-size: 13px; 
+            color: var(--color-text-secondary); 
+            line-height: 1.5; 
+            margin-top: 4px; 
+            border-left: 3px solid var(--zed-primary); 
+        }
+        @media (max-width: 540px) { .two-col { grid-template-columns: 1fr; } }
+</style>
 
 <!-- ═══ MINDSET FOOTER ═══ -->
 <div class="mindset-footer">
