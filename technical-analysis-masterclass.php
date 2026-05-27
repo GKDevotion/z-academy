@@ -448,274 +448,273 @@ include_once ('elements/header.php');
         ::-webkit-scrollbar-track { background: var(--zed-backgound-color); }
         ::-webkit-scrollbar-thumb { background: var(--zed-primary); border-radius: 3px; }
   </style>
-    <!-- ─── HERO ───────────────────────────────────────────── -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge mt-4 d-none"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
-            <h1>
-                Technical Analysis <em><br>Masterclass</em>
-            </h1>
-            <p class="sub">
-                Complete guide to chart reading and price action.
-            </p>
-            <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#courses" class="btn btn-red">
-                    Start Learning Now <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-                <a href="#topics" class="btn btn-ghost">
-                    Explore Topics
-                </a>
-            </div>
-            <div class="hero-floats">
-                <div class="float-stat">
-                    <div class="ico"><i class="bi bi-people-fill"></i></div>
-                    <div>
-                        <div class="val">12</div>
-                        <div class="lbl">Modules</div>
-                    </div>
-                </div>
-                <div class="float-stat">
-                    <div class="ico"><i class="bi bi-play-btn-fill"></i></div>
-                    <div>
-                        <div class="val">80+</div>
-                        <div class="lbl">Concepts</div>
-                    </div>
-                </div>
-                <div class="float-stat">
-                    <div class="ico"><i class="bi bi-award-fill"></i></div>
-                    <div>
-                        <div class="val">∞</div>
-                        <div class="lbl">Practice</div>
-                    </div>
-                </div>
-                <div class="float-stat d-none">
-                    <div class="ico"><i class="bi bi-currency-dollar"></i></div>
-                    <div>
-                        <div class="val">100K</div>
-                        <div class="lbl">Units of Base Currency</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="hdiv"></div>
-    
+  <!-- ─── HERO ───────────────────────────────────────────── -->
+  <section class="hero">
+      <div class="container">
+          <div class="hero-badge mt-4 d-none"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
+          <h1>
+              Technical Analysis <em><br>Masterclass</em>
+          </h1>
+          <p class="sub">
+              Complete guide to chart reading and price action.
+          </p>
+          <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
+              <a href="#courses" class="btn btn-red">
+                  Start Learning Now <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+              <a href="#topics" class="btn btn-ghost">
+                  Explore Topics
+              </a>
+          </div>
+          <div class="hero-floats">
+              <div class="float-stat">
+                  <div class="ico"><i class="bi bi-people-fill"></i></div>
+                  <div>
+                      <div class="val">12</div>
+                      <div class="lbl">Modules</div>
+                  </div>
+              </div>
+              <div class="float-stat">
+                  <div class="ico"><i class="bi bi-play-btn-fill"></i></div>
+                  <div>
+                      <div class="val">80+</div>
+                      <div class="lbl">Concepts</div>
+                  </div>
+              </div>
+              <div class="float-stat">
+                  <div class="ico"><i class="bi bi-award-fill"></i></div>
+                  <div>
+                      <div class="val">∞</div>
+                      <div class="lbl">Practice</div>
+                  </div>
+              </div>
+              <div class="float-stat d-none">
+                  <div class="ico"><i class="bi bi-currency-dollar"></i></div>
+                  <div>
+                      <div class="val">100K</div>
+                      <div class="lbl">Units of Base Currency</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
   
-    <style>
-      :root{
-        --black:#0d0d0d;
-        --red:#C0392B;
-        --white:#ffffff;
-        --g1:#f5f5f5;
-        --g2:#ebebeb;
-        --g3:#d4d4d4;
-        --g4:#a3a3a3;
-        --g5:#737373;
-        --g6:#404040;
-        --text:#1a1a1a;
-      } 
-    
-      /* PROGRESS */
-      .progress-bar{height:3px;background:var(--g2);}
-      .progress-fill{
-        height:100%;
-        background:var(--zed-primary);
-        transition:width 0.4s ease;
-      }
+  <div class="hdiv"></div>
+  
+  <style>
+    :root{
+      --black:#0d0d0d;
+      --red:#C0392B;
+      --white:#ffffff;
+      --g1:#f5f5f5;
+      --g2:#ebebeb;
+      --g3:#d4d4d4;
+      --g4:#a3a3a3;
+      --g5:#737373;
+      --g6:#404040;
+      --text:#1a1a1a;
+    } 
+  
+    /* PROGRESS */
+    .progress-bar{height:3px;background:var(--g2);}
+    .progress-fill{
+      height:100%;
+      background:var(--zed-primary);
+      transition:width 0.4s ease;
+    }
 
-      /* NAV */
-      .nav{
-        display:flex;
-        background:var(--white);
-        border-bottom:1px solid var(--g2);
-        overflow-x:auto;
-        justify-content: center;
-        gap: 0px;
-      }
-      .nav-btn{
-        font-family: 'Poppins', serif;
-        font-size:1rem;
-        letter-spacing:1px;
-        text-transform:uppercase;
-        background:none;
-        border:none;
-        color:var(--g4);
-        padding:0.8rem 1.1rem;
-        cursor:pointer;
-        border-bottom:2px solid transparent;
-        white-space:nowrap;
-        transition:all 0.2s;
-      }
-      .nav-btn:hover{color:var(--text);}
-      .nav-btn.active{
-        color:var(--black);
-        border-bottom-color:var(--zed-primary);
-      }
+    /* NAV */
+    .nav{
+      display:flex;
+      background:var(--white);
+      border-bottom:1px solid var(--g2);
+      overflow-x:auto;
+      justify-content: center;
+      gap: 0px;
+    }
+    .nav-btn{
+      font-family: 'Poppins', serif;
+      font-size:1rem;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      background:none;
+      border:none;
+      color:var(--g4);
+      padding:0.8rem 1.1rem;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      white-space:nowrap;
+      transition:all 0.2s;
+    }
+    .nav-btn:hover{color:var(--text);}
+    .nav-btn.active{
+      color:var(--black);
+      border-bottom-color:var(--zed-primary);
+    }
 
-      /* MODULE */
-      .module{display:none;animation:fadeIn 0.25s ease;}
-      .module.active{display:block;}
-      @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    /* MODULE */
+    .module{display:none;animation:fadeIn 0.25s ease;}
+    .module.active{display:block;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-      .mod-header{background:var(--g1);border-bottom:1px solid var(--g2);padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1rem;}
-      .mod-num{
-        font-family: 'Poppins', serif;
-        font-size:3.5rem;
-        color:var(--zed-secondary);
-        line-height:1;
-        min-width:58px;
-      }
-      .mod-badge{
-        font-family: 'Poppins', serif;
-        font-size:1rem;
-        color:var(--zed-secondary);
-        letter-spacing:2px;
-        text-transform:uppercase;
-        margin-bottom:0.3rem;
-      }
-      .mod-title{
-        font-family: 'Poppins', serif;
-        font-size:1.8rem;
-        color:var(--black);
-        letter-spacing:1px;
-      }
-      .mod-desc{ 
-        color:var(--zed-secondary);
-        font-style:italic;
-        margin-top:0.2rem;
-      }
+    .mod-header{background:var(--g1);border-bottom:1px solid var(--g2);padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1rem;}
+    .mod-num{
+      font-family: 'Poppins', serif;
+      font-size:3.5rem;
+      color:var(--zed-secondary);
+      line-height:1;
+      min-width:58px;
+    }
+    .mod-badge{
+      font-family: 'Poppins', serif;
+      font-size:1rem;
+      color:var(--zed-secondary);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:0.3rem;
+    }
+    .mod-title{
+      font-family: 'Poppins', serif;
+      font-size:1.8rem;
+      color:var(--black);
+      letter-spacing:1px;
+    }
+    .mod-desc{ 
+      color:var(--zed-secondary);
+      font-style:italic;
+      margin-top:0.2rem;
+    }
 
-      .mod-body{padding:1.5rem 2rem;background:var(--white);}
-      .section{margin-bottom:2rem;}
-      .section-title{
-        font-family: 'Poppins', serif;
-        font-size:1.25rem;
-        color:var(--black);
-        letter-spacing:2px;
-        text-transform:uppercase;
-        border-left:3px solid var(--zed-primary);
-        padding-left:0.7rem;
-        margin-bottom:1rem;
-      }
+    .mod-body{padding:1.5rem 2rem;background:var(--white);}
+    .section{margin-bottom:2rem;}
+    .section-title{
+      font-family: 'Poppins', serif;
+      font-size:1.25rem;
+      color:var(--black);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      border-left:3px solid var(--zed-primary);
+      padding-left:0.7rem;
+      margin-bottom:1rem;
+    }
 
-      /* CARDS */
-      .concepts{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:0.75rem;}
-      .concept{background:var(--g1);border:1px solid var(--g2);border-left:3px solid var(--g6);padding:1rem;border-radius:2px;}
-      .concept h4{
-        font-family: 'Poppins', serif;
-        font-size:1rem;
-        color:var(--g6);
-        text-transform:uppercase;
-        letter-spacing:1px;
-        margin-bottom:0.4rem;
-      }
-      .concept p{ 
-        color:var(--zed-secondary);
-        line-height:1.55;
-      }
+    /* CARDS */
+    .concepts{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:0.75rem;}
+    .concept{background:var(--g1);border:1px solid var(--g2);border-left:3px solid var(--g6);padding:1rem;border-radius:2px;}
+    .concept h4{
+      font-family: 'Poppins', serif;
+      font-size:1rem;
+      color:var(--g6);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:0.4rem;
+    }
+    .concept p{ 
+      color:var(--zed-secondary);
+      line-height:1.55;
+    }
 
-      /* LIST */
-      .rules{list-style:none;display:flex;flex-direction:column;gap:0.45rem;}
-      .rules li{
-        display:flex;
-        gap:0.75rem;
-        align-items:flex-start; 
-        color:var(--zed-secondary);
-        line-height:1.5;
-        padding:0.6rem 0.85rem;
-        background:var(--g1);
-        border-left:2px solid var(--g3);
-      }
-      .rules li::before{content:attr(data-n);font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--black);min-width:18px;}
+    /* LIST */
+    .rules{list-style:none;display:flex;flex-direction:column;gap:0.45rem;}
+    .rules li{
+      display:flex;
+      gap:0.75rem;
+      align-items:flex-start; 
+      color:var(--zed-secondary);
+      line-height:1.5;
+      padding:0.6rem 0.85rem;
+      background:var(--g1);
+      border-left:2px solid var(--g3);
+    }
+    .rules li::before{content:attr(data-n);font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--black);min-width:18px;}
 
-      /* INDICATOR CARD */
-      .ind-card{background:var(--g1);border:1px solid var(--g2);padding:1rem 1.25rem;border-radius:2px;}
-      .ind-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--black);letter-spacing:1px;margin-bottom:0.5rem;}
-      .ind-detail{font-size:0.93rem;color:#444;line-height:1.6;}
-      .tag{display:inline-block;font-family: 'Poppins', serif;font-size:10px;background:var(--g2);color:var(--g6);padding:2px 8px;border-radius:1px;margin:2px 2px 0 0;letter-spacing:1px;border:1px solid var(--g3);}
+    /* INDICATOR CARD */
+    .ind-card{background:var(--g1);border:1px solid var(--g2);padding:1rem 1.25rem;border-radius:2px;}
+    .ind-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--black);letter-spacing:1px;margin-bottom:0.5rem;}
+    .ind-detail{font-size:0.93rem;color:#444;line-height:1.6;}
+    .tag{display:inline-block;font-family: 'Poppins', serif;font-size:10px;background:var(--g2);color:var(--g6);padding:2px 8px;border-radius:1px;margin:2px 2px 0 0;letter-spacing:1px;border:1px solid var(--g3);}
 
-      /* PATTERN */
-      .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;}
-      .pattern{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;text-align:center;}
-      .pattern-name{
-        font-family: 'Poppins', serif;
-        color:var(--g6);
-        text-transform:uppercase;
-        letter-spacing:1px;
-        margin-bottom:0.5rem;
-      }
-      .pattern-sig{ 
-        color:var(--g5);
-        margin-top:0.4rem;
-      }
+    /* PATTERN */
+    .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;}
+    .pattern{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;text-align:center;}
+    .pattern-name{
+      font-family: 'Poppins', serif;
+      color:var(--g6);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:0.5rem;
+    }
+    .pattern-sig{ 
+      color:var(--g5);
+      margin-top:0.4rem;
+    }
 
-      /* R:R */
-      .rr-visual{background:var(--g1);border:1px solid var(--g2);padding:1.5rem;border-radius:2px;margin-bottom:1rem;}
-      .rr-label{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:1px;}
-      .rr-bar{position:relative;height:14px;border-radius:2px;margin:0.4rem 0;}
-      .loss-bar{background:var(--g3);width:33%;}
-      .gain-bar{background:var(--black);width:100%;}
+    /* R:R */
+    .rr-visual{background:var(--g1);border:1px solid var(--g2);padding:1.5rem;border-radius:2px;margin-bottom:1rem;}
+    .rr-label{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:1px;}
+    .rr-bar{position:relative;height:14px;border-radius:2px;margin:0.4rem 0;}
+    .loss-bar{background:var(--g3);width:33%;}
+    .gain-bar{background:var(--black);width:100%;}
 
-      /* CHECKLIST */
-      .checklist{display:flex;flex-direction:column;gap:0.45rem;}
-      .check-item{display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 1rem;background:var(--g1);border:1px solid var(--g2);border-radius:2px;cursor:pointer;transition:border-color 0.2s;}
-      .check-item:hover{border-color:var(--g4);}
-      .check-item.checked{
-        border-left:3px solid var(--zed-primary);
-        background:var(--g2);
-      }
-      .check-box{width:16px;height:16px;border:1.5px solid var(--g3);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all 0.2s;}
-      .check-item.checked .check-box{
-        background:var(--zed-primary);
-        border-color:var(--zed-primary);
-      }
-      .check-mark{font-size:10px;color:white;display:none;}
-      .check-item.checked .check-mark{display:block;}
-      .check-text{
-        font-size:0.95rem;
-        color:#333;
-        line-height:1.5;
-      }
-      .check-cat{font-family: 'Poppins', serif;font-size:10px;color:var(--g5);text-transform:uppercase;letter-spacing:1px;margin-top:0.2rem;}
+    /* CHECKLIST */
+    .checklist{display:flex;flex-direction:column;gap:0.45rem;}
+    .check-item{display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 1rem;background:var(--g1);border:1px solid var(--g2);border-radius:2px;cursor:pointer;transition:border-color 0.2s;}
+    .check-item:hover{border-color:var(--g4);}
+    .check-item.checked{
+      border-left:3px solid var(--zed-primary);
+      background:var(--g2);
+    }
+    .check-box{width:16px;height:16px;border:1.5px solid var(--g3);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all 0.2s;}
+    .check-item.checked .check-box{
+      background:var(--zed-primary);
+      border-color:var(--zed-primary);
+    }
+    .check-mark{font-size:10px;color:white;display:none;}
+    .check-item.checked .check-mark{display:block;}
+    .check-text{
+      font-size:0.95rem;
+      color:#333;
+      line-height:1.5;
+    }
+    .check-cat{font-family: 'Poppins', serif;font-size:10px;color:var(--g5);text-transform:uppercase;letter-spacing:1px;margin-top:0.2rem;}
 
-      /* FOOTER */
-      .footer{padding:1.25rem 2rem;border-top:1px solid var(--g2);display:flex;justify-content:space-between;align-items:center;background:var(--g1);}
-      .btn-nav{font-family: 'Poppins', serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.25rem;cursor:pointer;border-radius:2px;}
-      .btn-prev{background:none;border:1px solid var(--g3);color:var(--g5);}
-      .btn-prev:hover{border-color:var(--black);color:var(--black);}
-      .btn-next{
-        background:var(--zed-primary);
-        border:1px solid var(--zed-primary);
-        color:#fff;
-      }
-      .btn-next:hover{
-        background:var(--zed-primary);
-      }
-      .mod-indicator{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);}
+    /* FOOTER */
+    .footer{padding:1.25rem 2rem;border-top:1px solid var(--g2);display:flex;justify-content:space-between;align-items:center;background:var(--g1);}
+    .btn-nav{font-family: 'Poppins', serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.25rem;cursor:pointer;border-radius:2px;}
+    .btn-prev{background:none;border:1px solid var(--g3);color:var(--g5);}
+    .btn-prev:hover{border-color:var(--black);color:var(--black);}
+    .btn-next{
+      background:var(--zed-primary);
+      border:1px solid var(--zed-primary);
+      color:#fff;
+    }
+    .btn-next:hover{
+      background:var(--zed-primary);
+    }
+    .mod-indicator{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);}
 
-      .chart-bg{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;margin-bottom:1rem;}
-      .formula-box{background:var(--g1);border:1px solid var(--g2);border-left:4px solid var(--black);padding:1rem 1.25rem;border-radius:2px;font-family: 'Poppins', serif;font-size:13px;color:var(--text);}
+    .chart-bg{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;margin-bottom:1rem;}
+    .formula-box{background:var(--g1);border:1px solid var(--g2);border-left:4px solid var(--black);padding:1rem 1.25rem;border-radius:2px;font-family: 'Poppins', serif;font-size:13px;color:var(--text);}
 
-      table.rr-table{
-        width:100%;
-        border-collapse:collapse;
-        font-family: 'Poppins', serif; 
-      }
-      table.rr-table th{padding:8px;text-align:left;color:var(--black);border-bottom:1px solid var(--g3);}
-      table.rr-table th:not(:first-child){text-align:center;}
-      table.rr-table td{padding:8px;text-align:center;border-bottom:1px solid var(--g2);}
-      table.rr-table td:first-child{text-align:left;color:var(--g5);}
-      .neg{color:var(--g4);}
-      .pos{color:var(--black);font-weight:500;}
-      .strong{color:var(--black);font-weight:700;}
+    table.rr-table{
+      width:100%;
+      border-collapse:collapse;
+      font-family: 'Poppins', serif; 
+    }
+    table.rr-table th{padding:8px;text-align:left;color:var(--black);border-bottom:1px solid var(--g3);}
+    table.rr-table th:not(:first-child){text-align:center;}
+    table.rr-table td{padding:8px;text-align:center;border-bottom:1px solid var(--g2);}
+    table.rr-table td:first-child{text-align:left;color:var(--g5);}
+    .neg{color:var(--g4);}
+    .pos{color:var(--black);font-weight:500;}
+    .strong{color:var(--black);font-weight:700;}
 
-      @media(max-width:600px){
-        .hero-title{font-size:2.4rem;}
-        .mod-num{font-size:2.5rem;min-width:44px;}
-        .concepts{grid-template-columns:1fr;}
-      }
-    </style>
+    @media(max-width:600px){
+      .hero-title{font-size:2.4rem;}
+      .mod-num{font-size:2.5rem;min-width:44px;}
+      .concepts{grid-template-columns:1fr;}
+    }
+  </style>
 
   <div class="container">
     <div class="progress-bar"><div class="progress-fill" id="prog" style="width:8.3%"></div></div>
@@ -1267,28 +1266,29 @@ include_once ('elements/header.php');
       <div class="mod-indicator" id="modIndicator">1 / 12</div>
       <button class="btn-nav btn-next" onclick="nextMod()">Next →</button>
     </div>
-</div>
-<script>
-  let cur=0;
-  function show(n){
-    document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
-    document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-    document.getElementById('m'+n).classList.add('active');
-    document.querySelectorAll('.nav-btn')[n].classList.add('active');
-    cur=n;
-    document.getElementById('modIndicator').textContent=(n+1)+' / 12';
-    document.getElementById('prog').style.width=((n+1)/12*100)+'%';
-  }
-  function nextMod(){if(cur<11)show(cur+1);}
-  function prevMod(){if(cur>0)show(cur-1);}
-  function toggleCheck(el){
-    el.classList.toggle('checked');
-    const c=document.querySelectorAll('.check-item.checked').length;
-    document.getElementById('checkCount').textContent=c+' / 12 checked';
-    document.getElementById('checkResult').style.display=c===12?'block':'none';
-  }
-</script>
+  </div>
 
+  <script>
+    let cur=0;
+    function show(n){
+      document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+      document.getElementById('m'+n).classList.add('active');
+      document.querySelectorAll('.nav-btn')[n].classList.add('active');
+      cur=n;
+      document.getElementById('modIndicator').textContent=(n+1)+' / 12';
+      document.getElementById('prog').style.width=((n+1)/12*100)+'%';
+    }
+    
+    function nextMod(){if(cur<11)show(cur+1);}
+    function prevMod(){if(cur>0)show(cur-1);}
+    function toggleCheck(el){
+      el.classList.toggle('checked');
+      const c=document.querySelectorAll('.check-item.checked').length;
+      document.getElementById('checkCount').textContent=c+' / 12 checked';
+      document.getElementById('checkResult').style.display=c===12?'block':'none';
+    }
+  </script>
 
 <?php
 include_once ('elements/footer.php');
