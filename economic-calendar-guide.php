@@ -551,7 +551,11 @@ html{scroll-behavior:smooth}
 
 /* FAQ */
 .faq-sec{background:var(--W);border-top:2px solid var(--G100);padding:4rem 0}
-.faq-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.faq-wrap{
+    max-width:1100px;
+    margin:0 auto;
+    /* padding:0 2rem; */
+}
 .faq-hd{text-align:center;margin-bottom:2.5rem}
 .faq-hd h2{font-size:1.9rem;font-weight:800;color:var(--G800);letter-spacing:-.015em;margin-bottom:.5rem}
 .faq-hd h2 span{color:var(--zed-primary)}
@@ -586,6 +590,38 @@ html{scroll-behavior:smooth}
 .fl a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
 .fl a:hover{color:rgba(255,255,255,.5)}
 
+
+/* IMPACT CARDS */
+.impact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.2rem}
+.ic{background:var(--W);border:1px solid var(--G150);border-radius:10px;padding:1rem;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.06);transition:all .22s;position:relative;overflow:hidden}
+.ic::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.ic.high::before{background:var(--R)}
+.ic.medium::before{background:var(--AM)}
+.ic.low::before{background:var(--GR)}
+.ic:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+.ic-icon{font-size:1.6rem;margin-bottom:.4rem}
+.ic-label{
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    margin-bottom:.3rem;
+}
+.ic.high .ic-label{
+    color:var(--R);
+}
+.ic.medium .ic-label
+{color:var(--AM);
+}
+.ic.low .ic-label{
+    color:var(--GR);
+}
+.ic-desc{ 
+    color:var(--zed-secondary);
+    line-height:1.55;
+}
+.ic-pip{font-size:.72rem;font-weight:700;margin-top:.4rem}
+.ic.high .ic-pip{color:var(--R)}.ic.medium .ic-pip{color:var(--AM)}.ic.low .ic-pip{color:var(--GR)}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static}.hero-wrap{grid-template-columns:1fr}.hero-panel{display:none}}
 @media(max-width:640px){.hero-strip{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}.market-strip,.two,.sgrid{grid-template-columns:1fr 1fr}.nt-head,.nt-row{grid-template-columns:70px 1fr 80px}}
 </style>
@@ -1251,7 +1287,7 @@ html{scroll-behavior:smooth}
      <div class="faq-wrap">
 
             <div class="zed-sec-head mt-5 mb-5">  
-                    <h2 class="zed-sec-title">Risk Management Frequently Asked Questions— FAQ</h2> 
+                    <h2 class="zed-sec-title">Risk Management — FAQ</h2> 
                     <div class="underline"></div>
             </div>
  
@@ -1284,18 +1320,18 @@ html{scroll-behavior:smooth}
             </div>
 
             <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How does CPI data affect currency prices?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">CPI (Consumer Price Index) measures inflation. When CPI comes in higher than expected, it signals that the central bank may need to keep rates high or raise them further — which typically strengthens the currency. When CPI is lower than expected, it signals rate cuts may come sooner — weakening the currency and often lifting Gold. The gap between actual CPI and the forecast is what drives the magnitude of the market move.</div></div>
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How does CPI data affect currency prices?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">CPI (Consumer Price Index) measures inflation. When CPI comes in higher than expected, it signals that the central bank may need to keep rates high or raise them further — which typically strengthens the currency. When CPI is lower than expected, it signals rate cuts may come sooner — weakening the currency and often lifting Gold. The gap between actual CPI and the forecast is what drives the magnitude of the market move.</div></div>
             </div>
 
             <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Should I trade during news releases?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">For intermediate traders — no. During high-impact news releases, spreads widen to 5–20x their normal size, slippage is extreme, and stop losses can execute 20–50 pips from their intended level. The professional approach is to close or protect positions 30 minutes before a red event, avoid all new entries during the spike, and wait 15–30 minutes after for a confirmed directional setup before considering an entry.</div></div>
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Should I trade during news releases?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">For intermediate traders — no. During high-impact news releases, spreads widen to 5–20x their normal size, slippage is extreme, and stop losses can execute 20–50 pips from their intended level. The professional approach is to close or protect positions 30 minutes before a red event, avoid all new entries during the spike, and wait 15–30 minutes after for a confirmed directional setup before considering an entry.</div></div>
             </div>
 
             <div class="fi">
-            <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the best free economic calendar for Forex traders?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">The three most widely used free economic calendars are: Investing.com (most comprehensive, includes all global events), Forex Factory (trader-focused, colour-coded impact levels, community forum for context), and the official Federal Reserve website for all Fed-specific events. All three allow timezone customisation. Check one of these every morning before your trading session begins — it takes less than 3 minutes.</div></div>
+                <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the best free economic calendar for Forex traders?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                <div class="fa"><div class="fa-inner">The three most widely used free economic calendars are: Investing.com (most comprehensive, includes all global events), Forex Factory (trader-focused, colour-coded impact levels, community forum for context), and the official Federal Reserve website for all Fed-specific events. All three allow timezone customisation. Check one of these every morning before your trading session begins — it takes less than 3 minutes.</div></div>
             </div>
 
             <div class="fi">
@@ -1312,36 +1348,47 @@ html{scroll-behavior:smooth}
     <style>
         
         /* ── FAQ ── */
-        .faq-wrap{background:#fff;margin-top:1px}
+        .faq-wrap{
+            background:#fff;
+            margin-top:1px;
+        }
         .faq-top{
-        padding:1.4rem 2rem .9rem;
-        display:flex;
-        align-items:center;
-        gap:10px;
-        border-bottom:1px solid var(--G100);
+            padding:1.4rem 2rem .9rem;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            border-bottom:1px solid var(--G100);
         }
         .faq-top h2{
-        font-size:1rem;
-        font-weight:500;
-        color:var(--BK);
+            font-size:1rem;
+            font-weight:500;
+            color:var(--BK);
         }
         .faq-top i{
-        font-size:1.5rem;
-        color:var(--zed-primary);
+            font-size:1.5rem;
+            color:var(--zed-primary);
         }
         .faq-note{
-        padding:.6rem 2rem .8rem;
-        font-size:1rem;
-        color:var(--G400);
-        line-height:1.6;
-        border-bottom:1px solid var(--G100)
+            padding:.6rem 2rem .8rem;
+            font-size:1rem;
+            color:var(--G400);
+            line-height:1.6;
+            border-bottom:1px solid var(--G100)
         }
         .fi{
-        border-bottom:1px solid var(--G100);
-        display: flex;
-        flex-direction: column;
+            border-bottom:1px solid var(--G100);
+            display: flex;
+            flex-direction: column;
         }
-        .fq{display:flex;align-items:flex-start;justify-content:space-between;padding:.9rem 2rem;cursor:pointer;gap:12px;transition:background .15s}
+        .fq{
+            display:flex;
+            align-items:flex-start;
+            justify-content:space-between;
+            padding:.9rem 2rem;
+            cursor:pointer;
+            gap:12px;
+            transition:background .15s;
+        }
         /* .fq:hover{background:var(--G50)} */
         .fq-txt{
             font-size:1rem;
@@ -1351,103 +1398,108 @@ html{scroll-behavior:smooth}
             line-height:1.5;
         }
         .fq-ic{
-        font-size:1.5rem;
-        color:var(--zed-secondary);
-        transition:transform .25s,color .2s;
-        flex-shrink:0;
-        margin-top:2px;
+            font-size:1.5rem;
+            color:var(--zed-secondary);
+            transition:transform .25s,color .2s;
+            flex-shrink:0;
+            margin-top:2px;
         } 
-        .fa{max-height:0;overflow:hidden;transition:max-height .35s ease}
-        .fa.open{max-height:400px}
+        .fa{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height .35s ease;
+        }
+
+        .fa.open{
+            max-height:400px;
+        }
         .fa-inner{
-        margin:0 2rem .9rem;
-        padding:.8rem 1rem;
-        font-family: 'Poppins', serif;
-        background:var(--G50);
-        border-left:3px solid var(--zed-primary);
-        border-radius:0 4px 4px 0; 
-        color:var(--zed-secondary);
-        font-weight: 400;
-        line-height:1.8;
+            margin:0 2rem .9rem;
+            padding:.8rem 1rem;
+            font-family: 'Poppins', serif;
+            background:var(--G50);
+            border-left:3px solid var(--zed-primary);
+            border-radius:0 4px 4px 0; 
+            color:var(--zed-secondary);
+            font-weight: 400;
+            line-height:1.8;
         }
         .fa-inner b{
-        color:var(--BK);
-        font-weight:500;
-        
+            color:var(--BK);
+            font-weight:500;
         }
 
         .underline {
-        width: 75px;
-        height: 4px;
-        background-color: var(--zed-primary);
-        margin: 10px 0  0;
-        padding: 4px;
-    }
+            width: 75px;
+            height: 4px;
+            background-color: var(--zed-primary);
+            margin: 10px 0  0;
+            padding: 4px;
+        }
 
-    .zed-sec-title {
-        font-family: 'Poppins', serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 25px;
-        color: black;
-    }
-
+        .zed-sec-title {
+            font-family: 'Poppins', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: black;
+        }
 
     </style>
 
-<script>
-    const done=new Set(),T=9;
-    function tog(id){
-    document.querySelectorAll('.mod').forEach(m=>{
-        const mid=+m.dataset.id,b=m.querySelector('.mbody');
-        if(mid===id){const o=b.classList.contains('open');b.classList.toggle('open',!o);m.classList.toggle('open',!o);}
-        else{b.classList.remove('open');m.classList.remove('open');}
-    });
-    updSb(id);
-    }
-    function jumpTo(id){
-    const m=document.querySelector(`.mod[data-id="${id}"]`);
-    if(m){if(!m.querySelector('.mbody').classList.contains('open'))tog(id);setTimeout(()=>m.scrollIntoView({behavior:'smooth',block:'start'}),55);}
-    }
-    function markDone(id){
-    done.add(id);
-    const m=document.querySelector(`.mod[data-id="${id}"]`);
-    if(m){m.classList.add('done');m.classList.remove('active','open');m.querySelector('.mbody').classList.remove('open');const b=m.querySelector('.badge');b.className='badge b-d';b.textContent='✓ Done';}
-    const si=document.querySelector(`.sb-item[data-for="${id}"]`);
-    if(si){si.classList.add('done');if(!si.querySelector('.sb-tick')){const t=document.createElement('i');t.className='ti ti-check sb-tick';si.appendChild(t);}}
-    updProg();
-    const nx=id+1;
-    if(nx<=T){const nm=document.querySelector(`.mod[data-id="${nx}"]`);if(nm){nm.classList.add('active');tog(nx);}}
-    if(id===T)setTimeout(()=>sendPrompt('I completed the Zed Capital Economic Calendar Guide. Please summarise key lessons and tell me what course to take next.'),400);
-    }
-    function updProg(){
-    const pct=Math.round((done.size/T)*100);
-    document.getElementById('pbar').style.width=pct+'%';
-    document.getElementById('ppct').textContent=pct+'%';
-    document.getElementById('pcnt').textContent=done.size+' / '+T;
-    document.getElementById('k3').textContent=done.size;
-    document.getElementById('sbdone').textContent=done.size+' / '+T;
-    }
-    function updSb(id){
-    document.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));
-    const si=document.querySelector(`.sb-item[data-for="${id}"]`);
-    if(si)si.classList.add('active');
-    }
-    function chk(el){
-    el.classList.toggle('checked');
-    el.querySelector('.ci-box').textContent=el.classList.contains('checked')?'✓':'';
-    const all=document.querySelectorAll('#clwrap .ci').length;
-    const n=document.querySelectorAll('#clwrap .ci.checked').length;
-    const st=document.getElementById('clstat');
-    if(n===all){st.textContent='✓ All 9 rules confirmed — you are ready to trade around news events safely.';st.style.color='var(--GR)';st.style.fontWeight='700';}
-    else{st.textContent=n+' of '+all+' completed';st.style.color='';st.style.fontWeight='600';}
-    }
-    function faqTog(qel){
-        const fi=qel.closest('.fi'), fa=fi.querySelector('.fa'), isOpen=fa.classList.contains('open');
-        document.querySelectorAll('.fi').forEach(f=>{ f.classList.remove('open'); f.querySelector('.fa').classList.remove('open'); });
-        if(!isOpen){ fi.classList.add('open'); fa.classList.add('open'); }
-    }
-</script>
+    <script>
+        const done=new Set(),T=9;
+        function tog(id){
+        document.querySelectorAll('.mod').forEach(m=>{
+            const mid=+m.dataset.id,b=m.querySelector('.mbody');
+            if(mid===id){const o=b.classList.contains('open');b.classList.toggle('open',!o);m.classList.toggle('open',!o);}
+            else{b.classList.remove('open');m.classList.remove('open');}
+        });
+        updSb(id);
+        }
+        function jumpTo(id){
+        const m=document.querySelector(`.mod[data-id="${id}"]`);
+        if(m){if(!m.querySelector('.mbody').classList.contains('open'))tog(id);setTimeout(()=>m.scrollIntoView({behavior:'smooth',block:'start'}),55);}
+        }
+        function markDone(id){
+        done.add(id);
+        const m=document.querySelector(`.mod[data-id="${id}"]`);
+        if(m){m.classList.add('done');m.classList.remove('active','open');m.querySelector('.mbody').classList.remove('open');const b=m.querySelector('.badge');b.className='badge b-d';b.textContent='✓ Done';}
+        const si=document.querySelector(`.sb-item[data-for="${id}"]`);
+        if(si){si.classList.add('done');if(!si.querySelector('.sb-tick')){const t=document.createElement('i');t.className='ti ti-check sb-tick';si.appendChild(t);}}
+        updProg();
+        const nx=id+1;
+        if(nx<=T){const nm=document.querySelector(`.mod[data-id="${nx}"]`);if(nm){nm.classList.add('active');tog(nx);}}
+        if(id===T)setTimeout(()=>sendPrompt('I completed the Zed Capital Economic Calendar Guide. Please summarise key lessons and tell me what course to take next.'),400);
+        }
+        function updProg(){
+        const pct=Math.round((done.size/T)*100);
+        document.getElementById('pbar').style.width=pct+'%';
+        document.getElementById('ppct').textContent=pct+'%';
+        document.getElementById('pcnt').textContent=done.size+' / '+T;
+        document.getElementById('k3').textContent=done.size;
+        document.getElementById('sbdone').textContent=done.size+' / '+T;
+        }
+        function updSb(id){
+        document.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));
+        const si=document.querySelector(`.sb-item[data-for="${id}"]`);
+        if(si)si.classList.add('active');
+        }
+        function chk(el){
+        el.classList.toggle('checked');
+        el.querySelector('.ci-box').textContent=el.classList.contains('checked')?'✓':'';
+        const all=document.querySelectorAll('#clwrap .ci').length;
+        const n=document.querySelectorAll('#clwrap .ci.checked').length;
+        const st=document.getElementById('clstat');
+        if(n===all){st.textContent='✓ All 9 rules confirmed — you are ready to trade around news events safely.';st.style.color='var(--GR)';st.style.fontWeight='700';}
+        else{st.textContent=n+' of '+all+' completed';st.style.color='';st.style.fontWeight='600';}
+        }
+        function faqTog(qel){
+            const fi=qel.closest('.fi'), fa=fi.querySelector('.fa'), isOpen=fa.classList.contains('open');
+            document.querySelectorAll('.fi').forEach(f=>{ f.classList.remove('open'); f.querySelector('.fa').classList.remove('open'); });
+            if(!isOpen){ fi.classList.add('open'); fa.classList.add('open'); }
+        }
+    </script>
 
 <?php
 include_once ('elements/footer.php');

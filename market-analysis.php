@@ -880,7 +880,11 @@ html{scroll-behavior:smooth}
 
 /* FAQ */
 .faq-sec{background:var(--W);border-top:2px solid var(--G100);padding:4rem 0}
-.faq-wrap{max-width:1100px;margin:0 auto;padding:0 2rem}
+.faq-wrap{
+    max-width:1100px;
+    margin:0 auto;
+    /* padding:0 2rem; */
+}
 .faq-hd{text-align:center;margin-bottom:2.5rem}
 .faq-hd h2{font-size:1.9rem;font-weight:800;color:var(--G800);letter-spacing:-.015em;margin-bottom:.5rem}
 .faq-hd h2 span{color:var(--zed-primary)}
@@ -1489,7 +1493,7 @@ html{scroll-behavior:smooth}
         <div class="faq-wrap">
 
             <div class="zed-sec-head mt-5 mb-5">  
-                    <h2 class="zed-sec-title">Risk Management Frequently Asked Questions— FAQ</h2> 
+                    <h2 class="zed-sec-title">Risk Management — FAQ</h2> 
                     <div class="underline"></div>
             </div>
  

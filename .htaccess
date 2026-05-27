@@ -50,4 +50,4 @@ RewriteRule ^trading-psychology-course trading-psychology-course.php?slug=$1 [L,
 RewriteRule ^advanced-trading-strategies advanced-trading-strategies.php?slug=$1 [L,QSA]
 RewriteRule ^trading-glossary trading-glossary.php?slug=$1 [L,QSA]
 RewriteRule ^market-analysis market-analysis.php?slug=$1 [L,QSA]
-RewriteRule ^economic-calendar economic-calendar.php?slug=$1 [L,QSA]
+RewriteRule ^economic-calendar-guide economic-calendar-guide.php?slug=$1 [L,QSA]
