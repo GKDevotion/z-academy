@@ -181,7 +181,7 @@ include_once ('elements/header.php');
   --W:#FFFFFF;--G50:#F7F8FA;--G100:#ECEEF2;--G150:#E2E5EA;
   --G200:#D0D4DC;--G300:#B0B8C4;--G400:#8892A0;--G500:#636E7D;
   --G600:#465060;--G700:#2D3748;--G800:#1A2333;
-  --GR:#00B870;--AM:#E8960A;--BL:#3B7DD8;
+  --GR: green;--AM:#E8960A;--BL:#3B7DD8;
   --navy:#1a2a4a;--navy2:#16213e;
 }
 html{scroll-behavior:smooth} 
@@ -610,7 +610,15 @@ html{scroll-behavior:smooth}
 .ic.medium::before{background:var(--AM)}
 .ic.low::before{background:var(--GR)}
 .ic:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
-.ic-icon{font-size:1.6rem;margin-bottom:.4rem}
+.ic-icon{
+    font-size:1.6rem;
+    margin-bottom:.4rem;
+    padding: 10px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
 .ic-label{
     font-size:.72rem;
     font-weight:700;
@@ -631,7 +639,11 @@ html{scroll-behavior:smooth}
     color:var(--zed-secondary);
     line-height:1.55;
 }
-.ic-pip{font-size:.72rem;font-weight:700;margin-top:.4rem}
+.ic-pip{
+    font-size:.82rem;
+    font-weight:700;
+    margin-top:.4rem;
+}
 .ic.high .ic-pip{color:var(--R)}.ic.medium .ic-pip{color:var(--AM)}.ic.low .ic-pip{color:var(--GR)}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static}.hero-wrap{grid-template-columns:1fr}.hero-panel{display:none}}
 @media(max-width:640px){.hero-strip{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}.market-strip,.two,.sgrid{grid-template-columns:1fr 1fr}.nt-head,.nt-row{grid-template-columns:70px 1fr 80px}}
@@ -756,19 +768,19 @@ html{scroll-behavior:smooth}
 
                     <div class="impact-cards">
                     <div class="ic high">
-                        <div class="ic-icon">🔴</div>
+                        <div class="ic-icon" style="background-color: var(--zed-primary);"></div>
                         <div class="ic-label">High Impact</div>
                         <div class="ic-desc">NFP, CPI, Interest Rate Decisions, FOMC. Immediate, large, often unpredictable moves.</div>
                         <div class="ic-pip">50–200+ pips possible</div>
                     </div>
                     <div class="ic medium">
-                        <div class="ic-icon">🟡</div>
+                        <div class="ic-icon" style="background-color: var(--AM);"></div>
                         <div class="ic-label">Medium Impact</div>
                         <div class="ic-desc">PMI, Retail Sales, Trade Balance, Jobless Claims. Moderate moves, trend-confirming.</div>
                         <div class="ic-pip">20–60 pips typical</div>
                     </div>
                     <div class="ic low">
-                        <div class="ic-icon">🟢</div>
+                        <div class="ic-icon" style="background-color: var(--GR);"></div>
                         <div class="ic-label">Low Impact</div>
                         <div class="ic-desc">Housing Data, Minor Speeches, Building Permits. Usually minimal direct market impact.</div>
                         <div class="ic-pip">5–20 pips typical</div>

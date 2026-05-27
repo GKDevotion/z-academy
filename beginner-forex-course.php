@@ -890,7 +890,7 @@ include_once ('elements/header.php');
         .hero h1 {
             font-size: clamp(3rem, 7vw, 5.5rem);
             font-weight: 800;
-            line-height: 1.0;
+            line-height: 1.2;
             margin-top: 50px;
             letter-spacing: -.04em;
             color: var(--zed-dark-text);
@@ -1298,15 +1298,16 @@ include_once ('elements/header.php');
         ::-webkit-scrollbar-track { background: var(--zed-backgound-color); }
         ::-webkit-scrollbar-thumb { background: var(--zed-primary); border-radius: 3px; }
     </style>
+
     <!-- ─── HERO ───────────────────────────────────────────── -->
     <section class="hero">
         <div class="container">
             <div class="hero-badge mt-4 d-none"><i class="bi bi-mortarboard-fill"></i> Professional Trading Education</div>
             <h1>
-                Forex Trading <em>Academy</em> <br>Zero to Hero
+                 <em>Complete </em><br>Forex Trading Course
             </h1>
             <p class="sub">
-                Theory · Practical · Math · Infographics · Psychology · AI Trading — Everything you need to trade like a professional.
+                Learn Forex Trading, Technical Analysis, Risk Management, Price Action & Market Structure Like a Professional Trader
             </p>
             <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
                 <a href="#courses" class="btn btn-red">
@@ -1345,6 +1346,22 @@ include_once ('elements/header.php');
                         <div class="lbl"> Base Currency</div>
                     </div>
                 </div>
+
+                <div class="float-stat">
+                    <div class="ico"><i class="bi bi-currency-dollar"></i></div>
+                    <div>
+                        <div class="val">~5%</div>
+                        <div class="lbl">Retail % of Market</div>
+                    </div>
+                </div>
+
+                <div class="float-stat">
+                    <div class="ico"><i class="bi bi-currency-dollar"></i></div>
+                    <div>
+                        <div class="val">180+</div>
+                        <div class="lbl">Countries</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1371,10 +1388,10 @@ include_once ('elements/header.php');
         </style>
 
         <!-- What is Forex -->
-        <div class="row g-4 mb-5">
+        <div class="row g-4">
             <div class="col-lg-7 reveal">
                 
-            <div class="zed-eyebrow">What is Forex? — The Complete Picture</div>
+            <div class="zed-eyebrow">What is Forex ? </div>
                 <h3 class="font-serif" style="font-size:1.8rem; font-weight:700; color:var(--ink); margin-bottom:14px;">
                     Understanding the Foreign Exchange Market</h3>
                 <p style="color: var(--zed-secondary) !important; line-height:1.82; margin-bottom:14px;">
@@ -1391,40 +1408,82 @@ include_once ('elements/header.php');
                 </p>
             </div>
 
-            <div class="col-lg-5 reveal">
-                 <!-- Brief History Timeline -->
-                <div class="zed-eyebrow mb-2">Brief History of Forex</div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1944</div>
-                        <div class="timeline-text"><strong>Bretton Woods:</strong> Countries pegged currencies to USD, which was
-                        backed by gold (BW/GS).</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1971</div>
-                        <div class="timeline-text"><strong>Nixon Shock:</strong> USA abandoned gold standard. Currencies began
-                        floating freely against each other — Forex as we know it was born.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1973</div>
-                        <div class="timeline-text"><strong>Free Float Era Major:</strong> Pairs began consistently fluctuating based
-                        on supply/demand.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">1990s</div>
-                        <div class="timeline-text"><strong>Electronic Trading:</strong> Internet enabled retail traders to access
-                        Forex markets for the first time.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2000s–Now</div>
-                        <div class="timeline-text"><strong>MT4/MT5</strong> platforms, ECN brokers, algorithmic trading, and mobile
-                        apps democratised Forex globally.</div>
-                    </div>
-                </div>
+            <div class="col-lg-5 reveal mt-0">
+                 <img src="assets/img/forex-market-fundamental-removebg-preview.png" alt="" style="border-radius: 15px;">
             </div>
 
         </div>
     </section>
 
+     <section class="zed-section" style="background:var(--zed-light-bg)">
+
+        <div class="container">
+            <div class="zed-sec-head reveal d-none"> 
+                <h2 class="zed-sec-title">Forex Market Fundamentals — Complete Guide</h2> 
+                <div class="underline"></div>
+            </div>
+
+
+             <div class="row g-4 mb-5">
+
+                <div class="col-lg-6 reveal">
+                        
+                    <div class="zed-eyebrow">Brief History of Forex</div> 
+                         <div class="timeline-item">
+                            <!-- <div class="timeline-year"></div> -->
+                            <div class="timeline-text"><span class="timeline-year">1944 — Bretton Woods :</span> Countries pegged currencies to USD, which was backed by gold ($35/oz).</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">1971</div> -->
+                            <div class="timeline-text"><span class="timeline-year">1971 — Nixon Shock :</span> USA abandoned gold standard. Currencies began floating freely against each other — forex as we know it was born.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">1973</div> -->
+                            <div class="timeline-text"><span class="timeline-year">1973 — Free Float Era :</span> Major currencies started fluctuating based on supply/demand.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">1990s</div> -->
+                            <div class="timeline-text"><span class="timeline-year">1990s — Electronic Trading :</span> Internet enabled retail traders to access forex markets for the first time.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">2000s–Now</div> -->
+                            <div class="timeline-text"><span class="timeline-year">2000s–Now : </span> MT4/MT5 platforms, ECN brokers, algorithmic trading, and mobile apps democratised forex globally.</div>
+                        </div>
+                </div>
+
+                <div class="col-lg-6 reveal">
+                    <!-- Brief History Timeline -->
+                    <div class="zed-eyebrow mb-2">Why Does Forex Exist?</div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year"></div> -->
+                            <div class="timeline-text"><span class="timeline-year">1. International Trade : </span> A UAE company importing from Japan must convert AED → JPY to pay the supplier. This creates demand for JPY.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">1971</div> -->
+                            <div class="timeline-text"><span class="timeline-year">2. Tourism & Travel: </span> Tourists exchange currency at airports and banks worldwide — billions of small transactions daily.
+                        </div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">1973</div> -->
+                            <div class="timeline-text"><span class="timeline-year">3. Investment: </span> A US fund buying German bonds must buy EUR. A British investor in Japanese stocks needs JPY.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">1990s</div> -->
+                            <div class="timeline-text"><span class="timeline-year">4. Speculation :</span> Traders and hedge funds buy/sell currencies to profit from price movements — this accounts for the vast majority of forex volume.</div>
+                        </div>
+                        <div class="timeline-item">
+                            <!-- <div class="timeline-year">2000s–Now</div> -->
+                            <div class="timeline-text"><span class="timeline-year">5. Central Bank Policy : </span> buy/sell their own currency to control inflation, support exports, and manage reserves.</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </section>
+ 
     <style>
         .professional-pricing{
             background-color: var(--zed-backgound-color);
@@ -2069,6 +2128,22 @@ include_once ('elements/header.php');
     </section>
 
     <hr class="zed-divider" />
+
+    <section class="zed-section" style="background:var(--zed-background-color)">
+        <div class="container">
+            <div class="zed-sec-head reveal"> 
+                <h2 class="zed-sec-title">Demo Account vs Live Account — A Critical Difference</h2> 
+                <div class="underline"></div>
+            </div> 
+
+
+
+
+
+
+
+        </div>
+    </section>
 
     <!-- ═══ MINDSET FOOTER ═══ -->
     <div class="mindset-footer">
