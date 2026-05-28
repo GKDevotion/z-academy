@@ -593,7 +593,9 @@ include_once ('elements/header.php');
 .mod{background:#fff;border-left:3px solid transparent;transition:border-color .25s}
 .mod+.mod{border-top:1px solid var(--G100)}
 .mod.active{border-left-color:var(--zed-primary)}
-.mod.done{border-left-color:var(--G200)}
+.mod.done{
+  border-left-color:var(--zed-primary);
+}
 .mod-hd{display:flex;align-items:center;gap:12px;padding:.95rem 1.5rem;cursor:pointer;transition:background .15s;user-select:none}
 .mod-hd:hover{background:var(--G50)}
 .mn{
@@ -626,7 +628,7 @@ include_once ('elements/header.php');
 .mod.done .micon{
   background:var(--zed-primary);
   border-color:var(--zed-primary);
-  color:var(--zed-primary)
+  color:#fff;
 }
 .mmeta{flex:1;min-width:0}
 .mt{
