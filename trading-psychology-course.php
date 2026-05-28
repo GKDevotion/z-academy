@@ -604,7 +604,7 @@ include_once ('elements/header.php');
         .mt{
             font-size:1.5rem;
             font-weight:500;
-            color:var(--BK);
+            color:var(--zed-dark-text);
             line-height:1.3;
         }
         .ms{
@@ -680,7 +680,7 @@ include_once ('elements/header.php');
         .sbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.7rem .8rem;text-align:center}
         .sbox.hi{background:var(--RL);border-color:#FACDD3}
         .sbox.ok{background:#F0FDF4;border-color:#BBF7D0}
-        .sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--BK);line-height:1}
+        .sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--zed-dark-text);line-height:1}
         .sv.r{color:var(--zed-primary)}
         .sv.g{color:#16A34A}
         .sk{ 
@@ -693,8 +693,14 @@ include_once ('elements/header.php');
         /* ── TWO COL ── */
         .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
         .tbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.8rem 1rem}
-        .tbox.danger{background:var(--RL);border-color:#FACDD3}
-        .tbox.good{background:#F0FDF4;border-color:#BBF7D0}
+        .tbox.danger{
+            background:var(--RL);
+            border-color:var(--zed-primary);
+        }
+        .tbox.good{
+            background:#F0FDF4;
+            border-color:var(--green);
+        }
         .tbox-title{
             font-size:1rem;
             font-weight:600;
@@ -767,7 +773,7 @@ include_once ('elements/header.php');
         .step-title{
             font-size:1rem;
             font-weight:500;
-            color:var(--BK);
+            color:var(--zed-dark-text);
             margin-bottom:1px;
         }
         .step-desc{ 
@@ -812,7 +818,7 @@ include_once ('elements/header.php');
         .faq-top h2{
             font-size:15px;
             font-weight:500;
-            color:var(--BK);
+            color:var(--zed-dark-text);
         }
         .faq-top i{font-size:20px;color:var(--zed-primary)}
         .faq-note{
@@ -831,7 +837,7 @@ include_once ('elements/header.php');
         .fq-txt{
             font-size:1rem;
             font-weight:500;
-            color:var(--BK);
+            color:var(--zed-dark-text);
             flex:1;
             line-height:1.5;
         }
@@ -854,12 +860,12 @@ include_once ('elements/header.php');
             line-height:1.8;
         }
         .fa-inner b{
-            color:var(--BK);
+            color:var(--zed-dark-text);
             font-weight:500;
         }
 
         /* ── FOOTER ── */
-        .footer{background:var(--BK);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+        .footer{background:var(--zed-dark-text);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
         .brand{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:#fff}
         .brand span{color:var(--zed-primary)}
         .fbadge{font-size:10px;color:var(--G600);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(255,255,255,.08);border-radius:2px}

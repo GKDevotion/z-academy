@@ -548,7 +548,7 @@ include_once ('elements/header.php');
     }
     .nav-btn:hover{color:var(--text);}
     .nav-btn.active{
-      color:var(--black);
+      color:var(--zed-dark-text);
       border-bottom-color:var(--zed-primary);
     }
 
@@ -576,7 +576,7 @@ include_once ('elements/header.php');
     .mod-title{
       font-family: 'Poppins', serif;
       font-size:1.8rem;
-      color:var(--black);
+      color:var(--zed-dark-text);
       letter-spacing:1px;
     }
     .mod-desc{ 
@@ -590,7 +590,7 @@ include_once ('elements/header.php');
     .section-title{
       font-family: 'Poppins', serif;
       font-size:1.25rem;
-      color:var(--black);
+      color:var(--zed-dark-text);
       letter-spacing:2px;
       text-transform:uppercase;
       border-left:3px solid var(--zed-primary);
@@ -599,12 +599,22 @@ include_once ('elements/header.php');
     }
 
     /* CARDS */
-    .concepts{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:0.75rem;}
-    .concept{background:var(--g1);border:1px solid var(--g2);border-left:3px solid var(--g6);padding:1rem;border-radius:2px;}
+    .concepts{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(195px,1fr));
+      gap:0.75rem;
+    }
+    .concept{
+      background:var(--g1);
+      border:1px solid var(--g2);
+      border-left:3px solid var(--zed-primary);
+      padding:1rem;
+      border-radius:2px;
+    }
     .concept h4{
       font-family: 'Poppins', serif;
       font-size:1rem;
-      color:var(--g6);
+      color:var(--zed-dark-text);
       text-transform:uppercase;
       letter-spacing:1px;
       margin-bottom:0.4rem;
@@ -624,15 +634,15 @@ include_once ('elements/header.php');
       line-height:1.5;
       padding:0.6rem 0.85rem;
       background:var(--g1);
-      border-left:2px solid var(--g3);
+      border-left:2px solid var(--zed-primary);
     }
-    .rules li::before{content:attr(data-n);font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--black);min-width:18px;}
+    .rules li::before{content:attr(data-n);font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--zed-dark-text);min-width:18px;}
 
     /* INDICATOR CARD */
     .ind-card{background:var(--g1);border:1px solid var(--g2);padding:1rem 1.25rem;border-radius:2px;}
-    .ind-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--black);letter-spacing:1px;margin-bottom:0.5rem;}
+    .ind-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--zed-dark-text);letter-spacing:1px;margin-bottom:0.5rem;}
     .ind-detail{font-size:0.93rem;color:#444;line-height:1.6;}
-    .tag{display:inline-block;font-family: 'Poppins', serif;font-size:10px;background:var(--g2);color:var(--g6);padding:2px 8px;border-radius:1px;margin:2px 2px 0 0;letter-spacing:1px;border:1px solid var(--g3);}
+    .tag{display:inline-block;font-family: 'Poppins', serif;font-size:10px;background:var(--g2);color:var(--g6);padding:2px 8px;border-radius:1px;margin:2px 2px 0 0;letter-spacing:1px;border:1px solid var(--zed-primary);}
 
     /* PATTERN */
     .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;}
@@ -653,8 +663,8 @@ include_once ('elements/header.php');
     .rr-visual{background:var(--g1);border:1px solid var(--g2);padding:1.5rem;border-radius:2px;margin-bottom:1rem;}
     .rr-label{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:1px;}
     .rr-bar{position:relative;height:14px;border-radius:2px;margin:0.4rem 0;}
-    .loss-bar{background:var(--g3);width:33%;}
-    .gain-bar{background:var(--black);width:100%;}
+    .loss-bar{background:var(--zed-primary);width:33%;}
+    .gain-bar{background:var(--zed-dark-text);width:100%;}
 
     /* CHECKLIST */
     .checklist{display:flex;flex-direction:column;gap:0.45rem;}
@@ -664,7 +674,7 @@ include_once ('elements/header.php');
       border-left:3px solid var(--zed-primary);
       background:var(--g2);
     }
-    .check-box{width:16px;height:16px;border:1.5px solid var(--g3);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all 0.2s;}
+    .check-box{width:16px;height:16px;border:1.5px solid var(--zed-primary);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all 0.2s;}
     .check-item.checked .check-box{
       background:var(--zed-primary);
       border-color:var(--zed-primary);
@@ -681,8 +691,8 @@ include_once ('elements/header.php');
     /* FOOTER */
     .footer{padding:1.25rem 2rem;border-top:1px solid var(--g2);display:flex;justify-content:space-between;align-items:center;background:var(--g1);}
     .btn-nav{font-family: 'Poppins', serif;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.25rem;cursor:pointer;border-radius:2px;}
-    .btn-prev{background:none;border:1px solid var(--g3);color:var(--g5);}
-    .btn-prev:hover{border-color:var(--black);color:var(--black);}
+    .btn-prev{background:none;border:1px solid var(--zed-primary);color:var(--g5);}
+    .btn-prev:hover{border-color:var(--zed-dark-text);color:var(--zed-dark-text);}
     .btn-next{
       background:var(--zed-primary);
       border:1px solid var(--zed-primary);
@@ -694,20 +704,29 @@ include_once ('elements/header.php');
     .mod-indicator{font-family: 'Poppins', serif;font-size:11px;color:var(--g5);}
 
     .chart-bg{background:var(--g1);border:1px solid var(--g2);padding:1rem;border-radius:2px;margin-bottom:1rem;}
-    .formula-box{background:var(--g1);border:1px solid var(--g2);border-left:4px solid var(--black);padding:1rem 1.25rem;border-radius:2px;font-family: 'Poppins', serif;font-size:13px;color:var(--text);}
+    .formula-box{
+      background:var(--g1);
+      border:1px solid var(--g2);
+      border-left:4px solid var(--zed-dark-text);
+      padding:1rem 1.25rem;
+      border-radius:2px;
+      font-family: 'Poppins', serif;
+      font-size:13px;
+      color:var(--text);
+    }
 
     table.rr-table{
       width:100%;
       border-collapse:collapse;
       font-family: 'Poppins', serif; 
     }
-    table.rr-table th{padding:8px;text-align:left;color:var(--black);border-bottom:1px solid var(--g3);}
+    table.rr-table th{padding:8px;text-align:left;color:var(--zed-dark-text);border-bottom:1px solid var(--zed-primary);}
     table.rr-table th:not(:first-child){text-align:center;}
     table.rr-table td{padding:8px;text-align:center;border-bottom:1px solid var(--g2);}
     table.rr-table td:first-child{text-align:left;color:var(--g5);}
     .neg{color:var(--g4);}
-    .pos{color:var(--black);font-weight:500;}
-    .strong{color:var(--black);font-weight:700;}
+    .pos{color:var(--zed-dark-text);font-weight:500;}
+    .strong{color:var(--zed-dark-text);font-weight:700;}
 
     @media(max-width:600px){
       .hero-title{font-size:2.4rem;}
@@ -795,8 +814,8 @@ include_once ('elements/header.php');
                 <li data-n="C">Close — price at which the candle closed</li>
               </ul>
               <div style="display:flex;gap:1.5rem;padding:1rem;background:var(--g1);border:1px solid var(--g2);">
-                <div style="display:flex;align-items:center;gap:0.5rem;"><div style="width:20px;height:32px;background:var(--black);border-radius:2px;"></div><div style="font-size:0.85rem;color:#555;font-family:monospace;"><strong>BEARISH</strong><br>Close &lt; Open<br>Filled black</div></div>
-                <div style="display:flex;align-items:center;gap:0.5rem;"><div style="width:20px;height:32px;background:var(--white);border:2px solid var(--black);border-radius:2px;"></div><div style="font-size:0.85rem;color:#555;font-family:monospace;"><strong>BULLISH</strong><br>Close &gt; Open<br>Hollow/white</div></div>
+                <div style="display:flex;align-items:center;gap:0.5rem;"><div style="width:20px;height:32px;background:var(--zed-dark-text);border-radius:2px;"></div><div style="font-size:0.85rem;color:#555;font-family:monospace;"><strong>BEARISH</strong><br>Close &lt; Open<br>Filled black</div></div>
+                <div style="display:flex;align-items:center;gap:0.5rem;"><div style="width:20px;height:32px;background:var(--white);border:2px solid var(--zed-dark-text);border-radius:2px;"></div><div style="font-size:0.85rem;color:#555;font-family:monospace;"><strong>BULLISH</strong><br>Close &gt; Open<br>Hollow/white</div></div>
               </div>
             </div>
           </div>
@@ -1193,7 +1212,7 @@ include_once ('elements/header.php');
             <div class="rr-bar loss-bar"></div>
             <div class="rr-label" style="margin-top:1.25rem;">Potential Gain — 3R (e.g. $300)</div>
             <div class="rr-bar gain-bar"></div>
-            <div style="margin-top:1.25rem;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--black);letter-spacing:1px;">RISK : REWARD = 1 : 3</div>
+            <div style="margin-top:1.25rem;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--zed-dark-text);letter-spacing:1px;">RISK : REWARD = 1 : 3</div>
             <div style="font-size:0.9rem;color:var(--g5);margin-top:0.25rem;">SL = 100 pips away, TP = 300 pips away. Risk $100 to potentially make $300.</div>
           </div>
         </div>
@@ -1216,7 +1235,7 @@ include_once ('elements/header.php');
             Position Size = Risk Amount ÷ (Entry Price − Stop Loss Price)<br><br>
             <span style="color:var(--g5);">Example: $10,000 account · 1% risk = $100 risk<br>
             Entry = $50.00 · SL = $49.00 · Gap = $1.00<br>
-            Position Size = $100 ÷ $1.00 = <strong style="color:var(--black);">100 shares</strong></span>
+            Position Size = $100 ÷ $1.00 = <strong style="color:var(--zed-dark-text);">100 shares</strong></span>
           </div>
         </div>
         <div class="section">
@@ -1254,7 +1273,7 @@ include_once ('elements/header.php');
           <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><span class="check-mark">✓</span></div><div><div class="check-text">Have I written the full trade plan in my trading journal before entering?</div><div class="check-cat">Trade Journal</div></div></div>
         </div>
         <div id="checkResult" style="margin-top:1.5rem;display:none;">
-          <div style="background:var(--g1);border:2px solid var(--black);padding:1rem 1.25rem;border-radius:2px;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--black);letter-spacing:1px;text-align:center;">
+          <div style="background:var(--g1);border:2px solid var(--zed-dark-text);padding:1rem 1.25rem;border-radius:2px;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--zed-dark-text);letter-spacing:1px;text-align:center;">
             ✓ ALL CHECKS COMPLETE — TRADE READY TO EXECUTE
           </div>
         </div>

@@ -758,7 +758,7 @@ include_once ('elements/header.php');
             .mt{
                 font-size: 1.5rem;
                 font-weight:500;
-                color:var(--BK);
+                color:var(--zed-dark-text);
                 line-height:1.3;
             }
             .ms{
@@ -837,7 +837,7 @@ include_once ('elements/header.php');
                 display:flex;
                 align-items:center;
                 gap:12px;
-                background:var(--BK);
+                background:var(--zed-dark-text);
                 border-radius:4px;
                 padding:.85rem 1.1rem;
                 margin-bottom:1.2rem;
@@ -886,7 +886,7 @@ include_once ('elements/header.php');
             .sv{
                 font-family:'Bebas Neue',sans-serif;
                 font-size:1.6rem;
-                color:var(--BK);
+                color:var(--zed-dark-text);
                 line-height:1;
             } 
             .sv.r{
@@ -1075,7 +1075,7 @@ include_once ('elements/header.php');
             .faq-top h2{
                 font-size:1rem;
                 font-weight:500;
-                color:var(--BK);
+                color:var(--zed-dark-text);
             }
             .faq-top i{
                 font-size:1.5rem;
@@ -1106,7 +1106,7 @@ include_once ('elements/header.php');
             .fq-txt{
                 font-size:1rem;
                 font-weight:500;
-                color:var(--BK);
+                color:var(--zed-dark-text);
                 flex:1;
                 line-height:1.5;
             }
@@ -1141,7 +1141,7 @@ include_once ('elements/header.php');
                 line-height:1.8;
             }
             .fa-inner b{
-                color:var(--BK);
+                color:var(--zed-dark-text);
                 font-weight:500; 
             } 
             .underline {
@@ -1193,7 +1193,7 @@ include_once ('elements/header.php');
             .step-title{
                 font-size:1rem;
                 font-weight:500;
-                color:var(--BK);
+                color:var(--zed-dark-text);
                 margin-bottom:1px;
             }
             .step-desc{ 
@@ -1203,7 +1203,7 @@ include_once ('elements/header.php');
 
             /* LEVEL VISUAL */
             .level-visual{
-                background:var(--BK);
+                background:var(--zed-dark-text);
                 border-radius:4px;
                 padding:1rem;
                 margin-bottom:1.2rem;
@@ -1282,7 +1282,7 @@ include_once ('elements/header.php');
             .tf-name{
                 font-family:'Bebas Neue',sans-serif;
                 font-size:1.1rem;
-                color:var(--BK);
+                color:var(--zed-dark-text);
                 letter-spacing:.04em;
                 margin-bottom:3px;
             }

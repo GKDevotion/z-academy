@@ -252,7 +252,7 @@ include_once ('elements/header.php');
 
 /* ── SEARCH BAND ── */
 .search-band {
-  background: var(--ink);
+  background: var(--zed-dark-text);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 18px 0;
   position: sticky;
@@ -366,7 +366,7 @@ include_once ('elements/header.php');
   flex-wrap: wrap;
 }
 .results-text { font-size: 16px; color: var(--muted); }
-.results-text strong { color: var(--ink); font-weight: 600; }
+.results-text strong { color: var(--zed-dark-text); font-weight: 600; }
 .view-toggle {
   display: flex;
   background: #fff;
@@ -389,7 +389,7 @@ include_once ('elements/header.php');
 .vtbtn:last-child { border-right: none; }
 .vtbtn svg { width: 20px; height: 20px; }
 .vtbtn.on { background: var(--zed-primary); color: #fff; }
-.vtbtn:not(.on):hover { background: var(--zed-backgound-color); color: var(--ink); }
+.vtbtn:not(.on):hover { background: var(--zed-backgound-color); color: var(--zed-dark-text); }
 
 /* ── CONTENT ── */
 .content {
@@ -455,7 +455,7 @@ include_once ('elements/header.php');
   flex: 1; 
   font-size: 1rem; 
   font-weight: 600; 
-  color: var(--ink); 
+  color: var(--zed-dark-text); 
 }
 .acc-tag {
   font-size: 11px;
@@ -520,7 +520,7 @@ include_once ('elements/header.php');
 .card-title { 
   font-size: 1rem; 
   font-weight: 700; 
-  color: var(--ink); 
+  color: var(--zed-dark-text); 
   line-height: 1.3; 
   flex: 1; 
 }
@@ -587,7 +587,7 @@ include_once ('elements/header.php');
 }
 @keyframes mup { from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)} }
 .modal-hdr {
-  background: var(--ink);
+  background: var(--zed-dark-text);
   padding: 22px 24px 18px;
   display: flex;
   align-items: flex-start;

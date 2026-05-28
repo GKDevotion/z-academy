@@ -634,7 +634,7 @@ include_once ('elements/header.php');
 .mt{
   font-size: 1.5rem;
   font-weight:500;
-  color:var(--BK);
+  color:var(--zed-dark-text);
   line-height:1.3;
 }
 .ms{
@@ -687,7 +687,7 @@ include_once ('elements/header.php');
 }
 
 /* ── FORMULA ── */
-.fbox{display:flex;align-items:center;gap:12px;background:var(--BK);border-radius:4px;padding:.85rem 1.1rem;margin-bottom:1.2rem}
+.fbox{display:flex;align-items:center;gap:12px;background:var(--zed-dark-text);border-radius:4px;padding:.85rem 1.1rem;margin-bottom:1.2rem}
 .flbl{font-size:10px;color:var(--G400);letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
 .fdiv{width:1px;height:18px;background:rgba(255,255,255,.12);flex-shrink:0}
 .feq{font-size:12.5px;color:#fff;font-weight:400;line-height:1.5}
@@ -697,7 +697,7 @@ include_once ('elements/header.php');
 .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.2rem}
 .sbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.7rem .8rem;text-align:center}
 .sbox.hi{background:var(--zed-primaryL);border-color:#FACDD3}
-.sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--BK);line-height:1}
+.sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--zed-dark-text);line-height:1}
 .sv.r{color:var(--zed-primary)}
 .sk{font-size:10px;color:var(--G400);letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
 
@@ -829,7 +829,7 @@ include_once ('elements/header.php');
 .faq-top h2{
   font-size:1rem;
   font-weight:500;
-  color:var(--BK);
+  color:var(--zed-dark-text);
 }
 .faq-top i{
   font-size:1.5rem;
@@ -852,7 +852,7 @@ include_once ('elements/header.php');
 .fq-txt{
   font-size:1rem;
   font-weight:500;
-  color:var(--BK);
+  color:var(--zed-dark-text);
   flex:1;
   line-height:1.5;
 }
@@ -878,7 +878,7 @@ include_once ('elements/header.php');
   line-height:1.8;
 }
 .fa-inner b{
-  color:var(--BK);
+  color:var(--zed-dark-text);
   font-weight:500;
   
 }

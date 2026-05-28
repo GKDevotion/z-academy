@@ -952,7 +952,7 @@ include_once ('elements/header.php');
         font-size: 1.5rem;
         font-weight: 500;
         /* font-family: poppins, sans-serif; */
-        color: var(--G800);
+        color: var(--zed-dark-text);
         line-height: 1.3;
         }
         .msub {
@@ -1132,7 +1132,7 @@ include_once ('elements/header.php');
         .mc-sym {
         font-size: 1rem;
         font-weight: 800;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         margin-bottom: 2px;
         }
         .mc-name {
@@ -1142,7 +1142,7 @@ include_once ('elements/header.php');
         .mc-price {
         font-size: 1.1rem;
         font-weight: 800;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         margin-bottom: 2px;
         }
         .mc-chg {
@@ -1211,7 +1211,7 @@ include_once ('elements/header.php');
         .sv {
         font-size: 1.55rem;
         font-weight: 800;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         line-height: 1;
         }
         .sbox.r .sv {
@@ -1441,7 +1441,7 @@ include_once ('elements/header.php');
         .step-t {
         font-size: 0.82rem;
         font-weight: 700;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         margin-bottom: 1px;
         }
         .step-d {
@@ -1798,7 +1798,7 @@ include_once ('elements/header.php');
         .cs-v {
         font-size: 0.78rem;
         font-weight: 700;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         }
         .cs-v.r {
         color: var(--zed-primary);
@@ -1895,7 +1895,7 @@ include_once ('elements/header.php');
         .faq-hd h2 {
         font-size: 1.9rem;
         font-weight: 800;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         letter-spacing: -0.015em;
         margin-bottom: 0.5rem;
         }
@@ -1935,7 +1935,7 @@ include_once ('elements/header.php');
         .fq-t {
         font-size: 0.85rem;
         font-weight: 600;
-        color: var(--G800);
+        color: var(--zed-dark-text);
         flex: 1;
         line-height: 1.5;
         }
@@ -2131,7 +2131,7 @@ include_once ('elements/header.php');
                             font-size: 2.5rem;
                             font-weight: 700;
                             margin-bottom: 25px;
-                            color: black;
+                            color: var(--zed-dark-text);
                         }
                     </style>
                     <!-- L1 DAILY MARKET OVERVIEW -->
@@ -2737,7 +2737,7 @@ include_once ('elements/header.php');
         .faq-top h2{
         font-size:1rem;
         font-weight:500;
-        color:var(--BK);
+        color:var(--zed-dark-text);
         }
         .faq-top i{
         font-size:1.5rem;
@@ -2760,7 +2760,7 @@ include_once ('elements/header.php');
         .fq-txt{
             font-size:1rem;
             font-weight:500;
-            color:var(--BK);
+            color:var(--zed-dark-text);
             flex:1;
             line-height:1.5;
         }
@@ -2785,7 +2785,7 @@ include_once ('elements/header.php');
         line-height:1.8;
         }
         .fa-inner b{
-        color:var(--BK);
+        color:var(--zed-dark-text);
         font-weight:500;
         
         }
@@ -2803,7 +2803,7 @@ include_once ('elements/header.php');
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 25px;
-            color: black;
+            color: var(--zed-dark-text);
         }
 
 

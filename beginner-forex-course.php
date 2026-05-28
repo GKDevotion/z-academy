@@ -116,7 +116,7 @@ include_once ('elements/header.php');
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 25px;
-            color: var(--ink);
+            color: var(--zed-dark-text);
         }
 
         .zed-sec-rule {
@@ -160,7 +160,7 @@ include_once ('elements/header.php');
             font-family: 'Poppins', serif;
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
             margin-bottom: 8px;
             line-height: 1.3;
         }
@@ -171,7 +171,7 @@ include_once ('elements/header.php');
         }
 
         .zed-card-text strong {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -271,7 +271,7 @@ include_once ('elements/header.php');
         }
 
         .btn-zed-dark {
-            background: var(--ink);
+            background: var(--zed-dark-text);
             color: #fff;
         }
 
@@ -352,7 +352,7 @@ include_once ('elements/header.php');
         }
 
         .timeline-text strong {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -386,7 +386,7 @@ include_once ('elements/header.php');
             font-family: 'Poppins', serif;
             font-size: .95rem;
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
             margin-bottom: 6px;
         }
 
@@ -397,7 +397,7 @@ include_once ('elements/header.php');
         }
 
         .trader-text strong {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -447,13 +447,13 @@ include_once ('elements/header.php');
             font-weight: 700;
             letter-spacing: .14em;
             text-transform: uppercase;
-            color: var(--ac, var(--zed-primary));
+            color: var(--zed-primary);
             margin-bottom: 4px;
         }
 
         .session-time { 
             font-weight: 600;
-            color: var(--ink);
+            color: var(--zed-dark-text);
             margin-bottom: 4px;
         }
 
@@ -545,7 +545,7 @@ include_once ('elements/header.php');
         .cp-pair {
             font-family: 'Poppins', serif;
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
         }
 
         .cp-cat-major {
@@ -610,7 +610,7 @@ include_once ('elements/header.php');
 
         .style-name {
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
         }
 
         /* Broker type cards */
@@ -642,7 +642,7 @@ include_once ('elements/header.php');
         .broker-title {
             font-family: 'Poppins', serif; 
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
             margin-bottom: 8px;
         }
 
@@ -652,7 +652,7 @@ include_once ('elements/header.php');
         }
 
         .broker-text strong {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -695,7 +695,7 @@ include_once ('elements/header.php');
 
         .step-title {
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
             margin-bottom: 4px;
             font-size: 1.25rem;
         }
@@ -710,7 +710,7 @@ include_once ('elements/header.php');
         }
 
         .step-text strong {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -746,7 +746,7 @@ include_once ('elements/header.php');
             font-family: 'Poppins', serif;
             font-size: 1rem;
             font-weight: 700;
-            color: var(--ink);
+            color: var(--zed-dark-text);
             margin-bottom: 8px;
         }
 
@@ -756,7 +756,7 @@ include_once ('elements/header.php');
         }
 
         .order-text strong {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -772,7 +772,7 @@ include_once ('elements/header.php');
         }
 
         .order-list li b {
-            color: var(--ink);
+            color: var(--zed-dark-text);
             font-weight: 600;
         }
 
@@ -1449,7 +1449,7 @@ include_once ('elements/header.php');
                 <div class="col-lg-7 reveal">
                     
                 <div class="zed-eyebrow">What is Forex ? </div>
-                    <h3 class="font-serif" style="font-size:1.8rem; font-weight:700; color:var(--ink); margin-bottom:14px;">
+                    <h3 class="font-serif" style="font-size:1.8rem; font-weight:700; color:var(--zed-dark-text); margin-bottom:14px;">
                         Understanding the Foreign Exchange Market</h3>
                     <p style="color: var(--zed-secondary) !important; line-height:1.82; margin-bottom:14px;">
                         <strong>Forex (Foreign Exchange)</strong> is the global marketplace where one currency is exchanged for
