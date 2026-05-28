@@ -293,9 +293,9 @@ html{scroll-behavior:smooth}
 }
 .mmeta{flex:1;min-width:0}
 .mtitle{
-    font-size:1rem;
-    font-weight:700;
-    font-family: poppins, sans-serif;
+    font-size:1.5rem;
+    font-weight:500;
+    /* font-family: poppins, sans-serif; */
     color:var(--G800);
     line-height:1.3;
 }
