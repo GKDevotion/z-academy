@@ -875,7 +875,7 @@ include_once ('elements/header.php');
     <div class="container">
          
          <div class="zed-sec-head mt-5 mb-5">  
-            <h2 class="zed-sec-title">Core Lessons — Trading Psychology</h2> 
+            <h2 class="zed-sec-title">Core Lessons | Trading Psychology</h2> 
             <div class="underline"></div>
         </div>
 
@@ -1292,13 +1292,13 @@ include_once ('elements/header.php');
 
         <div class="slbl d-none" style="margin-top:1px;">
             <i class="ti ti-help" aria-hidden="true"></i>
-            <span>Trading Psychology Frequently Asked Questions — FAQ
+            <span>Trading Psychology Frequently Asked Questions | FAQ
             <div class="underline"></div>
             </span>
         </div>
 
          <div class="zed-sec-head mt-5">  
-            <h2 class="zed-sec-title">Trading Psychology Frequently Asked Questions — FAQ</h2> 
+            <h2 class="zed-sec-title">Trading Psychology Frequently Asked Questions | FAQ</h2> 
             <div class="underline"></div>
         </div>
 

@@ -666,7 +666,11 @@ html{scroll-behavior:smooth}
     <div class="container">
         <div class="layout">
             <main>
-            <div class="sec-lbl"><i class="ti ti-calendar-event"></i>Core Lessons — Economic Calendar Guide</div>
+            
+            <div class="zed-sec-head mt-5 mb-4">  
+                <h2 class="zed-sec-title">Core Lessons | Economic Calendar Guide</h2> 
+                <div class="underline"></div>
+            </div>
 
             <!-- L1 WHAT IS ECONOMIC CALENDAR -->
             <article class="mod active open rv" data-id="1">
@@ -1313,7 +1317,7 @@ html{scroll-behavior:smooth}
         <div class="faq-wrap">
 
                 <div class="zed-sec-head mt-5 mb-5">  
-                        <h2 class="zed-sec-title">Risk Management — FAQ</h2> 
+                        <h2 class="zed-sec-title">Risk Management | FAQ</h2> 
                         <div class="underline"></div>
                 </div>
 

@@ -2114,7 +2114,7 @@ include_once ('elements/header.php');
                 <main> 
 
                     <div class="zed-sec-head mt-5 mb-3">  
-                        <h2 class="zed-sec-title">Core Lessons — Market Analysis</h2> 
+                        <h2 class="zed-sec-title">Core Lessons | Market Analysis</h2> 
                         <div class="underline"></div>
                     </div>
 
@@ -2664,7 +2664,7 @@ include_once ('elements/header.php');
             <div class="faq-wrap">
 
                     <div class="zed-sec-head mt-5 mb-5">  
-                            <h2 class="zed-sec-title">Risk Management — FAQ</h2> 
+                            <h2 class="zed-sec-title">Risk Management | FAQ</h2> 
                             <div class="underline"></div>
                     </div>
     

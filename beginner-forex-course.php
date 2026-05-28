@@ -1429,7 +1429,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
             <div class="zed-sec-head reveal"> 
-                <h2 class="zed-sec-title">Forex Market Fundamentals — Complete Guide</h2> 
+                <h2 class="zed-sec-title">Forex Market Fundamentals | Complete Guide</h2> 
                 <div class="underline mb-3"></div>
                 <p style="color: var(--zed-secondary) !important; line-height:1.82; margin-bottom:14px;">The foreign exchange market (Forex/FX) is the world's largest and most liquid financial market — trading currencies 24 hours a day, 5 days a week. This module covers everything from scratch: what forex is, who trades it, how it works, all terminology, market structure, broker types, leverage, margin, lot sizes, orders and how trades actually flow. Read every word.</p>
             </div>
@@ -1477,7 +1477,7 @@ include_once ('elements/header.php');
 
         <div class="container">
             <div class="zed-sec-head reveal d-none"> 
-                <h2 class="zed-sec-title">Forex Market Fundamentals — Complete Guide</h2> 
+                <h2 class="zed-sec-title">Forex Market Fundamentals | Complete Guide</h2> 
                 <div class="underline"></div>
             </div>
 
@@ -1590,7 +1590,7 @@ include_once ('elements/header.php');
     <section class="professional-pricing">
         <div class="container">
             <div class="pricing-section">
-                <h2 class="h2 fw-bold">Who Trades Forex? — Market Participants</h2>
+                <h2 class="h2 fw-bold">Who Trades Forex? | Market Participants</h2>
                 <div class="underline"></div>
 
                 <div class="row">
@@ -1700,7 +1700,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
             <div class="zed-sec-head reveal"> 
-                <h2 class="zed-sec-title">Market Sessions — Full Infographic</h2> 
+                <h2 class="zed-sec-title">Market Sessions | Full Infographic</h2> 
                 <div class="underline"></div>
             </div>
 
@@ -1785,7 +1785,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Core Terminology — Every Term Explained</h2>
+            <h2 class="zed-sec-title">Core Terminology | Every Term Explained</h2>
             <div class="underline"></div> 
         </div>
         <div class="row g-4 mb-4">
@@ -1906,7 +1906,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-background-color)" id="m4">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Broker Types — Which One Should You Use?</h2>
+            <h2 class="zed-sec-title">Broker Types | Which One Should You Use?</h2>
             <div class="underline"></div> 
         </div>
         <div class="row g-3">
@@ -1956,7 +1956,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Currency Pairs — Full Classification</h2> 
+            <h2 class="zed-sec-title">Currency Pairs | Full Classification</h2> 
             <div class="underline"></div>
         </div>
         <div class="table-responsive reveal">
@@ -2040,7 +2040,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">How a Forex Trade Works — Step by Step</h2> 
+            <h2 class="zed-sec-title">How a Forex Trade Works | Step by Step</h2> 
             <div class="underline"></div>
         </div>
         <div class="row justify-content-center">
@@ -2092,7 +2092,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Order Types — Complete Guide with When to Use Each</h2> 
+            <h2 class="zed-sec-title">Order Types | Complete Guide with When to Use Each</h2> 
             <div class="underline"></div>
         </div>
 
@@ -2159,7 +2159,7 @@ include_once ('elements/header.php');
       <section class="zed-section" style="background:var(--zed-light-bg)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Fundamental Analysis — What Moves Forex</h2> 
+            <h2 class="zed-sec-title">Fundamental Analysis | What Moves Forex</h2> 
             <div class="underline"></div>
         </div>
 
@@ -2334,7 +2334,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-background-color)">
         <div class="container">
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Trading Styles — Which One Suits You?</h2> 
+            <h2 class="zed-sec-title">Trading Styles | Which One Suits You?</h2> 
             <div class="underline"></div>
         </div>
         <div class="table-responsive reveal">
@@ -2406,7 +2406,7 @@ include_once ('elements/header.php');
     <section class="zed-section" style="background:var(--zed-background-color)">
             <div class="container">
                 <div class="zed-sec-head reveal"> 
-                    <h2 class="zed-sec-title">Demo Account vs Live Account — A Critical Difference</h2> 
+                    <h2 class="zed-sec-title">Demo Account vs Live Account | A Critical Difference</h2> 
                     <div class="underline"></div>
                 </div> 
     
@@ -2525,7 +2525,7 @@ include_once ('elements/header.php');
     <div class="container">
 
         <div class="zed-sec-head reveal"> 
-            <h2 class="zed-sec-title">Prop Firms — Trade with Funded Capital</h2> 
+            <h2 class="zed-sec-title">Prop Firms | Trade with Funded Capital</h2> 
             <div class="underline"></div>
         </div>
 

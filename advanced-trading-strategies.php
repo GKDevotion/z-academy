@@ -1310,7 +1310,7 @@ include_once ('elements/header.php');
       <div class="container">  
             
             <div class="zed-sec-head mt-5 mb-3">  
-                <h2 class="zed-sec-title">Core Lessons — Advanced Trading Strategies</h2> 
+                <h2 class="zed-sec-title">Core Lessons | Advanced Trading Strategies</h2> 
                 <div class="underline"></div>
             </div>
 
@@ -1796,7 +1796,7 @@ include_once ('elements/header.php');
     <div class="container"> 
 
         <div class="zed-sec-head mt-5 mb-3">  
-            <h2 class="zed-sec-title">Advanced Trading Strategies — FAQ</h2> 
+            <h2 class="zed-sec-title">Advanced Trading Strategies | FAQ</h2> 
             <div class="underline"></div>
         </div>
         
