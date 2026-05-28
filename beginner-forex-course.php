@@ -2263,7 +2263,7 @@ include_once ('elements/header.php');
         <div class="info-grid">
 
                 <div class="info-card" style="border-left:4px solid var(--zed-primary);">
-                    <div class="info-head">🏦 Interest Rates — The #1 Driver</div>
+                    <div class="info-head">🏦 Interest Rates | The #1 Driver</div>
                     <div class="info-body">
                             Central bank interest rates are the single most powerful driver of long-term currency direction.<br><br>
                             <strong>Rule:</strong> Higher interest rates → currency attracts more foreign investment → demand for
@@ -2308,7 +2308,7 @@ include_once ('elements/header.php');
                 </div>
 
                 <div class="info-card" style="border-left:4px solid var(--gold);">
-                    <div class="info-head">📅 Economic Calendar — How to Use It</div>
+                    <div class="info-head">📅 Economic Calendar | How to Use It</div>
                         <div class="info-body">
                             Use <strong>Forex Factory, Investing.com, or TradingEconomics</strong> to track all upcoming events.<br><br>
                             <strong>Impact levels:</strong><br>
