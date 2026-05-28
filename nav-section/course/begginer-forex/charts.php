@@ -395,7 +395,7 @@
         </li>
         <li><span class="bi">🏔️</span>
           <div><strong>Key Levels</strong> — Previous day/week/month highs and lows, psychological round numbers
-            (1.1000, 1.2000), and 52-week highs/lows are all critical levels to mark on your chart.</div>
+            (1.1000, 1.2000) and 52-week highs/lows are all critical levels to mark on your chart.</div>
         </li>
       </ul>
     </div>

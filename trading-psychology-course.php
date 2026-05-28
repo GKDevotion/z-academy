@@ -457,7 +457,7 @@ include_once ('elements/header.php');
                 Master Your<em> <br>Mindset</em>
             </h1>
             <p class="sub">
-                The market does not destroy traders — their own emotions do. Fear, and ego are responsible for more losses than any bad strategy.  
+                The market does not destroy traders — their own emotions do. Fear and ego are responsible for more losses than any bad strategy.  
             </p>
             <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
                 <a href="#courses" class="btn btn-red">
@@ -889,7 +889,7 @@ include_once ('elements/header.php');
         </div>
         <div class="mbody open">
             <div class="minner">
-            <p class="intro">Trading psychology is the study of how a trader's emotions, beliefs, and mental state influence their decisions in the market. A trader can have a profitable strategy and still lose money consistently — because emotions override logic at the moment of execution.</p>
+            <p class="intro">Trading psychology is the study of how a trader's emotions, beliefs and mental state influence their decisions in the market. A trader can have a profitable strategy and still lose money consistently — because emotions override logic at the moment of execution.</p>
             <div class="qblock">
                 <p>"The most important organ in trading is not the brain — it is the stomach. Anyone can see a setup. Not everyone can hold through the discomfort of uncertainty."</p>
                 <cite>— Professional Trading Principle</cite>
@@ -931,7 +931,7 @@ include_once ('elements/header.php');
         </div>
         <div class="mbody">
             <div class="minner">
-            <p class="intro">Fear and greed are the two most powerful forces in any financial market. They operate in cycles, driving prices to extremes, and they operate inside every trader — causing entries that are too late, exits that are too early, and positions that are far too large.</p>
+            <p class="intro">Fear and greed are the two most powerful forces in any financial market. They operate in cycles, driving prices to extremes and they operate inside every trader — causing entries that are too late, exits that are too early and positions that are far too large.</p>
             <div class="emeter">
                 <div class="emeter-row">
                 <span class="emeter-lbl">Fear of loss</span>
@@ -967,7 +967,7 @@ include_once ('elements/header.php');
             </div>
             <div class="rcard">
                 <div class="rtitle"><i class="ti ti-list-check" aria-hidden="true"></i> How to control both</div>
-                <div class="rrow"><div class="rdot"></div>Pre-define your entry, stop, and target before the market opens</div>
+                <div class="rrow"><div class="rdot"></div>Pre-define your entry, stop and target before the market opens</div>
                 <div class="rrow"><div class="rdot"></div>Use a checklist — decisions made in advance override emotions in the moment</div>
                 <div class="rrow"><div class="rdot"></div>Journal every emotional trade — awareness is the first step to control</div>
             </div>
@@ -1015,7 +1015,7 @@ include_once ('elements/header.php');
         </div>
         <div class="mbody">
             <div class="minner">
-            <p class="intro">Overconfidence is what happens after a strong run of winning trades. The trader begins to believe their skill is greater than it is — risk rules loosen, position sizes increase, and setups that would normally be skipped are taken. One bad trade wipes out weeks of gains.</p>
+            <p class="intro">Overconfidence is what happens after a strong run of winning trades. The trader begins to believe their skill is greater than it is — risk rules loosen, position sizes increase and setups that would normally be skipped are taken. One bad trade wipes out weeks of gains.</p>
             <div class="sgrid">
                 <div class="sbox danger hi"><div class="sv r">3+</div><div class="sk">Wins before overconfidence sets in</div></div>
                 <div class="sbox"><div class="sv">2×</div><div class="sk">Typical size increase when overconfident</div></div>
@@ -1120,7 +1120,7 @@ include_once ('elements/header.php');
             <div class="minner">
             <p class="intro">Emotional risk control means recognising that your emotional state directly affects your trading decisions — and building rules specifically to protect your account when your emotions are elevated. Your risk management system must account for the human element.</p>
             <div class="steps">
-                <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Rate your emotional state before each session</div><div class="step-desc">On a scale of 1–10, assess stress, anxiety, fatigue, and anger. Score above 6 — do not trade</div></div></div>
+                <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Rate your emotional state before each session</div><div class="step-desc">On a scale of 1–10, assess stress, anxiety, fatigue and anger. Score above 6 — do not trade</div></div></div>
                 <div class="step"><div class="step-num">02</div><div class="step-body"><div class="step-title">Reduce size when emotional</div><div class="step-desc">If you must trade and emotion is present, halve your normal position size — protect capital first</div></div></div>
                 <div class="step"><div class="step-num">03</div><div class="step-body"><div class="step-title">Set emotional circuit breakers</div><div class="step-desc">After 2 consecutive losses in one session — mandatory 60-minute pause before any new trade</div></div></div>
                 <div class="step"><div class="step-num">04</div><div class="step-body"><div class="step-title">Physical reset protocol</div><div class="step-desc">Walk, breathe, hydrate — physical state directly influences cognitive clarity and decision quality</div></div></div>
@@ -1140,7 +1140,7 @@ include_once ('elements/header.php');
         </div>
         <div class="mbody">
             <div class="minner">
-            <p class="intro">A trading routine removes the need to make decisions under pressure. When your pre-market preparation, execution process, and post-market review are structured, emotion has less room to operate. Routine is the architecture of discipline.</p>
+            <p class="intro">A trading routine removes the need to make decisions under pressure. When your pre-market preparation, execution process and post-market review are structured, emotion has less room to operate. Routine is the architecture of discipline.</p>
             <div class="steps">
                 <div class="step"><div class="step-num">AM</div><div class="step-body"><div class="step-title">Pre-market preparation (30 min)</div><div class="step-desc">Review economic calendar, mark key levels, identify valid setups, confirm emotional readiness</div></div></div>
                 <div class="step"><div class="step-num">MK</div><div class="step-body"><div class="step-title">Market session execution</div><div class="step-desc">Wait for setups to come to you — execute only A-grade criteria, follow the checklist on every trade</div></div></div>
@@ -1162,14 +1162,14 @@ include_once ('elements/header.php');
         </div>
         <div class="mbody">
             <div class="minner">
-            <p class="intro">A trading journal is not just a record of trade outcomes — it is a psychological diagnostic tool. When used correctly, it reveals the emotional patterns, cognitive biases, and habitual mistakes that no chart analysis will ever show you.</p>
+            <p class="intro">A trading journal is not just a record of trade outcomes — it is a psychological diagnostic tool. When used correctly, it reveals the emotional patterns, cognitive biases and habitual mistakes that no chart analysis will ever show you.</p>
             <div class="rcard">
                 <div class="rtitle"><i class="ti ti-file-text" aria-hidden="true"></i> What every journal entry must include</div>
-                <div class="rrow"><div class="rdot"></div>Date, instrument, direction, entry price, stop loss, target, and lot size</div>
+                <div class="rrow"><div class="rdot"></div>Date, instrument, direction, entry price, stop loss, target and lot size</div>
                 <div class="rrow"><div class="rdot"></div>The reason for the trade — what setup criteria was met</div>
                 <div class="rrow"><div class="rdot"></div>Emotional state at entry: calm / anxious / excited / frustrated (rate 1–10)</div>
                 <div class="rrow"><div class="rdot"></div>Did you follow your plan exactly? If not — what changed and why?</div>
-                <div class="rrow"><div class="rdot"></div>Outcome, R:R achieved, and one lesson extracted from this trade</div>
+                <div class="rrow"><div class="rdot"></div>Outcome, R:R achieved and one lesson extracted from this trade</div>
                 <div class="rrow"><div class="rdot"></div>Screenshot of the setup with annotations — visual memory accelerates learning</div>
             </div>
             <div class="rcard" style="border-color:#16A34A">
@@ -1320,7 +1320,7 @@ include_once ('elements/header.php');
                 <i class="ti ti-message-question" aria-hidden="true"></i>
                 <h2>Trading Psychology — FAQ</h2>
             </div>
-            <div class="faq-note">Professional answers optimised for search engines, AI assistants, and voice search — covering the most common questions on trading mindset and emotion control.</div>
+            <div class="faq-note">Professional answers optimised for search engines, AI assistants and voice search — covering the most common questions on trading mindset and emotion control.</div>
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is trading psychology and why does it matter?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
@@ -1329,17 +1329,17 @@ include_once ('elements/header.php');
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do fear and greed affect trading decisions?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                <div class="fa"><div class="fa-inner">Fear causes traders to exit winning trades too early, hesitate on valid setups, and move stop losses to avoid being stopped out. Greed causes traders to hold winners past their targets, over-size positions after wins, and chase price entries they missed. <b>Both emotions bypass the rational, rule-based decision-making that profitable trading requires.</b> The antidote is a written plan that pre-defines every decision before emotion can interfere.</div></div>
+                <div class="fa"><div class="fa-inner">Fear causes traders to exit winning trades too early, hesitate on valid setups and move stop losses to avoid being stopped out. Greed causes traders to hold winners past their targets, over-size positions after wins and chase price entries they missed. <b>Both emotions bypass the rational, rule-based decision-making that profitable trading requires.</b> The antidote is a written plan that pre-defines every decision before emotion can interfere.</div></div>
             </div>
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is revenge trading and how do I stop it?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                <div class="fa"><div class="fa-inner">Revenge trading is placing trades immediately after a loss with the primary goal of recovering that money quickly — rather than waiting for a valid setup. <b>It is driven by emotional pain, not analysis.</b> To stop it: implement a mandatory 30-minute break after any loss, set a maximum of 3 trades per day, and close your trading platform when the daily loss limit is reached. Physical distance from the screen is the most effective circuit breaker.</div></div>
+                <div class="fa"><div class="fa-inner">Revenge trading is placing trades immediately after a loss with the primary goal of recovering that money quickly — rather than waiting for a valid setup. <b>It is driven by emotional pain, not analysis.</b> To stop it: implement a mandatory 30-minute break after any loss, set a maximum of 3 trades per day and close your trading platform when the daily loss limit is reached. Physical distance from the screen is the most effective circuit breaker.</div></div>
             </div>
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do I build discipline as a trader?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                <div class="fa"><div class="fa-inner">Discipline is built through systems, not willpower. <b>Write a trading plan that defines every rule in advance</b> — entry criteria, stop loss rules, maximum daily loss, and position sizing. Use a pre-trade checklist before every session. Journal every trade including your emotional state. Discipline is the consistent application of these structures over time — it is a skill developed through repetition, not a personality trait you either have or do not.</div></div>
+                <div class="fa"><div class="fa-inner">Discipline is built through systems, not willpower. <b>Write a trading plan that defines every rule in advance</b> — entry criteria, stop loss rules, maximum daily loss and position sizing. Use a pre-trade checklist before every session. Journal every trade including your emotional state. Discipline is the consistent application of these structures over time — it is a skill developed through repetition, not a personality trait you either have or do not.</div></div>
             </div>
 
             <div class="fi">
@@ -1349,7 +1349,7 @@ include_once ('elements/header.php');
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What should I write in a trading journal?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                <div class="fa"><div class="fa-inner">Every journal entry should include: instrument, direction, entry/exit prices, lot size, stop loss and target levels, the specific reason for the trade, your emotional state at entry rated 1–10, whether you followed your plan exactly, the outcome and R:R achieved, and one lesson extracted. <b>A screenshot of the setup with annotations</b> is highly recommended. Reviewed weekly, this data reveals which setups are genuinely profitable and which emotional states predict your worst decisions.</div></div>
+                <div class="fa"><div class="fa-inner">Every journal entry should include: instrument, direction, entry/exit prices, lot size, stop loss and target levels, the specific reason for the trade, your emotional state at entry rated 1–10, whether you followed your plan exactly, the outcome and R:R achieved and one lesson extracted. <b>A screenshot of the setup with annotations</b> is highly recommended. Reviewed weekly, this data reveals which setups are genuinely profitable and which emotional states predict your worst decisions.</div></div>
             </div>
 
             <div class="fi">
@@ -1359,12 +1359,12 @@ include_once ('elements/header.php');
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How does a trading routine improve psychology?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                <div class="fa"><div class="fa-inner">A structured trading routine — pre-market preparation, session execution protocol, and post-market review — <b>removes the need to make decisions under emotional pressure.</b> When your actions are pre-decided through routine, emotion has fewer entry points to influence your behaviour. Traders with consistent routines report lower anxiety, fewer impulsive decisions, and more consistent execution compared to those who approach each session without structure.</div></div>
+                <div class="fa"><div class="fa-inner">A structured trading routine — pre-market preparation, session execution protocol and post-market review — <b>removes the need to make decisions under emotional pressure.</b> When your actions are pre-decided through routine, emotion has fewer entry points to influence your behaviour. Traders with consistent routines report lower anxiety, fewer impulsive decisions and more consistent execution compared to those who approach each session without structure.</div></div>
             </div>
 
             <div class="fi">
                 <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is Zed Capital's Trading Psychology Course designed to achieve?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                <div class="fa"><div class="fa-inner">This course — <b>Course 4 of Zed Capital's Core Trading Series</b> — is designed to give traders a complete framework for understanding and managing the psychological forces that drive trading decisions. It covers fear, greed, revenge trading, overconfidence, patience, loss handling, emotional risk control, journaling, and the daily psychology checklist. The goal is to help traders execute their strategy with consistency — removing emotion as a variable in their results.</div></div>
+                <div class="fa"><div class="fa-inner">This course — <b>Course 4 of Zed Capital's Core Trading Series</b> — is designed to give traders a complete framework for understanding and managing the psychological forces that drive trading decisions. It covers fear, greed, revenge trading, overconfidence, patience, loss handling, emotional risk control, journaling and the daily psychology checklist. The goal is to help traders execute their strategy with consistency — removing emotion as a variable in their results.</div></div>
             </div>
         </div>
 

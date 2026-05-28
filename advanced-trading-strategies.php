@@ -1448,7 +1448,7 @@ include_once ('elements/header.php');
 
                 <div class="mbody">
                     <div class="minner">
-                        <p class="intro">The Break and Retest strategy eliminates the fakeout problem by waiting for price to break a level, pull back to that level (now flipped from resistance to support, or vice versa), and confirm rejection before entering. It provides a superior Risk-to-Reward entry compared to chasing the initial breakout.</p>
+                        <p class="intro">The Break and Retest strategy eliminates the fakeout problem by waiting for price to break a level, pull back to that level (now flipped from resistance to support, or vice versa) and confirm rejection before entering. It provides a superior Risk-to-Reward entry compared to chasing the initial breakout.</p>
                         <div class="steps">
                             <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Identify the key level</div><div class="step-desc">Mark a significant resistance (for longs) or support (for shorts) — the level must be clean and well-tested</div></div></div>
                             <div class="step"><div class="step-num">02</div><div class="step-body"><div class="step-title">Wait for a clean break with close</div><div class="step-desc">Price must close convincingly beyond the level — a wick does not count as a break</div></div></div>
@@ -1533,7 +1533,7 @@ include_once ('elements/header.php');
             </div>
             <div class="mbody">
                 <div class="minner">
-                <p class="intro">Pullback trading is the discipline of waiting for price to retrace within an established trend before entering — rather than chasing breakouts at the worst possible risk. It offers superior entry prices, tighter stops, and better Risk-to-Reward ratios than impulsive breakout chasing.</p>
+                <p class="intro">Pullback trading is the discipline of waiting for price to retrace within an established trend before entering — rather than chasing breakouts at the worst possible risk. It offers superior entry prices, tighter stops and better Risk-to-Reward ratios than impulsive breakout chasing.</p>
                 <div class="steps">
                     <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Confirm the trend direction</div><div class="step-desc">Use H4 or Daily for trend bias — only trade pullbacks in the direction of the dominant trend</div></div></div>
                     <div class="step"><div class="step-num">02</div><div class="step-body"><div class="step-title">Identify the pullback zone</div><div class="step-desc">Mark the 38.2%–61.8% Fibonacci retracement, moving average confluence, or prior broken structure as the target pullback area</div></div></div>
@@ -1666,7 +1666,7 @@ include_once ('elements/header.php');
             </div>
             <div class="mbody">
                 <div class="minner">
-                <p class="intro">High-impact news events — Non-Farm Payrolls, interest rate decisions, CPI releases — create extreme, unpredictable price movement. Spreads widen, slippage increases, and stop losses may not execute at the intended price. News is not a strategy — it is a risk to be managed.</p>
+                <p class="intro">High-impact news events — Non-Farm Payrolls, interest rate decisions, CPI releases — create extreme, unpredictable price movement. Spreads widen, slippage increases and stop losses may not execute at the intended price. News is not a strategy — it is a risk to be managed.</p>
                 <div class="two">
                     <div class="tbox danger">
                     <div class="tbox-title"><i class="ti ti-alert-triangle" aria-hidden="true"></i> High-impact events</div>
@@ -1746,10 +1746,10 @@ include_once ('elements/header.php');
                 <div class="minner">
                 <p class="intro">Backtesting is the process of applying your strategy to historical price data to measure its performance before risking live capital. It transforms opinion into evidence — replacing "I think this works" with "this strategy produced a 2.1 R expectancy over 200 trades across 12 months."</p>
                 <div class="steps">
-                    <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Define your strategy rules in writing</div><div class="step-desc">Every entry criterion, exit rule, and filter must be written down — if it is not written, it cannot be tested consistently</div></div></div>
+                    <div class="step"><div class="step-num">01</div><div class="step-body"><div class="step-title">Define your strategy rules in writing</div><div class="step-desc">Every entry criterion, exit rule and filter must be written down — if it is not written, it cannot be tested consistently</div></div></div>
                     <div class="step"><div class="step-num">02</div><div class="step-body"><div class="step-title">Select your instrument and timeframe</div><div class="step-desc">Test on the exact pair and timeframe you intend to trade live — results from EUR/USD H4 do not automatically transfer to GBP/JPY M15</div></div></div>
-                    <div class="step"><div class="step-num">03</div><div class="step-body"><div class="step-title">Go back at least 12 months of data</div><div class="step-desc">Markets cycle through trending, ranging, and volatile phases — your strategy must be tested across all of them</div></div></div>
-                    <div class="step"><div class="step-num">04</div><div class="step-body"><div class="step-title">Log every signal — including skipped ones</div><div class="step-desc">Record win/loss, R:R achieved, entry reason, and whether the setup fully met criteria. Minimum 50 trades for statistical validity</div></div></div>
+                    <div class="step"><div class="step-num">03</div><div class="step-body"><div class="step-title">Go back at least 12 months of data</div><div class="step-desc">Markets cycle through trending, ranging and volatile phases — your strategy must be tested across all of them</div></div></div>
+                    <div class="step"><div class="step-num">04</div><div class="step-body"><div class="step-title">Log every signal — including skipped ones</div><div class="step-desc">Record win/loss, R:R achieved, entry reason and whether the setup fully met criteria. Minimum 50 trades for statistical validity</div></div></div>
                     <div class="step"><div class="step-num">05</div><div class="step-body"><div class="step-title">Analyse and calculate your edge</div><div class="step-desc">Win rate × average win − loss rate × average loss = expectancy per trade. A positive expectancy means a viable strategy</div></div></div>
                 </div>
                 <div class="sgrid sgrid-2">
@@ -1802,7 +1802,7 @@ include_once ('elements/header.php');
         
         <div class="faq-wrap">
         
-        <div class="faq-note">Professional answers optimised for Google search, AI assistants, and voice search — covering the most searched questions on advanced trading strategies.</div>
+        <div class="faq-note">Professional answers optimised for Google search, AI assistants and voice search — covering the most searched questions on advanced trading strategies.</div>
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is market structure in trading and why does it matter?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
@@ -1811,12 +1811,12 @@ include_once ('elements/header.php');
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the difference between a breakout and a break and retest?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">A breakout entry is taken at the moment price moves beyond a key level — carrying the risk of entering a fakeout. A break and retest entry waits for price to break the level, pull back to it (now flipped — resistance becomes support or vice versa), and show a rejection before entering. <b>The break and retest offers a tighter stop, better R:R, and lower fakeout risk</b> — making it the preferred entry method for most professional price action traders.</div></div>
+            <div class="fa"><div class="fa-inner">A breakout entry is taken at the moment price moves beyond a key level — carrying the risk of entering a fakeout. A break and retest entry waits for price to break the level, pull back to it (now flipped — resistance becomes support or vice versa) and show a rejection before entering. <b>The break and retest offers a tighter stop, better R:R and lower fakeout risk</b> — making it the preferred entry method for most professional price action traders.</div></div>
         </div>
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do you use multi-timeframe analysis in trading?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">Multi-timeframe analysis uses three timeframes simultaneously: a macro timeframe (Daily or Weekly) to define trend direction and major structure, a mid timeframe (H4 or H1) to identify the specific trade setup, and a lower timeframe (M15 or M5) to pinpoint the entry candle. <b>The golden rule is that lower timeframe setups must align with — never contradict — the higher timeframe bias.</b> Alignment across all three timeframes produces the highest-probability trades.</div></div>
+            <div class="fa"><div class="fa-inner">Multi-timeframe analysis uses three timeframes simultaneously: a macro timeframe (Daily or Weekly) to define trend direction and major structure, a mid timeframe (H4 or H1) to identify the specific trade setup and a lower timeframe (M15 or M5) to pinpoint the entry candle. <b>The golden rule is that lower timeframe setups must align with — never contradict — the higher timeframe bias.</b> Alignment across all three timeframes produces the highest-probability trades.</div></div>
         </div>
 
         <div class="fi">
@@ -1826,17 +1826,17 @@ include_once ('elements/header.php');
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Should I trade during news events?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">For most traders — particularly those who are intermediate level — <b>trading during high-impact news events should be avoided.</b> Spreads widen dramatically, slippage means stop losses do not execute at the intended price, and the initial price spike is almost always a market-maker trap that reverses quickly. The professional approach is to close or protect open positions 30 minutes before a red-flag event, and wait 15–30 minutes after the release for price to stabilise before considering new entries.</div></div>
+            <div class="fa"><div class="fa-inner">For most traders — particularly those who are intermediate level — <b>trading during high-impact news events should be avoided.</b> Spreads widen dramatically, slippage means stop losses do not execute at the intended price and the initial price spike is almost always a market-maker trap that reverses quickly. The professional approach is to close or protect open positions 30 minutes before a red-flag event and wait 15–30 minutes after the release for price to stabilise before considering new entries.</div></div>
         </div>
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do you backtest a trading strategy?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">To backtest a strategy: write every entry and exit rule in precise detail, select your target instrument and timeframe, scroll back through at least 12 months of historical data, and log every signal your rules would have generated — including the ones you would have skipped. Record win/loss, R:R achieved, and entry conditions for each. <b>A minimum of 50 trades is required for statistical validity.</b> Calculate your expectancy: (Win Rate × Average Win) − (Loss Rate × Average Loss). A positive result confirms a viable edge.</div></div>
+            <div class="fa"><div class="fa-inner">To backtest a strategy: write every entry and exit rule in precise detail, select your target instrument and timeframe, scroll back through at least 12 months of historical data and log every signal your rules would have generated — including the ones you would have skipped. Record win/loss, R:R achieved and entry conditions for each. <b>A minimum of 50 trades is required for statistical validity.</b> Calculate your expectancy: (Win Rate × Average Win) − (Loss Rate × Average Loss). A positive result confirms a viable edge.</div></div>
         </div>
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What price action patterns are best for trade confirmation?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">The most reliable price action confirmation patterns are: <b>the pin bar</b> (a long wick showing rejection of a level with a small body), <b>the engulfing candle</b> (a candle that completely encompasses the prior candle's body, showing a decisive shift in momentum), and <b>a strong momentum close</b> (a full-bodied candle with minimal wicks closing at or near its high or low). All three must occur at a significant level — at random price they carry no predictive value.</div></div>
+            <div class="fa"><div class="fa-inner">The most reliable price action confirmation patterns are: <b>the pin bar</b> (a long wick showing rejection of a level with a small body), <b>the engulfing candle</b> (a candle that completely encompasses the prior candle's body, showing a decisive shift in momentum) and <b>a strong momentum close</b> (a full-bodied candle with minimal wicks closing at or near its high or low). All three must occur at a significant level — at random price they carry no predictive value.</div></div>
         </div>
 
         <div class="fi">
@@ -1846,7 +1846,7 @@ include_once ('elements/header.php');
 
         <div class="fi">
             <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is Zed Capital's Advanced Trading Strategies course designed for?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-            <div class="fa"><div class="fa-inner">This course — <b>Course 5 of Zed Capital's Core Trading Series</b> — is designed for intermediate to advanced traders who already understand the basics of risk management and trading psychology and are ready to build a professional strategy framework. It covers market structure, seven specific strategy types, multi-timeframe analysis, price action confirmation, news risk management, entry and exit rules, and backtesting — providing a complete, systematic approach to identifying and executing high-probability trades.</div></div>
+            <div class="fa"><div class="fa-inner">This course — <b>Course 5 of Zed Capital's Core Trading Series</b> — is designed for intermediate to advanced traders who already understand the basics of risk management and trading psychology and are ready to build a professional strategy framework. It covers market structure, seven specific strategy types, multi-timeframe analysis, price action confirmation, news risk management, entry and exit rules and backtesting — providing a complete, systematic approach to identifying and executing high-probability trades.</div></div>
         </div>
         </div>
 

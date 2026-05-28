@@ -927,7 +927,7 @@ include_once ('elements/header.php');
       </div>
       <div class="mbody open">
         <div class="minner">
-          <p class="intro">Risk management is the systematic process of identifying, measuring, and controlling the financial risk in every trade. It is not about avoiding losses — losses are inevitable. It is about ensuring no single loss, or series of losses, can end your trading career.</p>
+          <p class="intro">Risk management is the systematic process of identifying, measuring and controlling the financial risk in every trade. It is not about avoiding losses — losses are inevitable. It is about ensuring no single loss, or series of losses, can end your trading career.</p>
           <div class="two">
             <div class="tbox">
               <div class="tbox-title"><i class="ti ti-circle-check" aria-hidden="true"></i> What it IS</div>
@@ -1023,7 +1023,7 @@ include_once ('elements/header.php');
       </div>
       <div class="mbody">
         <div class="minner">
-          <p class="intro">Position sizing is the process of determining exactly how large each trade should be relative to your account. It ties together your risk %, stop loss distance, and pip value into one precise number. It is the engine of disciplined trading.</p>
+          <p class="intro">Position sizing is the process of determining exactly how large each trade should be relative to your account. It ties together your risk %, stop loss distance and pip value into one precise number. It is the engine of disciplined trading.</p>
           <div class="fbox">
             <span class="flbl">Process</span><div class="fdiv"></div>
             <span class="feq"><b>Step 1:</b> Define risk % → <b>Step 2:</b> Set SL → <b>Step 3:</b> Calculate lot size</span>
@@ -1148,7 +1148,7 @@ include_once ('elements/header.php');
       </div>
       <div class="mbody">
         <div class="minner">
-          <p class="intro">Overtrading is one of the most common — and most destructive — habits in retail trading. It is driven by boredom, revenge, FOMO, and the illusion that more trades equals more profit. It does not. Discipline means waiting for only A-grade setups.</p>
+          <p class="intro">Overtrading is one of the most common — and most destructive — habits in retail trading. It is driven by boredom, revenge, FOMO and the illusion that more trades equals more profit. It does not. Discipline means waiting for only A-grade setups.</p>
           <div class="two">
             <div class="tbox danger">
               <div class="tbox-title"><i class="ti ti-alert-triangle" aria-hidden="true"></i> Signs of overtrading</div>
@@ -1235,7 +1235,7 @@ include_once ('elements/header.php');
       </div>
       <div class="mbody">
         <div class="minner">
-          <p class="intro">A trading plan is a written document that defines exactly how you trade — before you are in a trade, before you are emotional, and before the market is moving. Without it, you are improvising. With it, you are executing a system.</p>
+          <p class="intro">A trading plan is a written document that defines exactly how you trade — before you are in a trade, before you are emotional and before the market is moving. Without it, you are improvising. With it, you are executing a system.</p>
           <div class="rcard">
             <div class="rtitle"><i class="ti ti-file-text" aria-hidden="true"></i> Your Plan Must Include</div>
             <div class="rrow"><div class="rdot"></div>The markets and timeframes you trade — and only those</div>
@@ -1294,16 +1294,16 @@ include_once ('elements/header.php');
           <i class="ti ti-message-question" aria-hidden="true"></i>
           <h2></h2>
         </div>
-        <div class="faq-note">Professional answers to the most common risk management questions — optimised for search, voice, and AI discovery.</div>
+        <div class="faq-note">Professional answers to the most common risk management questions — optimised for search, voice and AI discovery.</div>
 
         <div class="fi">
           <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is risk management in trading and why is it important?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-          <div class="fa"><div class="fa-inner">Risk management in trading is the structured practice of controlling financial exposure on every trade through predefined rules — including stop losses, position sizing, and daily loss limits. <b>It is important because over 80% of retail traders lose money, and poor risk management is the primary cause.</b> A trader with an average strategy but excellent risk management will outlast a talented trader with none.</div></div>
+          <div class="fa"><div class="fa-inner">Risk management in trading is the structured practice of controlling financial exposure on every trade through predefined rules — including stop losses, position sizing and daily loss limits. <b>It is important because over 80% of retail traders lose money and poor risk management is the primary cause.</b> A trader with an average strategy but excellent risk management will outlast a talented trader with none.</div></div>
         </div>
 
         <div class="fi">
           <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How much should a beginner risk per trade?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-          <div class="fa"><div class="fa-inner">Beginners should risk no more than <b>1% of their total account balance per trade.</b> This means that even after 10 consecutive losing trades, only 10% of the account is lost — preserving enough capital to continue, learn, and improve. As consistency improves over 50–100 documented trades, risk can be gradually increased to a maximum of 2%.</div></div>
+          <div class="fa"><div class="fa-inner">Beginners should risk no more than <b>1% of their total account balance per trade.</b> This means that even after 10 consecutive losing trades, only 10% of the account is lost — preserving enough capital to continue, learn and improve. As consistency improves over 50–100 documented trades, risk can be gradually increased to a maximum of 2%.</div></div>
         </div>
 
         <div class="fi">
@@ -1323,7 +1323,7 @@ include_once ('elements/header.php');
 
         <div class="fi">
           <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is overtrading and how do I stop it?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-          <div class="fa"><div class="fa-inner">Overtrading is taking more trades than your strategy warrants — typically driven by boredom, FOMO, or the urge to recover losses. <b>It is one of the fastest ways to erode a trading account.</b> To stop it: define your A-grade setup criteria in writing, set a maximum of 2–3 trades per day, stop trading once the daily loss limit is reached, and journal every trade including your emotional state at entry.</div></div>
+          <div class="fa"><div class="fa-inner">Overtrading is taking more trades than your strategy warrants — typically driven by boredom, FOMO, or the urge to recover losses. <b>It is one of the fastest ways to erode a trading account.</b> To stop it: define your A-grade setup criteria in writing, set a maximum of 2–3 trades per day, stop trading once the daily loss limit is reached and journal every trade including your emotional state at entry.</div></div>
         </div>
 
         <div class="fi">
@@ -1333,7 +1333,7 @@ include_once ('elements/header.php');
 
         <div class="fi">
           <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What should a trading plan include for risk management?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-          <div class="fa"><div class="fa-inner">A complete trading plan must include: <b>risk % per trade, maximum daily and weekly loss limits, entry criteria for A-grade setups, stop loss placement rules, minimum R:R requirement, position sizing method, conditions for stopping trading, and a weekly review process.</b> Without a written plan, every trading decision is made emotionally in real time — which is the definition of gambling.</div></div>
+          <div class="fa"><div class="fa-inner">A complete trading plan must include: <b>risk % per trade, maximum daily and weekly loss limits, entry criteria for A-grade setups, stop loss placement rules, minimum R:R requirement, position sizing method, conditions for stopping trading and a weekly review process.</b> Without a written plan, every trading decision is made emotionally in real time — which is the definition of gambling.</div></div>
         </div>
 
         <div class="fi">

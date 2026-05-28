@@ -2,12 +2,12 @@
     <div id="sec-psychology" class="sec">
       <div class="sec-title">🧠 Trading Psychology — Master Your Mind</div>
       <p class="sec-desc">90% of retail traders lose money. The math is learnable — the mind is the real edge. Fear,
-        greed, and ego destroy more accounts than bad strategies ever will.</p>
+        greed and ego destroy more accounts than bad strategies ever will.</p>
 
       <div class="psych-card fear">
         <div class="psych-icon">😰</div>
         <div class="psych-title">Fear</div>
-        <div class="psych-desc">Fear causes premature exits, missed entries, and analysis paralysis. It stems from loss
+        <div class="psych-desc">Fear causes premature exits, missed entries and analysis paralysis. It stems from loss
           aversion — psychological research (Kahneman & Tversky, 1979) shows losses hurt approximately 2× more than
           equivalent gains feel good. This makes fearful traders exit winners too early and avoid valid setups after
           losses.</div>
@@ -26,7 +26,7 @@
         <div class="psych-icon">🤑</div>
         <div class="psych-title">Greed</div>
         <div class="psych-desc">Greed manifests as oversizing, moving take profit further mid-trade, removing stop
-          losses, revenge trading after losses, and FOMO (Fear Of Missing Out) entries. Greed is the #1 account killer —
+          losses, revenge trading after losses and FOMO (Fear Of Missing Out) entries. Greed is the #1 account killer —
           it temporarily works until one catastrophic trade wipes months of gains.</div>
         <div class="psych-tags">
           <span class="tag tr">Doubling lot size after big wins</span><span class="tag tr">Removing or moving Take

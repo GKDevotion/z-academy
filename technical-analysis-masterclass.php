@@ -1150,7 +1150,7 @@ include_once ('elements/header.php');
 
     <!-- M9 ENTRY SL TP -->
     <div class="module" id="m9">
-      <div class="mod-header"><div class="mod-num">10</div><div><div class="mod-badge">Module 10 — Trade Management</div><div class="mod-title">Entry, Stop Loss & Take Profit</div><div class="mod-desc">Knowing exactly where to enter, exit, and protect your capital</div></div></div>
+      <div class="mod-header"><div class="mod-num">10</div><div><div class="mod-badge">Module 10 — Trade Management</div><div class="mod-title">Entry, Stop Loss & Take Profit</div><div class="mod-desc">Knowing exactly where to enter, exit and protect your capital</div></div></div>
       <div class="mod-body">
         <div class="section">
           <div class="section-title">Entry Types</div>
@@ -1173,7 +1173,7 @@ include_once ('elements/header.php');
         <div class="section">
           <div class="section-title">Take Profit Strategies</div>
           <div class="concepts">
-            <div class="concept"><h4>Next S/R Level</h4><p>The nearest significant resistance (long) or support (short) becomes your first TP. Clean, logical, and widely respected.</p></div>
+            <div class="concept"><h4>Next S/R Level</h4><p>The nearest significant resistance (long) or support (short) becomes your first TP. Clean, logical and widely respected.</p></div>
             <div class="concept"><h4>Measured Move</h4><p>Pattern height measured from breakout = minimum target. H&S, flags, triangles all have predictable measured targets.</p></div>
             <div class="concept"><h4>Fibonacci Extensions</h4><p>1.272 and 1.618 extension levels are strong TP targets. Use Fibonacci retracements for entry, extensions for profit targets.</p></div>
             <div class="concept"><h4>Partial Profit Taking</h4><p>Close 50% at TP1, move SL to break-even, let remaining run to TP2. Locks in profit while giving the trade room to extend.</p></div>

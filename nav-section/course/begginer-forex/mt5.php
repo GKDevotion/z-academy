@@ -197,22 +197,22 @@
         </div>
         <div class="mt5-card">
           <div class="mt5-title"><span class="mt5-icon">💼</span>Terminal</div>
-          <div class="mt5-desc">Tabs: Trade (open positions), History, Alerts, Mailbox. Monitor equity, balance, and
+          <div class="mt5-desc">Tabs: Trade (open positions), History, Alerts, Mailbox. Monitor equity, balance and
             free margin live.</div>
         </div>
         <div class="mt5-card">
           <div class="mt5-title"><span class="mt5-icon">👁️</span>Navigator</div>
-          <div class="mt5-desc">Your account tree, indicators, EAs, and scripts. Drag-and-drop indicators onto charts.
+          <div class="mt5-desc">Your account tree, indicators, EAs and scripts. Drag-and-drop indicators onto charts.
           </div>
         </div>
         <div class="mt5-card">
           <div class="mt5-title"><span class="mt5-icon">💻</span>MQL5 Editor</div>
-          <div class="mt5-desc">Code EAs, indicators, and scripts in MQL5 (C++-like). Built-in debugger and MetaEditor
+          <div class="mt5-desc">Code EAs, indicators and scripts in MQL5 (C++-like). Built-in debugger and MetaEditor
             IDE.</div>
         </div>
         <div class="mt5-card">
           <div class="mt5-title"><span class="mt5-icon">🔬</span>Strategy Tester</div>
-          <div class="mt5-desc">Backtest EAs on historical data. Visual mode, optimization, and forward testing
+          <div class="mt5-desc">Backtest EAs on historical data. Visual mode, optimization and forward testing
             capabilities.</div>
         </div>
         <div class="mt5-card">

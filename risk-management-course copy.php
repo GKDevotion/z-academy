@@ -938,7 +938,7 @@ include_once ('elements/header.php');
             <h1 class="lesson-title-main">What is Risk Management?</h1>
             <p class="lesson-subtitle-main">The foundation of professional trading</p>
             <hr class="zed-divider" />
-            <p class="lesson-body-text">Risk management is the process of identifying, assessing, and controlling financial losses in every trade you take. Without a systematic approach to managing risk, even a profitable strategy will eventually wipe an account. Professional traders treat risk management as the single most important discipline — not an afterthought.</p>
+            <p class="lesson-body-text">Risk management is the process of identifying, assessing and controlling financial losses in every trade you take. Without a systematic approach to managing risk, even a profitable strategy will eventually wipe an account. Professional traders treat risk management as the single most important discipline — not an afterthought.</p>
             <div class="zed-formula-bar">
               <span class="formula-label">Core Principle</span>
               <span class="formula-expr">Capital Preservation <span class="hi">&gt;</span> Profit Generation</span>
@@ -1062,7 +1062,7 @@ include_once ('elements/header.php');
             <h1 class="lesson-title-main">Lot Size Calculation</h1>
             <p class="lesson-subtitle-main">Sizing every position with precision</p>
             <hr class="zed-divider" />
-            <p class="lesson-body-text">Lot size determines how many units you trade on any position. The correct lot size is calculated from your risk amount, your stop-loss distance in pips, and the pip value of the instrument. Getting this number right is non-negotiable — guessing leads to over-exposure.</p>
+            <p class="lesson-body-text">Lot size determines how many units you trade on any position. The correct lot size is calculated from your risk amount, your stop-loss distance in pips and the pip value of the instrument. Getting this number right is non-negotiable — guessing leads to over-exposure.</p>
             <div class="zed-formula-bar"><span class="formula-label">Formula</span><span class="formula-expr">Lot Size = <span class="hi">Risk Amount ÷ (Stop Pips × Pip Value)</span></span></div>
             <div class="zed-rules-block"><div class="rules-heading">Rules</div><ul class="rules-list"><li>Always calculate lot size before entering — never size by feel</li><li>Recalculate for every trade — account balance changes constantly</li><li>Smaller stop = larger lot size; wider stop = smaller lot size</li><li>Use a pip calculator tool to verify before execution</li></ul></div>
             <div class="lesson-nav">
@@ -1080,7 +1080,7 @@ include_once ('elements/header.php');
             <h1 class="lesson-title-main">Position Sizing</h1>
             <p class="lesson-subtitle-main">Scaling trade size to your account and risk tolerance</p>
             <hr class="zed-divider" />
-            <p class="lesson-body-text">Position sizing ties together your account balance, risk percentage, stop-loss distance, and instrument pip value into a single precise unit count per trade. Correct position sizing means a stop-out on any given trade only ever costs you the pre-planned risk amount — not more.</p>
+            <p class="lesson-body-text">Position sizing ties together your account balance, risk percentage, stop-loss distance and instrument pip value into a single precise unit count per trade. Correct position sizing means a stop-out on any given trade only ever costs you the pre-planned risk amount — not more.</p>
             <div class="zed-formula-bar"><span class="formula-label">Formula</span><span class="formula-expr">Units = <span class="hi">(Balance × Risk%) ÷ Stop Distance</span></span></div>
             <div class="zed-rules-block"><div class="rules-heading">Rules</div><ul class="rules-list"><li>Re-size every position based on current account balance — not original balance</li><li>Never average down by adding to a losing position</li><li>Scale position size down during losing streaks to reduce drawdown speed</li><li>Keep a position sizing spreadsheet or calculator open at all times</li></ul></div>
             <div class="lesson-nav">
@@ -1265,7 +1265,7 @@ include_once ('elements/header.php');
             <h2>Risk Management — FAQ</h2>
             <p>
                 Professional answers to the most common risk management questions —
-                optimised for search, voice, and AI discovery.
+                optimised for search, voice and AI discovery.
             </p>
         </div>
 
@@ -1289,7 +1289,7 @@ include_once ('elements/header.php');
                     <div class="accordion-body">
                         Risk management is the process of controlling how much money
                         you risk on each trade. It protects your trading capital,
-                        reduces emotional decisions, and helps traders survive losing
+                        reduces emotional decisions and helps traders survive losing
                         streaks while staying profitable long term.
                     </div>
                 </div>
@@ -1356,7 +1356,7 @@ include_once ('elements/header.php');
                     <div class="accordion-body">
                         Drawdown refers to the reduction in your account balance
                         after a series of losses. Traders manage drawdown by lowering
-                        position size, reducing trade frequency, and following strict
+                        position size, reducing trade frequency and following strict
                         risk limits.
                     </div>
                 </div>
@@ -1378,7 +1378,7 @@ include_once ('elements/header.php');
 
                     <div class="accordion-body">
                         Lot size is calculated based on your account balance, risk
-                        percentage, and stop loss distance. Proper position sizing
+                        percentage and stop loss distance. Proper position sizing
                         ensures you never risk more than your planned amount.
                     </div>
                 </div>
@@ -1445,7 +1445,7 @@ include_once ('elements/header.php');
                     <div class="accordion-body">
                         A strong trading plan should include risk per trade, maximum
                         daily loss, position sizing rules, entry confirmation,
-                        stop-loss strategy, and profit targets.
+                        stop-loss strategy and profit targets.
                     </div>
                 </div>
             </div>

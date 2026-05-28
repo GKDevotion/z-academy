@@ -458,7 +458,7 @@ include_once ('elements/header.php');
                 Read the<em> <br>Markets</em>Trade with Clarity
             </h1>
             <p class="sub">
-                Master daily market analysis across Forex, Gold, and Indices. Understand technical setups, fundamental drivers, and key support/resistance zones — every single trading day.
+                Master daily market analysis across Forex, Gold and Indices. Understand technical setups, fundamental drivers and key support/resistance zones — every single trading day.
             </p>
             <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
                 <a href="#courses" class="btn btn-red">
@@ -2145,7 +2145,7 @@ include_once ('elements/header.php');
                         <div class="minner">
                             <div class="l-sub">Market Structure</div>
                             <h2 class="l-head">Start Every Day With a Complete Market Picture.</h2>
-                            <p class="l-body">A Daily Market Overview is a structured scan of the most important financial markets before the trading session begins. <b>It tells you what moved overnight, what the overall bias is, and where the key levels sit</b> — so every decision you make during the day is informed, not reactive.</p>
+                            <p class="l-body">A Daily Market Overview is a structured scan of the most important financial markets before the trading session begins. <b>It tells you what moved overnight, what the overall bias is and where the key levels sit</b> — so every decision you make during the day is informed, not reactive.</p>
 
                             <!-- ANIMATED MULTI-MARKET CHART -->
                             <div class="cbox">
@@ -2183,11 +2183,11 @@ include_once ('elements/header.php');
 
                             <div class="rules b">
                             <div class="r-title"><i class="ti ti-list-check"></i>Daily Overview — What to Check Every Morning</div>
-                            <div class="rrow"><div class="rdot"></div><b>Session performance overnight:</b> what moved, by how much, and in which direction</div>
+                            <div class="rrow"><div class="rdot"></div><b>Session performance overnight:</b> what moved, by how much and in which direction</div>
                             <div class="rrow"><div class="rdot"></div><b>Overall market bias:</b> is risk-on or risk-off sentiment dominating across major assets</div>
                             <div class="rrow"><div class="rdot"></div><b>Key level proximity:</b> is price near a major support, resistance, or decision zone</div>
                             <div class="rrow"><div class="rdot"></div><b>News calendar:</b> what high-impact events are scheduled today — mark them before trading</div>
-                            <div class="rrow"><div class="rdot"></div><b>Correlation check:</b> Gold, Dollar, and equity indices often move in predictable relationships</div>
+                            <div class="rrow"><div class="rdot"></div><b>Correlation check:</b> Gold, Dollar and equity indices often move in predictable relationships</div>
                             </div>
                             <button class="btn-done" onclick="markDone(1)"><i class="ti ti-check"></i>Mark Complete</button>
                         </div>
@@ -2198,14 +2198,14 @@ include_once ('elements/header.php');
                     <article class="mod rv" data-id="2">
                         <div class="mod-hd" onclick="tog(2)">
                         <div class="mn">02</div><div class="mico"><i class="ti ti-currency-euro"></i></div>
-                        <div class="mmeta"><div class="mtitle">Forex Market Analysis</div><div class="msub">Reading currency pairs — structure, bias, and key setups</div></div>
+                        <div class="mmeta"><div class="mtitle">Forex Market Analysis</div><div class="msub">Reading currency pairs — structure, bias and key setups</div></div>
                         <div class="mright"><span class="badge b-l">Lesson</span><i class="ti ti-chevron-right mchev"></i></div>
                         </div>
                         <div class="mbody">
                         <div class="minner">
                             <div class="l-sub">Currency Markets</div>
                             <h2 class="l-head">Forex Analysis Is the Foundation of Every Trade Decision.</h2>
-                            <p class="l-body">Forex market analysis combines reading price structure, identifying trend direction, locating high-probability entry zones, and aligning with the broader macro environment. <b>Without a clear analytical framework, every trade is a guess.</b></p>
+                            <p class="l-body">Forex market analysis combines reading price structure, identifying trend direction, locating high-probability entry zones and aligning with the broader macro environment. <b>Without a clear analytical framework, every trade is a guess.</b></p>
 
                             <!-- FOREX ANALYSIS CHART -->
                             <div class="cbox">
@@ -2246,10 +2246,10 @@ include_once ('elements/header.php');
 
                             <div class="steps">
                             <div class="step"><div class="step-n">1</div><div><div class="step-t">Identify the higher timeframe trend</div><div class="step-d">Check H4 and Daily — is price making HH/HL (bullish) or LH/LL (bearish)? This is your non-negotiable bias.</div></div></div>
-                            <div class="step"><div class="step-n">2</div><div><div class="step-t">Mark key support and resistance levels</div><div class="step-d">Identify prior swing highs, lows, and horizontal levels from Daily chart. These are your decision zones.</div></div></div>
+                            <div class="step"><div class="step-n">2</div><div><div class="step-t">Mark key support and resistance levels</div><div class="step-d">Identify prior swing highs, lows and horizontal levels from Daily chart. These are your decision zones.</div></div></div>
                             <div class="step"><div class="step-n">3</div><div><div class="step-t">Check for confluence</div><div class="step-d">Does price sit near a Fibonacci level, moving average, or round number? Multiple confluences raise probability.</div></div></div>
                             <div class="step"><div class="step-n">4</div><div><div class="step-t">Define the entry zone and wait</div><div class="step-d">Identify where you would enter on H1 or M15. Wait for price to come to you — never chase entries.</div></div></div>
-                            <div class="step"><div class="step-n">5</div><div><div class="step-t">Set stop, target, and R:R before entry</div><div class="step-d">Calculate lot size based on stop distance. Minimum 1:1.5 R:R required. If it does not qualify — skip it.</div></div></div>
+                            <div class="step"><div class="step-n">5</div><div><div class="step-t">Set stop, target and R:R before entry</div><div class="step-d">Calculate lot size based on stop distance. Minimum 1:1.5 R:R required. If it does not qualify — skip it.</div></div></div>
                             </div>
                             <button class="btn-done" onclick="markDone(2)"><i class="ti ti-check"></i>Mark Complete</button>
                         </div>
@@ -2260,14 +2260,14 @@ include_once ('elements/header.php');
                     <article class="mod rv" data-id="3">
                         <div class="mod-hd" onclick="tog(3)">
                         <div class="mn">03</div><div class="mico"><i class="ti ti-square-rounded-letter-g"></i></div>
-                        <div class="mmeta"><div class="mtitle">Gold Market Analysis</div><div class="msub">XAU/USD — structure, drivers, and price zones</div></div>
+                        <div class="mmeta"><div class="mtitle">Gold Market Analysis</div><div class="msub">XAU/USD — structure, drivers and price zones</div></div>
                         <div class="mright"><span class="badge b-l">Lesson</span><i class="ti ti-chevron-right mchev"></i></div>
                         </div>
                         <div class="mbody">
                         <div class="minner">
                             <div class="l-sub">Commodity Market</div>
                             <h2 class="l-head">Gold is the World's Safe Haven. Know When it Moves.</h2>
-                            <p class="l-body">Gold (XAU/USD) is one of the most widely traded instruments in the world. It moves on a unique combination of <b>USD strength, geopolitical risk, inflation data, and real interest rates.</b> Understanding these drivers is essential before analysing any Gold chart.</p>
+                            <p class="l-body">Gold (XAU/USD) is one of the most widely traded instruments in the world. It moves on a unique combination of <b>USD strength, geopolitical risk, inflation data and real interest rates.</b> Understanding these drivers is essential before analysing any Gold chart.</p>
 
                             <!-- GOLD CANDLE CHART -->
                             <div class="cbox">
@@ -2333,7 +2333,7 @@ include_once ('elements/header.php');
                         <div class="minner">
                             <div class="l-sub">Equity Indices</div>
                             <h2 class="l-head">Indices Tell You the Story of the Entire Economy.</h2>
-                            <p class="l-body">Equity indices measure the aggregate performance of a basket of stocks. Trading them gives you exposure to the broad direction of entire economies. <b>US30, SPX500, and NAS100 are the three most traded indices in the world</b> — each with a distinct character and set of drivers.</p>
+                            <p class="l-body">Equity indices measure the aggregate performance of a basket of stocks. Trading them gives you exposure to the broad direction of entire economies. <b>US30, SPX500 and NAS100 are the three most traded indices in the world</b> — each with a distinct character and set of drivers.</p>
 
                             <!-- INDICES COMPARISON CHART -->
                             <div class="cbox">
@@ -2382,14 +2382,14 @@ include_once ('elements/header.php');
                     <article class="mod rv" data-id="5">
                         <div class="mod-hd" onclick="tog(5)">
                         <div class="mn">05</div><div class="mico"><i class="ti ti-chart-candle"></i></div>
-                        <div class="mmeta"><div class="mtitle">Technical Market Outlook</div><div class="msub">Chart patterns, indicators, and price action setups</div></div>
+                        <div class="mmeta"><div class="mtitle">Technical Market Outlook</div><div class="msub">Chart patterns, indicators and price action setups</div></div>
                         <div class="mright"><span class="badge b-l">Lesson</span><i class="ti ti-chevron-right mchev"></i></div>
                         </div>
                         <div class="mbody">
                         <div class="minner">
                             <div class="l-sub">Technical Analysis</div>
                             <h2 class="l-head">The Chart Shows You Everything — If You Know How to Read It.</h2>
-                            <p class="l-body">Technical outlook is the process of reading price action, identifying chart patterns, and applying indicator confluence to forecast the most probable direction. <b>It is objective, repeatable, and entirely based on what price has actually done</b> — not what you think it should do.</p>
+                            <p class="l-body">Technical outlook is the process of reading price action, identifying chart patterns and applying indicator confluence to forecast the most probable direction. <b>It is objective, repeatable and entirely based on what price has actually done</b> — not what you think it should do.</p>
 
                             <!-- TECHNICAL SETUP CHART -->
                             <div class="cbox">
@@ -2437,14 +2437,14 @@ include_once ('elements/header.php');
                     <article class="mod rv" data-id="6">
                         <div class="mod-hd" onclick="tog(6)">
                         <div class="mn">06</div><div class="mico"><i class="ti ti-building-bank"></i></div>
-                        <div class="mmeta"><div class="mtitle">Fundamental Market Outlook</div><div class="msub">Economic data, central banks, and macro drivers</div></div>
+                        <div class="mmeta"><div class="mtitle">Fundamental Market Outlook</div><div class="msub">Economic data, central banks and macro drivers</div></div>
                         <div class="mright"><span class="badge b-l">Lesson</span><i class="ti ti-chevron-right mchev"></i></div>
                         </div>
                         <div class="mbody">
                         <div class="minner">
                             <div class="l-sub">Macro Analysis</div>
                             <h2 class="l-head">Understanding Why Markets Move — Not Just How.</h2>
-                            <p class="l-body">Fundamental analysis studies the economic and monetary forces that drive asset prices. <b>Central bank policy, inflation data, employment figures, and GDP growth</b> are the primary engines of long-term market direction. No technical setup lasts long against a fundamental headwind.</p>
+                            <p class="l-body">Fundamental analysis studies the economic and monetary forces that drive asset prices. <b>Central bank policy, inflation data, employment figures and GDP growth</b> are the primary engines of long-term market direction. No technical setup lasts long against a fundamental headwind.</p>
 
                             <div class="sgrid">
                             <div class="sbox r"><div class="sv" style="font-size:1.1rem">Fed</div><div class="sk">US Central Bank Policy</div></div>
@@ -2527,7 +2527,7 @@ include_once ('elements/header.php');
                         <div class="minner">
                             <div class="l-sub">Economic Calendar</div>
                             <h2 class="l-head">News Events Can Move the Market 100+ Pips in Seconds. Know Them.</h2>
-                            <p class="l-body">High-impact economic releases create extreme, fast price movements that can trigger stops, widen spreads, and invalidate technical setups in moments. <b>Knowing what events are scheduled, when they occur, and how to manage your positions around them</b> is a critical professional skill.</p>
+                            <p class="l-body">High-impact economic releases create extreme, fast price movements that can trigger stops, widen spreads and invalidate technical setups in moments. <b>Knowing what events are scheduled, when they occur and how to manage your positions around them</b> is a critical professional skill.</p>
 
                             <!-- NEWS TABLE -->
                             <div class="news-table">
@@ -2569,14 +2569,14 @@ include_once ('elements/header.php');
                     <article class="mod rv" data-id="9">
                         <div class="mod-hd" onclick="tog(9)">
                         <div class="mn">09</div><div class="mico"><i class="ti ti-calendar-stats"></i></div>
-                        <div class="mmeta"><div class="mtitle">Weekly Market Summary</div><div class="msub">Reviewing the week, extracting lessons, and setting up for next week</div></div>
+                        <div class="mmeta"><div class="mtitle">Weekly Market Summary</div><div class="msub">Reviewing the week, extracting lessons and setting up for next week</div></div>
                         <div class="mright"><span class="badge b-f">Final</span><i class="ti ti-chevron-right mchev"></i></div>
                         </div>
                         <div class="mbody">
                         <div class="minner">
                             <div class="l-sub">Weekly Review</div>
                             <h2 class="l-head">The Best Traders Review More Than They Trade.</h2>
-                            <p class="l-body">A Weekly Market Summary is the discipline of reviewing everything that happened across the week — what moved, why it moved, what setups triggered, and what the overall bias looks like heading into the next session. <b>Traders who review consistently improve faster than those who simply trade more.</b></p>
+                            <p class="l-body">A Weekly Market Summary is the discipline of reviewing everything that happened across the week — what moved, why it moved, what setups triggered and what the overall bias looks like heading into the next session. <b>Traders who review consistently improve faster than those who simply trade more.</b></p>
 
                             <!-- WEEKLY PERFORMANCE CHART -->
                             <div class="cbox">
@@ -2617,9 +2617,9 @@ include_once ('elements/header.php');
                             </div>
 
                             <div class="steps">
-                            <div class="step"><div class="step-n">1</div><div><div class="step-t">Review every trade taken this week</div><div class="step-d">Were entries, stops, and targets all placed at the right levels? Did you follow your plan on every trade?</div></div></div>
+                            <div class="step"><div class="step-n">1</div><div><div class="step-t">Review every trade taken this week</div><div class="step-d">Were entries, stops and targets all placed at the right levels? Did you follow your plan on every trade?</div></div></div>
                             <div class="step"><div class="step-n">2</div><div><div class="step-t">Identify the week's biggest movers and why</div><div class="step-d">Which pairs moved most? Was it news-driven, technical breakout, or institutional activity? Understand the cause.</div></div></div>
-                            <div class="step"><div class="step-n">3</div><div><div class="step-t">Mark the next week's key levels now</div><div class="step-d">Before the weekend ends, identify next week's key S/R zones, round numbers, and potential reaction areas</div></div></div>
+                            <div class="step"><div class="step-n">3</div><div><div class="step-t">Mark the next week's key levels now</div><div class="step-d">Before the weekend ends, identify next week's key S/R zones, round numbers and potential reaction areas</div></div></div>
                             <div class="step"><div class="step-n">4</div><div><div class="step-t">Check the next week's economic calendar</div><div class="step-d">Identify all red-flag events. Plan your sessions around them — know which days to reduce exposure</div></div></div>
                             <div class="step"><div class="step-n">5</div><div><div class="step-t">Set one improvement goal for next week</div><div class="step-d">Based on your week's review — identify one specific thing to improve: entry discipline, patience, risk sizing</div></div></div>
                             </div>
@@ -2677,24 +2677,24 @@ include_once ('elements/header.php');
 
                         <div class="fa">
                             <div class="fa-inner">
-                                Market analysis is the process of studying price data, economic indicators, and market conditions to forecast the most probable direction of an asset. It combines technical analysis (chart reading) and fundamental analysis (economic data) to form a complete, informed view before any trade is placed. Without it, every trading decision is driven by emotion rather than evidence. 
+                                Market analysis is the process of studying price data, economic indicators and market conditions to forecast the most probable direction of an asset. It combines technical analysis (chart reading) and fundamental analysis (economic data) to form a complete, informed view before any trade is placed. Without it, every trading decision is driven by emotion rather than evidence. 
                             </div>
                         </div>
                     </div>
 
                     <div class="fi">
                         <div class="fq" onclick="faqTog(this)"><span class="fq-txt">How do you analyse the Forex market daily?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                        <div class="fa"><div class="fa-inner">A daily Forex analysis routine includes: checking overnight price movement and session bias, marking key support and resistance levels from Daily/H4 charts, reviewing the economic calendar for red-flag events, checking correlation between USD, Gold, and major indices, and identifying the highest-probability setups across major pairs. This process should take 20–30 minutes before the session opens.</div></div>
+                        <div class="fa"><div class="fa-inner">A daily Forex analysis routine includes: checking overnight price movement and session bias, marking key support and resistance levels from Daily/H4 charts, reviewing the economic calendar for red-flag events, checking correlation between USD, Gold and major indices and identifying the highest-probability setups across major pairs. This process should take 20–30 minutes before the session opens.</div></div>
                     </div>
 
                     <div class="fi">
                         <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What drives the Gold (XAU/USD) price?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                        <div class="fa"><div class="fa-inner">Gold is primarily driven by: USD strength (inverse relationship), real interest rates (higher rates = bearish Gold), geopolitical uncertainty (crisis = bullish Gold), inflation expectations (higher inflation = bullish Gold), and central bank buying. When the Fed signals rate cuts, Gold typically rises. When data shows a strengthening economy, Gold often falls. Always check these drivers before analysing the Gold chart.</div></div>
+                        <div class="fa"><div class="fa-inner">Gold is primarily driven by: USD strength (inverse relationship), real interest rates (higher rates = bearish Gold), geopolitical uncertainty (crisis = bullish Gold), inflation expectations (higher inflation = bullish Gold) and central bank buying. When the Fed signals rate cuts, Gold typically rises. When data shows a strengthening economy, Gold often falls. Always check these drivers before analysing the Gold chart.</div></div>
                     </div>
 
                     <div class="fi">
                         <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the difference between technical and fundamental analysis?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                        <div class="fa"><div class="fa-inner">Technical analysis studies price chart patterns, candlestick formations, support/resistance zones, and indicators to identify high-probability entry and exit points. Fundamental analysis studies economic data, central bank policy, interest rates, and geopolitical events to understand why markets move in a given direction. Professional traders use both together — fundamentals set the long-term bias, technicals provide the precise entry.</div></div>
+                        <div class="fa"><div class="fa-inner">Technical analysis studies price chart patterns, candlestick formations, support/resistance zones and indicators to identify high-probability entry and exit points. Fundamental analysis studies economic data, central bank policy, interest rates and geopolitical events to understand why markets move in a given direction. Professional traders use both together — fundamentals set the long-term bias, technicals provide the precise entry.</div></div>
                     </div>
 
                     <div class="fi">
@@ -2714,7 +2714,7 @@ include_once ('elements/header.php');
 
                     <div class="fi">
                         <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Why is a weekly market review important for traders?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                        <div class="fa"><div class="fa-inner">A weekly review forces you to evaluate your decision-making process objectively — not just your profits or losses. Traders who review consistently identify repeating mistakes and fix them faster than those who simply trade more. A structured weekly review includes: trade-by-trade analysis, identifying the week's key movers and their causes, marking next week's levels, checking the upcoming economic calendar, and setting one specific improvement focus for the following week.</div></div>
+                        <div class="fa"><div class="fa-inner">A weekly review forces you to evaluate your decision-making process objectively — not just your profits or losses. Traders who review consistently identify repeating mistakes and fix them faster than those who simply trade more. A structured weekly review includes: trade-by-trade analysis, identifying the week's key movers and their causes, marking next week's levels, checking the upcoming economic calendar and setting one specific improvement focus for the following week.</div></div>
                     </div>
     
             </div>

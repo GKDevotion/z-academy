@@ -28,7 +28,7 @@
                     <strong>Forex (Foreign Exchange)</strong> is the global marketplace where one currency is exchanged for
                     another. Unlike stocks (which trade on centralised exchanges like NYSE), Forex is an <strong>OTC
                     (Over-The-Counter)</strong> market — meaning there is no single central exchange. Instead, trading happens
-                    through a global network of banks, brokers, and electronic systems called the <strong>interbank
+                    through a global network of banks, brokers and electronic systems called the <strong>interbank
                     network.</strong>
                 </p>
                 <p style="color: var(--zed-secondary) !important; line-height:1.82;">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="timeline-item">
                     <!-- <div class="timeline-year">2000s–Now</div> -->
-                    <div class="timeline-text"><span class="timeline-year">2000s–Now : </span> MT4/MT5 platforms, ECN brokers, algorithmic trading, and mobile apps democratised forex globally.</div>
+                    <div class="timeline-text"><span class="timeline-year">2000s–Now : </span> MT4/MT5 platforms, ECN brokers, algorithmic trading and mobile apps democratised forex globally.</div>
                 </div>
             </div>
 
@@ -104,7 +104,7 @@
                 </div>
                 <div class="timeline-item">
                     <!-- <div class="timeline-year">2000s–Now</div> -->
-                    <div class="timeline-text"><span class="timeline-year">5. Central Bank Policy : </span> buy/sell their own currency to control inflation, support exports, and manage reserves.</div>
+                    <div class="timeline-text"><span class="timeline-year">5. Central Bank Policy : </span> buy/sell their own currency to control inflation, support exports and manage reserves.</div>
                 </div>
             </div>
             
@@ -175,10 +175,10 @@
                         Federal Reserve (USA), ECB (Europe), Bank of Japan, Bank of England, etc.
                     </p>
                     <p class="text-gray" style="width: 90%;">
-                        <strong>What they do :</strong> Set interest rates, conduct quantitative easing/tightening, and intervene directly in currency markets. A single central bank statement can move EUR/USD 200+ pips in seconds.
+                        <strong>What they do :</strong> Set interest rates, conduct quantitative easing/tightening and intervene directly in currency markets. A single central bank statement can move EUR/USD 200+ pips in seconds.
                     </p>
                     <p class="text-gray" style="width: 90%;">
-                        <strong>Why it matters for you : </strong> FOMC, ECB, and BOJ meetings are the most important events on the economic calendar. Learn to trade around them.
+                        <strong>Why it matters for you : </strong> FOMC, ECB and BOJ meetings are the most important events on the economic calendar. Learn to trade around them.
                     </p>
                     <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
 
@@ -190,7 +190,7 @@
 
                     </p>
                     <p class="text-gray" style="width: 90%;">
-                        <strong>George Soros example : </strong> In 1992, Soros shorted the British Pound with $10 billion, forced the UK to exit the European Exchange Rate Mechanism, and made $1 billion in a single day.
+                        <strong>George Soros example : </strong> In 1992, Soros shorted the British Pound with $10 billion, forced the UK to exit the European Exchange Rate Mechanism and made $1 billion in a single day.
 
                     </p>
                     <p class="text-gray" style="width: 90%;">
@@ -209,7 +209,7 @@
 
                         </p>
                         <p class="text-gray" style="width: 90%;">
-                           <strong>Revenue : </strong> Brokers earn from spreads, commissions, swap fees, and (for market makers) from client losses.
+                           <strong>Revenue : </strong> Brokers earn from spreads, commissions, swap fees and (for market makers) from client losses.
                         </p>
                         <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
     
@@ -812,7 +812,7 @@
                     Demo account — start here
                 </div>
                 <div class="card-body">
-                    <p>A demo account uses <strong style="color:var(--color-text-primary)">virtual money</strong> with real market prices. It is identical to a live account in terms of charts, indicators, and order types — but there is NO emotional weight because you cannot actually lose real money.</p>
+                    <p>A demo account uses <strong style="color:var(--color-text-primary)">virtual money</strong> with real market prices. It is identical to a live account in terms of charts, indicators and order types — but there is NO emotional weight because you cannot actually lose real money.</p>
                     <div class="divider"></div>
                     <p class="label">How long on demo?</p>
                     <p>Until you are consistently profitable for at least 3 months. Not 3 weeks — 3 months. Track every trade in a journal.</p>
@@ -921,7 +921,7 @@
             The Trading Mindset
         </div>
         <blockquote class="mindset-quote reveal">
-            "Start with Demo Trading ONLY. You need time to think, analyse, and react without the stress of watching every
+            "Start with Demo Trading ONLY. You need time to think, analyse and react without the stress of watching every
             tick. Most successful beginner traders start 3–6 months of demo trading after 6+ months of consistent demo
             trading results."
         </blockquote>

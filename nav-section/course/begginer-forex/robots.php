@@ -1,7 +1,7 @@
  <!-- ═══════════════ AI & ROBOTS ═══════════════ -->
     <div id="sec-ai" class="sec">
       <div class="sec-title">🤖 AI Trading & Expert Advisors (EAs)</div>
-      <p class="sec-desc">Algorithmic trading removes emotion, fatigue, and hesitation from your trading. EAs execute
+      <p class="sec-desc">Algorithmic trading removes emotion, fatigue and hesitation from your trading. EAs execute
         your strategy perfectly — 24 hours a day, 5 days a week.</p>
 
       <div class="sub-title">🧠 What is Algorithmic Trading?</div>
@@ -74,7 +74,7 @@
         </div>
         <div class="mt5-card">
           <div class="mt5-title"><span class="mt5-icon">⚡</span>Scalping EAs</div>
-          <div class="mt5-desc">Dozens of trades/day targeting 5–15 pips. Needs low spread, fast execution, and VPS with
+          <div class="mt5-desc">Dozens of trades/day targeting 5–15 pips. Needs low spread, fast execution and VPS with
             low latency.</div>
         </div>
         <div class="mt5-card">
@@ -103,7 +103,7 @@
         </li>
         <li class="step-item">
           <div class="step-num">2</div>
-          <div class="step-text"><strong>Test 5+ years minimum</strong> — Include bull, bear, and sideways markets. One
+          <div class="step-text"><strong>Test 5+ years minimum</strong> — Include bull, bear and sideways markets. One
             market condition is not enough to validate a strategy.</div>
         </li>
         <li class="step-item">
@@ -132,7 +132,7 @@
       <div class="info-grid">
         <div class="info-card">
           <div class="info-head">📰 Sentiment Analysis</div>
-          <div class="info-body">NLP models scan news, Twitter/X, Reddit, and Telegram for market sentiment.
+          <div class="info-body">NLP models scan news, Twitter/X, Reddit and Telegram for market sentiment.
             Bullish/bearish signal aggregation. Tools: Bloomberg Sentiment, FinBERT models.</div>
         </div>
         <div class="info-card">

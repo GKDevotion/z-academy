@@ -127,7 +127,7 @@ include_once ('elements/header.php');
                News Events <em>Market Impact</em> <br>Trade Smarter
             </h1>
             <p class="sub">
-               Understand how economic data releases move the markets. From interest rate decisions and CPI to NFP and central bank speeches — learn what matters, when it happens, and how to protect your trades around it.
+               Understand how economic data releases move the markets. From interest rate decisions and CPI to NFP and central bank speeches — learn what matters, when it happens and how to protect your trades around it.
             </p>
             <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
                 <a href="#courses" class="btn btn-red">
@@ -679,7 +679,7 @@ html{scroll-behavior:smooth}
                 <div class="minner">
                     <div class="l-sub">Foundation</div>
                     <h2 class="l-head">The Economic Calendar is the Most Powerful Free Tool in Trading.</h2>
-                    <p class="l-body">An economic calendar is a scheduled list of upcoming economic data releases, central bank decisions, and speeches that have the potential to move financial markets. <b>Every serious trader checks it before every session</b> — because trading without it is like driving without knowing where the speed bumps are.</p>
+                    <p class="l-body">An economic calendar is a scheduled list of upcoming economic data releases, central bank decisions and speeches that have the potential to move financial markets. <b>Every serious trader checks it before every session</b> — because trading without it is like driving without knowing where the speed bumps are.</p>
 
                     <!-- ANIMATED CALENDAR VISUAL -->
                     <div class="cbox">
@@ -834,7 +834,7 @@ html{scroll-behavior:smooth}
                 <div class="minner">
                     <div class="l-sub">Central Bank Policy</div>
                     <h2 class="l-head">Interest Rate Decisions Move Every Market Simultaneously.</h2>
-                    <p class="l-body">When a central bank changes interest rates — or even signals a change in its future policy stance — <b>every major Forex pair, commodity, equity index, and bond market reacts instantly.</b> Understanding the relationship between rates and market prices is non-negotiable knowledge for any trader.</p>
+                    <p class="l-body">When a central bank changes interest rates — or even signals a change in its future policy stance — <b>every major Forex pair, commodity, equity index and bond market reacts instantly.</b> Understanding the relationship between rates and market prices is non-negotiable knowledge for any trader.</p>
 
                     <!-- RATE DECISION IMPACT CHART -->
                     <div class="cbox">
@@ -887,7 +887,7 @@ html{scroll-behavior:smooth}
                     </div>
                     <div class="rules">
                     <div class="r-title"><i class="ti ti-list-check"></i>Key Rate Decision Facts</div>
-                    <div class="rrow"><div class="rdot"></div>The Fed (US), ECB (EU), BoE (UK), and BoJ (Japan) are the four most market-moving central banks globally</div>
+                    <div class="rrow"><div class="rdot"></div>The Fed (US), ECB (EU), BoE (UK) and BoJ (Japan) are the four most market-moving central banks globally</div>
                     <div class="rrow"><div class="rdot"></div><b>It is not just the rate change that moves the market — it is the forward guidance</b> in the statement and press conference</div>
                     <div class="rrow"><div class="rdot"></div>"Hawkish" language = rates staying high or going higher → USD bullish, Gold bearish</div>
                     <div class="rrow"><div class="rdot"></div>"Dovish" language = rates cutting or staying low → USD bearish, Gold bullish, equities bullish</div>
@@ -902,7 +902,7 @@ html{scroll-behavior:smooth}
             <article class="mod rv" data-id="4">
                 <div class="mod-hd" onclick="tog(4)">
                 <div class="mn">04</div><div class="mico"><i class="ti ti-trending-up"></i></div>
-                <div class="mmeta"><div class="mtitle">CPI and Inflation Data</div><div class="msub">How inflation numbers move currencies, gold, and rates</div></div>
+                <div class="mmeta"><div class="mtitle">CPI and Inflation Data</div><div class="msub">How inflation numbers move currencies, gold and rates</div></div>
                 <div class="mright"><span class="badge b-l">Lesson</span><i class="ti ti-chevron-right mchev"></i></div>
                 </div>
                 <div class="mbody">
@@ -1101,7 +1101,7 @@ html{scroll-behavior:smooth}
                 <div class="minner">
                     <div class="l-sub">Forward Guidance</div>
                     <h2 class="l-head">One Sentence From Jerome Powell Can Move the Dollar 80 Pips.</h2>
-                    <p class="l-body">Central bank officials — particularly the Fed Chair (Jerome Powell), ECB President (Christine Lagarde), and BoE Governor — regularly speak at conferences and press events. <b>Their language about inflation, growth, and future rate decisions provides the market's most important forward guidance.</b> A single word change in a speech can move markets more than the data itself.</p>
+                    <p class="l-body">Central bank officials — particularly the Fed Chair (Jerome Powell), ECB President (Christine Lagarde) and BoE Governor — regularly speak at conferences and press events. <b>Their language about inflation, growth and future rate decisions provides the market's most important forward guidance.</b> A single word change in a speech can move markets more than the data itself.</p>
 
                     <!-- SPEECH IMPACT VISUAL -->
                     <div class="cbox">
@@ -1143,7 +1143,7 @@ html{scroll-behavior:smooth}
                     </div>
                     <div class="rules a">
                     <div class="r-title"><i class="ti ti-list-check"></i>Central Bank Speech Rules</div>
-                    <div class="rrow"><div class="rdot"></div>Follow Fed Chair speeches on Investing.com, Bloomberg, and the Federal Reserve website live</div>
+                    <div class="rrow"><div class="rdot"></div>Follow Fed Chair speeches on Investing.com, Bloomberg and the Federal Reserve website live</div>
                     <div class="rrow"><div class="rdot"></div>Do not trade during a live speech — wait for the headline to be clear, then trade the confirmation</div>
                     <div class="rrow"><div class="rdot"></div>Compare language to the <b>previous statement</b> — any deviation, however small, is significant</div>
                     <div class="rrow"><div class="rdot"></div>FOMC press conferences (8 times per year) are the highest-impact speech events globally</div>
@@ -1325,14 +1325,14 @@ html{scroll-behavior:smooth}
                     </div>
                         <div class="fa">
                             <div class="fa-inner">
-                                An economic calendar is a scheduled list of upcoming economic data releases, central bank decisions, and major speeches that have potential to move financial markets. Traders use it to anticipate periods of high volatility, protect open positions before major events, and identify potential directional moves following data releases. Checking it before every trading session is a non-negotiable professional habit.
+                                An economic calendar is a scheduled list of upcoming economic data releases, central bank decisions and major speeches that have potential to move financial markets. Traders use it to anticipate periods of high volatility, protect open positions before major events and identify potential directional moves following data releases. Checking it before every trading session is a non-negotiable professional habit.
                             </div>
                         </div>
                 </div>
 
                 <div class="fi">
-                    <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the difference between high, medium, and low impact news?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                    <div class="fa"><div class="fa-inner">High-impact events (red on calendars) include NFP, CPI, interest rate decisions, and Fed speeches — these can move major Forex pairs 50–200+ pips within minutes of release. Medium-impact events (orange) such as PMI and retail sales produce moderate moves of 20–60 pips. Low-impact events (green) typically produce minimal price movement. Always check for red events before entering any trade.</div></div>
+                    <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the difference between high, medium and low impact news?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
+                    <div class="fa"><div class="fa-inner">High-impact events (red on calendars) include NFP, CPI, interest rate decisions and Fed speeches — these can move major Forex pairs 50–200+ pips within minutes of release. Medium-impact events (orange) such as PMI and retail sales produce moderate moves of 20–60 pips. Low-impact events (green) typically produce minimal price movement. Always check for red events before entering any trade.</div></div>
                 </div>
 
                 <div class="fi">
@@ -1352,12 +1352,12 @@ html{scroll-behavior:smooth}
 
                 <div class="fi">
                     <div class="fq" onclick="faqTog(this)"><span class="fq-txt">Should I trade during news releases?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                    <div class="fa"><div class="fa-inner">For intermediate traders — no. During high-impact news releases, spreads widen to 5–20x their normal size, slippage is extreme, and stop losses can execute 20–50 pips from their intended level. The professional approach is to close or protect positions 30 minutes before a red event, avoid all new entries during the spike, and wait 15–30 minutes after for a confirmed directional setup before considering an entry.</div></div>
+                    <div class="fa"><div class="fa-inner">For intermediate traders — no. During high-impact news releases, spreads widen to 5–20x their normal size, slippage is extreme and stop losses can execute 20–50 pips from their intended level. The professional approach is to close or protect positions 30 minutes before a red event, avoid all new entries during the spike and wait 15–30 minutes after for a confirmed directional setup before considering an entry.</div></div>
                 </div>
 
                 <div class="fi">
                     <div class="fq" onclick="faqTog(this)"><span class="fq-txt">What is the best free economic calendar for Forex traders?</span><i class="ti ti-chevron-down fq-ic" aria-hidden="true"></i></div>
-                    <div class="fa"><div class="fa-inner">The three most widely used free economic calendars are: Investing.com (most comprehensive, includes all global events), Forex Factory (trader-focused, colour-coded impact levels, community forum for context), and the official Federal Reserve website for all Fed-specific events. All three allow timezone customisation. Check one of these every morning before your trading session begins — it takes less than 3 minutes.</div></div>
+                    <div class="fa"><div class="fa-inner">The three most widely used free economic calendars are: Investing.com (most comprehensive, includes all global events), Forex Factory (trader-focused, colour-coded impact levels, community forum for context) and the official Federal Reserve website for all Fed-specific events. All three allow timezone customisation. Check one of these every morning before your trading session begins — it takes less than 3 minutes.</div></div>
                 </div>
 
                 <div class="fi">
