@@ -1596,7 +1596,7 @@ include_once ('elements/header.php');
                 <div class="row">
                     <div class="col-md-6 pricing-box mb-4" data-aos="fade-up" data-aos-duration="800">
                         <p class="fw-bold fs-4">
-                            Tier 1 — Central Banks (Most powerful)
+                            Tier 1 | Central Banks (Most powerful)
                         </p>
                         <p class="text-gray" style="width: 90%;">
                             Federal Reserve (USA), ECB (Europe), Bank of Japan, Bank of England, etc.
@@ -1610,7 +1610,7 @@ include_once ('elements/header.php');
                         <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
 
                         <p class="fw-bold fs-4">
-                            Tier 3 — Hedge Funds & Institutions
+                            Tier 3 | Hedge Funds & Institutions
                         </p>
                         <p class="text-gray" style="width: 90%;">
                             <strong> What they do : </strong> Trade currencies for speculation and portfolio hedging. Hedge funds are the most aggressive — they can move markets with massive position sizes ($100M+).
@@ -1626,7 +1626,7 @@ include_once ('elements/header.php');
                         <a href="javascript:void(0)" class="d-none a-link-move-icon" title="Learn About Commissions">Learn About Commissions <i class="fas fa-chevron-circle-right"></i></a>
 
                         <p class="fw-bold fs-4">
-                                Tier 5 — Retail Brokers
+                                Tier 5 | Retail Brokers
                             </p>
                             <p class="text-gray" style="width: 90%;">
                             IC Markets, Pepperstone, XM, FXCM, IG, Oanda, etc. 
@@ -1647,7 +1647,7 @@ include_once ('elements/header.php');
                 
 
                         <p class="fw-bold fs-4">
-                            Tier 2 — Commercial Banks
+                            Tier 2 | Commercial Banks
                         </p>
                         <p class="text-gray" style="width: 90%;">
                             JPMorgan, Citibank, Deutsche Bank, HSBC, Barclays, Goldman Sachs.
@@ -1660,7 +1660,7 @@ include_once ('elements/header.php');
                         </p>
 
                         <p class="fw-bold fs-4">
-                            Tier 4 — Corporations (Hedgers)
+                            Tier 4 | Corporations (Hedgers)
                         </p>
                         <p class="text-gray" style="width: 90%;">
                             Apple, Toyota, Airbus, Saudi Aramco, any multinational company.
@@ -1673,7 +1673,7 @@ include_once ('elements/header.php');
                         </p>
 
                         <p class="fw-bold fs-4">
-                                Tier 6 — Retail Traders 
+                                Tier 6 | Retail Traders 
                             </p>
                             <p class="text-gray" style="width: 90%;">
                                 Individual traders worldwide — day traders, swing traders, algorithmic traders.
