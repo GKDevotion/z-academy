@@ -645,7 +645,7 @@ include_once ('elements/header.php');
             color:var(--zed-secondary);
             line-height:1.8;
             margin-bottom:1.2rem;
-            max-width:510px;
+            /* max-width:510px; */
         }
 
         /* ── QUOTE BLOCK ── */
@@ -672,7 +672,9 @@ include_once ('elements/header.php');
         .emeter-fill{height:100%;border-radius:3px;animation:barGrow .8s ease forwards}
         .fill-danger{background:var(--zed-primary)}
         .fill-warn{background:#D97706}
-        .fill-ok{background:#16A34A}
+        .fill-ok{
+                background: var(--zed-secondary);
+        }
         .emeter-val{font-size:11px;color:var(--G400);min-width:30px;text-align:right}
 
         /* ── STAT GRID ── */
@@ -694,12 +696,12 @@ include_once ('elements/header.php');
         .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
         .tbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.8rem 1rem}
         .tbox.danger{
-            background:var(--RL);
+            /* background:var(--RL); */
             border-color:var(--zed-primary);
         }
         .tbox.good{
-            background:#F0FDF4;
-            border-color:var(--green);
+            /* background:#F0FDF4; */
+             border-color:var(--zed-primary);
         }
         .tbox-title{
             font-size:1rem;
@@ -713,7 +715,9 @@ include_once ('elements/header.php');
             gap:5px;
         }
         .tbox.danger .tbox-title{color:var(--zed-primary)}
-        .tbox.good .tbox-title{color:#16A34A}
+        .tbox.good .tbox-title{
+            color: var(--zed-primary);
+        }
         .tbox-row{ 
             color:var(--zed-secondary);
             padding:2px 0;
@@ -729,7 +733,9 @@ include_once ('elements/header.php');
             color:var(--G400);
         }
         .tbox.danger .tbox-row i{color:var(--zed-primary)}
-        .tbox.good .tbox-row i{color:#16A34A}
+        .tbox.good .tbox-row i{
+            color: var(--zed-primary);
+        }
 
         /* ── RULES CARD ── */
         .rcard{background:var(--G50);border-left:3px solid var(--zed-primary);border-radius:0 4px 4px 0;padding:.85rem 1rem;margin-bottom:1.2rem}
@@ -1178,11 +1184,11 @@ include_once ('elements/header.php');
                 <div class="rrow"><div class="rdot"></div>Outcome, R:R achieved and one lesson extracted from this trade</div>
                 <div class="rrow"><div class="rdot"></div>Screenshot of the setup with annotations — visual memory accelerates learning</div>
             </div>
-            <div class="rcard" style="border-color:#16A34A">
-                <div class="rtitle" style="color:#16A34A"><i class="ti ti-trending-up" aria-hidden="true"></i> What consistent journaling reveals</div>
-                <div class="rrow"><div class="rdot" style="background:#16A34A"></div>Which setups are genuinely profitable versus which you only think are</div>
-                <div class="rrow"><div class="rdot" style="background:#16A34A"></div>The emotional states that predict your worst trading decisions</div>
-                <div class="rrow"><div class="rdot" style="background:#16A34A"></div>The time of day when your execution is strongest — and weakest</div>
+            <div class="rcard" style="border-color:var(--zed-primary);">
+                <div class="rtitle" style="color:var(--zed-primary);"><i class="ti ti-trending-up" aria-hidden="true"></i> What consistent journaling reveals</div>
+                <div class="rrow"><div class="rdot" style="background:var(--zed-primary)"></div>Which setups are genuinely profitable versus which you only think are</div>
+                <div class="rrow"><div class="rdot" style="background:var(--zed-primary)"></div>The emotional states that predict your worst trading decisions</div>
+                <div class="rrow"><div class="rdot" style="background:var(--zed-primary)"></div>The time of day when your execution is strongest — and weakest</div>
             </div>
             <button class="btndone" onclick="markDone(9)"><i class="ti ti-check" aria-hidden="true"></i> Mark Complete</button>
             </div>

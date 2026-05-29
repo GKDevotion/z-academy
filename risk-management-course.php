@@ -688,7 +688,14 @@ include_once ('elements/header.php');
 
 /* ── FORMULA ── */
 .fbox{display:flex;align-items:center;gap:12px;background:var(--zed-dark-text);border-radius:4px;padding:.85rem 1.1rem;margin-bottom:1.2rem}
-.flbl{font-size:10px;color:var(--G400);letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.flbl{
+  font-size:15px;
+  color:var(--zed-secondary);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  flex-shrink:0;
+}
 .fdiv{width:1px;height:18px;background:rgba(255,255,255,.12);flex-shrink:0}
 .feq{font-size:12.5px;color:#fff;font-weight:400;line-height:1.5}
 .feq b{color:var(--zed-primary)}
@@ -699,7 +706,13 @@ include_once ('elements/header.php');
 .sbox.hi{background:var(--zed-primaryL);border-color:#FACDD3}
 .sv{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--zed-dark-text);line-height:1}
 .sv.r{color:var(--zed-primary)}
-.sk{font-size:10px;color:var(--G400);letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
+.sk{
+  font-size:15px;
+  color:var(--zed-secondary);
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin-top:3px;
+}
 
 /* ── RULES CARD ── */
 .rcard{background:var(--G50);border-left:3px solid var(--zed-primary);border-radius:0 4px 4px 0;padding:.85rem 1rem;margin-bottom:1.2rem}
@@ -731,13 +744,17 @@ include_once ('elements/header.php');
 /* ── TWO COL ── */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
 .tbox{background:var(--G50);border:1px solid var(--G100);border-radius:4px;padding:.8rem 1rem}
-.tbox.danger{background:var(--zed-primaryL);border-color:#FACDD3}
+.tbox.danger{
+  /* background:var(--zed-primaryL);
+  border-color:#FACDD3; */
+}
 .tbox-title{
   font-size:1rem;
   font-weight:600;
   letter-spacing:.08em;
   text-transform:uppercase; 
   margin-bottom:.5rem;
+  color: var(--zed-primary);
   display:flex;
   align-items:center;
   gap:5px;
@@ -760,7 +777,7 @@ include_once ('elements/header.php');
 }
 .tbox.danger .tbox-row i{color:var(--zed-primary)}
 .tbox-row i{
-  color:var(--zed-secondary)
+  color:var(--zed-primary)
 }
 
 /* ── CHECKLIST ── */

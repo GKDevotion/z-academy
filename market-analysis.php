@@ -1045,17 +1045,17 @@ include_once ('elements/header.php');
         margin-bottom: 1.2rem;
         }
         .l-body b {
-        color: var(--G700);
+        color: var(--zed-dark-text);
         font-weight: 600;
         }
 
         /* DARK CHART BOX */
         .cbox {
-        background: var(--navy);
+        background: #fff;
         border-radius: 12px;
         padding: 1.2rem;
         margin-bottom: 1.2rem;
-        border: 1px solid rgba(255, 255, 255, 0.07);
+        border: 1px solid var(--zed-primary);
         position: relative;
         overflow: hidden;
         }
@@ -1081,7 +1081,7 @@ include_once ('elements/header.php');
         margin-bottom: 0.9rem;
         }
         .cb-lbl {
-        color: var(--zed-secondary);
+        color: var(--zed-primary);
         letter-spacing: 0.08em;
         text-transform: uppercase;
         display: flex;
@@ -1122,7 +1122,7 @@ include_once ('elements/header.php');
         left: 0;
         right: 0;
         height: 3px;
-        background: var(--mc, var(--zed-primary));
+        background: var(--zed-primary);
         border-radius: 3px 3px 0 0;
         }
         .mkt-card:hover {
@@ -1150,7 +1150,7 @@ include_once ('elements/header.php');
         font-weight: 700;
         }
         .mc-chg.up {
-        color: var(--GR);
+        color: var(--zed-primary);
         }
         .mc-chg.dn {
         color: var(--zed-primary);
@@ -1193,20 +1193,19 @@ include_once ('elements/header.php');
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
         }
         .sbox.r {
-        background: rgba(200, 16, 46, 0.05);
-        border-color: rgba(200, 16, 46, 0.18);
+        /* background: rgba(200, 16, 46, 0.05); */
+        border-color: #ff0000;
         }
         .sbox.g {
-        background: rgba(0, 184, 112, 0.05);
-        border-color: rgba(0, 184, 112, 0.18);
+        /* background: rgba(0, 184, 112, 0.05); */
+        border-color: #ff0000;
         }
         .sbox.a {
-        background: rgba(232, 150, 10, 0.05);
-        border-color: rgba(232, 150, 10, 0.18);
+        /* background: rgba(232, 150, 10, 0.05); */
+        border-color: var(--zed-primary);
         }
-        .sbox.b {
-        background: rgba(59, 125, 216, 0.05);
-        border-color: rgba(59, 125, 216, 0.18);
+        .sbox.b { 
+        border-color: var(--zed-primary);
         }
         .sv {
         font-size: 1.55rem;
@@ -1218,17 +1217,16 @@ include_once ('elements/header.php');
         color: var(--zed-primary);
         }
         .sbox.g .sv {
-        color: var(--GR);
+        color: var(--zed-primary);
         }
         .sbox.a .sv {
-        color: var(--AM);
+        color: var(--zed-primary);
         }
         .sbox.b .sv {
-        color: var(--BL);
+        color: var(--zed-primary);
         }
-        .sk {
-        font-size: 0.7rem;
-        color: var(--G400);
+        .sk { 
+        color: var(--zed-secondary);
         letter-spacing: 0.05em;
         text-transform: uppercase;
         margin-top: 4px;
@@ -1253,16 +1251,16 @@ include_once ('elements/header.php');
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
         }
         .tc.r {
-        background: rgba(200, 16, 46, 0.04);
+        /* background: rgba(200, 16, 46, 0.04); */
         border-color: rgba(200, 16, 46, 0.18);
         }
         .tc.g {
-        background: rgba(0, 184, 112, 0.04);
-        border-color: rgba(0, 184, 112, 0.18);
+        /* background: rgba(200, 16, 46, 0.04); */
+        border-color: rgba(200, 16, 46, 0.18);
         }
         .tc.a {
-        background: rgba(232, 150, 10, 0.04);
-        border-color: rgba(232, 150, 10, 0.18);
+        /* background: rgba(232, 150, 10, 0.04); */
+        border-color: rgba(200, 16, 46, 0.18);
         }
         .tc-h {
         font-size: 1rem;
@@ -1279,10 +1277,10 @@ include_once ('elements/header.php');
         color: var(--zed-primary);
         }
         .tc.g .tc-h {
-        color: var(--GR);
+        color: var(--zed-primary);
         }
         .tc.a .tc-h {
-        color: var(--AM);
+        color: var(--zed-primary);
         }
         .tc-row {
         color: var(--zed-secondary);
@@ -1299,13 +1297,13 @@ include_once ('elements/header.php');
         border-radius: 50%;
         flex-shrink: 0;
         margin-top: 7px;
-        background: var(--G300);
+        background: var(--zed-primary);
         }
         .tc.r .tc-row::before {
         background: var(--zed-primary);
         }
         .tc.g .tc-row::before {
-        background: var(--GR);
+        background: var(--zed-primary);
         }
 
         /* RULES CARD */
@@ -1328,10 +1326,10 @@ include_once ('elements/header.php');
         border-left-color: var(--AM);
         }
         .rules.b {
-        border-left-color: var(--BL);
+        border-left-color: var(--zed-primary);
         }
         .r-title {
-        font-size: 0.72rem;
+        font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -1348,7 +1346,7 @@ include_once ('elements/header.php');
         color: var(--AM);
         }
         .rules.b .r-title {
-        color: var(--BL);
+        color: var(--zed-primary);
         }
         .r-title i {
         font-size: 13px;
@@ -1362,7 +1360,7 @@ include_once ('elements/header.php');
         line-height: 1.7;
         }
         .rrow b {
-        color: var(--G700);
+        color: var(--zed-dark-text);
         font-weight: 600;
         }
         .rdot {
@@ -1381,7 +1379,7 @@ include_once ('elements/header.php');
         background: var(--AM);
         }
         .rules.b .rdot {
-        background: var(--BL);
+        background: var(--zed-primary);
         }
 
         /* STEPS */
@@ -1509,8 +1507,8 @@ include_once ('elements/header.php');
         color: var(--zed-primary);
         }
         .imp-m {
-        background: rgba(232, 150, 10, 0.1);
-        color: var(--AM);
+        background: #eeeeee;
+        color: var(--zed-secondary);
         }
         .imp-l {
         background: rgba(0, 184, 112, 0.1);
@@ -1518,7 +1516,7 @@ include_once ('elements/header.php');
         }
         .fore-pos {
         font-weight: 700;
-        color: var(--GR);
+        color: var(--zed-secondary);
         }
         .fore-neg {
         font-weight: 700;
@@ -1527,15 +1525,15 @@ include_once ('elements/header.php');
 
         /* SR ZONES */
         .sr-visual {
-        background: var(--navy);
+        background: #fff;
         border-radius: 12px;
         padding: 1.2rem;
         margin-bottom: 1.2rem;
-        border: 1px solid rgba(255, 255, 255, 0.07);
+        border: 1px solid var(--zed-primary);
         }
         .sr-head {
-        font-size: 10px;
-        color: rgba(255, 255, 255, 0.28);
+        font-size: 15px;
+        color: var(--zed-primary);
         letter-spacing: 0.08em;
         text-transform: uppercase;
         margin-bottom: 1rem;
@@ -1581,8 +1579,8 @@ include_once ('elements/header.php');
         text-align: right;
         }
         .sr-r {
-        background: rgba(200, 16, 46, 0.2);
-        color: #ff6b8a;
+        /* background: rgba(200, 16, 46, 0.2); */
+        color: var(--zed-primary);
         border: 1px solid rgba(200, 16, 46, 0.3);
         }
         .sr-rline {
@@ -1595,22 +1593,22 @@ include_once ('elements/header.php');
         color: #ff6b8a;
         }
         .sr-s {
-        background: rgba(0, 184, 112, 0.15);
-        color: var(--GR);
+        /* background: rgba(0, 184, 112, 0.15); */
+        color: var(--zed-dark-text);
         border: 1px solid rgba(0, 184, 112, 0.25);
         }
         .sr-sline {
         background: rgba(0, 184, 112, 0.3);
         }
         .sr-sline::after {
-        background: var(--GR);
+        background: var(--zed-dark-text);
         }
         .sr-sprice {
-        color: var(--GR);
+        color: var(--zed-dark-text);
         }
         .sr-z {
-        background: rgba(232, 150, 10, 0.15);
-        color: var(--AM);
+        /* background: rgba(232, 150, 10, 0.15); */
+        color: var(--zed-secondary);
         border: 1px solid rgba(232, 150, 10, 0.25);
         }
         .sr-zline {
@@ -1619,10 +1617,10 @@ include_once ('elements/header.php');
         opacity: 0.7;
         }
         .sr-zline::after {
-        background: var(--AM);
+        background: var(--zed-secondary);
         }
         .sr-zprice {
-        color: var(--AM);
+        color: var(--zed-secondary);
         }
         .sr-p {
         background: rgba(255, 255, 255, 0.07);
@@ -1741,7 +1739,7 @@ include_once ('elements/header.php');
         box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
         }
         .sb-hd {
-        background: linear-gradient(135deg, var(--navy), var(--navy2));
+        background: linear-gradient(135deg, var(--zed-dark-text));
         padding: 1.1rem 1.3rem;
         display: flex;
         align-items: center;
@@ -1786,14 +1784,14 @@ include_once ('elements/header.php');
         border-bottom: none;
         }
         .cs-l {
-        color: var(--zed-secondary);
+        color: var(--zed-dark-text);
         display: flex;
         align-items: center;
         gap: 5px;
         }
         .cs-l i {
-        font-size: 13px;
-        color: var(--G300);
+        font-size: 15px;
+        color: var(--zed-secondary);
         }
         .cs-v {
         font-size: 0.78rem;
@@ -1810,11 +1808,11 @@ include_once ('elements/header.php');
         padding: 0.6rem 0;
         }
         .sb-nav-lbl {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 700;
         letter-spacing: 0.11em;
         text-transform: uppercase;
-        color: var(--G400);
+        color: var(--zed-dark-text);
         padding: 0.3rem 1.3rem 0.7rem;
         display: flex;
         align-items: center;
@@ -1850,7 +1848,7 @@ include_once ('elements/header.php');
         .sb-n {
         font-size: 0.78rem;
         font-weight: 800;
-        color: var(--G300);
+        color: var(--zed-secondary);
         min-width: 16px;
         flex-shrink: 0;
         }
@@ -1861,7 +1859,7 @@ include_once ('elements/header.php');
         color: var(--GR);
         }
         .sb-text {
-        color: var(--zed-secondary);
+        color: var(--zed-dark-text);
         flex: 1;
         line-height: 1.3;
         }
@@ -1969,7 +1967,7 @@ include_once ('elements/header.php');
         border-top: 1px solid var(--G100);
         }
         .fa-i b {
-        color: var(--G700);
+        color: var(--zed-dark-text);
         font-weight: 600;
         }
 
@@ -2152,7 +2150,7 @@ include_once ('elements/header.php');
                             <div class="cb-head"><span class="cb-lbl"><i class="ti ti-chart-line"></i>Multi-Market Daily Snapshot</span><span class="cb-sub">Indicative · Not Financial Advice</span></div>
                             <svg viewBox="0 0 520 140" width="100%" height="130" aria-label="Daily market overview showing EUR/USD, Gold and US30">
                                 <defs>
-                                <linearGradient id="dg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(0,184,112,.2)"/><stop offset="100%" stop-color="rgba(0,184,112,0)"/></linearGradient>
+                                <linearGradient id="dg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(184, 83, 0, 0.2)"/><stop offset="100%" stop-color="rgba(0,184,112,0)"/></linearGradient>
                                 <linearGradient id="dg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(232,150,10,.2)"/><stop offset="100%" stop-color="rgba(232,150,10,0)"/></linearGradient>
                                 </defs>
                                 <!-- Grid -->
@@ -2160,24 +2158,24 @@ include_once ('elements/header.php');
                                 <line x1="0" y1="75" x2="520" y2="75" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <line x1="0" y1="115" x2="520" y2="115" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <!-- EUR/USD -->
-                                <path d="M10,120 L40,112 L70,116 L100,104 L130,109 L160,95 L190,100 L220,86 L250,91 L280,76 L310,81 L340,65 L370,70 L400,55 L430,60 L460,45 L490,50 L515,42" stroke="#00B870" stroke-width="2" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000" style="animation:traceL 2.5s ease forwards .3s"/>
+                                <path d="M10,120 L40,112 L70,116 L100,104 L130,109 L160,95 L190,100 L220,86 L250,91 L280,76 L310,81 L340,65 L370,70 L400,55 L430,60 L460,45 L490,50 L515,42" stroke="#ff0000" stroke-width="2" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000" style="animation:traceL 2.5s ease forwards .3s"/>
                                 <path d="M10,120 L40,112 L70,116 L100,104 L130,109 L160,95 L190,100 L220,86 L250,91 L280,76 L310,81 L340,65 L370,70 L400,55 L430,60 L460,45 L490,50 L515,42 L515,140 L10,140Z" fill="url(#dg1)" style="opacity:0;animation:fadeIn .5s ease forwards 2.7s"/>
                                 <!-- Gold overlaid -->
-                                <path d="M10,130 L40,122 L70,126 L100,115 L130,120 L160,108 L190,112 L220,98 L250,103 L280,89 L310,94 L340,78 L370,83 L400,68 L430,73 L460,58 L490,63 L515,55" stroke="#E8960A" stroke-width="1.5" fill="none" opacity=".65" stroke-dasharray="1000" stroke-dashoffset="1000" style="animation:traceL 2.5s ease forwards .8s"/>
+                                <path d="M10,130 L40,122 L70,126 L100,115 L130,120 L160,108 L190,112 L220,98 L250,103 L280,89 L310,94 L340,78 L370,83 L400,68 L430,73 L460,58 L490,63 L515,55" stroke="#000" stroke-width="1.5" fill="none" opacity=".65" stroke-dasharray="1000" stroke-dashoffset="1000" style="animation:traceL 2.5s ease forwards .8s"/>
                                 <!-- US30 -->
-                                <path d="M10,128 L40,120 L70,122 L100,108 L130,114 L160,100 L190,106 L220,90 L250,97 L280,82 L310,88 L340,72 L370,78 L400,62 L430,68 L460,52 L490,58 L515,48" stroke="#3B7DD8" stroke-width="1.5" fill="none" opacity=".55" stroke-dasharray="5,4" stroke-dashoffset="1000" style="animation:traceL 2.5s ease forwards 1.2s"/>
+                                <path d="M10,128 L40,120 L70,122 L100,108 L130,114 L160,100 L190,106 L220,90 L250,97 L280,82 L310,88 L340,72 L370,78 L400,62 L430,68 L460,52 L490,58 L515,48" stroke="#7b7b7b" stroke-width="1.5" fill="none" opacity=".55" stroke-dasharray="5,4" stroke-dashoffset="1000" style="animation:traceL 2.5s ease forwards 1.2s"/>
                                 <!-- Legend -->
-                                <circle cx="12" cy="17" r="4" fill="#00B870"/><text x="20" y="20" fill="#00B870" font-size="9" font-weight="700" font-family="Inter">EUR/USD</text>
-                                <circle cx="80" cy="17" r="4" fill="#E8960A"/><text x="88" y="20" fill="#E8960A" font-size="9" font-weight="700" font-family="Inter">XAU/USD (Gold)</text>
-                                <circle cx="185" cy="17" r="4" fill="#3B7DD8"/><text x="193" y="20" fill="#3B7DD8" font-size="9" font-weight="700" font-family="Inter">US30 (Dow)</text>
+                                <circle cx="12" cy="17" r="4" fill="#ff0000"/><text x="20" y="20" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter">EUR/USD</text>
+                                <circle cx="80" cy="17" r="4" fill="#ff0000"/><text x="88" y="20" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter">XAU/USD (Gold)</text>
+                                <circle cx="185" cy="17" r="4" fill="#ff0000"/><text x="193" y="20" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter">US30 (Dow)</text>
                                 <!-- Live dot -->
-                                <circle cx="515" cy="42" r="5" fill="#00B870" style="animation:pulse 1.5s ease infinite 3s;opacity:0;animation-fill-mode:both"/>
+                                <circle cx="515" cy="42" r="5" fill="#ff0000" style="animation:pulse 1.5s ease infinite 3s;opacity:0;animation-fill-mode:both"/>
                             </svg>
                             </div>
 
                             <div class="market-strip">
-                            <div class="mkt-card" style="--mc:#00B870"><div class="mc-sym">EUR/USD</div><div class="mc-name">Forex · Major</div><div class="mc-price">1.0854</div><div class="mc-chg up">▲ +0.23% Bullish</div><div class="mc-bar"><div class="mc-bar-fill" style="background:#00B870;--bw:72%;width:72%"></div></div></div>
-                            <div class="mkt-card" style="--mc:#E8960A"><div class="mc-sym">XAU/USD</div><div class="mc-name">Gold · Commodity</div><div class="mc-price">$2,338</div><div class="mc-chg up">▲ +0.41% Bullish</div><div class="mc-bar"><div class="mc-bar-fill" style="background:#E8960A;--bw:65%;width:65%"></div></div></div>
+                            <div class="mkt-card" style="--mc:#00B870"><div class="mc-sym">EUR/USD</div><div class="mc-name">Forex · Major</div><div class="mc-price">1.0854</div><div class="mc-chg up">▲ +0.23% Bullish</div><div class="mc-bar"><div class="mc-bar-fill" style="background:var(--zed-primary);--bw:72%;width:72%"></div></div></div>
+                            <div class="mkt-card" style="--mc:#E8960A"><div class="mc-sym">XAU/USD</div><div class="mc-name">Gold · Commodity</div><div class="mc-price">$2,338</div><div class="mc-chg up">▲ +0.41% Bullish</div><div class="mc-bar"><div class="mc-bar-fill" style="background:var(--zed-primary);--bw:65%;width:65%"></div></div></div>
                             <div class="mkt-card" style="--mc:#C8102E"><div class="mc-sym">US30</div><div class="mc-name">Dow Jones · Index</div><div class="mc-price">39,420</div><div class="mc-chg dn">▼ −0.18% Bearish</div><div class="mc-bar"><div class="mc-bar-fill" style="background:var(--zed-primary);--bw:38%;width:38%"></div></div></div>
                             </div>
 
@@ -2219,28 +2217,28 @@ include_once ('elements/header.php');
                                 <rect x="0" y="28" width="520" height="12" fill="rgba(200,16,46,.12)"/>
                                 <text x="440" y="23" fill="rgba(200,16,46,.7)" font-size="8.5" font-weight="700" font-family="Inter">RESISTANCE ZONE</text>
                                 <!-- Support zone -->
-                                <rect x="0" y="108" width="520" height="12" fill="rgba(0,184,112,.1)"/>
-                                <text x="450" y="132" fill="rgba(0,184,112,.65)" font-size="8.5" font-weight="700" font-family="Inter">SUPPORT ZONE</text>
+                                <rect x="0" y="108" width="520" height="12" fill="rgba(200,16,46,.12)"/>
+                                <text x="450" y="132" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">SUPPORT ZONE</text>
                                 <!-- Price path (bullish structure) -->
-                                <path d="M10,122 L45,108 L65,115 L100,98 L120,105 L155,85 L175,93 L210,72 L230,80 L265,58 L285,67 L320,45 L340,53 L375,35 L395,42 L430,28 L460,35 L490,22 L515,18" stroke="#00B870" stroke-width="2.5" fill="none" stroke-dasharray="1100" stroke-dashoffset="1100" style="animation:traceL 3s ease forwards .3s"/>
+                                <path d="M10,122 L45,108 L65,115 L100,98 L120,105 L155,85 L175,93 L210,72 L230,80 L265,58 L285,67 L320,45 L340,53 L375,35 L395,42 L430,28 L460,35 L490,22 L515,18" stroke="#ff0000" stroke-width="2.5" fill="none" stroke-dasharray="1100" stroke-dashoffset="1100" style="animation:traceL 3s ease forwards .3s"/>
                                 <!-- HH markers -->
-                                <circle cx="100" cy="98" r="4" fill="#00B870" style="animation:scaleUp .3s ease forwards 1s;opacity:0;transform-origin:100px 98px"/>
-                                <circle cx="210" cy="72" r="4" fill="#00B870" style="animation:scaleUp .3s ease forwards 1.4s;opacity:0;transform-origin:210px 72px"/>
-                                <circle cx="320" cy="45" r="4" fill="#00B870" style="animation:scaleUp .3s ease forwards 1.8s;opacity:0;transform-origin:320px 45px"/>
-                                <circle cx="430" cy="28" r="4" fill="#00B870" style="animation:scaleUp .3s ease forwards 2.2s;opacity:0;transform-origin:430px 28px"/>
-                                <text x="86" y="93" fill="rgba(0,184,112,.8)" font-size="8" font-family="Inter" font-weight="600" style="animation:fadeIn .3s ease forwards 1s;opacity:0">HH</text>
-                                <text x="196" y="67" fill="rgba(0,184,112,.8)" font-size="8" font-family="Inter" font-weight="600" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0">HH</text>
-                                <text x="306" y="40" fill="rgba(0,184,112,.8)" font-size="8" font-family="Inter" font-weight="600" style="animation:fadeIn .3s ease forwards 1.8s;opacity:0">HH</text>
+                                <circle cx="100" cy="98" r="4" fill="#ff0000" style="animation:scaleUp .3s ease forwards 1s;opacity:0;transform-origin:100px 98px"/>
+                                <circle cx="210" cy="72" r="4" fill="#ff0000" style="animation:scaleUp .3s ease forwards 1.4s;opacity:0;transform-origin:210px 72px"/>
+                                <circle cx="320" cy="45" r="4" fill="#ff0000" style="animation:scaleUp .3s ease forwards 1.8s;opacity:0;transform-origin:320px 45px"/>
+                                <circle cx="430" cy="28" r="4" fill="#ff0000" style="animation:scaleUp .3s ease forwards 2.2s;opacity:0;transform-origin:430px 28px"/>
+                                <text x="86" y="93" fill="rgba(184, 0, 0, 0.8)" font-size="8" font-family="Inter" font-weight="600" style="animation:fadeIn .3s ease forwards 1s;opacity:0">HH</text>
+                                <text x="196" y="67" fill="rgba(184, 0, 0, 0.8)" font-size="8" font-family="Inter" font-weight="600" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0">HH</text>
+                                <text x="306" y="40" fill="rgba(184, 0, 0, 0.8)" font-size="8" font-family="Inter" font-weight="600" style="animation:fadeIn .3s ease forwards 1.8s;opacity:0">HH</text>
                                 <!-- HL markers -->
-                                <circle cx="65" cy="115" r="3" fill="rgba(0,184,112,.6)" style="animation:scaleUp .3s ease forwards 1.2s;opacity:0;transform-origin:65px 115px"/>
-                                <circle cx="175" cy="93" r="3" fill="rgba(0,184,112,.6)" style="animation:scaleUp .3s ease forwards 1.6s;opacity:0;transform-origin:175px 93px"/>
-                                <circle cx="285" cy="67" r="3" fill="rgba(0,184,112,.6)" style="animation:scaleUp .3s ease forwards 2s;opacity:0;transform-origin:285px 67px"/>
-                                <text x="53" y="128" fill="rgba(0,184,112,.55)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.2s;opacity:0">HL</text>
-                                <text x="163" y="106" fill="rgba(0,184,112,.55)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0">HL</text>
-                                <text x="273" y="80" fill="rgba(0,184,112,.55)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 2s;opacity:0">HL</text>
+                                <circle cx="65" cy="115" r="3" fill="rgba(184, 0, 0, 0.8)" style="animation:scaleUp .3s ease forwards 1.2s;opacity:0;transform-origin:65px 115px"/>
+                                <circle cx="175" cy="93" r="3" fill="rgba(184, 0, 0, 0.8)" style="animation:scaleUp .3s ease forwards 1.6s;opacity:0;transform-origin:175px 93px"/>
+                                <circle cx="285" cy="67" r="3" fill="rgba(184, 0, 0, 0.8)" style="animation:scaleUp .3s ease forwards 2s;opacity:0;transform-origin:285px 67px"/>
+                                <text x="53" y="128" fill="rgba(184, 0, 0, 0.8)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.2s;opacity:0">HL</text>
+                                <text x="163" y="106" fill="rgba(184, 0, 0, 0.8)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0">HL</text>
+                                <text x="273" y="80" fill="rgba(184, 0, 0, 0.8)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 2s;opacity:0">HL</text>
                                 <!-- Entry arrow -->
-                                <path d="M460,50 L460,35" stroke="#00B870" stroke-width="1.5" stroke-dasharray="3,2" style="animation:fadeIn .5s ease forwards 2.5s;opacity:0"/>
-                                <text x="465" y="50" fill="#00B870" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .5s ease forwards 2.5s;opacity:0">BUY ZONE</text>
+                                <path d="M460,50 L460,35" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="3,2" style="animation:fadeIn .5s ease forwards 2.5s;opacity:0"/>
+                                <text x="465" y="50" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .5s ease forwards 2.5s;opacity:0">BUY ZONE</text>
                             </svg>
                             </div>
 
@@ -2278,33 +2276,33 @@ include_once ('elements/header.php');
                                 <line x1="0" y1="75" x2="520" y2="75" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <line x1="0" y1="115" x2="520" y2="115" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <!-- Resistance -->
-                                <line x1="0" y1="30" x2="520" y2="30" stroke="rgba(200,16,46,.5)" stroke-width="1.5" stroke-dasharray="6,4"/>
-                                <text x="440" y="26" fill="rgba(200,16,46,.7)" font-size="8.5" font-weight="700" font-family="Inter">RES $2,380</text>
+                                <line x1="0" y1="30" x2="520" y2="30" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="6,4"/>
+                                <text x="440" y="26" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">RES $2,380</text>
                                 <!-- Support -->
-                                <line x1="0" y1="112" x2="520" y2="112" stroke="rgba(0,184,112,.5)" stroke-width="1.5" stroke-dasharray="6,4"/>
-                                <text x="445" y="127" fill="rgba(0,184,112,.65)" font-size="8.5" font-weight="700" font-family="Inter">SUP $2,290</text>
+                                <line x1="0" y1="112" x2="520" y2="112" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="6,4"/>
+                                <text x="445" y="127" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">SUP $2,290</text>
                                 <!-- Candles (animated) -->
                                 <g style="animation:fadeIn .4s ease forwards .5s;opacity:0">
                                 <!-- Bullish candles -->
-                                <line x1="32" y1="112" x2="32" y2="90" stroke="#00B870" stroke-width="1.5"/><rect x="27" y="96" width="10" height="16" rx="1" fill="#00B870"/>
-                                <line x1="65" y1="106" x2="65" y2="82" stroke="#00B870" stroke-width="1.5"/><rect x="60" y="88" width="10" height="18" rx="1" fill="#00B870"/>
-                                <line x1="130" y1="95" x2="130" y2="70" stroke="#00B870" stroke-width="1.5"/><rect x="125" y="76" width="10" height="19" rx="1" fill="#00B870"/>
-                                <line x1="163" y1="88" x2="163" y2="62" stroke="#00B870" stroke-width="1.5"/><rect x="158" y="68" width="10" height="20" rx="1" fill="#00B870"/>
-                                <line x1="260" y1="72" x2="260" y2="48" stroke="#00B870" stroke-width="1.5"/><rect x="255" y="54" width="10" height="18" rx="1" fill="#00B870"/>
-                                <line x1="325" y1="62" x2="325" y2="38" stroke="#00B870" stroke-width="1.5"/><rect x="320" y="44" width="10" height="18" rx="1" fill="#00B870"/>
-                                <line x1="390" y1="52" x2="390" y2="28" stroke="#00B870" stroke-width="1.5"/><rect x="385" y="34" width="10" height="18" rx="1" fill="#00B870"/>
-                                <line x1="455" y1="45" x2="455" y2="22" stroke="#00B870" stroke-width="1.5"/><rect x="450" y="28" width="10" height="17" rx="1" fill="#00B870"/>
-                                <line x1="488" y1="40" x2="488" y2="18" stroke="#00B870" stroke-width="1.5"/><rect x="483" y="24" width="10" height="16" rx="1" fill="#00B870"/>
+                                <line x1="32" y1="112" x2="32" y2="90" stroke="#7b7b7b" stroke-width="1.5"/><rect x="27" y="96" width="10" height="16" rx="1" fill="#7b7b7b"/>
+                                <line x1="65" y1="106" x2="65" y2="82" stroke="#7b7b7b" stroke-width="1.5"/><rect x="60" y="88" width="10" height="18" rx="1" fill="#7b7b7b"/>
+                                <line x1="130" y1="95" x2="130" y2="70" stroke="#7b7b7b" stroke-width="1.5"/><rect x="125" y="76" width="10" height="19" rx="1" fill="#7b7b7b"/>
+                                <line x1="163" y1="88" x2="163" y2="62" stroke="#7b7b7b" stroke-width="1.5"/><rect x="158" y="68" width="10" height="20" rx="1" fill="#7b7b7b"/>
+                                <line x1="260" y1="72" x2="260" y2="48" stroke="#7b7b7b" stroke-width="1.5"/><rect x="255" y="54" width="10" height="18" rx="1" fill="#7b7b7b"/>
+                                <line x1="325" y1="62" x2="325" y2="38" stroke="#7b7b7b" stroke-width="1.5"/><rect x="320" y="44" width="10" height="18" rx="1" fill="#7b7b7b"/>
+                                <line x1="390" y1="52" x2="390" y2="28" stroke="#7b7b7b" stroke-width="1.5"/><rect x="385" y="34" width="10" height="18" rx="1" fill="#7b7b7b"/>
+                                <line x1="455" y1="45" x2="455" y2="22" stroke="#7b7b7b" stroke-width="1.5"/><rect x="450" y="28" width="10" height="17" rx="1" fill="#7b7b7b"/>
+                                <line x1="488" y1="40" x2="488" y2="18" stroke="#7b7b7b" stroke-width="1.5"/><rect x="483" y="24" width="10" height="16" rx="1" fill="#7b7b7b"/>
                                 <!-- Bearish candles -->
-                                <line x1="98" y1="92" x2="98" y2="72" stroke="#C8102E" stroke-width="1.5"/><rect x="93" y="76" width="10" height="16" rx="1" fill="#C8102E"/>
-                                <line x1="196" y1="78" x2="196" y2="58" stroke="#C8102E" stroke-width="1.5"/><rect x="191" y="62" width="10" height="16" rx="1" fill="#C8102E"/>
-                                <line x1="228" y1="70" x2="228" y2="50" stroke="#C8102E" stroke-width="1.5"/><rect x="223" y="54" width="10" height="16" rx="1" fill="#C8102E"/>
-                                <line x1="293" y1="60" x2="293" y2="40" stroke="#C8102E" stroke-width="1.5"/><rect x="288" y="44" width="10" height="16" rx="1" fill="#C8102E"/>
-                                <line x1="358" y1="50" x2="358" y2="30" stroke="#C8102E" stroke-width="1.5"/><rect x="353" y="34" width="10" height="16" rx="1" fill="#C8102E"/>
-                                <line x1="422" y1="44" x2="422" y2="24" stroke="#C8102E" stroke-width="1.5"/><rect x="417" y="28" width="10" height="16" rx="1" fill="#C8102E"/>
+                                <line x1="98" y1="92" x2="98" y2="72" stroke="#ff0000" stroke-width="1.5"/><rect x="93" y="76" width="10" height="16" rx="1" fill="#ff0000"/>
+                                <line x1="196" y1="78" x2="196" y2="58" stroke="#ff0000" stroke-width="1.5"/><rect x="191" y="62" width="10" height="16" rx="1" fill="#ff0000"/>
+                                <line x1="228" y1="70" x2="228" y2="50" stroke="#ff0000" stroke-width="1.5"/><rect x="223" y="54" width="10" height="16" rx="1" fill="#ff0000"/>
+                                <line x1="293" y1="60" x2="293" y2="40" stroke="#ff0000" stroke-width="1.5"/><rect x="288" y="44" width="10" height="16" rx="1" fill="#ff0000"/>
+                                <line x1="358" y1="50" x2="358" y2="30" stroke="#ff0000" stroke-width="1.5"/><rect x="353" y="34" width="10" height="16" rx="1" fill="#ff0000"/>
+                                <line x1="422" y1="44" x2="422" y2="24" stroke="#ff0000" stroke-width="1.5"/><rect x="417" y="28" width="10" height="16" rx="1" fill="#ff0000"/>
                                 </g>
                                 <!-- Price label -->
-                                <text x="12" y="17" fill="#E8960A" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.2s;opacity:0">XAU/USD · $2,338 · Bullish Structure</text>
+                                <text x="12" y="17" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.2s;opacity:0">XAU/USD · $2,338 · Bullish Structure</text>
                             </svg>
                             </div>
 
@@ -2343,26 +2341,26 @@ include_once ('elements/header.php');
                                 <line x1="0" y1="80" x2="520" y2="80" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <line x1="0" y1="120" x2="520" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <!-- US30 -->
-                                <path d="M10,118 L55,105 L100,110 L145,95 L190,100 L235,83 L280,88 L325,72 L370,77 L415,60 L460,65 L510,50" stroke="#C8102E" stroke-width="2" fill="none" stroke-dasharray="900" stroke-dashoffset="900" style="animation:traceL 2.5s ease forwards .3s"/>
+                                <path d="M10,118 L55,105 L100,110 L145,95 L190,100 L235,83 L280,88 L325,72 L370,77 L415,60 L460,65 L510,50" stroke="#ff0000" stroke-width="2" fill="none" stroke-dasharray="900" stroke-dashoffset="900" style="animation:traceL 2.5s ease forwards .3s"/>
                                 <!-- SPX500 -->
-                                <path d="M10,115 L55,102 L100,107 L145,91 L190,96 L235,78 L280,83 L325,66 L370,71 L415,54 L460,59 L510,44" stroke="#00B870" stroke-width="2" fill="none" stroke-dasharray="900" stroke-dashoffset="900" style="animation:traceL 2.5s ease forwards .7s"/>
+                                <path d="M10,115 L55,102 L100,107 L145,91 L190,96 L235,78 L280,83 L325,66 L370,71 L415,54 L460,59 L510,44" stroke="#7b7b7b" stroke-width="2" fill="none" stroke-dasharray="900" stroke-dashoffset="900" style="animation:traceL 2.5s ease forwards .7s"/>
                                 <!-- NAS100 -->
-                                <path d="M10,112 L55,98 L100,103 L145,86 L190,91 L235,72 L280,78 L325,60 L370,65 L415,47 L460,52 L510,38" stroke="#3B7DD8" stroke-width="2" fill="none" stroke-dasharray="900" stroke-dashoffset="900" style="animation:traceL 2.5s ease forwards 1.1s"/>
+                                <path d="M10,112 L55,98 L100,103 L145,86 L190,91 L235,72 L280,78 L325,60 L370,65 L415,47 L460,52 L510,38" stroke="#000" stroke-width="2" fill="none" stroke-dasharray="900" stroke-dashoffset="900" style="animation:traceL 2.5s ease forwards 1.1s"/>
                                 <!-- Legend -->
-                                <rect x="10" y="12" width="12" height="3" rx="1" fill="#C8102E"/><text x="26" y="17" fill="rgba(200,16,46,.8)" font-size="8.5" font-weight="700" font-family="Inter">US30 Dow Jones</text>
-                                <rect x="135" y="12" width="12" height="3" rx="1" fill="#00B870"/><text x="151" y="17" fill="rgba(0,184,112,.8)" font-size="8.5" font-weight="700" font-family="Inter">SPX500 S&amp;P 500</text>
-                                <rect x="265" y="12" width="12" height="3" rx="1" fill="#3B7DD8"/><text x="281" y="17" fill="rgba(59,125,216,.8)" font-size="8.5" font-weight="700" font-family="Inter">NAS100 Nasdaq</text>
+                                <rect x="10" y="12" width="12" height="3" rx="1" fill="#ff0000"/><text x="26" y="17" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">US30 Dow Jones</text>
+                                <rect x="135" y="12" width="12" height="3" rx="1" fill="#ff0000"/><text x="151" y="17" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">SPX500 S&amp;P 500</text>
+                                <rect x="265" y="12" width="12" height="3" rx="1" fill="#ff0000"/><text x="281" y="17" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">NAS100 Nasdaq</text>
                                 <!-- Dots -->
-                                <circle cx="510" cy="50" r="4" fill="#C8102E" style="animation:pulse 1.5s ease infinite 3s;opacity:0;animation-fill-mode:both"/>
-                                <circle cx="510" cy="44" r="4" fill="#00B870" style="animation:pulse 1.5s ease infinite 3.2s;opacity:0;animation-fill-mode:both"/>
-                                <circle cx="510" cy="38" r="4" fill="#3B7DD8" style="animation:pulse 1.5s ease infinite 3.4s;opacity:0;animation-fill-mode:both"/>
+                                <circle cx="510" cy="50" r="4" fill="#ff0000" style="animation:pulse 1.5s ease infinite 3s;opacity:0;animation-fill-mode:both"/>
+                                <circle cx="510" cy="44" r="4" fill="#7b7b7b" style="animation:pulse 1.5s ease infinite 3.2s;opacity:0;animation-fill-mode:both"/>
+                                <circle cx="510" cy="38" r="4" fill="#000" style="animation:pulse 1.5s ease infinite 3.4s;opacity:0;animation-fill-mode:both"/>
                             </svg>
                             </div>
 
                             <div class="market-strip">
                             <div class="mkt-card" style="--mc:var(--zed-primary)"><div class="mc-sym">US30</div><div class="mc-name">Dow Jones Industrial</div><div class="mc-price">39,420</div><div class="mc-chg dn">▼ −0.18%</div><div class="mc-bar"><div class="mc-bar-fill" style="background:var(--zed-primary);--bw:42%;width:42%"></div></div></div>
-                            <div class="mkt-card" style="--mc:#00B870"><div class="mc-sym">SPX500</div><div class="mc-name">S&amp;P 500 Index</div><div class="mc-price">5,224</div><div class="mc-chg up">▲ +0.12%</div><div class="mc-bar"><div class="mc-bar-fill" style="background:#00B870;--bw:60%;width:60%"></div></div></div>
-                            <div class="mkt-card" style="--mc:#3B7DD8"><div class="mc-sym">NAS100</div><div class="mc-name">Nasdaq 100 Index</div><div class="mc-price">18,205</div><div class="mc-chg up">▲ +0.28%</div><div class="mc-bar"><div class="mc-bar-fill" style="background:#3B7DD8;--bw:68%;width:68%"></div></div></div>
+                            <div class="mkt-card" style="--mc:#00B870"><div class="mc-sym">SPX500</div><div class="mc-name">S&amp;P 500 Index</div><div class="mc-price">5,224</div><div class="mc-chg up">▲ +0.12%</div><div class="mc-bar"><div class="mc-bar-fill" style="background:var(--zed-primary);--bw:60%;width:60%"></div></div></div>
+                            <div class="mkt-card" style="--mc:#3B7DD8"><div class="mc-sym">NAS100</div><div class="mc-name">Nasdaq 100 Index</div><div class="mc-price">18,205</div><div class="mc-chg up">▲ +0.28%</div><div class="mc-bar"><div class="mc-bar-fill" style="background:var(--zed-primary);--bw:68%;width:68%"></div></div></div>
                             </div>
 
                             <div class="rules b">
@@ -2400,23 +2398,23 @@ include_once ('elements/header.php');
                                 <line x1="0" y1="80" x2="520" y2="80" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <line x1="0" y1="120" x2="520" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
                                 <!-- Key level -->
-                                <line x1="0" y1="72" x2="520" y2="72" stroke="rgba(200,16,46,.5)" stroke-width="1.5" stroke-dasharray="6,4"/>
-                                <text x="440" y="68" fill="rgba(200,16,46,.7)" font-size="8.5" font-weight="700" font-family="Inter">KEY LEVEL → FLIPPED</text>
+                                <line x1="0" y1="72" x2="520" y2="72" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="6,4"/>
+                                <text x="440" y="68" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">KEY LEVEL → FLIPPED</text>
                                 <!-- Price approaching level -->
                                 <path d="M10,130 L45,122 L80,126 L115,115 L150,118 L185,105 L220,108 L255,94 L280,98 L310,74" stroke="rgba(255,255,255,.45)" stroke-width="2" fill="none" stroke-dasharray="700" stroke-dashoffset="700" style="animation:traceL 1.5s ease forwards .3s"/>
                                 <!-- Breakout above -->
-                                <path d="M310,74 L340,60 L365,52" stroke="#00B870" stroke-width="2.5" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:traceL .8s ease forwards 1.8s"/>
+                                <path d="M310,74 L340,60 L365,52" stroke="#ff0000" stroke-width="2.5" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:traceL .8s ease forwards 1.8s"/>
                                 <!-- Retest to flipped level -->
                                 <path d="M365,52 L390,62 L415,72" stroke="rgba(255,255,255,.5)" stroke-width="2" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:traceL .8s ease forwards 2.6s"/>
                                 <!-- Entry and continuation -->
-                                <path d="M415,72 L445,55 L475,40 L510,28" stroke="#00B870" stroke-width="2.5" fill="none" stroke-dasharray="300" stroke-dashoffset="300" style="animation:traceL .9s ease forwards 3.4s"/>
+                                <path d="M415,72 L445,55 L475,40 L510,28" stroke="#ff0000" stroke-width="2.5" fill="none" stroke-dasharray="300" stroke-dashoffset="300" style="animation:traceL .9s ease forwards 3.4s"/>
                                 <!-- Labels -->
-                                <text x="270" y="90" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Consolidation</text>
-                                <text x="332" y="48" fill="#00B870" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.8s;opacity:0">BREAK ↑</text>
-                                <text x="378" y="88" fill="rgba(232,150,10,.8)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 2.6s;opacity:0">RETEST</text>
-                                <text x="450" y="38" fill="#00B870" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 3.4s;opacity:0">ENTRY ↑</text>
+                                <text x="270" y="90" fill="#000" font-size="12" font-family="Inter">Consolidation</text>
+                                <text x="332" y="48" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.8s;opacity:0">BREAK ↑</text>
+                                <text x="378" y="88" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 2.6s;opacity:0">RETEST</text>
+                                <text x="450" y="38" fill="#000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 3.4s;opacity:0">ENTRY ↑</text>
                                 <!-- Entry circle -->
-                                <circle cx="415" cy="72" r="6" fill="rgba(0,184,112,.2)" stroke="#00B870" stroke-width="2" style="animation:scaleUp .4s ease forwards 3.4s;opacity:0;transform-origin:415px 72px"/>
+                                <circle cx="415" cy="72" r="6" fill="rgba(0,184,112,.2)" stroke="#ff0000" stroke-width="2" style="animation:scaleUp .4s ease forwards 3.4s;opacity:0;transform-origin:415px 72px"/>
                             </svg>
                             </div>
 
@@ -2453,7 +2451,7 @@ include_once ('elements/header.php');
                             </div>
 
                             <div class="two">
-                            <div class="tc b">
+                            <div class="tc g">
                                 <div class="tc-h"><i class="ti ti-chart-line"></i>Rate Hike Impact</div>
                                 <div class="tc-row">Currency strengthens — higher yield attracts capital</div>
                                 <div class="tc-row">Gold tends to fall — higher rates increase opportunity cost</div>
@@ -2593,17 +2591,17 @@ include_once ('elements/header.php');
                                 <text x="10" y="84" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">0%</text>
                                 <text x="5" y="114" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">−1%</text>
                                 <!-- EUR/USD bars Mon-Fri -->
-                                <rect x="55" y="50" width="18" height="30" rx="2" fill="#00B870"><animate attributeName="height" from="0" to="30" dur=".8s" begin=".3s" fill="freeze"/><animate attributeName="y" from="80" to="50" dur=".8s" begin=".3s" fill="freeze"/></rect>
-                                <rect x="140" y="42" width="18" height="38" rx="2" fill="#00B870"><animate attributeName="height" from="0" to="38" dur=".8s" begin=".5s" fill="freeze"/><animate attributeName="y" from="80" to="42" dur=".8s" begin=".5s" fill="freeze"/></rect>
+                                <rect x="55" y="50" width="18" height="30" rx="2" fill="#ff0000"><animate attributeName="height" from="0" to="30" dur=".8s" begin=".3s" fill="freeze"/><animate attributeName="y" from="80" to="50" dur=".8s" begin=".3s" fill="freeze"/></rect>
+                                <rect x="140" y="42" width="18" height="38" rx="2" fill="#ff0000"><animate attributeName="height" from="0" to="38" dur=".8s" begin=".5s" fill="freeze"/><animate attributeName="y" from="80" to="42" dur=".8s" begin=".5s" fill="freeze"/></rect>
                                 <rect x="225" y="72" width="18" height="8" rx="2" fill="#C8102E"><animate attributeName="height" from="0" to="8" dur=".8s" begin=".7s" fill="freeze"/></rect>
-                                <rect x="310" y="55" width="18" height="25" rx="2" fill="#00B870"><animate attributeName="height" from="0" to="25" dur=".8s" begin=".9s" fill="freeze"/><animate attributeName="y" from="80" to="55" dur=".8s" begin=".9s" fill="freeze"/></rect>
-                                <rect x="395" y="60" width="18" height="20" rx="2" fill="#00B870"><animate attributeName="height" from="0" to="20" dur=".8s" begin="1.1s" fill="freeze"/><animate attributeName="y" from="80" to="60" dur=".8s" begin="1.1s" fill="freeze"/></rect>
+                                <rect x="310" y="55" width="18" height="25" rx="2" fill="#ff0000"><animate attributeName="height" from="0" to="25" dur=".8s" begin=".9s" fill="freeze"/><animate attributeName="y" from="80" to="55" dur=".8s" begin=".9s" fill="freeze"/></rect>
+                                <rect x="395" y="60" width="18" height="20" rx="2" fill="#ff0000"><animate attributeName="height" from="0" to="20" dur=".8s" begin="1.1s" fill="freeze"/><animate attributeName="y" from="80" to="60" dur=".8s" begin="1.1s" fill="freeze"/></rect>
                                 <!-- Gold bars (offset) -->
-                                <rect x="76" y="44" width="18" height="36" rx="2" fill="#E8960A" opacity=".8"><animate attributeName="height" from="0" to="36" dur=".8s" begin=".4s" fill="freeze"/><animate attributeName="y" from="80" to="44" dur=".8s" begin=".4s" fill="freeze"/></rect>
+                                <rect x="76" y="44" width="18" height="36" rx="2" fill="#7b7b7b" opacity=".8"><animate attributeName="height" from="0" to="36" dur=".8s" begin=".4s" fill="freeze"/><animate attributeName="y" from="80" to="44" dur=".8s" begin=".4s" fill="freeze"/></rect>
                                 <rect x="161" y="68" width="18" height="12" rx="2" fill="#C8102E" opacity=".8"><animate attributeName="height" from="0" to="12" dur=".8s" begin=".6s" fill="freeze"/></rect>
-                                <rect x="246" y="50" width="18" height="30" rx="2" fill="#E8960A" opacity=".8"><animate attributeName="height" from="0" to="30" dur=".8s" begin=".8s" fill="freeze"/><animate attributeName="y" from="80" to="50" dur=".8s" begin=".8s" fill="freeze"/></rect>
-                                <rect x="331" y="58" width="18" height="22" rx="2" fill="#E8960A" opacity=".8"><animate attributeName="height" from="0" to="22" dur=".8s" begin="1s" fill="freeze"/><animate attributeName="y" from="80" to="58" dur=".8s" begin="1s" fill="freeze"/></rect>
-                                <rect x="416" y="52" width="18" height="28" rx="2" fill="#E8960A" opacity=".8"><animate attributeName="height" from="0" to="28" dur=".8s" begin="1.2s" fill="freeze"/><animate attributeName="y" from="80" to="52" dur=".8s" begin="1.2s" fill="freeze"/></rect>
+                                <rect x="246" y="50" width="18" height="30" rx="2" fill="#7b7b7b" opacity=".8"><animate attributeName="height" from="0" to="30" dur=".8s" begin=".8s" fill="freeze"/><animate attributeName="y" from="80" to="50" dur=".8s" begin=".8s" fill="freeze"/></rect>
+                                <rect x="331" y="58" width="18" height="22" rx="2" fill="#7b7b7b" opacity=".8"><animate attributeName="height" from="0" to="22" dur=".8s" begin="1s" fill="freeze"/><animate attributeName="y" from="80" to="58" dur=".8s" begin="1s" fill="freeze"/></rect>
+                                <rect x="416" y="52" width="18" height="28" rx="2" fill="#7b7b7b" opacity=".8"><animate attributeName="height" from="0" to="28" dur=".8s" begin="1.2s" fill="freeze"/><animate attributeName="y" from="80" to="52" dur=".8s" begin="1.2s" fill="freeze"/></rect>
                                 <!-- X labels -->
                                 <text x="58" y="125" fill="rgba(255,255,255,.4)" font-size="9" font-weight="600" font-family="Inter">Mon</text>
                                 <text x="143" y="125" fill="rgba(255,255,255,.4)" font-size="9" font-weight="600" font-family="Inter">Tue</text>
@@ -2611,8 +2609,8 @@ include_once ('elements/header.php');
                                 <text x="313" y="125" fill="rgba(255,255,255,.4)" font-size="9" font-weight="600" font-family="Inter">Thu</text>
                                 <text x="400" y="125" fill="rgba(255,255,255,.4)" font-size="9" font-weight="600" font-family="Inter">Fri</text>
                                 <!-- Legend -->
-                                <rect x="438" y="12" width="10" height="4" rx="1" fill="#00B870"/><text x="452" y="17" fill="rgba(0,184,112,.7)" font-size="8" font-family="Inter">EUR/USD</text>
-                                <rect x="438" y="22" width="10" height="4" rx="1" fill="#E8960A"/><text x="452" y="27" fill="rgba(232,150,10,.7)" font-size="8" font-family="Inter">Gold</text>
+                                <rect x="438" y="12" width="10" height="4" rx="1" fill="#ff0000"/><text x="452" y="17" fill="#ff0000" font-size="12" font-family="Inter">EUR/USD</text>
+                                <rect x="438" y="22" width="10" height="4" rx="1" fill="#ff0000"/><text x="452" y="27" fill="#ff0000" font-size="12" font-family="Inter">Gold</text>
                             </svg>
                             </div>
 

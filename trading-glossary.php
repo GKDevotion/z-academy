@@ -252,7 +252,7 @@ include_once ('elements/header.php');
 
 /* ── SEARCH BAND ── */
 .search-band {
-  background: var(--zed-dark-text);
+  /* background: var(--zed-dark-text); */
   border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 18px 0;
   position: sticky;
@@ -260,23 +260,23 @@ include_once ('elements/header.php');
   z-index: 200;
 }
 .search-band-inner {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 36px;
 }
 .search-box {
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #000;
+  border: 1px solid #000;
   border-radius: 10px;
   padding: 0 16px;
   gap: 10px;
   transition: border-color .2s, background .2s;
 }
 .search-box:focus-within {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,0,0,0.45);
+  background: #000;
+  border-color: var(--zed-primary);
 }
 .search-box svg { width: 15px; height: 15px; color: rgba(255,255,255,.35); flex-shrink: 0; }
 #search-input {
@@ -310,7 +310,7 @@ include_once ('elements/header.php');
 
 /* ── FILTER PILLS ── */
 .filter-bar {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 22px 36px 4px;
   display: flex;
@@ -356,7 +356,7 @@ include_once ('elements/header.php');
 
 /* ── RESULTS INFO ── */
 .results-bar {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 6px 36px 20px;
   display: flex;
@@ -365,7 +365,10 @@ include_once ('elements/header.php');
   gap: 12px;
   flex-wrap: wrap;
 }
-.results-text { font-size: 16px; color: var(--muted); }
+.results-text { 
+  font-size: 18px; 
+  color: var(--zed-dark-text); 
+}
 .results-text strong { color: var(--zed-dark-text); font-weight: 600; }
 .view-toggle {
   display: flex;
@@ -393,7 +396,7 @@ include_once ('elements/header.php');
 
 /* ── CONTENT ── */
 .content {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 36px 80px;
 }
@@ -643,7 +646,10 @@ mark { background: rgba(255,0,0,0.12); color: var(--zed-primary); border-radius:
   .hero-inner { padding: 18px 20px 0; }
   .hero-body { grid-template-columns: 1fr; }
   .hero-kpis { display: none; }
-  .search-band-inner, .filter-bar, .results-bar, .content { padding-left: 20px; padding-right: 20px; }
+  .search-band-inner, .filter-bar, .results-bar, .content { 
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
 }
 </style>
 </head>
@@ -652,7 +658,7 @@ mark { background: rgba(255,0,0,0.12); color: var(--zed-primary); border-radius:
       
 
 <!-- SEARCH BAND (sticky dark) -->
-<div class="search-band">
+<div class="search-band container">
   <div class="search-band-inner">
     <div class="search-box">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -667,7 +673,7 @@ mark { background: rgba(255,0,0,0.12); color: var(--zed-primary); border-radius:
         <div class="kpi d-none"><span class="kpi-n">6</span><span class="kpi-l">Categories</span></div>
  
 <!-- FILTER PILLS -->
-<div class="filter-bar">
+<div class="filter-bar container">
   <span class="filter-label">Filter:</span>
   <button class="pill active" data-cat="all">
     <span>All</span>
@@ -699,7 +705,7 @@ mark { background: rgba(255,0,0,0.12); color: var(--zed-primary); border-radius:
 </div>
 
 <!-- RESULTS BAR -->
-<div class="results-bar">
+<div class="results-bar container">
   <span class="results-text" id="results-text"></span>
   <div class="view-toggle">
     <button class="vtbtn on" id="btn-list" title="List view">
@@ -712,7 +718,7 @@ mark { background: rgba(255,0,0,0.12); color: var(--zed-primary); border-radius:
 </div>
 
 <!-- MAIN -->
-<main class="content" id="content"></main>
+<main class="content container" id="content"></main>
 
 <!-- MODAL -->
 <div class="overlay" id="overlay">
@@ -737,12 +743,12 @@ mark { background: rgba(255,0,0,0.12); color: var(--zed-primary); border-radius:
 <script>
 // ── CATEGORY CONFIG ──
 const CATS = {
-  Basics:   { color: '#1551a0', bg: '#eff6ff', label: 'Basics' },
-  Orders:   { color: '#0891b2', bg: '#ecfeff', label: 'Orders' },
-  Analysis: { color: '#7c3aed', bg: '#faf5ff', label: 'Analysis' },
-  Risk:     { color: '#b45309', bg: '#fffbeb', label: 'Risk' },
-  Market:   { color: '#166534', bg: '#f0fdf4', label: 'Market' },
-  Forex:    { color: '#a01a45', bg: '#fff0f5', label: 'Forex' },
+  Basics:   { color: '#ff0000', bg: '#fff', label: 'Basics' },
+  Orders:   { color: '#ff0000', bg: '#fff', label: 'Orders' },
+  Analysis: { color: '#ff0000', bg: '#fff', label: 'Analysis' },
+  Risk:     { color: '#ff0000', bg: '#fff', label: 'Risk' },
+  Market:   { color: '#ff0000', bg: '#fff', label: 'Market' },
+  Forex:    { color: '#ff0000', bg: '#fff', label: 'Forex' },
 };
 
 // ── TERM DATA ──
@@ -927,7 +933,7 @@ function render() {
     const hdr = document.createElement("div");
     hdr.className = "cat-group-hdr";
     hdr.innerHTML = `
-      <div class="cat-badge" style="color:${cfg.color};background:${cfg.bg};border-color:${cfg.color}40"> 
+      <div class="cat-badge" style="color:#ff0000; border-color:${cfg.color}40"> 
         ${cfg.label}
       </div>
       <span class="cat-count-chip">${items.length} term${items.length !== 1 ? "s" : ""}</span>
@@ -987,7 +993,7 @@ function render() {
           </div>
           <div class="card-exc">${term.d}</div>
           <button class="card-more">Read more <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8L8 2M4 2h4v4"/></svg></button>`;
-        card.querySelector(".card-more").addEventListener("click", () => openModal(term, cfg));
+        // card.querySelector(".card-more").addEventListener("click", () => openModal(term, cfg));
         grid.appendChild(card);
       });
       grp.appendChild(grid);

@@ -830,7 +830,7 @@ include_once ('elements/header.php');
                 color:var(--zed-secondary);
                 line-height:1.8;
                 margin-bottom:1.2rem;
-                max-width:510px;
+                /* max-width:510px; */
             } 
             /* ── FORMULA ── */
             .fbox{
@@ -893,8 +893,8 @@ include_once ('elements/header.php');
                 color:var(--zed-primary);
             } 
             .sk{
-                font-size:10px;
-                color:var(--G400);
+                font-size:15px;
+                color:var(--zed-secondary);
                 letter-spacing:.05em;
                 text-transform:uppercase;
                 margin-top:3px;
@@ -946,8 +946,8 @@ include_once ('elements/header.php');
                 margin-bottom:1.2rem;
             } 
             .tbox{
-                background:var(--G50);
-                border:1px solid var(--G100);
+                background:#fff;
+                border:1px solid #FACDD3;
                 border-radius:4px;
                 padding:.8rem 1rem;
             } 
@@ -961,6 +961,7 @@ include_once ('elements/header.php');
                 letter-spacing:.08em;
                 text-transform:uppercase; 
                 margin-bottom:.5rem;
+                color: var(--zed-primary);
                 display:flex;
                 align-items:center;
                 gap:5px;
@@ -985,7 +986,7 @@ include_once ('elements/header.php');
                 color:var(--zed-primary);
             }
             .tbox-row i{
-                color:var(--zed-secondary)
+                color:var(--zed-primary)
             } 
             /* ── CHECKLIST ── */
             .clwrap{
@@ -1243,24 +1244,24 @@ include_once ('elements/header.php');
                 background:var(--R);
             }
             .lv-sup{
-                background:rgba(22,163,74,.25);
-                color:#16A34A
+                /* background:rgba(22,163,74,.25); */
+                color: var(--zed-primary);
             }
             .lv-sup-line{
-                background:#16A34A;
+                background: var(--zed-primary);
             }
             .lv-zone{
                 background:rgba(217,119,6,.2);
-                color:var(--AM)
+                color:var(--zed-primary)
             }
             .lv-zone-line{
-                background:var(--AM);
+                background:var(--zed-secondary);
                 height:6px;
                 opacity:.5;
             }
             .lv-price{
-                font-size:10px;
-                color:var(--G400);
+                font-size:15px;
+                color:var(--zed-secondary);
             }
 
             /* TF GRID */
@@ -1337,22 +1338,22 @@ include_once ('elements/header.php');
                         <div class="chart-visual">
 
                             <div class="chart-label"><i class="ti ti-chart-line" aria-hidden="true"></i> Bullish market structure — higher highs, higher lows</div>
-                                <svg viewBox="0 0 300 80" width="100%" height="70">
-                                <polyline points="10,70 50,50 70,58 110,35 130,43 170,20 190,28 230,10 250,16" stroke="#16A34A" stroke-width="2" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:drawLine 1.2s ease forwards .3s"/>
-                                <circle cx="10" cy="70" r="3" fill="#16A34A" opacity=".7"/>
-                                <circle cx="70" cy="58" r="3" fill="#16A34A" opacity=".7"/>
-                                <circle cx="130" cy="43" r="3" fill="#16A34A" opacity=".7"/>
-                                <circle cx="190" cy="28" r="3" fill="#16A34A" opacity=".7"/>
-                                <text x="12" y="78" fill="#16A34A" font-size="8" opacity=".8">HL</text>
-                                <text x="72" y="67" fill="#16A34A" font-size="8" opacity=".8">HL</text>
-                                <text x="132" y="52" fill="#16A34A" font-size="8" opacity=".8">HL</text>
-                                <circle cx="50" cy="50" r="3" fill="#C8102E" opacity=".7"/>
-                                <circle cx="110" cy="35" r="3" fill="#C8102E" opacity=".7"/>
-                                <circle cx="170" cy="20" r="3" fill="#C8102E" opacity=".7"/>
-                                <circle cx="230" cy="10" r="3" fill="#C8102E" opacity=".7"/>
-                                <text x="40" y="46" fill="#C8102E" font-size="8" opacity=".8">HH</text>
-                                <text x="100" y="31" fill="#C8102E" font-size="8" opacity=".8">HH</text>
-                                <text x="160" y="16" fill="#C8102E" font-size="8" opacity=".8">HH</text>
+                                <svg viewBox="0 0 300 80" width="100%" height="100">
+                                <polyline points="10,70 50,50 70,58 110,35 130,43 170,20 190,28 230,10 250,16" stroke="#ff0000" stroke-width="2" fill="none" stroke-dasharray="200" stroke-dashoffset="200" style="animation:drawLine 1.2s ease forwards .3s"/>
+                                <circle cx="10" cy="70" r="3" fill="#000" opacity=".7"/>
+                                <circle cx="70" cy="58" r="3" fill="#000" opacity=".7"/>
+                                <circle cx="130" cy="43" r="3" fill="#000" opacity=".7"/>
+                                <circle cx="190" cy="28" r="3" fill="#000" opacity=".7"/>
+                                <text x="12" y="78" fill="#000" font-size="8" opacity=".8">HL</text>
+                                <text x="72" y="67" fill="#000" font-size="8" opacity=".8">HL</text>
+                                <text x="132" y="52" fill="#000" font-size="8" opacity=".8">HL</text>
+                                <circle cx="50" cy="50" r="3" fill="#ff0000" opacity=".7"/>
+                                <circle cx="110" cy="35" r="3" fill="#ff0000" opacity=".7"/>
+                                <circle cx="170" cy="20" r="3" fill="#ff0000" opacity=".7"/>
+                                <circle cx="230" cy="10" r="3" fill="#ff0000" opacity=".7"/>
+                                <text x="40" y="46" fill="#ff0000" font-size="8" opacity=".8">HH</text>
+                                <text x="100" y="31" fill="#ff0000" font-size="8" opacity=".8">HH</text>
+                                <text x="160" y="16" fill="#ff0000" font-size="8" opacity=".8">HH</text>
                                 </svg>
                             </div>
 
@@ -1405,13 +1406,13 @@ include_once ('elements/header.php');
                         <div class="chart-visual">
 
                             <div class="chart-label"><i class="ti ti-chart-line" aria-hidden="true"></i> Breakout above resistance — genuine vs false</div>
-                                <svg viewBox="0 0 300 80" width="100%" height="70">
-                                <line x1="10" y1="35" x2="280" y2="35" stroke="#C8102E" stroke-width="1" stroke-dasharray="4,3" opacity=".6"/>
-                                <text x="282" y="38" fill="#C8102E" font-size="8">Res</text>
-                                <polyline points="10,65 40,60 70,58 100,55 130,52 160,50 190,36 210,28 240,20 270,15" stroke="#16A34A" stroke-width="2" fill="none" stroke-dasharray="300" stroke-dashoffset="300" style="animation:drawLine 1.4s ease forwards .2s"/>
+                                <svg viewBox="0 0 300 80" width="100%" height="100">
+                                <line x1="10" y1="35" x2="280" y2="35" stroke="#ff0000" stroke-width="1" stroke-dasharray="4,3" opacity=".6"/>
+                                <text x="282" y="38" fill="#ff0000" font-size="8">Res</text>
+                                <polyline points="10,65 40,60 70,58 100,55 130,52 160,50 190,36 210,28 240,20 270,15" stroke="#ff0000" stroke-width="2" fill="none" stroke-dasharray="300" stroke-dashoffset="300" style="animation:drawLine 1.4s ease forwards .2s"/>
                                 <line x1="185" y1="35" x2="185" y2="28" stroke="#fff" stroke-width="1" stroke-dasharray="2,2" opacity=".4"/>
-                                <text x="140" y="47" fill="#999" font-size="8">Consolidation</text>
-                                <text x="196" y="33" fill="#16A34A" font-size="8">Break ↑</text>
+                                <text x="140" y="47" fill="#000" font-size="8">Consolidation</text>
+                                <text x="196" y="33" fill="#ff0000" font-size="8">Break ↑</text>
                                 </svg>
                             </div>
 
@@ -1610,20 +1611,20 @@ include_once ('elements/header.php');
                     </div>
                     <div style="text-align:center;flex:1">
                         <div style="display:flex;flex-direction:column;align-items:center;height:55px;justify-content:flex-end">
-                        <div style="width:1px;height:5px;background:#C8102E"></div>
-                        <div style="width:10px;height:30px;background:#C8102E;border-radius:1px"></div>
-                        <div style="width:1px;height:18px;background:#C8102E"></div>
+                        <div style="width:1px;height:5px;background:var(--zed-primary)"></div>
+                        <div style="width:10px;height:30px;background:var(--zed-primary);border-radius:1px"></div>
+                        <div style="width:1px;height:18px;background:var(--zed-primary)"></div>
                         </div>
-                        <div style="font-size:9px;color:#C8102E;margin-top:3px">Bearish Pin</div>
+                        <div style="font-size:9px; color:var(--zed-primary); margin-top:3px">Bearish Pin</div>
                     </div>
                     <div style="text-align:center;flex:1">
                         <div style="display:flex;flex-direction:column;align-items:center;height:55px;justify-content:flex-end">
                         <div style="width:1px;height:4px;background:#999"></div>
                         <div style="width:10px;height:8px;background:#16A34A;border-radius:1px"></div>
-                        <div style="width:10px;height:20px;background:#C8102E;border-radius:1px;margin-top:1px"></div>
+                        <div style="width:10px;height:20px;background:var(--zed-primary);border-radius:1px;margin-top:1px"></div>
                         <div style="width:1px;height:4px;background:#999"></div>
                         </div>
-                        <div style="font-size:9px;color:#16A34A;margin-top:3px">Engulfing</div>
+                        <div style="font-size:9px; color:#16A34A; margin-top:3px">Engulfing</div>
                     </div>
                     <div style="text-align:center;flex:1">
                         <div style="display:flex;flex-direction:column;align-items:center;height:55px;justify-content:flex-end">

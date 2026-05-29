@@ -309,7 +309,11 @@ html{scroll-behavior:smooth}
 }
 .mright{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .badge{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:100px}
-.b-s{background:var(--RM);color:var(--zed-primary);border:1px solid rgba(200,16,46,.22)}
+.b-s{
+    /* background:var(--RM); */
+    color:var(--zed-primary);
+    border:1px solid rgba(200,16,46,.22);
+}
 .b-l{background:var(--G50);color:var(--G400);border:1px solid var(--G200)}
 .b-f{background:var(--zed-primary);color:#fff}
 .b-d{background:rgba(0,184,112,.1);color:var(--GR);border:1px solid rgba(0,184,112,.25)}
@@ -345,11 +349,19 @@ html{scroll-behavior:smooth}
 .l-body b{color:var(--G700);font-weight:600}
 
 /* DARK CHART BOX */
-.cbox{background:var(--navy);border-radius:12px;padding:1.2rem;margin-bottom:1.2rem;border:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden}
+.cbox{
+    /* background:var(--navy); */
+    border-radius:12px;
+    padding:1.2rem;
+    margin-bottom:1.2rem;
+    border:1px solid var(--zed-primary);
+    position:relative;
+    overflow:hidden;
+}
 .cbox::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,16,46,.6),transparent)}
 .cb-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem}
 .cb-lbl{ 
-    color:var(--zed-secondary);
+    color:var(--zed-primary);
     letter-spacing:.08em;
     text-transform:uppercase;
     display:flex;
@@ -388,20 +400,58 @@ html{scroll-behavior:smooth}
 .sgrid.two{grid-template-columns:1fr 1fr}
 .sbox{background:var(--W);border:1px solid var(--G150);border-radius:10px;padding:.75rem .85rem;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.06);transition:all .22s}
 .sbox:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.09)}
-.sbox.r{background:rgba(200,16,46,.05);border-color:rgba(200,16,46,.18)}
-.sbox.g{background:rgba(0,184,112,.05);border-color:rgba(0,184,112,.18)}
-.sbox.a{background:rgba(232,150,10,.05);border-color:rgba(232,150,10,.18)}
-.sbox.b{background:rgba(59,125,216,.05);border-color:rgba(59,125,216,.18)}
-.sv{font-size:1.55rem;font-weight:800;color:var(--zed-dark-text);line-height:1}
-.sbox.r .sv{color:var(--zed-primary)}.sbox.g .sv{color:var(--GR)}.sbox.a .sv{color:var(--AM)}.sbox.b .sv{color:var(--BL)}
-.sk{font-size:.7rem;color:var(--G400);letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
+.sbox.r{
+    /* background:rgba(200,16,46,.05); */
+    border-color:rgba(200,16,46,.18);
+}
+.sbox.g{
+    /* background:rgba(0,184,112,.05); */
+    border-color:rgba(200,16,46,.18);
+}
+.sbox.a{
+    /* background:rgba(232,150,10,.05); */
+    border-color:rgba(200,16,46,.18);
+}
+.sbox.b{
+    /* background:rgba(59,125,216,.05); */
+    border-color:rgba(200,16,46,.18);
+}
+.sv{
+    font-size:1.55rem;
+    font-weight:800;
+    color:var(--zed-dark-text);
+    line-height:1;
+}
+.sbox.r .sv{color:var(--zed-primary)}
+.sbox.g .sv{
+    color:var(--zed-primary);
+}
+.sbox.a .sv{
+    color:var(--zed-primary);
+}
+.sbox.b .sv{
+    color:var(--zed-primary);
+}
+.sk{
+    font-size:.7rem;
+    color:var(--G400);
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    margin-top:4px;
+}
 
 /* TWO COL */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
 .tc{background:var(--W);border:1px solid var(--G150);border-radius:10px;padding:.85rem 1rem;box-shadow:0 1px 6px rgba(0,0,0,.06);transition:all .22s}
 .tc:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.tc.r{background:rgba(200,16,46,.04);border-color:rgba(200,16,46,.18)}
-.tc.g{background:rgba(0,184,112,.04);border-color:rgba(0,184,112,.18)}
+.tc.r{
+    /* background:rgba(200,16,46,.04); */
+    border-color:rgba(200,16,46,.18);
+}
+.tc.g{
+    /* background:rgba(0,184,112,.04); */
+    border-color:rgba(0,184,112,.18);
+}
 .tc.a{background:rgba(232,150,10,.04);border-color:rgba(232,150,10,.18)}
 .tc-h{
     font-size:1rem;
@@ -414,7 +464,13 @@ html{scroll-behavior:smooth}
     align-items:center;
     gap:5px;
 }
-.tc.r .tc-h{color:var(--zed-primary)}.tc.g .tc-h{color:var(--GR)}.tc.a .tc-h{color:var(--AM)}
+.tc.r .tc-h{color:var(--zed-primary)}
+.tc.g .tc-h{
+    color:var(--zed-primary);
+}
+.tc.a .tc-h{
+    color:var(--AM);
+}
 .tc-row{ 
     color:var(--zed-secondary);
     padding:2px 0;
@@ -424,14 +480,42 @@ html{scroll-behavior:smooth}
     line-height:1.6;
 }
 .tc-row::before{content:'';width:4px;height:4px;border-radius:50%;flex-shrink:0;margin-top:7px;background:var(--G300)}
-.tc.r .tc-row::before{background:var(--zed-primary)}.tc.g .tc-row::before{background:var(--GR)}
+.tc.r .tc-row::before{background:var(--zed-primary)}
+.tc.g .tc-row::before{
+    background:var(--zed-primary);
+}
 
 /* RULES CARD */
 .rules{border-left:4px solid var(--zed-primary);background:var(--W);border-radius:0 10px 10px 0;padding:.9rem 1.1rem;margin-bottom:1.2rem;border-top:1px solid var(--G150);border-right:1px solid var(--G150);border-bottom:1px solid var(--G150);box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.rules.g{border-left-color:var(--GR)}.rules.a{border-left-color:var(--AM)}.rules.b{border-left-color:var(--BL)}
-.r-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--zed-primary);margin-bottom:.72rem;display:flex;align-items:center;gap:6px}
-.rules.g .r-title{color:var(--GR)}.rules.a .r-title{color:var(--AM)}.rules.b .r-title{color:var(--BL)}
-.r-title i{font-size:13px}
+.rules.g{border-left-color:var(--GR)}
+.rules.a{
+    border-left-color:var(--zed-primary);
+}
+.rules.b{
+    border-left-color:var(--zed-primary);
+}
+.r-title{
+    font-size: 1rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--zed-primary);
+    margin-bottom:.72rem;
+    display:flex;
+    align-items:center;
+    gap:6px}
+.rules.g .r-title{
+    color:var(--GR);
+}
+.rules.a .r-title{
+    color:var(--zed-primary);
+}
+.rules.b .r-title{
+    color:var(--zed-primary);
+}
+.r-title i{
+    font-size:13px;
+}
 .rrow{
     display:flex;
     align-items:flex-start;
@@ -442,7 +526,13 @@ html{scroll-behavior:smooth}
 }
 .rrow b{color:var(--G700);font-weight:600}
 .rdot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:7px;background:var(--zed-primary);animation:pulse 3s ease infinite}
-.rules.g .rdot{background:var(--GR)}.rules.a .rdot{background:var(--AM)}.rules.b .rdot{background:var(--BL)}
+.rules.g .rdot{background:var(--GR)}
+.rules.a .rdot{
+    background:var(--AM);
+}
+.rules.b .rdot{
+    background:var(--zed-primary);
+}
 
 /* STEPS */
 .steps{display:flex;flex-direction:column;gap:7px;margin-bottom:1.2rem;position:relative}
@@ -495,9 +585,15 @@ html{scroll-behavior:smooth}
 .cl-wrap{margin-bottom:1rem}
 .ci{display:flex;align-items:center;gap:10px;padding:6px 10px;border-radius:8px;cursor:pointer;transition:.18s;font-size:.82rem;color:var(--G600);border:1px solid transparent}
 .ci:hover{background:var(--W);border-color:var(--G200);box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.ci.checked{background:rgba(0,184,112,.05);border-color:rgba(0,184,112,.2)}
+.ci.checked{
+    background:#fff;
+    border-color: #ff0000;
+}
 .ci-box{width:18px;height:18px;border:2px solid var(--G200);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:.22s}
-.ci.checked .ci-box{background:var(--GR);border-color:var(--GR);box-shadow:0 2px 8px rgba(0,184,112,.28)}
+.ci.checked .ci-box{
+    background:var(--zed-primary);
+    border-color:var(--zed-primary); 
+}
 .ci.checked .ci-text{text-decoration:line-through;color:var(--G300)}
 
 /* BTN */
@@ -513,7 +609,15 @@ html{scroll-behavior:smooth}
     height:fit-content;
 }
 .sb-card{background:var(--W);border:1px solid var(--G150);border-radius:12px;overflow:hidden;margin-bottom:12px;box-shadow:0 4px 18px rgba(0,0,0,.07)}
-.sb-hd{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:1.1rem 1.3rem;display:flex;align-items:center;gap:9px;position:relative;overflow:hidden}
+.sb-hd{
+    background:linear-gradient(135deg,var(--zed-dark-text));
+    padding:1.1rem 1.3rem;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    position:relative;
+    overflow:hidden;
+}
 .sb-hd::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--zed-primary),transparent)}
 .sb-hd i{font-size:17px;color:var(--zed-primary)}
 .sb-hd h3{
@@ -522,17 +626,26 @@ html{scroll-behavior:smooth}
     color:#fff;
 }
 .sb-body{padding:1.1rem 1.3rem}
-.cs-row{display:flex;justify-content:space-between;align-items:center;padding:.52rem 0;border-bottom:1px solid var(--G100)}
+.cs-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.52rem 0;
+    border-bottom:1px solid var(--G100);
+}
 .cs-row:last-child{border-bottom:none}
 .cs-l{ 
-    color:var(--zed-secondary);
+    color:var(--zed-dark-text);
     display:flex;
     align-items:center;
     gap:5px;
 }
 .cs-l i{font-size:13px;color:var(--G300)}
 .cs-v{font-size:.78rem;font-weight:700;color:var(--zed-dark-text)}
-.cs-v.r{color:var(--zed-primary)}.cs-v.g{color:var(--GR)}
+.cs-v.r{color:var(--zed-primary)}
+.cs-v.g{
+    color:var(--zed-secondary);
+}
 .sb-nav{padding:.6rem 0}
 .sb-nav-lbl{
     font-size:1rem;
@@ -553,11 +666,14 @@ html{scroll-behavior:smooth}
 .sb-n{font-size:.78rem;font-weight:800;color:var(--G300);min-width:16px;flex-shrink:0}
 .sb-item.active .sb-n{color:var(--zed-primary)}.sb-item.done .sb-n{color:var(--GR)}
 .sb-text{ 
-    color:var(--zed-secondary);
+    color:var(--zed-dark-text);
     flex:1;
     line-height:1.3;
 }
-.sb-item.active .sb-text{color:var(--zed-primary);font-weight:600}.sb-item.done .sb-text{color:var(--G400)}
+.sb-item.active .sb-text{
+    color:var(--zed-primary);
+    font-weight:600;
+}.sb-item.done .sb-text{color:var(--G400)}
 .sb-tick{font-size:13px;color:var(--GR)}
 
 /* FAQ */
@@ -607,8 +723,12 @@ html{scroll-behavior:smooth}
 .ic{background:var(--W);border:1px solid var(--G150);border-radius:10px;padding:1rem;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.06);transition:all .22s;position:relative;overflow:hidden}
 .ic::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
 .ic.high::before{background:var(--zed-primary)}
-.ic.medium::before{background:var(--AM)}
-.ic.low::before{background:var(--GR)}
+.ic.medium::before{
+    background:var(--zed-primary);
+}
+.ic.low::before{
+    background:var(--zed-primary);
+}
 .ic:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
 .ic-icon{
     font-size:1.6rem;
@@ -620,7 +740,7 @@ html{scroll-behavior:smooth}
     display: inline-block;
 }
 .ic-label{
-    font-size:.72rem;
+    font-size:1rem;
     font-weight:700;
     letter-spacing:.09em;
     text-transform:uppercase;
@@ -630,10 +750,10 @@ html{scroll-behavior:smooth}
     color:var(--zed-primary);
 }
 .ic.medium .ic-label
-{color:var(--AM);
+{color:var(--zed-primary);
 }
 .ic.low .ic-label{
-    color:var(--GR);
+    color:var(--zed-primary);
 }
 .ic-desc{ 
     color:var(--zed-secondary);
@@ -644,7 +764,15 @@ html{scroll-behavior:smooth}
     font-weight:700;
     margin-top:.4rem;
 }
-.ic.high .ic-pip{color:var(--zed-primary)}.ic.medium .ic-pip{color:var(--AM)}.ic.low .ic-pip{color:var(--GR)}
+.ic.high .ic-pip{
+    color:var(--zed-dark-text);
+}
+.ic.medium .ic-pip{
+color:var(--zed-dark-text);
+}
+.ic.low .ic-pip{
+    color:var(--zed-dark-text);
+}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static}.hero-wrap{grid-template-columns:1fr}.hero-panel{display:none}}
 @media(max-width:640px){.hero-strip{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}.market-strip,.two,.sgrid{grid-template-columns:1fr 1fr}.nt-head,.nt-row{grid-template-columns:70px 1fr 80px}}
 </style>
@@ -688,7 +816,7 @@ html{scroll-behavior:smooth}
                     <!-- ANIMATED CALENDAR VISUAL -->
                     <div class="cbox">
                     <div class="cb-head"><span class="cb-lbl"><i class="ti ti-calendar-event"></i>Economic Calendar — Weekly View</span><span class="cb-sub">Indicative Example</span></div>
-                    <svg viewBox="0 0 520 155" width="100%" height="148" aria-label="Economic calendar weekly view showing high medium and low impact events">
+                    <svg viewBox="0 0 520 155" width="100%" height="200" aria-label="Economic calendar weekly view showing high medium and low impact events">
                         <!-- Calendar grid background -->
                         <rect x="5" y="5" width="510" height="145" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
                         <!-- Header row -->
@@ -716,23 +844,23 @@ html{scroll-behavior:smooth}
 
                         <!-- WED events — HIGH (red) -->
                         <rect x="217" y="40" width="88" height="18" rx="4" fill="rgba(200,16,46,.2)" stroke="rgba(200,16,46,.45)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards .7s;opacity:0;transform-origin:261px 49px"/>
-                        <text x="223" y="52" fill="#ff8a9a" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">🔴 US CPI Inflation</text>
+                        <text x="223" y="52" fill="#ff0000" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">🔴 US CPI Inflation</text>
                         <rect x="217" y="65" width="88" height="18" rx="4" fill="rgba(200,16,46,.2)" stroke="rgba(200,16,46,.45)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards .75s;opacity:0;transform-origin:261px 74px"/>
-                        <text x="223" y="77" fill="#ff8a9a" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .8s;opacity:0">🔴 FOMC Minutes</text>
+                        <text x="223" y="77" fill="#ff0000" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .8s;opacity:0">🔴 FOMC Minutes</text>
                         <rect x="217" y="90" width="88" height="18" rx="4" fill="rgba(232,150,10,.15)" stroke="rgba(232,150,10,.3)" stroke-width="1" style="animation:scaleUp .3s ease forwards .8s;opacity:0;transform-origin:261px 99px"/>
                         <text x="223" y="102" fill="rgba(232,150,10,.85)" font-size="7.5" font-weight="600" font-family="Inter" style="animation:fadeIn .3s ease forwards .85s;opacity:0">Crude Oil Inventory</text>
 
                         <!-- THU events -->
                         <rect x="319" y="40" width="88" height="18" rx="4" fill="rgba(200,16,46,.2)" stroke="rgba(200,16,46,.45)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards .9s;opacity:0;transform-origin:363px 49px"/>
-                        <text x="325" y="52" fill="#ff8a9a" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .95s;opacity:0">🔴 ECB Rate Decision</text>
+                        <text x="325" y="52" fill="#ff0000" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .95s;opacity:0">🔴 ECB Rate Decision</text>
                         <rect x="319" y="65" width="88" height="18" rx="4" fill="rgba(0,184,112,.15)" stroke="rgba(0,184,112,.3)" stroke-width="1" style="animation:scaleUp .3s ease forwards .95s;opacity:0;transform-origin:363px 74px"/>
                         <text x="325" y="77" fill="rgba(0,184,112,.85)" font-size="7.5" font-weight="600" font-family="Inter" style="animation:fadeIn .3s ease forwards 1s;opacity:0">Initial Jobless Claims</text>
 
                         <!-- FRI events — NFP -->
                         <rect x="421" y="40" width="88" height="18" rx="4" fill="rgba(200,16,46,.2)" stroke="rgba(200,16,46,.45)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards 1.1s;opacity:0;transform-origin:465px 49px"/>
-                        <text x="427" y="52" fill="#ff8a9a" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">🔴 NFP Employment</text>
+                        <text x="427" y="52" fill="#ff0000" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">🔴 NFP Employment</text>
                         <rect x="421" y="65" width="88" height="18" rx="4" fill="rgba(200,16,46,.2)" stroke="rgba(200,16,46,.45)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards 1.15s;opacity:0;transform-origin:465px 74px"/>
-                        <text x="427" y="77" fill="#ff8a9a" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.2s;opacity:0">🔴 US Unemployment</text>
+                        <text x="427" y="77" fill="#ff0000" font-size="7.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.2s;opacity:0">🔴 US Unemployment</text>
 
                         <!-- Legend -->
                         <rect x="12" y="130" width="10" height="8" rx="2" fill="rgba(200,16,46,.4)" stroke="rgba(200,16,46,.6)" stroke-width="1"/>
@@ -778,13 +906,13 @@ html{scroll-behavior:smooth}
                         <div class="ic-pip">50–200+ pips possible</div>
                     </div>
                     <div class="ic medium">
-                        <div class="ic-icon" style="background-color: var(--AM);"></div>
+                        <div class="ic-icon" style="background-color: var(--zed-primary);"></div>
                         <div class="ic-label">Medium Impact</div>
                         <div class="ic-desc">PMI, Retail Sales, Trade Balance, Jobless Claims. Moderate moves, trend-confirming.</div>
                         <div class="ic-pip">20–60 pips typical</div>
                     </div>
                     <div class="ic low">
-                        <div class="ic-icon" style="background-color: var(--GR);"></div>
+                        <div class="ic-icon" style="background-color: var(--zed-primary);"></div>
                         <div class="ic-label">Low Impact</div>
                         <div class="ic-desc">Housing Data, Minor Speeches, Building Permits. Usually minimal direct market impact.</div>
                         <div class="ic-pip">5–20 pips typical</div>
@@ -801,17 +929,17 @@ html{scroll-behavior:smooth}
                         <!-- Pre-news calm -->
                         <path d="M5,75 L60,72 L115,74 L170,71 L225,73 L250,72" stroke="rgba(255,255,255,.45)" stroke-width="2" fill="none" stroke-dasharray="600" stroke-dashoffset="600" style="animation:traceL 1.2s ease forwards .3s"/>
                         <!-- News line -->
-                        <line x1="255" y1="5" x2="255" y2="140" stroke="rgba(200,16,46,.6)" stroke-width="2" stroke-dasharray="6,4" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0"/>
-                        <text x="258" y="22" fill="rgba(200,16,46,.85)" font-size="9" font-weight="800" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0">NFP RELEASE</text>
-                        <text x="258" y="35" fill="rgba(200,16,46,.65)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0">13:30 UTC</text>
+                        <line x1="255" y1="5" x2="255" y2="140" stroke="#ff0000" stroke-width="2" stroke-dasharray="6,4" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0"/>
+                        <text x="258" y="22" fill="#ff0000" font-size="9" font-weight="800" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0">NFP RELEASE</text>
+                        <text x="258" y="35" fill="#ff0000" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0">13:30 UTC</text>
                         <!-- Spike up then settle -->
-                        <path d="M255,72 L270,28 L285,42 L300,18 L315,35 L330,25 L345,38 L360,30 L380,42 L400,38 L430,44 L460,40 L490,38 L515,36" stroke="#00B870" stroke-width="2.5" fill="none" stroke-dasharray="800" stroke-dashoffset="800" style="animation:traceL 2s ease forwards 1.8s"/>
+                        <path d="M255,72 L270,28 L285,42 L300,18 L315,35 L330,25 L345,38 L360,30 L380,42 L400,38 L430,44 L460,40 L490,38 L515,36" stroke="#ff0000" stroke-width="2.5" fill="none" stroke-dasharray="800" stroke-dashoffset="800" style="animation:traceL 2s ease forwards 1.8s"/>
                         <!-- Spread indicator -->
-                        <rect x="252" y="60" width="6" height="25" rx="1" fill="rgba(200,16,46,.35)" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0"/>
-                        <text x="262" y="68" fill="rgba(200,16,46,.65)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.8s;opacity:0">↑ Wide Spread</text>
+                        <rect x="252" y="60" width="6" height="25" rx="1" fill="#ff0000" style="animation:fadeIn .3s ease forwards 1.6s;opacity:0"/>
+                        <text x="262" y="68" fill="#ff0000" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.8s;opacity:0">↑ Wide Spread</text>
                         <!-- Labels -->
                         <text x="10" y="90" fill="rgba(255,255,255,.3)" font-size="8.5" font-family="Inter">Pre-news: Calm, tight spread</text>
-                        <text x="340" y="22" fill="rgba(0,184,112,.75)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 2.5s;opacity:0">Post-news direction forms</text>
+                        <text x="340" y="22" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 2.5s;opacity:0">Post-news direction forms</text>
                     </svg>
                     </div>
 
@@ -845,41 +973,41 @@ html{scroll-behavior:smooth}
                     <div class="cb-head"><span class="cb-lbl"><i class="ti ti-building-bank"></i>Rate Hike vs Rate Cut — Multi-Market Impact</span><span class="cb-sub">General Relationship</span></div>
                     <svg viewBox="0 0 520 145" width="100%" height="138" aria-label="Chart showing rate hike versus rate cut impact across currencies gold and equities">
                         <!-- RATE HIKE side (left) -->
-                        <rect x="5" y="5" width="250" height="130" rx="8" fill="rgba(200,16,46,.06)" stroke="rgba(200,16,46,.2)" stroke-width="1"/>
-                        <text x="55" y="22" fill="rgba(200,16,46,.8)" font-size="10" font-weight="800" font-family="Inter">RATE HIKE ↑</text>
-                        <text x="18" y="22" fill="rgba(200,16,46,.8)" font-size="14">📈</text>
+                        <rect x="5" y="5" width="250" height="130" rx="8" fill="#fff" stroke="rgba(200,16,46,.2)" stroke-width="1"/>
+                        <text x="55" y="22" fill="#ff0000" font-size="10" font-weight="800" font-family="Inter">RATE HIKE ↑</text>
+                        <text x="18" y="22" fill="#ff0000" font-size="14">📈</text>
                         <!-- Hike impact bars -->
                         <text x="14" y="42" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">USD</text>
-                        <rect x="40" y="33" height="12" rx="3" fill="#00B870"><animate attributeName="width" from="0" to="160" dur=".8s" begin=".4s" fill="freeze"/></rect>
-                        <text x="205" y="42" fill="rgba(0,184,112,.8)" font-size="8.5" font-weight="700" font-family="Inter">↑ Strong</text>
+                        <rect x="40" y="33" height="12" rx="3" fill="#7b7b7b"><animate attributeName="width" from="0" to="160" dur=".8s" begin=".4s" fill="freeze"/></rect>
+                        <text x="205" y="42" fill="#7b7b7b" font-size="8.5" font-weight="700" font-family="Inter">↑ Strong</text>
                         <text x="14" y="63" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">Gold</text>
                         <rect x="40" y="54" height="12" rx="3" fill="#C8102E"><animate attributeName="width" from="0" to="120" dur=".8s" begin=".5s" fill="freeze"/></rect>
-                        <text x="165" y="63" fill="rgba(200,16,46,.8)" font-size="8.5" font-weight="700" font-family="Inter">↓ Falls</text>
+                        <text x="165" y="63" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">↓ Falls</text>
                         <text x="14" y="84" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">Stocks</text>
                         <rect x="40" y="75" height="12" rx="3" fill="#C8102E"><animate attributeName="width" from="0" to="100" dur=".8s" begin=".6s" fill="freeze"/></rect>
-                        <text x="145" y="84" fill="rgba(200,16,46,.8)" font-size="8.5" font-weight="700" font-family="Inter">↓ Pressure</text>
+                        <text x="145" y="84" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">↓ Pressure</text>
                         <text x="14" y="105" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">AUD/JPY</text>
                         <rect x="50" y="96" height="12" rx="3" fill="#C8102E"><animate attributeName="width" from="0" to="90" dur=".8s" begin=".7s" fill="freeze"/></rect>
-                        <text x="145" y="105" fill="rgba(200,16,46,.8)" font-size="8.5" font-weight="700" font-family="Inter">↓ Weakens</text>
+                        <text x="145" y="105" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">↓ Weakens</text>
                         <text x="14" y="126" fill="rgba(255,255,255,.3)" font-size="7.5" font-family="Inter" font-style="italic">Hawkish = USD buying</text>
 
                         <!-- RATE CUT side (right) -->
-                        <rect x="265" y="5" width="250" height="130" rx="8" fill="rgba(0,184,112,.06)" stroke="rgba(0,184,112,.2)" stroke-width="1"/>
-                        <text x="318" y="22" fill="rgba(0,184,112,.8)" font-size="10" font-weight="800" font-family="Inter">RATE CUT ↓</text>
-                        <text x="278" y="22" fill="rgba(0,184,112,.8)" font-size="14">📉</text>
+                        <rect x="265" y="5" width="250" height="130" rx="8" fill="#fff" stroke="rgba(0,184,112,.2)" stroke-width="1"/>
+                        <text x="318" y="22" fill="#7b7b7b" font-size="10" font-weight="800" font-family="Inter">RATE CUT ↓</text>
+                        <text x="278" y="22" fill="#7b7b7b" font-size="14">📉</text>
                         <!-- Cut impact bars -->
                         <text x="274" y="42" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">USD</text>
                         <rect x="300" y="33" height="12" rx="3" fill="#C8102E"><animate attributeName="width" from="0" to="130" dur=".8s" begin=".5s" fill="freeze"/></rect>
-                        <text x="435" y="42" fill="rgba(200,16,46,.8)" font-size="8.5" font-weight="700" font-family="Inter">↓ Weak</text>
+                        <text x="435" y="42" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter">↓ Weak</text>
                         <text x="274" y="63" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">Gold</text>
-                        <rect x="300" y="54" height="12" rx="3" fill="#00B870"><animate attributeName="width" from="0" to="150" dur=".8s" begin=".6s" fill="freeze"/></rect>
-                        <text x="455" y="63" fill="rgba(0,184,112,.8)" font-size="8.5" font-weight="700" font-family="Inter">↑ Rises</text>
+                        <rect x="300" y="54" height="12" rx="3" fill="#7b7b7b"><animate attributeName="width" from="0" to="150" dur=".8s" begin=".6s" fill="freeze"/></rect>
+                        <text x="455" y="63" fill="#7b7b7b" font-size="8.5" font-weight="700" font-family="Inter">↑ Rises</text>
                         <text x="274" y="84" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">Stocks</text>
-                        <rect x="300" y="75" height="12" rx="3" fill="#00B870"><animate attributeName="width" from="0" to="140" dur=".8s" begin=".7s" fill="freeze"/></rect>
-                        <text x="445" y="84" fill="rgba(0,184,112,.8)" font-size="8.5" font-weight="700" font-family="Inter">↑ Rally</text>
+                        <rect x="300" y="75" height="12" rx="3" fill="#7b7b7b"><animate attributeName="width" from="0" to="140" dur=".8s" begin=".7s" fill="freeze"/></rect>
+                        <text x="445" y="84" fill="#7b7b7b" font-size="8.5" font-weight="700" font-family="Inter">↑ Rally</text>
                         <text x="274" y="105" fill="rgba(255,255,255,.45)" font-size="8.5" font-family="Inter">AUD/JPY</text>
-                        <rect x="310" y="96" height="12" rx="3" fill="#00B870"><animate attributeName="width" from="0" to="130" dur=".8s" begin=".8s" fill="freeze"/></rect>
-                        <text x="445" y="105" fill="rgba(0,184,112,.8)" font-size="8.5" font-weight="700" font-family="Inter">↑ Rises</text>
+                        <rect x="310" y="96" height="12" rx="3" fill="#7b7b7b"><animate attributeName="width" from="0" to="130" dur=".8s" begin=".8s" fill="freeze"/></rect>
+                        <text x="445" y="105" fill="#7b7b7b" font-size="8.5" font-weight="700" font-family="Inter">↑ Rises</text>
                         <text x="274" y="126" fill="rgba(255,255,255,.3)" font-size="7.5" font-family="Inter" font-style="italic">Dovish = Risk-on rally</text>
                     </svg>
                     </div>
@@ -931,19 +1059,19 @@ html{scroll-behavior:smooth}
                         <line x1="40" y1="75" x2="510" y2="75" stroke="rgba(0,184,112,.4)" stroke-width="1.5" stroke-dasharray="6,4"/>
                         <text x="470" y="70" fill="rgba(0,184,112,.65)" font-size="8" font-weight="700" font-family="Inter">2% Target</text>
                         <!-- Bars (months) — animated -->
-                        <rect x="50" y="105" width="28" height="0" rx="2" fill="#C8102E"><animate attributeName="height" from="0" to="55" dur=".7s" begin=".3s" fill="freeze"/><animate attributeName="y" from="105" to="50" dur=".7s" begin=".3s" fill="freeze"/></rect>
+                        <rect x="50" y="105" width="28" height="0" rx="2" fill="#ff0000"><animate attributeName="height" from="0" to="55" dur=".7s" begin=".3s" fill="freeze"/><animate attributeName="y" from="105" to="50" dur=".7s" begin=".3s" fill="freeze"/></rect>
                         <text x="52" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Jan</text>
-                        <rect x="95" y="105" width="28" height="0" rx="2" fill="#C8102E"><animate attributeName="height" from="0" to="62" dur=".7s" begin=".4s" fill="freeze"/><animate attributeName="y" from="105" to="43" dur=".7s" begin=".4s" fill="freeze"/></rect>
+                        <rect x="95" y="105" width="28" height="0" rx="2" fill="#ff0000"><animate attributeName="height" from="0" to="62" dur=".7s" begin=".4s" fill="freeze"/><animate attributeName="y" from="105" to="43" dur=".7s" begin=".4s" fill="freeze"/></rect>
                         <text x="97" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Feb</text>
-                        <rect x="140" y="105" width="28" height="0" rx="2" fill="#E8960A"><animate attributeName="height" from="0" to="48" dur=".7s" begin=".5s" fill="freeze"/><animate attributeName="y" from="105" to="57" dur=".7s" begin=".5s" fill="freeze"/></rect>
+                        <rect x="140" y="105" width="28" height="0" rx="2" fill="#7b7b7b"><animate attributeName="height" from="0" to="48" dur=".7s" begin=".5s" fill="freeze"/><animate attributeName="y" from="105" to="57" dur=".7s" begin=".5s" fill="freeze"/></rect>
                         <text x="142" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Mar</text>
-                        <rect x="185" y="105" width="28" height="0" rx="2" fill="#E8960A"><animate attributeName="height" from="0" to="42" dur=".7s" begin=".6s" fill="freeze"/><animate attributeName="y" from="105" to="63" dur=".7s" begin=".6s" fill="freeze"/></rect>
+                        <rect x="185" y="105" width="28" height="0" rx="2" fill="#7b7b7b"><animate attributeName="height" from="0" to="42" dur=".7s" begin=".6s" fill="freeze"/><animate attributeName="y" from="105" to="63" dur=".7s" begin=".6s" fill="freeze"/></rect>
                         <text x="187" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Apr</text>
-                        <rect x="230" y="105" width="28" height="0" rx="2" fill="#E8960A"><animate attributeName="height" from="0" to="38" dur=".7s" begin=".7s" fill="freeze"/><animate attributeName="y" from="105" to="67" dur=".7s" begin=".7s" fill="freeze"/></rect>
+                        <rect x="230" y="105" width="28" height="0" rx="2" fill="#7b7b7b"><animate attributeName="height" from="0" to="38" dur=".7s" begin=".7s" fill="freeze"/><animate attributeName="y" from="105" to="67" dur=".7s" begin=".7s" fill="freeze"/></rect>
                         <text x="232" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">May</text>
-                        <rect x="275" y="105" width="28" height="0" rx="2" fill="#E8960A"><animate attributeName="height" from="0" to="35" dur=".7s" begin=".8s" fill="freeze"/><animate attributeName="y" from="105" to="70" dur=".7s" begin=".8s" fill="freeze"/></rect>
+                        <rect x="275" y="105" width="28" height="0" rx="2" fill="#7b7b7b"><animate attributeName="height" from="0" to="35" dur=".7s" begin=".8s" fill="freeze"/><animate attributeName="y" from="105" to="70" dur=".7s" begin=".8s" fill="freeze"/></rect>
                         <text x="277" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Jun</text>
-                        <rect x="320" y="105" width="28" height="0" rx="2" fill="#E8960A"><animate attributeName="height" from="0" to="32" dur=".7s" begin=".9s" fill="freeze"/><animate attributeName="y" from="105" to="73" dur=".7s" begin=".9s" fill="freeze"/></rect>
+                        <rect x="320" y="105" width="28" height="0" rx="2" fill="#7b7b7b"><animate attributeName="height" from="0" to="32" dur=".7s" begin=".9s" fill="freeze"/><animate attributeName="y" from="105" to="73" dur=".7s" begin=".9s" fill="freeze"/></rect>
                         <text x="322" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Jul</text>
                         <rect x="365" y="105" width="28" height="0" rx="2" fill="#00B870"><animate attributeName="height" from="0" to="30" dur=".7s" begin="1s" fill="freeze"/><animate attributeName="y" from="105" to="75" dur=".7s" begin="1s" fill="freeze"/></rect>
                         <text x="367" y="120" fill="rgba(255,255,255,.3)" font-size="8" font-family="Inter">Aug</text>
@@ -1059,15 +1187,15 @@ html{scroll-behavior:smooth}
                         <text x="65" y="125" fill="rgba(255,255,255,.45)" font-size="9" font-weight="600" font-family="Inter">🇺🇸 USA</text>
                         <text x="68" y="40" fill="rgba(0,184,112,.85)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.1s;opacity:0">+2.5%</text>
                         <!-- UK bar -->
-                        <rect x="135" y="90" width="52" height="0" rx="3" fill="#E8960A"><animate attributeName="height" from="0" to="20" dur=".8s" begin=".45s" fill="freeze"/><animate attributeName="y" from="90" to="70" dur=".8s" begin=".45s" fill="freeze"/></rect>
+                        <rect x="135" y="90" width="52" height="0" rx="3" fill="#7b7b7b"><animate attributeName="height" from="0" to="20" dur=".8s" begin=".45s" fill="freeze"/><animate attributeName="y" from="90" to="70" dur=".8s" begin=".45s" fill="freeze"/></rect>
                         <text x="140" y="125" fill="rgba(255,255,255,.45)" font-size="9" font-weight="600" font-family="Inter">🇬🇧 UK</text>
-                        <text x="143" y="65" fill="rgba(232,150,10,.85)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.2s;opacity:0">+0.9%</text>
+                        <text x="143" y="65" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.2s;opacity:0">+0.9%</text>
                         <!-- EU bar -->
-                        <rect x="210" y="90" width="52" height="0" rx="3" fill="#E8960A"><animate attributeName="height" from="0" to="15" dur=".8s" begin=".6s" fill="freeze"/><animate attributeName="y" from="90" to="75" dur=".8s" begin=".6s" fill="freeze"/></rect>
+                        <rect x="210" y="90" width="52" height="0" rx="3" fill="#7b7b7b"><animate attributeName="height" from="0" to="15" dur=".8s" begin=".6s" fill="freeze"/><animate attributeName="y" from="90" to="75" dur=".8s" begin=".6s" fill="freeze"/></rect>
                         <text x="215" y="125" fill="rgba(255,255,255,.45)" font-size="9" font-weight="600" font-family="Inter">🇪🇺 EU</text>
-                        <text x="218" y="70" fill="rgba(232,150,10,.85)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.3s;opacity:0">+0.6%</text>
+                        <text x="218" y="70" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.3s;opacity:0">+0.6%</text>
                         <!-- Japan bar (slightly negative) -->
-                        <rect x="285" y="90" width="52" height="0" rx="3" fill="#C8102E"><animate attributeName="height" from="0" to="12" dur=".8s" begin=".75s" fill="freeze"/></rect>
+                        <rect x="285" y="90" width="52" height="0" rx="3" fill="#ff0000"><animate attributeName="height" from="0" to="12" dur=".8s" begin=".75s" fill="freeze"/></rect>
                         <text x="290" y="125" fill="rgba(255,255,255,.45)" font-size="9" font-weight="600" font-family="Inter">🇯🇵 Japan</text>
                         <text x="290" y="118" fill="rgba(200,16,46,.85)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.4s;opacity:0">−0.4%</text>
                         <!-- China bar -->
@@ -1075,9 +1203,9 @@ html{scroll-behavior:smooth}
                         <text x="365" y="125" fill="rgba(255,255,255,.45)" font-size="9" font-weight="600" font-family="Inter">🇨🇳 China</text>
                         <text x="365" y="25" fill="rgba(0,184,112,.85)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.6s;opacity:0">+5.2%</text>
                         <!-- Canada bar -->
-                        <rect x="435" y="90" width="52" height="0" rx="3" fill="#E8960A"><animate attributeName="height" from="0" to="18" dur=".8s" begin="1.05s" fill="freeze"/><animate attributeName="y" from="90" to="72" dur=".8s" begin="1.05s" fill="freeze"/></rect>
+                        <rect x="435" y="90" width="52" height="0" rx="3" fill="#7b7b7b"><animate attributeName="height" from="0" to="18" dur=".8s" begin="1.05s" fill="freeze"/><animate attributeName="y" from="90" to="72" dur=".8s" begin="1.05s" fill="freeze"/></rect>
                         <text x="440" y="125" fill="rgba(255,255,255,.45)" font-size="9" font-weight="600" font-family="Inter">🇨🇦 Canada</text>
-                        <text x="440" y="67" fill="rgba(232,150,10,.85)" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.7s;opacity:0">+0.8%</text>
+                        <text x="440" y="67" fill="#ff0000" font-size="9" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 1.7s;opacity:0">+0.8%</text>
                     </svg>
                     </div>
 
@@ -1117,15 +1245,15 @@ html{scroll-behavior:smooth}
                         <!-- Pre-speech drift -->
                         <path d="M5,70 L50,68 L100,70 L150,67 L200,69 L238,68" stroke="rgba(255,255,255,.4)" stroke-width="1.8" fill="none" stroke-dasharray="400" stroke-dashoffset="400" style="animation:traceL 1s ease forwards .3s"/>
                         <!-- Speech start line -->
-                        <line x1="245" y1="5" x2="245" y2="130" stroke="rgba(232,150,10,.6)" stroke-width="1.5" stroke-dasharray="5,4" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0"/>
-                        <text x="248" y="18" fill="rgba(232,150,10,.85)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0">Powell Speech</text>
-                        <text x="248" y="30" fill="rgba(232,150,10,.6)" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0">"Higher for longer"</text>
+                        <line x1="245" y1="5" x2="245" y2="130" stroke="#ff0000" stroke-width="1.5" stroke-dasharray="5,4" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0"/>
+                        <text x="248" y="18" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0">Powell Speech</text>
+                        <text x="248" y="30" fill="#ff0000" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0">"Higher for longer"</text>
                         <!-- Spike on hawkish comment (USD up = USD/JPY up) -->
-                        <path d="M245,68 L260,50 L275,38 L290,45 L305,35 L320,40 L340,36 L360,38 L385,36 L410,34 L445,35 L480,33 L510,32" stroke="#00B870" stroke-width="2.5" fill="none" stroke-dasharray="700" stroke-dashoffset="700" style="animation:traceL 2s ease forwards 1.6s"/>
-                        <text x="290" y="30" fill="rgba(0,184,112,.75)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 2.5s;opacity:0">USD/JPY +65 pips</text>
+                        <path d="M245,68 L260,50 L275,38 L290,45 L305,35 L320,40 L340,36 L360,38 L385,36 L410,34 L445,35 L480,33 L510,32" stroke="#ff0000" stroke-width="2.5" fill="none" stroke-dasharray="700" stroke-dashoffset="700" style="animation:traceL 2s ease forwards 1.6s"/>
+                        <text x="290" y="30" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .4s ease forwards 2.5s;opacity:0">USD/JPY +65 pips</text>
                         <!-- Quote bubble -->
                         <rect x="8" y="105" width="220" height="22" rx="5" fill="rgba(232,150,10,.12)" stroke="rgba(232,150,10,.25)" stroke-width="1" style="animation:fadeIn .5s ease forwards 1.8s;opacity:0"/>
-                        <text x="14" y="119" fill="rgba(232,150,10,.8)" font-size="8" font-family="Inter" style="animation:fadeIn .5s ease forwards 1.8s;opacity:0">"We are prepared to raise rates further if needed"</text>
+                        <text x="14" y="119" fill="#ff0000" font-size="8" font-family="Inter" style="animation:fadeIn .5s ease forwards 1.8s;opacity:0">"We are prepared to raise rates further if needed"</text>
                     </svg>
                     </div>
 
@@ -1173,33 +1301,33 @@ html{scroll-behavior:smooth}
                     <!-- MECHANISM FLOW -->
                     <div class="cbox">
                     <div class="cb-head"><span class="cb-lbl"><i class="ti ti-arrow-right"></i>News-to-Price Mechanism — Strong US CPI Example</span><span class="cb-sub">Causal Chain</span></div>
-                    <svg viewBox="0 0 520 100" width="100%" height="95" aria-label="Diagram showing causal chain from news release to forex price movement">
+                    <svg viewBox="0 0 520 100" width="100%" height="150" aria-label="Diagram showing causal chain from news release to forex price movement">
                         <!-- Step boxes -->
-                        <rect x="5" y="30" width="85" height="40" rx="6" fill="rgba(200,16,46,.15)" stroke="rgba(200,16,46,.35)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards .3s;opacity:0;transform-origin:47px 50px"/>
-                        <text x="10" y="47" fill="rgba(200,16,46,.85)" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .35s;opacity:0">CPI Higher</text>
-                        <text x="10" y="58" fill="rgba(200,16,46,.65)" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards .35s;opacity:0">Than Forecast</text>
+                        <rect x="5" y="30" width="85" height="40" rx="6" fill="#fff" stroke="#ff0000" stroke-width="0.5" style="animation:scaleUp .3s ease forwards .3s;opacity:0;transform-origin:47px 50px"/>
+                        <text x="10" y="47" fill="#ff0000" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .35s;opacity:0">CPI Higher</text>
+                        <text x="10" y="58" fill="#000" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards .35s;opacity:0">Than Forecast</text>
                         <!-- Arrow -->
-                        <path d="M92,50 L104,50" stroke="rgba(255,255,255,.4)" stroke-width="1.5" marker-end="url(#arrow)" style="animation:fadeIn .3s ease forwards .6s;opacity:0"/>
-                        <polygon points="103,46 110,50 103,54" fill="rgba(255,255,255,.4)" style="animation:fadeIn .3s ease forwards .6s;opacity:0"/>
+                        <path d="M92,50 L104,50" stroke="#ff0000" stroke-width="1.5" marker-end="url(#arrow)" style="animation:fadeIn .3s ease forwards .6s;opacity:0"/>
+                        <polygon points="103,46 110,50 103,54" fill="#ff0000" style="animation:fadeIn .3s ease forwards .6s;opacity:0"/>
                         <!-- Step 2 -->
-                        <rect x="112" y="30" width="85" height="40" rx="6" fill="rgba(232,150,10,.15)" stroke="rgba(232,150,10,.3)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards .7s;opacity:0;transform-origin:155px 50px"/>
-                        <text x="117" y="47" fill="rgba(232,150,10,.85)" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">Rate Hike</text>
-                        <text x="117" y="58" fill="rgba(232,150,10,.65)" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">Expectations↑</text>
-                        <polygon points="199,46 206,50 199,54" fill="rgba(255,255,255,.4)" style="animation:fadeIn .3s ease forwards 1s;opacity:0"/>
+                        <rect x="112" y="30" width="85" height="40" rx="6" fill="#fff" stroke="#ff0000" stroke-width="0.5" style="animation:scaleUp .3s ease forwards .7s;opacity:0;transform-origin:155px 50px"/>
+                        <text x="117" y="47" fill="#ff0000" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">Rate Hike</text>
+                        <text x="117" y="58" fill="#000" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">Expectations↑</text>
+                        <polygon points="199,46 206,50 199,54" fill="#ff0000" style="animation:fadeIn .3s ease forwards 1s;opacity:0"/>
                         <!-- Step 3 -->
-                        <rect x="208" y="30" width="85" height="40" rx="6" fill="rgba(59,125,216,.15)" stroke="rgba(59,125,216,.3)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards 1.1s;opacity:0;transform-origin:251px 50px"/>
-                        <text x="213" y="47" fill="rgba(59,125,216,.85)" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">Capital Flows</text>
-                        <text x="213" y="58" fill="rgba(59,125,216,.65)" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">Into USD</text>
-                        <polygon points="295,46 302,50 295,54" fill="rgba(255,255,255,.4)" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0"/>
+                        <rect x="208" y="30" width="85" height="40" rx="6" fill="#fff" stroke="#ff0000" stroke-width="0.5" style="animation:scaleUp .3s ease forwards 1.1s;opacity:0;transform-origin:251px 50px"/>
+                        <text x="213" y="47" fill="#ff0000" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">Capital Flows</text>
+                        <text x="213" y="58" fill="#000" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">Into USD</text>
+                        <polygon points="295,46 302,50 295,54" fill="#ff0000" style="animation:fadeIn .3s ease forwards 1.4s;opacity:0"/>
                         <!-- Step 4 -->
-                        <rect x="304" y="30" width="85" height="40" rx="6" fill="rgba(0,184,112,.15)" stroke="rgba(0,184,112,.3)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards 1.5s;opacity:0;transform-origin:346px 50px"/>
-                        <text x="309" y="47" fill="rgba(0,184,112,.85)" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.55s;opacity:0">EUR/USD</text>
-                        <text x="309" y="58" fill="rgba(0,184,112,.65)" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.55s;opacity:0">Falls Sharply</text>
-                        <polygon points="391,46 398,50 391,54" fill="rgba(255,255,255,.4)" style="animation:fadeIn .3s ease forwards 1.8s;opacity:0"/>
+                        <rect x="304" y="30" width="85" height="40" rx="6" fill="#fff" stroke="#ff0000" stroke-width="0.5" style="animation:scaleUp .3s ease forwards 1.5s;opacity:0;transform-origin:346px 50px"/>
+                        <text x="309" y="47" fill="#ff0000" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.55s;opacity:0">EUR/USD</text>
+                        <text x="309" y="58" fill="#000" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.55s;opacity:0">Falls Sharply</text>
+                        <polygon points="391,46 398,50 391,54" fill="#ff0000" style="animation:fadeIn .3s ease forwards 1.8s;opacity:0"/>
                         <!-- Step 5 -->
-                        <rect x="400" y="30" width="115" height="40" rx="6" fill="rgba(200,16,46,.15)" stroke="rgba(200,16,46,.3)" stroke-width="1.5" style="animation:scaleUp .3s ease forwards 1.9s;opacity:0;transform-origin:458px 50px"/>
-                        <text x="405" y="47" fill="#ff8a9a" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.95s;opacity:0">Tradeable Setup</text>
-                        <text x="405" y="58" fill="rgba(200,16,46,.65)" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.95s;opacity:0">15-30 min later</text>
+                        <rect x="400" y="30" width="115" height="40" rx="6" fill="#fff" stroke="#ff0000" stroke-width="0.5" style="animation:scaleUp .3s ease forwards 1.9s;opacity:0;transform-origin:458px 50px"/>
+                        <text x="405" y="47" fill="#ff0000" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.95s;opacity:0">Tradeable Setup</text>
+                        <text x="405" y="58" fill="#000" font-size="7.5" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.95s;opacity:0">15-30 min later</text>
                     </svg>
                     </div>
 
@@ -1238,29 +1366,29 @@ html{scroll-behavior:smooth}
                         <rect x="20" y="55" width="480" height="4" rx="2" fill="rgba(200,16,46,.3)"><animate attributeName="width" from="0" to="480" dur="1.5s" begin=".3s" fill="freeze"/></rect>
                         <!-- Phase markers -->
                         <!-- T-60 -->
-                        <circle cx="20" cy="57" r="7" fill="#E8960A" style="animation:scaleUp .3s ease forwards .5s;opacity:0;transform-origin:20px 57px"/>
-                        <text x="5" y="38" fill="rgba(232,150,10,.8)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .55s;opacity:0">T−60min</text>
+                        <circle cx="20" cy="57" r="7" fill="#ff0000" style="animation:scaleUp .3s ease forwards .5s;opacity:0;transform-origin:20px 57px"/>
+                        <text x="5" y="38" fill="#ff0000" font-size="12" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .55s;opacity:0">T−60min</text>
                         <text x="5" y="80" fill="rgba(255,255,255,.4)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards .55s;opacity:0">Check calendar</text>
                         <!-- T-30 -->
-                        <circle cx="140" cy="57" r="7" fill="#E8960A" style="animation:scaleUp .3s ease forwards .7s;opacity:0;transform-origin:140px 57px"/>
-                        <text x="118" y="38" fill="rgba(232,150,10,.8)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">T−30min</text>
+                        <circle cx="140" cy="57" r="7" fill="#ff0000" style="animation:scaleUp .3s ease forwards .7s;opacity:0;transform-origin:140px 57px"/>
+                        <text x="118" y="38" fill="#ff0000" font-size="12" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">T−30min</text>
                         <text x="110" y="80" fill="rgba(255,255,255,.4)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards .75s;opacity:0">Close or protect</text>
                         <!-- T-0 RELEASE -->
-                        <circle cx="260" cy="57" r="10" fill="#C8102E" style="animation:scaleUp .3s ease forwards .9s;opacity:0;transform-origin:260px 57px"/>
-                        <text x="232" y="38" fill="rgba(200,16,46,.9)" font-size="8.5" font-weight="800" font-family="Inter" style="animation:fadeIn .3s ease forwards .95s;opacity:0">RELEASE TIME</text>
-                        <text x="238" y="80" fill="rgba(200,16,46,.7)" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .95s;opacity:0">DO NOT TRADE</text>
+                        <circle cx="260" cy="57" r="10" fill="#ff0000" style="animation:scaleUp .3s ease forwards .9s;opacity:0;transform-origin:260px 57px"/>
+                        <text x="232" y="38" fill="#ff0000" font-size="12" font-weight="800" font-family="Inter" style="animation:fadeIn .3s ease forwards .95s;opacity:0">RELEASE TIME</text>
+                        <text x="238" y="80" fill="#ff0000" font-size="12" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards .95s;opacity:0">DO NOT TRADE</text>
                         <!-- T+15 -->
-                        <circle cx="370" cy="57" r="7" fill="#E8960A" style="animation:scaleUp .3s ease forwards 1.1s;opacity:0;transform-origin:370px 57px"/>
-                        <text x="348" y="38" fill="rgba(232,150,10,.8)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">T+15min</text>
+                        <circle cx="370" cy="57" r="7" fill="#ff0000" style="animation:scaleUp .3s ease forwards 1.1s;opacity:0;transform-origin:370px 57px"/>
+                        <text x="348" y="38" fill="#ff0000" font-size="12" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">T+15min</text>
                         <text x="340" y="80" fill="rgba(255,255,255,.4)" font-size="8" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.15s;opacity:0">Wait for direction</text>
                         <!-- T+30 ENTRY -->
-                        <circle cx="500" cy="57" r="9" fill="#00B870" style="animation:scaleUp .3s ease forwards 1.3s;opacity:0;transform-origin:500px 57px"/>
-                        <text x="472" y="38" fill="rgba(0,184,112,.9)" font-size="8.5" font-weight="800" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.35s;opacity:0">T+30min</text>
-                        <text x="468" y="80" fill="rgba(0,184,112,.7)" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.35s;opacity:0">Entry zone</text>
+                        <circle cx="500" cy="57" r="9" fill="#ff0000" style="animation:scaleUp .3s ease forwards 1.3s;opacity:0;transform-origin:500px 57px"/>
+                        <text x="472" y="38" fill="#ff0000" font-size="8.5" font-weight="800" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.35s;opacity:0">T+30min</text>
+                        <text x="468" y="80" fill="#ff0000" font-size="8" font-weight="700" font-family="Inter" style="animation:fadeIn .3s ease forwards 1.35s;opacity:0">Entry zone</text>
                         <!-- Warning -->
-                        <rect x="55" y="100" width="410" height="32" rx="6" fill="rgba(200,16,46,.12)" stroke="rgba(200,16,46,.25)" stroke-width="1" style="animation:fadeIn .5s ease forwards 1.5s;opacity:0"/>
-                        <text x="65" y="114" fill="rgba(200,16,46,.8)" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .5s ease forwards 1.5s;opacity:0">⚠ Widened spreads from T−5min to T+10min — never place orders in this window</text>
-                        <text x="65" y="127" fill="rgba(200,16,46,.6)" font-size="8" font-family="Inter" style="animation:fadeIn .5s ease forwards 1.5s;opacity:0">Slippage can be 20–50+ pips on major pairs during peak volatility</text>
+                        <rect x="55" y="100" width="410" height="32" rx="6" fill="#fff" stroke="rgba(200,16,46,.25)" stroke-width="1" style="animation:fadeIn .5s ease forwards 1.5s;opacity:0"/>
+                        <text x="65" y="114" fill="#ff0000" font-size="8.5" font-weight="700" font-family="Inter" style="animation:fadeIn .5s ease forwards 1.5s;opacity:0">⚠ Widened spreads from T−5min to T+10min — never place orders in this window</text>
+                        <text x="65" y="127" fill="#000" font-size="8" font-family="Inter" style="animation:fadeIn .5s ease forwards 1.5s;opacity:0">Slippage can be 20–50+ pips on major pairs during peak volatility</text>
                     </svg>
                     </div>
 

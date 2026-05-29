@@ -561,15 +561,16 @@ include_once ('elements/header.php');
     .mod-num{
       font-family: 'Poppins', serif;
       font-size:3.5rem;
-      color:var(--zed-secondary);
+      color:var(--zed-dark-text);
       line-height:1;
       min-width:58px;
     }
     .mod-badge{
       font-family: 'Poppins', serif;
       font-size:1rem;
-      color:var(--zed-secondary);
+      color:var(--zed-primary);
       letter-spacing:2px;
+      font-weight: 500;
       text-transform:uppercase;
       margin-bottom:0.3rem;
     }
@@ -636,13 +637,30 @@ include_once ('elements/header.php');
       background:var(--g1);
       border-left:2px solid var(--zed-primary);
     }
-    .rules li::before{content:attr(data-n);font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--zed-dark-text);min-width:18px;}
+    .rules li::before{
+      content:attr(data-n);
+      font-family:'poppins',sans-serif;
+      font-size:1.1rem;
+      color:var(--zed-primary);
+      min-width:18px;
+    }
 
     /* INDICATOR CARD */
     .ind-card{background:var(--g1);border:1px solid var(--g2);padding:1rem 1.25rem;border-radius:2px;}
     .ind-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--zed-dark-text);letter-spacing:1px;margin-bottom:0.5rem;}
     .ind-detail{font-size:0.93rem;color:#444;line-height:1.6;}
-    .tag{display:inline-block;font-family: 'Poppins', serif;font-size:10px;background:var(--g2);color:var(--g6);padding:2px 8px;border-radius:1px;margin:2px 2px 0 0;letter-spacing:1px;border:1px solid var(--zed-primary);}
+    .tag{
+      display:inline-block;
+      font-family: 'Poppins', serif;
+      font-size:10px;
+      background:#fff;
+      color:var(--g6);
+      padding:2px 8px;
+      border-radius:1px;
+      margin:2px 2px 0 0;
+      letter-spacing:1px;
+      border:1px solid var(--zed-primary);
+    }
 
     /* PATTERN */
     .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;}
@@ -956,32 +974,32 @@ include_once ('elements/header.php');
           <div class="pattern-grid">
             <div class="pattern">
               <div class="pattern-name">Hammer</div>
-              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="5" x2="20" y2="26" stroke="#a3a3a3" stroke-width="1.5"/><rect x="12" y="26" width="16" height="13" fill="#0d0d0d" rx="1"/><line x1="20" y1="39" x2="20" y2="72" stroke="#a3a3a3" stroke-width="1.5"/></svg>
+              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="5" x2="20" y2="26" stroke="#ff0000" stroke-width="1.5"/><rect x="12" y="26" width="16" height="13" fill="#ff0000" rx="1"/><line x1="20" y1="39" x2="20" y2="72" stroke="#ff0000" stroke-width="1.5"/></svg>
               <div class="pattern-sig">Bullish reversal at bottom</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Bullish Engulfing</div>
-              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="18" y="30" width="12" height="20" fill="#a3a3a3" rx="1"/><rect x="33" y="18" width="14" height="44" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="18" y="30" width="12" height="20" fill="#000" rx="1"/><rect x="33" y="18" width="14" height="44" fill="#ff0000" rx="1"/></svg>
               <div class="pattern-sig">Large candle engulfs prior one</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Morning Star</div>
-              <svg viewBox="0 0 80 80" width="80" style="display:block;margin:0 auto;"><rect x="5" y="20" width="18" height="35" fill="#a3a3a3" rx="1"/><rect x="30" y="46" width="14" height="8" fill="#d4d4d4" rx="1"/><rect x="50" y="25" width="18" height="30" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 80 80" width="80" style="display:block;margin:0 auto;"><rect x="5" y="20" width="18" height="35" fill="#ff0000" rx="1"/><rect x="30" y="46" width="14" height="8" fill="#000" rx="1"/><rect x="50" y="25" width="18" height="30" fill="#ff0000" rx="1"/></svg>
               <div class="pattern-sig">3-candle bullish reversal</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Piercing Line</div>
-              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="12" y="20" width="14" height="35" fill="#a3a3a3" rx="1"/><rect x="30" y="34" width="14" height="30" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="12" y="20" width="14" height="35" fill="#ff0000" rx="1"/><rect x="30" y="34" width="14" height="30" fill="#000" rx="1"/></svg>
               <div class="pattern-sig">Closes above 50% of prior candle</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Dragonfly Doji</div>
-              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="18" x2="20" y2="22" stroke="#0d0d0d" stroke-width="2"/><line x1="20" y1="22" x2="20" y2="68" stroke="#a3a3a3" stroke-width="1.5"/><line x1="12" y1="20" x2="28" y2="20" stroke="#0d0d0d" stroke-width="2"/></svg>
+              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="18" x2="20" y2="22" stroke="#ff0000" stroke-width="2"/><line x1="20" y1="22" x2="20" y2="68" stroke="#000" stroke-width="1.5"/><line x1="12" y1="20" x2="28" y2="20" stroke="#ff0000" stroke-width="2"/></svg>
               <div class="pattern-sig">Buyers rejected lower prices fully</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Bullish Harami</div>
-              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="10" y="18" width="16" height="44" fill="#a3a3a3" rx="1"/><rect x="30" y="30" width="14" height="20" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="10" y="18" width="16" height="44" fill="#ff0000" rx="1"/><rect x="30" y="30" width="14" height="20" fill="#000" rx="1"/></svg>
               <div class="pattern-sig">Small candle inside large bearish</div>
             </div>
           </div>
@@ -991,32 +1009,32 @@ include_once ('elements/header.php');
           <div class="pattern-grid">
             <div class="pattern">
               <div class="pattern-name">Shooting Star</div>
-              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="8" x2="20" y2="50" stroke="#a3a3a3" stroke-width="1.5"/><rect x="12" y="50" width="16" height="13" fill="#0d0d0d" rx="1"/><line x1="20" y1="63" x2="20" y2="68" stroke="#a3a3a3" stroke-width="1.5"/></svg>
+              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="8" x2="20" y2="50" stroke="#ff0000" stroke-width="1.5"/><rect x="12" y="50" width="16" height="13" fill="#000" rx="1"/><line x1="20" y1="63" x2="20" y2="68" stroke="#ff0000" stroke-width="1.5"/></svg>
               <div class="pattern-sig">Bearish reversal at top</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Bearish Engulfing</div>
-              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="18" y="26" width="12" height="22" fill="#d4d4d4" rx="1" stroke="#a3a3a3" stroke-width="1"/><rect x="33" y="15" width="14" height="44" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="18" y="26" width="12" height="22" fill="#000" rx="1" stroke="#000" stroke-width="1"/><rect x="33" y="15" width="14" height="44" fill="#ff0000" rx="1"/></svg>
               <div class="pattern-sig">Large dark candle engulfs prior</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Evening Star</div>
-              <svg viewBox="0 0 80 80" width="80" style="display:block;margin:0 auto;"><rect x="5" y="25" width="18" height="30" fill="#d4d4d4" rx="1" stroke="#a3a3a3" stroke-width="1"/><rect x="30" y="18" width="14" height="10" fill="#d4d4d4" rx="1" stroke="#a3a3a3" stroke-width="1"/><rect x="50" y="20" width="18" height="35" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 80 80" width="80" style="display:block;margin:0 auto;"><rect x="5" y="25" width="18" height="30" fill="#ff0000" rx="1" stroke="#ff0000" stroke-width="1"/><rect x="30" y="18" width="14" height="10" fill="#ff0000" rx="1" stroke="#ff0000" stroke-width="1"/><rect x="50" y="20" width="18" height="35" fill="#000" rx="1"/></svg>
               <div class="pattern-sig">3-candle bearish reversal</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Dark Cloud Cover</div>
-              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="12" y="30" width="14" height="30" fill="#d4d4d4" rx="1" stroke="#a3a3a3" stroke-width="1"/><rect x="28" y="18" width="14" height="28" fill="#0d0d0d" rx="1"/></svg>
+              <svg viewBox="0 0 60 80" width="60" style="display:block;margin:0 auto;"><rect x="12" y="30" width="14" height="30" fill="#000" rx="1" stroke="#000" stroke-width="1"/><rect x="28" y="18" width="14" height="28" fill="#ff0000" rx="1"/></svg>
               <div class="pattern-sig">Closes below 50% of prior candle</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Gravestone Doji</div>
-              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="10" x2="20" y2="56" stroke="#a3a3a3" stroke-width="1.5"/><line x1="20" y1="56" x2="20" y2="60" stroke="#0d0d0d" stroke-width="2"/><line x1="12" y1="58" x2="28" y2="58" stroke="#0d0d0d" stroke-width="2"/></svg>
+              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="10" x2="20" y2="56" stroke="#000" stroke-width="1.5"/><line x1="20" y1="56" x2="20" y2="60" stroke="#000" stroke-width="2"/><line x1="12" y1="58" x2="28" y2="58" stroke="#ff0000" stroke-width="2"/></svg>
               <div class="pattern-sig">Sellers rejected higher prices fully</div>
             </div>
             <div class="pattern">
               <div class="pattern-name">Hanging Man</div>
-              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="8" x2="20" y2="26" stroke="#a3a3a3" stroke-width="1.5"/><rect x="12" y="26" width="16" height="13" fill="#0d0d0d" rx="1"/><line x1="20" y1="39" x2="20" y2="70" stroke="#a3a3a3" stroke-width="1.5"/></svg>
+              <svg viewBox="0 0 40 80" width="40" style="display:block;margin:0 auto;"><line x1="20" y1="8" x2="20" y2="26" stroke="#000" stroke-width="1.5"/><rect x="12" y="26" width="16" height="13" fill="#ff0000" rx="1"/><line x1="20" y1="39" x2="20" y2="70" stroke="#000" stroke-width="1.5"/></svg>
               <div class="pattern-sig">Hammer shape at top = bearish</div>
             </div>
           </div>

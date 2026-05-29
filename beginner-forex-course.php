@@ -26,7 +26,7 @@ include_once ('elements/header.php');
         }
 
         .text-muted-z {
-            color: var(--muted) !important;
+            color: var(--zed-secondary) !important;
         }
 
       
@@ -208,14 +208,14 @@ include_once ('elements/header.php');
         }
 
         .zed-badge-red {
-            background: rgba(255, 0, 0, .1);
+            background: rgba(232,17,26,.08);
             color: var(--zed-primary);
             border: 1px solid rgba(255, 0, 0, .2);
         }
 
         .zed-badge-gold {
-            background: rgba(201, 168, 76, .12);
-            color: var(--gold);
+            background: rgba(255, 0, 0, .1);
+            color:var(--zed-primary);
             border: 1px solid rgba(201, 168, 76, .25);
         }
 
@@ -226,8 +226,8 @@ include_once ('elements/header.php');
         }
 
         .zed-badge-navy {
-            background: var(--navy-s);
-            color: var(--navy);
+            background: rgba(255, 0, 0, .1);
+            color: var(--zed-primary);
             border: 1px solid rgba(26, 46, 90, .2);
         }
 
@@ -392,7 +392,7 @@ include_once ('elements/header.php');
 
         .trader-text {
             font-size: .76rem;
-            color: var(--muted);
+            color: var(--zed-secondary);
             line-height: 1.7;
         }
 
@@ -458,7 +458,7 @@ include_once ('elements/header.php');
         }
 
         .session-pairs { 
-            color: var(--muted);
+            color: var(--zed-secondary);
         }
 
         /* Lot size table */
@@ -503,12 +503,12 @@ include_once ('elements/header.php');
         }
 
         .zed-table .green-val {
-            color: var(--green);
+            color: var(--zed-primary);
             font-weight: 600;
         }
 
         .zed-table .muted-val {
-            color: var(--muted);
+            color: var(--zed-secondary);
         }
 
         /* Currency pair table */
@@ -526,7 +526,7 @@ include_once ('elements/header.php');
             padding: 10px 12px;
             border-bottom: 2px solid var(--zed-border-color);
             background: var(--zed-card-back);
-            color: var(--zed-secondary) !important; 
+            color: var(--zed-dark-text) !important; 
         }
 
         .cp-table td { 
@@ -544,7 +544,7 @@ include_once ('elements/header.php');
 
         .cp-pair {
             font-family: 'Poppins', serif;
-            font-weight: 700;
+            font-weight: 500;
             color: var(--zed-dark-text);
         }
 
@@ -553,20 +553,23 @@ include_once ('elements/header.php');
             font-weight: 700; 
             letter-spacing: .1em;
             text-transform: uppercase;
+            font-size: 1.2rem;
         }
 
         .cp-cat-minor {
-            color: var(--blue);
+            color: var(--zed-primary);
             font-weight: 700; 
             letter-spacing: .1em;
             text-transform: uppercase;
+            font-size: 1.2rem;
         }
 
         .cp-cat-exotic {
-            color: var(--amber);
+            color: var(--zed-primary);
             font-weight: 700; 
             letter-spacing: .1em;
             text-transform: uppercase;
+            font-size: 1.2rem;
         }
 
         .cp-best {
@@ -584,14 +587,14 @@ include_once ('elements/header.php');
 
         .style-table th {
             font-family: 'Poppins', serif;
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 700;
             letter-spacing: .12em;
             text-transform: uppercase;
             padding: 10px 12px;
             border-bottom: 2px solid var(--zed-border-color);
             background: var(--zed-card-back);
-            color: var(--faint);
+            color: var(--zed-dark-text);
         }
 
         .style-table td { 
@@ -610,7 +613,7 @@ include_once ('elements/header.php');
 
         .style-name {
             font-weight: 700;
-            color: var(--zed-dark-text);
+            color: var(--zed-primary);
         }
 
         /* Broker type cards */
@@ -725,7 +728,7 @@ include_once ('elements/header.php');
         }
 
         .order-card:hover {
-            border-color: var(--ac, var(--zed-primary));
+            border-color: var(--zed-primary);
             transform: translateY(-3px);
         }
 
@@ -735,7 +738,7 @@ include_once ('elements/header.php');
             font-weight: 700;
             letter-spacing: .16em;
             text-transform: uppercase;
-            color: var(--ac, var(--zed-primary));
+            color: var(--zed-primary);
             margin-bottom: 8px;
             display: flex;
             align-items: center;
@@ -763,7 +766,7 @@ include_once ('elements/header.php');
         .order-list li {
             font-size: .76rem;
             padding: 3px 0;
-            color: var(--muted);
+            color: var(--zed-secondary);
             border-bottom: 1px dashed var(--zed-border-color);
         }
 
@@ -884,6 +887,12 @@ include_once ('elements/header.php');
 
         .zed-section-sm {
             padding: 44px 0;
+        }
+
+        code {
+            font-size: .875em;
+            color: var(--zed-primary);
+            word-wrap: break-word;
         }
 
         @media (max-width: 768px) {
@@ -1704,7 +1713,7 @@ include_once ('elements/header.php');
                 <div class="underline"></div>
             </div>
 
-            <p class="reveal" style=" color:var(--muted); margin-bottom:24px;">Forex is open <strong>24 hours a
+            <p class="reveal" style=" color:var(--zed-secondary); margin-bottom:24px;">Forex is open <strong>24 hours a
                 day, 5 days a week.</strong> The market is a sequencing of sessions. Volatility and volume peak during the
                 London–NY overlap <strong>(13:00–17:00 GMT)</strong> — the golden trading window.
             </p>
@@ -1713,10 +1722,10 @@ include_once ('elements/header.php');
 
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="session-card" style="--ac:var(--zed-primary)">
-                        <div class="session-name">🗾 Tokyo Session</div>
+                        <div class="session-name"> Tokyo Session</div>
                         <div class="session-time">00:00–09:00 GMT</div>
                         <div class="session-pairs">Best pairs: AUD/USD, NZD/USD, USD/JPY, EUR/JPY</div>
-                        <div style="margin-top:8px; color:var(--muted);">Characteristics: Thin liquidity, price
+                        <div style="margin-top:8px; color:var(--zed-secondary);">Characteristics: Thin liquidity, price
                         spreads possible, mostly consolidation. Today's levels: Monitor NZD (Reserve Bank of Australia) statements
                         as key events.</div>
                         <span class="zed-badge zed-badge-red mt-2 d-inline-block">Asian Session</span>
@@ -1725,7 +1734,7 @@ include_once ('elements/header.php');
 
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="session-card" style="--ac:var(--blue)">
-                        <div class="session-name">🇬🇧 London Session</div>
+                        <div class="session-name">London Session</div>
                         <div class="session-time">08:00–17:00 GMT</div>
                         <div class="session-pairs">Best pairs: GBP/USD, EUR/USD, EUR/GBP, EUR/JPY</div>
                         <div style="margin-top:8px; color: var(--zed-secondary) !important; ">Characteristics: <strong>Highest volatility
@@ -1737,7 +1746,7 @@ include_once ('elements/header.php');
 
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="session-card" style="--ac:var(--gold)">
-                        <div class="session-name">🗽 New York Session</div>
+                        <div class="session-name"> New York Session</div>
                         <div class="session-time">13:00–22:00 GMT</div>
                         <div class="session-pairs">Best pairs: EUR/USD, GBP/USD, USD/CAD, USD/CHF</div>
                         <div style="margin-top:8px; color: var(--zed-secondary) !important; ">NFP, CPI, FOMC news drops here. Second most
@@ -1749,22 +1758,40 @@ include_once ('elements/header.php');
 
                 <div class="col-md-6 col-lg-12 reveal">
                     <div class="zed-dark-card" style="--dc:var(--zed-primary)">
+
                         <div
                             style="font-size:1rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--zed-primary); margin-bottom:12px;">
                             Best Times to Trade
                         </div>
+
                         <div style="font-size:.78rem; color: #fff !important;  line-height:1.8;">
-                        <div
-                            style="margin-bottom:8px; color: #fff !important;  font-weight:600;">
-                            London Open: 08:00–10:00 GMT</div>
-                        <div style=" margin-bottom:14px; color: #fff !important; ">EUR/USD, GBP/USD, Gold —
-                            highest breakout probability</div>
-                        <div
-                            style="margin-bottom:8px; color: #fff !important;  font-weight:600;">
-                            NY Open: 13:00–16:00 GMT</div>
-                        <div style="color: #fff !important; ">Avoid: 22:00–00:00 GMT (thin, manipulated
-                            spreads)</div>
+                            <div class="row">
+
+                                    <div class="col-md-6">
+                                            <div
+                                                style="margin-bottom:8px; color: #fff !important;  font-weight:600;">
+                                                London Open: 08:00–10:00 GMT
+                                            </div>
+                                            <div style=" margin-bottom:14px; color: #fff !important; ">EUR/USD, GBP/USD, Gold —
+                                                highest breakout probability
+                                            </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div style="margin-bottom:8px; color: #fff !important;  font-weight:600;">
+                                            NY Open: 13:00–16:00 GMT
+                                        </div>
+
+                                        <div style="color: #fff !important; ">Avoid: 22:00–00:00 GMT (thin, manipulated
+                                            spreads)
+                                        </div>
+
+                                    </div>
+
+                            </div>
                         </div>
+
                         <div
                         style="margin-top:14px; padding:10px; background:rgba(255,0,0,.08); border:1px solid rgba(255,0,0,.15); border-radius:6px; color: #fff !important; ">
                         <i class="fas fa-triangle-exclamation" style="color:var(--zed-primary);margin-right:5px"></i> Never trade
@@ -1804,7 +1831,7 @@ include_once ('elements/header.php');
                 <div
                     style="letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;">
                     Examples</div>
-                <div style=" color:var(--muted); line-height:1.8;">
+                <div style=" color:var(--zed-secondary); line-height:1.8;">
                     EUR/USD moves from 1.0800 → 1.0830 = <strong style="color:var(--zed-primary)">30 pips</strong><br>
                     GBP/JPY moves from 192.40 → 193.10 = <strong style="color:var(--zed-primary)">70 pips</strong><br>
                     Pip value (1 lot) = <strong>$10 per pip</strong> on EUR/USD
@@ -1861,7 +1888,7 @@ include_once ('elements/header.php');
                 <div
                     style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:6px;">
                     Practical Example</div>
-                <div style="font-size:.9rem;color:var(--muted);">You have $500. If you risk 1% = <strong>$5 risk per
+                <div style="font-size:.9rem;color:var(--zed-secondary);">You have $500. If you risk 1% = <strong>$5 risk per
                     trade.</strong> With 30-pip SL: lot size = 5÷(30×1) = <strong>0.17 mini lots</strong></div>
                 </div>
             </div>
@@ -1920,7 +1947,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-sm-6 col-lg-3 reveal">
-            <div class="broker-card" style="--ac:var(--blue)">
+            <div class="broker-card" style="--ac:var(--zed-primary)">
                 <div class="broker-label">STP Broker</div>
                 <div class="broker-title">Straight-Through Processing</div>
                 <p class="broker-text">They profit from your <strong>losses — the spread.</strong> No dealing desk, trades
@@ -1929,7 +1956,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-sm-6 col-lg-3 reveal">
-            <div class="broker-card" style="--ac:var(--green)">
+            <div class="broker-card" style="--ac:var(--zed-primary)">
                 <div class="broker-label">ECN Broker ✓ Recommended</div>
                 <div class="broker-title">Electronic Comm. Network</div>
                 <p class="broker-text">Your orders are sent directly to liquidity providers (banks). <strong>Raw spreads
@@ -1937,7 +1964,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-sm-6 col-lg-3 reveal">
-            <div class="broker-card" style="--ac:var(--gold)">
+            <div class="broker-card" style="--ac:var(--zed-primary)">
                 <div class="broker-label">Spread Betting</div>
                 <div class="broker-title">Spread Betting</div>
                 <p class="broker-text">Variable spreads. No requotes, faster execution than MM. <strong>Sigma:</strong>
@@ -1982,10 +2009,10 @@ include_once ('elements/header.php');
                     </td>
                     <td style=" color: var(--zed-secondary) !important; ">Highest liquidity globally. Most analysed. Tightest
                         spreads.</td>
-                    <td style="color:var(--green); font-weight:600;">
+                    <td style="color:var(--zed-success); font-weight:600;">
                         0.5–1.5 pips</td>
                     <td style="">50–150 pips</td>
-                    <td><span class="cp-best" style="background:var(--green-s);color:var(--green);">All traders</span></td>
+                    <td><span class="cp-best" style="color:var(--zed-secondary);">All traders</span></td>
                 </tr>
                 <tr>
                     <td><span class="cp-cat-minor">Minor</span></td>
@@ -1995,10 +2022,10 @@ include_once ('elements/header.php');
                     </td>
                     <td style="color: var(--zed-secondary) !important; ">Less liquidity, wider spreads. Offer unique
                         opportunities.</td>
-                    <td style="color:var(--amber); font-weight:600;">
+                    <td style="color:var(--zed-success); font-weight:600;">
                         1.5–3 pips</td>
                     <td style="">80–200 pips</td>
-                    <td><span class="cp-best" style="background:var(--navy-s);color:var(--navy);">Intermediate</span></td>
+                    <td><span class="cp-best" style="color:var(--zed-secondary);">Intermediate</span></td>
                 </tr>
                 <tr>
                     <td><span class="cp-cat-exotic">Exotic</span></td>
@@ -2009,23 +2036,23 @@ include_once ('elements/header.php');
                     <td style="color: var(--zed-secondary) !important; ">Very low liquidity, very wide spreads. High risk. Prone
                         to manipulation.</td>
                     <td
-                        style="color:var(--zed-primary); font-weight:600;">
+                        style="color:var(--zed-success); font-weight:600;">
                         5–50 pips</td>
                     <td style="">100–500+ pips</td>
-                    <td><span class="cp-best" style="background:rgba(255,0,0,.08);color:var(--zed-primary);">Advanced
+                    <td><span class="cp-best" style="color:var(--zed-secondary);">Advanced
                         only</span></td>
                 </tr>
                 <tr>
-                    <td><span class="cp-cat-exotic" style="color: #3f7e56;">Commodity-linked</span></td>
+                    <td><span class="cp-cat-exotic" style="color: var(--zed-primary);">Commodity-linked</span></td>
                     <td>
                         <div class="cp-pair">AUD/USD (gold) · USD/CAD (oil)</div>
                         <div class="cp-pair">NZD/USD (dairy)</div>
                     </td>
                     <td style="font-size:.9rem;color: var(--zed-secondary) !important; ">These currencies are heavily influenced by commodity prices. Gold up → AUD up. Oil up → CAD up.</td>
                     <td
-                        style="color:#3f7e56; font-weight:600;">0.5–2 pips</td>
+                        style="color:var(--zed-success); font-weight:600;">0.5–2 pips</td>
                     <td style="">40–100 pips</td>
-                    <td><span class="cp-best" style="background:#3f7e561f; color:#3f7e56;">All levels</span></td>
+                    <td><span class="cp-best" style=" color:var(--zed-secondary);">All levels</span></td>
                 </tr>
             </tbody>
             </table>
@@ -2186,12 +2213,12 @@ include_once ('elements/header.php');
             }
 
             .info-head {
-            font-size: 1rem;
-            font-weight: 600; 
-            font-family: poppins, sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin-bottom: 8px;
+                font-size: 1.2rem;
+                font-weight: 600; 
+                font-family: poppins, sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                margin-bottom: 8px;
             }
 
             .info-body { 
@@ -2263,7 +2290,7 @@ include_once ('elements/header.php');
         <div class="info-grid">
 
                 <div class="info-card" style="border-left:4px solid var(--zed-primary);">
-                    <div class="info-head">🏦 Interest Rates | The #1 Driver</div>
+                    <div class="info-head">Interest Rates | The #1 Driver</div>
                     <div class="info-body">
                             Central bank interest rates are the single most powerful driver of long-term currency direction.<br><br>
                             <strong>Rule:</strong> Higher interest rates → currency attracts more foreign investment → demand for
@@ -2276,8 +2303,8 @@ include_once ('elements/header.php');
                     </div>
                 </div>
 
-                <div class="info-card" style="border-left:4px solid var(--blue);">
-                    <div class="info-head">📊 Key Economic Indicators</div>
+                <div class="info-card" style="border-left:4px solid var(--zed-primary);">
+                    <div class="info-head">Key Economic Indicators</div>
                     <div class="info-body">
                         <strong>NFP — Non-Farm Payrolls (USA):</strong> First Friday of each month at 13:30 GMT. Shows jobs
                         created/lost. A huge beat → USD strengthens. A big miss → USD weakens. Spreads widen massively at release —
@@ -2292,8 +2319,8 @@ include_once ('elements/header.php');
                     </div>
                 </div>
 
-                <div class="info-card" style="border-left:4px solid var(--teal);">
-                    <div class="info-head">🌍 Geopolitical & Sentiment Factors</div>
+                <div class="info-card" style="border-left:4px solid var(--zed-primary);">
+                    <div class="info-head">Geopolitical & Sentiment Factors</div>
                     <div class="info-body">
                         <strong>Risk-On vs Risk-Off:</strong><br>
                         Risk-ON (markets calm, optimistic) → Traders buy AUD, NZD, EM currencies. Sell JPY, CHF, USD.<br>
@@ -2307,14 +2334,14 @@ include_once ('elements/header.php');
                     </div>
                 </div>
 
-                <div class="info-card" style="border-left:4px solid var(--gold);">
-                    <div class="info-head">📅 Economic Calendar | How to Use It</div>
+                <div class="info-card" style="border-left:4px solid var(--zed-primary);">
+                    <div class="info-head">Economic Calendar | How to Use It</div>
                         <div class="info-body">
                             Use <strong>Forex Factory, Investing.com, or TradingEconomics</strong> to track all upcoming events.<br><br>
                             <strong>Impact levels:</strong><br>
-                            🔴 High Impact — Can move pairs 50–300+ pips (NFP, FOMC, CPI)<br>
-                            🟡 Medium Impact — 20–60 pip moves possible<br>
-                            🟢 Low Impact — Usually no significant move<br><br>
+                             High Impact — Can move pairs 50–300+ pips (NFP, FOMC, CPI)<br>
+                             Medium Impact — 20–60 pip moves possible<br>
+                             Low Impact — Usually no significant move<br><br>
                             <strong>How to trade around news:</strong><br>
                             1. Mark all high-impact events for the week on Sunday.<br>
                             2. Don't open new trades 30 min before high-impact news.<br>
@@ -2419,7 +2446,7 @@ include_once ('elements/header.php');
                         Demo account — start here
                     </div>
                     <div class="card-body">
-                        <p>A demo account uses <strong style="color:var(--color-text-primary)">virtual money</strong> with real market prices. It is identical to a live account in terms of charts, indicators and order types — but there is NO emotional weight because you cannot actually lose real money.</p>
+                        <p>A demo account uses <strong style="color:var(--zed-secondary)">virtual money</strong> with real market prices. It is identical to a live account in terms of charts, indicators and order types — but there is NO emotional weight because you cannot actually lose real money.</p>
                         <div class="divider"></div>
                         <p class="label">How long on demo?</p>
                         <p>Until you are consistently profitable for at least 3 months. Not 3 weeks — 3 months. Track every trade in a journal.</p>
@@ -2435,7 +2462,7 @@ include_once ('elements/header.php');
                         Live account — the psychological shift
                     </div>
                     <div class="card-body">
-                        <p>When you move to a live account with real money, <strong style="color:var(--color-text-primary)">everything changes psychologically</strong>. Winning strategies on demo often fail on live because fear and greed take over.</p>
+                        <p>When you move to a live account with real money, <strong style="color:var(--zed-secondary);">everything changes psychologically</strong>. Winning strategies on demo often fail on live because fear and greed take over.</p>
                         <div class="divider"></div>
                         <p class="label">How to transition</p>
                         <ol class="step-list">
@@ -2445,7 +2472,7 @@ include_once ('elements/header.php');
                         <li><span class="step-num">4</span>Scale up only after 3 months of live profitability</li>
                         </ol>
                         <div class="callout">
-                        <strong style="color:var(--color-text-primary)">Reality:</strong> Most traders blow their first live account. It's almost a rite of passage. The lesson is always the same: risk management and psychology, not the strategy.
+                        <strong style="color:var(--zed-secondary);">Reality:</strong> Most traders blow their first live account. It's almost a rite of passage. The lesson is always the same: risk management and psychology, not the strategy.
                         </div>
                     </div>
                     </div>
@@ -2473,14 +2500,16 @@ include_once ('elements/header.php');
                 text-transform: uppercase; 
             }
             .card-header.demo { 
-                background: #e8f5ef; 
-                color: #0f6e56; 
-                border-bottom: 1px solid #9FE1CB; 
+                background: var(--zed-backgound-color); 
+                color: var(--zed-primary); 
+                font-weight: 600;
+                border-bottom: 1.5px solid var(--zed-primary); 
             }
             .card-header.live { 
-                background: #faeeda; 
-                color: #854F0B; 
-                border-bottom: 1px solid #FAC775; 
+                background: var(--zed-backgound-color); 
+                color: var(--zed-primary); 
+                font-weight: 600;
+                border-bottom: 1.5px solid var(--zed-primary); 
             }
             .card-body { 
                 padding: 16px; 
