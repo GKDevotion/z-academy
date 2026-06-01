@@ -153,7 +153,7 @@ include_once ('elements/header.php');
         }
 
         .zed-card-accent {
-            border-top: 3px solid var(--ac, var(--zed-primary));
+            border-top: 3px solid var(--zed-primary);
         }
 
         .zed-card-title {
@@ -435,7 +435,7 @@ include_once ('elements/header.php');
         .session-card {
             background: var(--zed-card-bg);
             border: 1px solid var(--zed-border-color);
-            border-left: 3px solid var(--ac, var(--zed-primary));
+            border-left: 3px solid var(--zed-primary);
             border-radius: 6px;
             padding: 14px 16px;
             margin-bottom: 10px;
@@ -1733,7 +1733,7 @@ include_once ('elements/header.php');
                 </div>
 
                 <div class="col-md-6 col-lg-4 reveal">
-                    <div class="session-card" style="--ac:var(--blue)">
+                    <div class="session-card" style="--ac:var(--zed-primary)">
                         <div class="session-name">London Session</div>
                         <div class="session-time">08:00–17:00 GMT</div>
                         <div class="session-pairs">Best pairs: GBP/USD, EUR/USD, EUR/GBP, EUR/JPY</div>
@@ -1745,7 +1745,7 @@ include_once ('elements/header.php');
                 </div>
 
                 <div class="col-md-6 col-lg-4 reveal">
-                    <div class="session-card" style="--ac:var(--gold)">
+                    <div class="session-card" style="--ac:var(--zed-primary)">
                         <div class="session-name"> New York Session</div>
                         <div class="session-time">13:00–22:00 GMT</div>
                         <div class="session-pairs">Best pairs: EUR/USD, GBP/USD, USD/CAD, USD/CHF</div>
@@ -1842,7 +1842,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 reveal">
-            <div class="zed-card zed-card-accent" style="--ac:var(--navy)">
+            <div class="zed-card zed-card-accent">
                 <div class="zed-eyebrow">LOT SIZE — Full Breakdown with Values</div>
                 <div class="zed-card-title">Lot Sizes Explained</div>
                 <div class="table-responsive">
@@ -2125,7 +2125,7 @@ include_once ('elements/header.php');
 
         <div class="row g-3">
             <div class="col-md-6 col-lg-4 reveal">
-            <div class="order-card" style="--ac:var(--zed-primary)">
+            <div class="order-card">
                 <div class="order-label"><i class="fas fa-arrow-up"></i> Market Order</div>
                 <div class="order-title">Market Order</div>
                 <p class="order-text">Executes immediately at the <strong>current best available price.</strong> Use when:
@@ -2133,7 +2133,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 col-lg-4 reveal">
-            <div class="order-card" style="--ac:var(--blue)">
+            <div class="order-card">
                 <div class="order-label"><i class="fas fa-arrow-down"></i> Buy Limit</div>
                 <div class="order-title">Buy Limit</div>
                 <p class="order-text">Place a buy order at a <strong>lower price than current.</strong> Refer to your broker
@@ -2142,7 +2142,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 col-lg-4 reveal">
-            <div class="order-card" style="--ac:var(--green)">
+            <div class="order-card">
                 <div class="order-label"><i class="fas fa-chart-line"></i> Buy Stop</div>
                 <div class="order-title">Buy Stop</div>
                 <p class="order-text">Place a buy order <strong>above current price.</strong> Executes when price rises to
@@ -2151,7 +2151,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 col-lg-4 reveal">
-            <div class="order-card" style="--ac:var(--gold)">
+            <div class="order-card">
                 <div class="order-label"><i class="fas fa-stop"></i> Stop Loss (SL)</div>
                 <div class="order-title">Stop Loss — Non-Negotiable</div>
                 <p class="order-text">An order that <strong>automatically closes your trade if price moves against
@@ -2160,7 +2160,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 col-lg-4 reveal">
-            <div class="order-card" style="--ac:var(--emerald)">
+            <div class="order-card">
                 <div class="order-label"><i class="fas fa-bullseye"></i> Take Profit (TP)</div>
                 <div class="order-title">Take Profit</div>
                 <p class="order-text">Automatically closes your trade at a <strong>target profit level.</strong> Place at
@@ -2169,7 +2169,7 @@ include_once ('elements/header.php');
             </div>
             </div>
             <div class="col-md-6 col-lg-4 reveal">
-            <div class="order-card" style="--ac:var(--purple)">
+            <div class="order-card">
                 <div class="order-label"><i class="fas fa-shield-alt"></i> Trailing Stop</div>
                 <div class="order-title">Trailing Stop</div>
                 <p class="order-text">A <strong>dynamic stop loss</strong> that moves with price as it goes in your favour —

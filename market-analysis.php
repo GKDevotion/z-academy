@@ -978,7 +978,7 @@ include_once ('elements/header.php');
         border-radius: 100px;
         }
         .b-s {
-        background: var(--RM);
+        background: rgba(232,17,26,.08);
         color: var(--zed-primary);
         border: 1px solid rgba(200, 16, 46, 0.22);
         }
