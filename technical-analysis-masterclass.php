@@ -653,14 +653,11 @@ include_once ('elements/header.php');
       display:inline-block;
       font-family: 'Poppins', serif;
       font-size:10px;
-      background:#fff;
+      background:var(--g2);
       color:var(--g6);
       padding:2px 8px;
       border-radius:1px;
-      margin:2px 2px 0 0;
-      letter-spacing:1px;
-      border:1px solid var(--zed-primary);
-    }
+      margin:2px 2px 0 0;letter-spacing:1px;border:1px solid var(--zed-primary);}
 
     /* PATTERN */
     .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;}
