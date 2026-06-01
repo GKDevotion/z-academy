@@ -813,7 +813,7 @@ include_once ('elements/header.php');
             <div>
               <svg viewBox="0 0 130 220" width="130">
                 <line x1="65" y1="10" x2="65" y2="52" stroke="#a3a3a3" stroke-width="2"/>
-                <rect x="28" y="52" width="74" height="110" fill="#0d0d0d" rx="2"/>
+                <rect x="28" y="52" width="74" height="110" fill="#ff0000" rx="2"/>
                 <line x1="65" y1="162" x2="65" y2="208" stroke="#a3a3a3" stroke-width="2"/>
                 <text x="6" y="18" fill="#a3a3a3" font-size="10" font-family="monospace">High</text>
                 <text x="6" y="78" fill="#ffffff" font-size="10" font-family="monospace">Open</text>
