@@ -2781,6 +2781,7 @@ include_once ('elements/header.php');
                         color: var(--zed-secondary); 
                         transition: transform 0.2s; 
                         flex-shrink: 0; 
+                        font-size: 1.5rem;
                         }
                     .faq-item.open .faq-arrow { 
                         transform: rotate(180deg); 
