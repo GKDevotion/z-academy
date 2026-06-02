@@ -1459,7 +1459,87 @@ include_once ('elements/header.php');
     </section>
     
     <div class="hdiv"></div>
-     
+
+    <style>
+         /* ── STAT CARDS ── */
+        .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+        margin-bottom: 28px;
+        }
+
+        .stat-card {
+        background: var(--white);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        padding: 18px 20px;
+        box-shadow: var(--shadow);
+        }
+
+        .stat-label {
+        font-size: 15px;
+        color: var(--zed-dark-text);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 6px;
+        }
+
+        .stat-val {
+        font-family: 'poppins', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--zed-primary);
+        margin-bottom: 4px;
+        }
+
+        .stat-sub { 
+        color: var(--zed-secondary);
+        }
+
+    </style>
+
+    <div class="container pt-5">
+        <div class="stat-grid">
+
+            <div class="stat-card">
+            <div class="stat-label">Daily Volume</div>
+            <div class="stat-val">$7.5T</div>
+            <div class="stat-sub">Larger than all stock markets combined</div>
+            </div>
+
+            <div class="stat-card">
+            <div class="stat-label">Market Hours</div>
+            <div class="stat-val">24/5</div>
+            <div class="stat-sub">Mon open Sydney → Fri close NY</div>
+            </div>
+
+            <div class="stat-card">
+            <div class="stat-label">Major Pairs</div>
+            <div class="stat-val">7+</div>
+            <div class="stat-sub">EUR/USD = 28% of all trades</div>
+            </div>
+
+            <div class="stat-card">
+            <div class="stat-label">Standard Lot</div>
+            <div class="stat-val">100K</div>
+            <div class="stat-sub">Units of base currency</div>
+            </div>
+
+            <div class="stat-card">
+            <div class="stat-label">Retail % of Market</div>
+            <div class="stat-val">~5%</div>
+            <div class="stat-sub">Banks control ~40%, hedgers ~55%</div>
+            </div>
+
+            <div class="stat-card">
+            <div class="stat-label">Countries</div>
+            <div class="stat-val">180+</div>
+            <div class="stat-sub">Currencies traded globally</div>
+            </div>
+
+        </div>
+    </div>
      <!-- ═══ SECTION 1: WHAT IS FOREX ═══ -->
 
     <section class="zed-section" style="background:var(--zed-light-bg)">
@@ -1467,6 +1547,8 @@ include_once ('elements/header.php');
             <div class="zed-sec-head reveal"> 
                 <h2 class="zed-sec-title">Forex Market Fundamentals | Complete Guide</h2> 
                 <div class="underline mb-3"></div>
+                  <!-- MARKET OVERVIEW -->
+        
                 <p style="color: var(--zed-secondary) !important; line-height:1.82; margin-bottom:14px;">The foreign exchange market (Forex/FX) is the world's largest and most liquid financial market — trading currencies 24 hours a day, 5 days a week. This module covers everything from scratch: what forex is, who trades it, how it works, all terminology, market structure, broker types, leverage, margin, lot sizes, orders and how trades actually flow. Read every word.</p>
             </div>
 
@@ -2776,434 +2858,434 @@ include_once ('elements/header.php');
 
   .hidden { display: none !important; }
  </style>
-      <div class="zed-sec-head mt-5 mb-5">  
-            <h2 class="zed-sec-title">Zed Capital — Forex Basics FAQ</h2> 
-            <div class="underline"></div>
-      </div>
+        <div class="zed-sec-head mt-5 mb-5">  
+                <h2 class="zed-sec-title">Zed Capital — Forex Basics FAQ</h2> 
+                <div class="underline"></div>
+        </div>
 
-      <h2 class="sr-only">Zed Capital — Forex Basics FAQ</h2>
+        <h2 class="sr-only">Zed Capital — Forex Basics FAQ</h2>
 
-<div class="wrap">
-  <div class="sec-title">
-    
-    <p class="sec-sub">Everything beginners need to know before placing their first trade on Zed Capital's MT5 platform. Click any question to expand.</p>
+        <div class="wrap">
+        <div class="sec-title">
+            
+            <p class="sec-sub">Everything beginners need to know before placing their first trade on Zed Capital's MT5 platform. Click any question to expand.</p>
 
-    <div class="cat-tabs">
-        <button class="cat-btn active" onclick="filterCat('all',this)">All Questions</button>
-        <button class="cat-btn" onclick="filterCat('market',this)">What is Forex</button>
-        <button class="cat-btn" onclick="filterCat('terms',this)">Key Terms</button>
-        <button class="cat-btn" onclick="filterCat('pairs',this)">Currency Pairs</button>
-        <button class="cat-btn" onclick="filterCat('broker',this)">Broker & Account</button>
-        <button class="cat-btn" onclick="filterCat('sessions',this)">Market Sessions</button>
-    </div>
-
-    <div class="count-bar">
-        <span class="count-text" id="faq-count">Showing all 20 questions</span>
-        <a class="zed-link" href="https://www.zedcapital.com/zed-academy">Explore Zed Academy →</a>
-    </div>
-
-    <div class="faq-list" id="faq-list">
-
-        <!-- Q1 -->
-        <div class="faq-item" data-cat="market">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">1</div>
-            <div class="faq-q-text">What is Forex trading?</div>
+            <div class="cat-tabs">
+                <button class="cat-btn active" onclick="filterCat('all',this)">All Questions</button>
+                <button class="cat-btn" onclick="filterCat('market',this)">What is Forex</button>
+                <button class="cat-btn" onclick="filterCat('terms',this)">Key Terms</button>
+                <button class="cat-btn" onclick="filterCat('pairs',this)">Currency Pairs</button>
+                <button class="cat-btn" onclick="filterCat('broker',this)">Broker & Account</button>
+                <button class="cat-btn" onclick="filterCat('sessions',this)">Market Sessions</button>
             </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Forex (Foreign Exchange) is the global marketplace where currencies are bought and sold against each other. It is the world's largest financial market with a daily trading volume of over <strong>$7.5 trillion</strong> — larger than all stock markets combined.<br><br>
-            Unlike stock markets, Forex is an <strong>OTC (Over-The-Counter)</strong> market with no single central exchange. Trading happens 24 hours a day, 5 days a week through a global network of banks, brokers, and electronic systems.
-            <div class="highlight">On Zed Capital, you can trade Forex, Stocks, Metals, Indices, Commodities and Crypto — all from one MT5 account.</div>
-        </div>
-        </div>
 
-        <!-- Q2 -->
-        <div class="faq-item" data-cat="market">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">2</div>
-            <div class="faq-q-text">Who participates in the Forex market?</div>
+            <div class="count-bar">
+                <span class="count-text" id="faq-count">Showing all 20 questions</span>
+                <a class="zed-link" href="https://www.zedcapital.com/zed-academy">Explore Zed Academy →</a>
             </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            The Forex market has a clear hierarchy of participants:<br><br>
-            <table>
-            <tr><th>Tier</th><th>Participant</th><th>Role</th></tr>
-            <tr><td>1</td><td>Central Banks (Fed, ECB, BOJ)</td><td>Set interest rates, control currency supply</td></tr>
-            <tr><td>2</td><td>Commercial Banks (JPMorgan, HSBC)</td><td>Make markets, provide liquidity</td></tr>
-            <tr><td>3</td><td>Hedge Funds & Institutions</td><td>Large-scale speculation & hedging</td></tr>
-            <tr><td>4</td><td>Multinational Corporations</td><td>Hedge currency exposure on international revenues</td></tr>
-            <tr><td>5</td><td>Retail Brokers (Zed Capital)</td><td>Provide market access to retail traders</td></tr>
-            <tr><td>6</td><td>Retail Traders (You)</td><td>~5% of total market volume</td></tr>
-            </table>
-            <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Retail traders represent only ~5% of Forex volume — which is why understanding how larger players move the market gives you a significant edge.</div>
-        </div>
-        </div>
 
-        <!-- Q3 -->
-        <div class="faq-item" data-cat="market">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">3</div>
-            <div class="faq-q-text">Why does the Forex market exist?</div>
+            <div class="faq-list" id="faq-list">
+
+                <!-- Q1 -->
+                <div class="faq-item" data-cat="market">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">1</div>
+                    <div class="faq-q-text">What is Forex trading?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Forex (Foreign Exchange) is the global marketplace where currencies are bought and sold against each other. It is the world's largest financial market with a daily trading volume of over <strong>$7.5 trillion</strong> — larger than all stock markets combined.<br><br>
+                    Unlike stock markets, Forex is an <strong>OTC (Over-The-Counter)</strong> market with no single central exchange. Trading happens 24 hours a day, 5 days a week through a global network of banks, brokers, and electronic systems.
+                    <div class="highlight">On Zed Capital, you can trade Forex, Stocks, Metals, Indices, Commodities and Crypto — all from one MT5 account.</div>
+                </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item" data-cat="market">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">2</div>
+                    <div class="faq-q-text">Who participates in the Forex market?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    The Forex market has a clear hierarchy of participants:<br><br>
+                    <table>
+                    <tr><th>Tier</th><th>Participant</th><th>Role</th></tr>
+                    <tr><td>1</td><td>Central Banks (Fed, ECB, BOJ)</td><td>Set interest rates, control currency supply</td></tr>
+                    <tr><td>2</td><td>Commercial Banks (JPMorgan, HSBC)</td><td>Make markets, provide liquidity</td></tr>
+                    <tr><td>3</td><td>Hedge Funds & Institutions</td><td>Large-scale speculation & hedging</td></tr>
+                    <tr><td>4</td><td>Multinational Corporations</td><td>Hedge currency exposure on international revenues</td></tr>
+                    <tr><td>5</td><td>Retail Brokers (Zed Capital)</td><td>Provide market access to retail traders</td></tr>
+                    <tr><td>6</td><td>Retail Traders (You)</td><td>~5% of total market volume</td></tr>
+                    </table>
+                    <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Retail traders represent only ~5% of Forex volume — which is why understanding how larger players move the market gives you a significant edge.</div>
+                </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item" data-cat="market">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">3</div>
+                    <div class="faq-q-text">Why does the Forex market exist?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Forex exists for five core reasons:<br><br>
+                    <strong>1. International Trade</strong> — A UAE company importing goods from Japan must convert AED to JPY to pay their supplier.<br>
+                    <strong>2. Tourism</strong> — Travellers exchange currency when visiting other countries — billions of small transactions daily.<br>
+                    <strong>3. Investment</strong> — A US fund buying European bonds must first purchase EUR.<br>
+                    <strong>4. Speculation</strong> — Traders and hedge funds buy/sell currencies to profit from price movements. This accounts for the majority of Forex volume.<br>
+                    <strong>5. Central Bank Policy</strong> — Countries manage their currency's value to control inflation and support exports.
+                </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">4</div>
+                    <div class="faq-q-text">What is a Pip and how is it calculated?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    A <strong>Pip (Price Interest Point)</strong> is the smallest standardised price movement in a currency pair.<br><br>
+                    For most pairs → 1 pip = movement of the <strong>4th decimal place (0.0001)</strong><br>
+                    For JPY pairs → 1 pip = movement of the <strong>2nd decimal place (0.01)</strong><br><br>
+                    <strong>Examples:</strong><br>
+                    EUR/USD moves from 1.0850 → 1.0860 = <span class="tag-g">+10 pips profit (if long)</span><br>
+                    GBP/USD moves from 1.2700 → 1.2650 = <span class="tag-r">−50 pips loss (if long)</span><br>
+                    USD/JPY moves from 150.00 → 151.00 = <span class="tag-g">+100 pips profit (if long)</span><br><br>
+                    <div class="highlight">Modern brokers like Zed Capital quote to 5 decimal places. The 5th digit is a "pipette" = 1/10th of a pip. e.g. EUR/USD at 1.08512 — the "2" is a pipette.</div>
+                </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">5</div>
+                    <div class="faq-q-text">What is a Spread and how does it affect my trades?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    The <strong>spread</strong> is the difference between the Bid price (what you sell at) and the Ask price (what you buy at). It is your broker's primary cost.<br><br>
+                    <strong>Example — EUR/USD:</strong><br>
+                    Bid: 1.08500 | Ask: 1.08515 → Spread = <strong>1.5 pips</strong><br><br>
+                    Every trade you open starts at a small loss equal to the spread. The market must move in your favour by at least the spread before you break even.<br><br>
+                    <table>
+                    <tr><th>Account</th><th>Spread</th><th>Commission</th><th>Best For</th></tr>
+                    <tr><td>Zed Capital Premium Elite</td><td>From 1.5 pips</td><td>$0</td><td>Beginners, Swing Traders</td></tr>
+                    <tr><td>Zed Capital Premium Raw</td><td>From 0.1 pips</td><td>$8/lot</td><td>Scalpers, Algo Traders</td></tr>
+                    </table>
+                </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">6</div>
+                    <div class="faq-q-text">What is Leverage and how does it work?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    <strong>Leverage</strong> allows you to control a larger position with a smaller amount of capital. Zed Capital offers leverage up to <strong>1:500</strong>.<br><br>
+                    <strong>Example with 1:100 leverage:</strong><br>
+                    You deposit $1,000. With 1:100 leverage, you can control a $100,000 position.<br>
+                    If the trade moves +1% in your favour → profit = $1,000 (100% of your deposit).<br>
+                    If the trade moves −1% against you → loss = $1,000 (entire deposit wiped).<br><br>
+                    <div class="highlight">⚠️ Leverage is a double-edged sword. It amplifies both profits AND losses. Always use a Stop Loss. Professional traders rarely use more than 1:10–1:20 effective leverage regardless of what their broker offers.</div>
+                    <div class="tip"><i class="ti ti-shield" aria-hidden="true"></i> Zed Capital includes negative balance protection — you cannot lose more than your deposit.</div>
+                </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">7</div>
+                    <div class="faq-q-text">What is Margin and what happens when I get a Margin Call?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    <strong>Margin</strong> is the deposit your broker holds as collateral to keep your trade open. It is not a fee — it is reserved from your account balance.<br><br>
+                    <strong>Required Margin formula:</strong><br>
+                    Required Margin = (Trade Size ÷ Leverage) × Exchange Rate<br><br>
+                    <strong>Example:</strong> Trading 1 lot EUR/USD (100,000 units) at 1:100 leverage → Required Margin = $1,000<br><br>
+                    <strong>Margin Call</strong> occurs when your account equity drops to 50% of the required margin (Zed Capital's margin call level). The broker alerts you to deposit more funds or close positions.<br><br>
+                    <strong>Stop Out</strong> occurs at 50% — Zed Capital will automatically close your positions to prevent further losses.
+                    <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Always keep free margin well above your used margin. A common rule: never use more than 20% of your account on any single trade.</div>
+                </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">8</div>
+                    <div class="faq-q-text">What are Lot Sizes? (Standard, Mini, Micro)</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    A <strong>Lot</strong> is the standard unit of trade size in Forex. On Zed Capital's MT5 platform, the Volume field controls your lot size.<br><br>
+                    <table>
+                    <tr><th>Lot Type</th><th>MT5 Volume</th><th>Units</th><th>Pip Value (EUR/USD)</th></tr>
+                    <tr><td>Standard Lot</td><td>1.0</td><td>100,000</td><td>~$10/pip</td></tr>
+                    <tr><td>Mini Lot</td><td>0.1</td><td>10,000</td><td>~$1/pip</td></tr>
+                    <tr><td>Micro Lot</td><td>0.01</td><td>1,000</td><td>~$0.10/pip</td></tr>
+                    </table>
+                    <div class="highlight">Beginners should always start with micro lots (0.01). With a $500 account and a 30-pip stop loss: 0.01 lot = $0.30 risk per pip × 30 pips = $3 total risk = 0.6% of account. This is safe and professional.</div>
+                </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">9</div>
+                    <div class="faq-q-text">What is a Swap / Rollover fee?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    A <strong>Swap (Rollover)</strong> is an interest charge or credit applied when you hold a Forex position past <strong>17:00 New York time</strong>. It is based on the interest rate difference between the two currencies in the pair.<br><br>
+                    <strong>Example — Buying EUR/USD:</strong><br>
+                    You buy EUR (ECB rate ~4%) and sell USD (Fed rate ~5.25%)<br>
+                    Net = 4% − 5.25% = <span class="tag-r">−1.25%/year</span> → You PAY swap daily<br><br>
+                    <strong>Wednesday Triple Swap:</strong> On Wednesday night, brokers charge 3× the normal swap to cover the weekend settlement. Avoid holding negative-swap trades through Wednesday.<br><br>
+                    <div class="tip"><i class="ti ti-moon" aria-hidden="true"></i> Zed Capital offers Islamic (swap-free) accounts for traders who cannot receive or pay interest under Sharia law.</div>
+                </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="faq-item" data-cat="pairs">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">10</div>
+                    <div class="faq-q-text">What is the difference between Base Currency and Quote Currency?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Every currency pair is written as <strong>BASE/QUOTE</strong>.<br><br>
+                    <strong>EUR/USD = 1.0850 means:</strong><br>
+                    → 1 EUR (base) = 1.0850 USD (quote)<br>
+                    → To BUY 1 EUR, you pay 1.0850 USD<br><br>
+                    <strong>When you BUY EUR/USD</strong> — you buy EUR and simultaneously sell USD.<br>
+                    <strong>When you SELL EUR/USD</strong> — you sell EUR and simultaneously buy USD.<br><br>
+                    This is why Forex always trades in pairs — you can never buy one currency without selling another.
+                </div>
+                </div>
+
+                <!-- Q11 -->
+                <div class="faq-item" data-cat="pairs">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">11</div>
+                    <div class="faq-q-text">What are Major, Minor, and Exotic currency pairs?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    <table>
+                    <tr><th>Category</th><th>Examples</th><th>Spread</th><th>Volatility</th></tr>
+                    <tr><td><span class="tag-g">Major</span></td><td>EUR/USD, GBP/USD, USD/JPY, AUD/USD</td><td>Tightest</td><td>Moderate–High</td></tr>
+                    <tr><td><span class="tag-b">Minor</span></td><td>EUR/GBP, EUR/JPY, GBP/JPY, AUD/JPY</td><td>Moderate</td><td>Moderate</td></tr>
+                    <tr><td><span class="tag-r">Exotic</span></td><td>USD/TRY, EUR/ZAR, USD/SGD</td><td>Widest</td><td>Very High</td></tr>
+                    </table><br>
+                    <strong>Best pairs for beginners:</strong> EUR/USD (most liquid, tightest spread), GBP/USD, USD/JPY.<br><br>
+                    <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Start with just 1–2 pairs. Master their behaviour before adding more. EUR/USD accounts for ~28% of all global Forex trades.</div>
+                </div>
+                </div>
+
+                <!-- Q12 -->
+                <div class="faq-item" data-cat="terms">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">12</div>
+                    <div class="faq-q-text">What is the difference between Going Long and Going Short?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Unlike stocks (where you typically only profit when prices rise), Forex allows you to profit in <strong>both directions</strong>.<br><br>
+                    <strong>LONG (Buy):</strong> You believe the base currency will RISE. Buy EUR/USD at 1.0800, close at 1.0900 → +100 pips profit.<br><br>
+                    <strong>SHORT (Sell):</strong> You believe the base currency will FALL. Sell EUR/USD at 1.0900, close at 1.0800 → +100 pips profit.<br><br>
+                    <div class="highlight">Professional traders are equally comfortable going short. In a downtrend, shorting is as natural as buying in an uptrend. Most beginners only think about buying — this limits their opportunities by 50%.</div>
+                </div>
+                </div>
+
+                <!-- Q13 -->
+                <div class="faq-item" data-cat="broker">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">13</div>
+                    <div class="faq-q-text">What is the difference between Market Maker, STP, and ECN brokers?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    <table>
+                    <tr><th>Type</th><th>Execution</th><th>Spread</th><th>Commission</th><th>Verdict</th></tr>
+                    <tr><td><span class="tag-r">Market Maker</span></td><td>Broker takes other side</td><td>Fixed, wider</td><td>None</td><td>Conflict of interest</td></tr>
+                    <tr><td><span class="tag-b">STP</span></td><td>Routed to liquidity providers</td><td>Variable</td><td>Markup on spread</td><td>Good middle ground</td></tr>
+                    <tr><td><span class="tag-g">ECN/STP</span></td><td>True interbank access</td><td>Raw (0.0+)</td><td>Fixed per lot</td><td>Best for serious traders</td></tr>
+                    </table>
+                    <div class="highlight">Zed Capital is a licensed STP broker regulated by the FSC Mauritius (GB24203133), with no dealing desk — your orders are routed directly to institutional liquidity providers.</div>
+                </div>
+                </div>
+
+                <!-- Q14 -->
+                <div class="faq-item" data-cat="broker">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">14</div>
+                    <div class="faq-q-text">What account types does Zed Capital offer?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Zed Capital offers two account types on MetaTrader 5:<br><br>
+                    <strong>Premium Elite</strong> — Spreads from 1.5 pips, zero commission, leverage up to 1:500, minimum deposit $100. Covers Forex, Stocks, Metals, Indices, Commodities, Crypto. Best for beginners and swing traders.<br><br>
+                    <strong>Premium Raw</strong> — Raw ECN spreads from 0.1 pips, $8 commission per lot, leverage up to 1:500, minimum deposit $100. Best for scalpers, day traders, and EA/algo traders.<br><br>
+                    Both accounts include segregated client funds, negative balance protection, and FSC regulation.
+                    <div class="tip"><i class="ti ti-star" aria-hidden="true"></i> Not sure which to choose? Start with a free Zed Capital Demo Account — same MT5 environment, zero risk.</div>
+                </div>
+                </div>
+
+                <!-- Q15 -->
+                <div class="faq-item" data-cat="broker">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">15</div>
+                    <div class="faq-q-text">Is my money safe with Zed Capital?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Zed Capital International Limited takes fund security seriously:<br><br>
+                    <strong>Regulated:</strong> Licensed by the Financial Services Commission (FSC) of Mauritius, regulatory number GB24203133.<br>
+                    <strong>Segregated accounts:</strong> Client funds are held separately from company operating funds in top-tier bank accounts.<br>
+                    <strong>Negative balance protection:</strong> You cannot lose more than your deposited funds.<br>
+                    <strong>Nominee fund protection:</strong> In the event of a client's unavailability, their nominated beneficiary can claim the account balance.<br>
+                    <strong>Bank-level encryption:</strong> All data and transactions are protected with institutional-grade security.
+                </div>
+                </div>
+
+                <!-- Q16 -->
+                <div class="faq-item" data-cat="sessions">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">16</div>
+                    <div class="faq-q-text">When is the Forex market open and what are the trading sessions?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    The Forex market is open <strong>24 hours a day, Monday to Friday</strong> across four global sessions:<br><br>
+                    <table>
+                    <tr><th>Session</th><th>GMT Hours</th><th>Best Pairs</th><th>Volatility</th></tr>
+                    <tr><td>Sydney</td><td>22:00–07:00</td><td>AUD/USD, NZD/USD</td><td>Low</td></tr>
+                    <tr><td>Tokyo</td><td>00:00–09:00</td><td>USD/JPY, GBP/JPY</td><td>Low–Moderate</td></tr>
+                    <tr><td>London</td><td>07:00–16:00</td><td>EUR/USD, GBP/USD</td><td>HIGH</td></tr>
+                    <tr><td>New York</td><td>12:00–21:00</td><td>All USD pairs</td><td>HIGH</td></tr>
+                    </table>
+                    <div class="highlight">The <strong>London–New York overlap (12:00–16:00 GMT)</strong> is the most liquid and volatile window — the best time to trade for most strategies.</div>
+                </div>
+                </div>
+
+                <!-- Q17 -->
+                <div class="faq-item" data-cat="sessions">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">17</div>
+                    <div class="faq-q-text">What are the best trading hours for traders based in Dubai (UAE)?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Zed Capital has a representative office in Dubai (Media City). For UAE-based traders (GMT+4):<br><br>
+                    <strong>London Open (best for trend starters):</strong> 11:00–13:00 UAE time<br>
+                    <strong>London–NY Overlap (highest volatility):</strong> 16:00–20:00 UAE time<br>
+                    <strong>NFP release (first Friday of each month):</strong> 16:30 UAE time<br>
+                    <strong>FOMC decisions:</strong> ~22:00 UAE time<br><br>
+                    <div class="highlight">Avoid trading between 02:00–10:00 UAE time — this is the late US/early Tokyo session with thin liquidity, wide spreads, and unpredictable price action.</div>
+                </div>
+                </div>
+
+                <!-- Q18 -->
+                <div class="faq-item" data-cat="market">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">18</div>
+                    <div class="faq-q-text">What is a Stop Loss and Take Profit — and why are they essential?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    <strong>Stop Loss (SL)</strong> is a price level at which your trade automatically closes to prevent further loss. It is your safety net.<br><br>
+                    <strong>Take Profit (TP)</strong> is a price level at which your trade automatically closes to lock in your profit.<br><br>
+                    <strong>Example:</strong><br>
+                    Buy EUR/USD at 1.0850 → SL at 1.0820 (30 pips risk) → TP at 1.0910 (60 pips reward) → Risk:Reward = 1:2<br><br>
+                    <div class="highlight">Never open a trade without a Stop Loss. Even one unprotected trade during a major news event can wipe an entire account. Zed Capital's MT5 allows you to set both SL and TP at the moment of order placement.</div>
+                </div>
+                </div>
+
+                <!-- Q19 -->
+                <div class="faq-item" data-cat="broker">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">19</div>
+                    <div class="faq-q-text">How do I start trading on Zed Capital — step by step?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    Getting started on Zed Capital takes less than 3 minutes:<br><br>
+                    <strong>Step 1 — Register:</strong> Visit zedcapital.com and fill in your basic personal details to open an account.<br>
+                    <strong>Step 2 — Verify:</strong> Submit your identity documents (KYC) to comply with FSC regulations.<br>
+                    <strong>Step 3 — Demo first:</strong> Open a free Demo account to practise on MT5 with virtual funds — no risk.<br>
+                    <strong>Step 4 — Deposit:</strong> Once confident, fund your live account (minimum $100) via bank transfer or crypto.<br>
+                    <strong>Step 5 — Download MT5:</strong> Available for Windows, macOS, iOS, Android, and Web Browser — all with the same login.<br>
+                    <strong>Step 6 — Trade:</strong> Start with micro lots (0.01), apply your Stop Loss on every trade, and track your progress.<br><br>
+                    <div class="tip"><i class="ti ti-school" aria-hidden="true"></i> Complete Zed Academy's beginner course before going live. Education first — profits follow.</div>
+                </div>
+                </div>
+
+                <!-- Q20 -->
+                <div class="faq-item" data-cat="market">
+                <div class="faq-q" onclick="toggle(this)">
+                    <div class="faq-q-left">
+                    <div class="faq-num">20</div>
+                    <div class="faq-q-text">What is the most important rule for beginner Forex traders?</div>
+                    </div>
+                    <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
+                </div>
+                <div class="faq-a">
+                    The single most important rule: <strong>protect your capital first.</strong><br><br>
+                    Most beginners focus on making money. Professionals focus on not losing money. If you preserve your capital, you stay in the game long enough to develop a real edge.<br><br>
+                    The three non-negotiable rules for every Zed Capital trader:<br><br>
+                    <strong>1.</strong> Never risk more than 1–2% of your account on a single trade.<br>
+                    <strong>2.</strong> Always use a Stop Loss — no exceptions, no matter how confident you feel.<br>
+                    <strong>3.</strong> Practise on demo for at least 3 consistent profitable months before going live.<br><br>
+                    <div class="highlight">"Your edge isn't your indicator or your pattern — it's your ability to execute the same process consistently despite losses, despite boredom, despite the inevitable streaks. The market doesn't reward brilliance. It rewards discipline."</div>
+                </div>
+                </div>
+
             </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Forex exists for five core reasons:<br><br>
-            <strong>1. International Trade</strong> — A UAE company importing goods from Japan must convert AED to JPY to pay their supplier.<br>
-            <strong>2. Tourism</strong> — Travellers exchange currency when visiting other countries — billions of small transactions daily.<br>
-            <strong>3. Investment</strong> — A US fund buying European bonds must first purchase EUR.<br>
-            <strong>4. Speculation</strong> — Traders and hedge funds buy/sell currencies to profit from price movements. This accounts for the majority of Forex volume.<br>
-            <strong>5. Central Bank Policy</strong> — Countries manage their currency's value to control inflation and support exports.
-        </div>
-        </div>
 
-        <!-- Q4 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">4</div>
-            <div class="faq-q-text">What is a Pip and how is it calculated?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
         </div>
-        <div class="faq-a">
-            A <strong>Pip (Price Interest Point)</strong> is the smallest standardised price movement in a currency pair.<br><br>
-            For most pairs → 1 pip = movement of the <strong>4th decimal place (0.0001)</strong><br>
-            For JPY pairs → 1 pip = movement of the <strong>2nd decimal place (0.01)</strong><br><br>
-            <strong>Examples:</strong><br>
-            EUR/USD moves from 1.0850 → 1.0860 = <span class="tag-g">+10 pips profit (if long)</span><br>
-            GBP/USD moves from 1.2700 → 1.2650 = <span class="tag-r">−50 pips loss (if long)</span><br>
-            USD/JPY moves from 150.00 → 151.00 = <span class="tag-g">+100 pips profit (if long)</span><br><br>
-            <div class="highlight">Modern brokers like Zed Capital quote to 5 decimal places. The 5th digit is a "pipette" = 1/10th of a pip. e.g. EUR/USD at 1.08512 — the "2" is a pipette.</div>
-        </div>
-        </div>
-
-        <!-- Q5 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">5</div>
-            <div class="faq-q-text">What is a Spread and how does it affect my trades?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            The <strong>spread</strong> is the difference between the Bid price (what you sell at) and the Ask price (what you buy at). It is your broker's primary cost.<br><br>
-            <strong>Example — EUR/USD:</strong><br>
-            Bid: 1.08500 | Ask: 1.08515 → Spread = <strong>1.5 pips</strong><br><br>
-            Every trade you open starts at a small loss equal to the spread. The market must move in your favour by at least the spread before you break even.<br><br>
-            <table>
-            <tr><th>Account</th><th>Spread</th><th>Commission</th><th>Best For</th></tr>
-            <tr><td>Zed Capital Premium Elite</td><td>From 1.5 pips</td><td>$0</td><td>Beginners, Swing Traders</td></tr>
-            <tr><td>Zed Capital Premium Raw</td><td>From 0.1 pips</td><td>$8/lot</td><td>Scalpers, Algo Traders</td></tr>
-            </table>
-        </div>
-        </div>
-
-        <!-- Q6 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">6</div>
-            <div class="faq-q-text">What is Leverage and how does it work?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            <strong>Leverage</strong> allows you to control a larger position with a smaller amount of capital. Zed Capital offers leverage up to <strong>1:500</strong>.<br><br>
-            <strong>Example with 1:100 leverage:</strong><br>
-            You deposit $1,000. With 1:100 leverage, you can control a $100,000 position.<br>
-            If the trade moves +1% in your favour → profit = $1,000 (100% of your deposit).<br>
-            If the trade moves −1% against you → loss = $1,000 (entire deposit wiped).<br><br>
-            <div class="highlight">⚠️ Leverage is a double-edged sword. It amplifies both profits AND losses. Always use a Stop Loss. Professional traders rarely use more than 1:10–1:20 effective leverage regardless of what their broker offers.</div>
-            <div class="tip"><i class="ti ti-shield" aria-hidden="true"></i> Zed Capital includes negative balance protection — you cannot lose more than your deposit.</div>
-        </div>
-        </div>
-
-        <!-- Q7 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">7</div>
-            <div class="faq-q-text">What is Margin and what happens when I get a Margin Call?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            <strong>Margin</strong> is the deposit your broker holds as collateral to keep your trade open. It is not a fee — it is reserved from your account balance.<br><br>
-            <strong>Required Margin formula:</strong><br>
-            Required Margin = (Trade Size ÷ Leverage) × Exchange Rate<br><br>
-            <strong>Example:</strong> Trading 1 lot EUR/USD (100,000 units) at 1:100 leverage → Required Margin = $1,000<br><br>
-            <strong>Margin Call</strong> occurs when your account equity drops to 50% of the required margin (Zed Capital's margin call level). The broker alerts you to deposit more funds or close positions.<br><br>
-            <strong>Stop Out</strong> occurs at 50% — Zed Capital will automatically close your positions to prevent further losses.
-            <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Always keep free margin well above your used margin. A common rule: never use more than 20% of your account on any single trade.</div>
-        </div>
-        </div>
-
-        <!-- Q8 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">8</div>
-            <div class="faq-q-text">What are Lot Sizes? (Standard, Mini, Micro)</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            A <strong>Lot</strong> is the standard unit of trade size in Forex. On Zed Capital's MT5 platform, the Volume field controls your lot size.<br><br>
-            <table>
-            <tr><th>Lot Type</th><th>MT5 Volume</th><th>Units</th><th>Pip Value (EUR/USD)</th></tr>
-            <tr><td>Standard Lot</td><td>1.0</td><td>100,000</td><td>~$10/pip</td></tr>
-            <tr><td>Mini Lot</td><td>0.1</td><td>10,000</td><td>~$1/pip</td></tr>
-            <tr><td>Micro Lot</td><td>0.01</td><td>1,000</td><td>~$0.10/pip</td></tr>
-            </table>
-            <div class="highlight">Beginners should always start with micro lots (0.01). With a $500 account and a 30-pip stop loss: 0.01 lot = $0.30 risk per pip × 30 pips = $3 total risk = 0.6% of account. This is safe and professional.</div>
-        </div>
-        </div>
-
-        <!-- Q9 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">9</div>
-            <div class="faq-q-text">What is a Swap / Rollover fee?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            A <strong>Swap (Rollover)</strong> is an interest charge or credit applied when you hold a Forex position past <strong>17:00 New York time</strong>. It is based on the interest rate difference between the two currencies in the pair.<br><br>
-            <strong>Example — Buying EUR/USD:</strong><br>
-            You buy EUR (ECB rate ~4%) and sell USD (Fed rate ~5.25%)<br>
-            Net = 4% − 5.25% = <span class="tag-r">−1.25%/year</span> → You PAY swap daily<br><br>
-            <strong>Wednesday Triple Swap:</strong> On Wednesday night, brokers charge 3× the normal swap to cover the weekend settlement. Avoid holding negative-swap trades through Wednesday.<br><br>
-            <div class="tip"><i class="ti ti-moon" aria-hidden="true"></i> Zed Capital offers Islamic (swap-free) accounts for traders who cannot receive or pay interest under Sharia law.</div>
-        </div>
-        </div>
-
-        <!-- Q10 -->
-        <div class="faq-item" data-cat="pairs">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">10</div>
-            <div class="faq-q-text">What is the difference between Base Currency and Quote Currency?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Every currency pair is written as <strong>BASE/QUOTE</strong>.<br><br>
-            <strong>EUR/USD = 1.0850 means:</strong><br>
-            → 1 EUR (base) = 1.0850 USD (quote)<br>
-            → To BUY 1 EUR, you pay 1.0850 USD<br><br>
-            <strong>When you BUY EUR/USD</strong> — you buy EUR and simultaneously sell USD.<br>
-            <strong>When you SELL EUR/USD</strong> — you sell EUR and simultaneously buy USD.<br><br>
-            This is why Forex always trades in pairs — you can never buy one currency without selling another.
-        </div>
-        </div>
-
-        <!-- Q11 -->
-        <div class="faq-item" data-cat="pairs">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">11</div>
-            <div class="faq-q-text">What are Major, Minor, and Exotic currency pairs?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            <table>
-            <tr><th>Category</th><th>Examples</th><th>Spread</th><th>Volatility</th></tr>
-            <tr><td><span class="tag-g">Major</span></td><td>EUR/USD, GBP/USD, USD/JPY, AUD/USD</td><td>Tightest</td><td>Moderate–High</td></tr>
-            <tr><td><span class="tag-b">Minor</span></td><td>EUR/GBP, EUR/JPY, GBP/JPY, AUD/JPY</td><td>Moderate</td><td>Moderate</td></tr>
-            <tr><td><span class="tag-r">Exotic</span></td><td>USD/TRY, EUR/ZAR, USD/SGD</td><td>Widest</td><td>Very High</td></tr>
-            </table><br>
-            <strong>Best pairs for beginners:</strong> EUR/USD (most liquid, tightest spread), GBP/USD, USD/JPY.<br><br>
-            <div class="tip"><i class="ti ti-bulb" aria-hidden="true"></i> Start with just 1–2 pairs. Master their behaviour before adding more. EUR/USD accounts for ~28% of all global Forex trades.</div>
-        </div>
-        </div>
-
-        <!-- Q12 -->
-        <div class="faq-item" data-cat="terms">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">12</div>
-            <div class="faq-q-text">What is the difference between Going Long and Going Short?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Unlike stocks (where you typically only profit when prices rise), Forex allows you to profit in <strong>both directions</strong>.<br><br>
-            <strong>LONG (Buy):</strong> You believe the base currency will RISE. Buy EUR/USD at 1.0800, close at 1.0900 → +100 pips profit.<br><br>
-            <strong>SHORT (Sell):</strong> You believe the base currency will FALL. Sell EUR/USD at 1.0900, close at 1.0800 → +100 pips profit.<br><br>
-            <div class="highlight">Professional traders are equally comfortable going short. In a downtrend, shorting is as natural as buying in an uptrend. Most beginners only think about buying — this limits their opportunities by 50%.</div>
-        </div>
-        </div>
-
-        <!-- Q13 -->
-        <div class="faq-item" data-cat="broker">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">13</div>
-            <div class="faq-q-text">What is the difference between Market Maker, STP, and ECN brokers?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            <table>
-            <tr><th>Type</th><th>Execution</th><th>Spread</th><th>Commission</th><th>Verdict</th></tr>
-            <tr><td><span class="tag-r">Market Maker</span></td><td>Broker takes other side</td><td>Fixed, wider</td><td>None</td><td>Conflict of interest</td></tr>
-            <tr><td><span class="tag-b">STP</span></td><td>Routed to liquidity providers</td><td>Variable</td><td>Markup on spread</td><td>Good middle ground</td></tr>
-            <tr><td><span class="tag-g">ECN/STP</span></td><td>True interbank access</td><td>Raw (0.0+)</td><td>Fixed per lot</td><td>Best for serious traders</td></tr>
-            </table>
-            <div class="highlight">Zed Capital is a licensed STP broker regulated by the FSC Mauritius (GB24203133), with no dealing desk — your orders are routed directly to institutional liquidity providers.</div>
-        </div>
-        </div>
-
-        <!-- Q14 -->
-        <div class="faq-item" data-cat="broker">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">14</div>
-            <div class="faq-q-text">What account types does Zed Capital offer?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Zed Capital offers two account types on MetaTrader 5:<br><br>
-            <strong>Premium Elite</strong> — Spreads from 1.5 pips, zero commission, leverage up to 1:500, minimum deposit $100. Covers Forex, Stocks, Metals, Indices, Commodities, Crypto. Best for beginners and swing traders.<br><br>
-            <strong>Premium Raw</strong> — Raw ECN spreads from 0.1 pips, $8 commission per lot, leverage up to 1:500, minimum deposit $100. Best for scalpers, day traders, and EA/algo traders.<br><br>
-            Both accounts include segregated client funds, negative balance protection, and FSC regulation.
-            <div class="tip"><i class="ti ti-star" aria-hidden="true"></i> Not sure which to choose? Start with a free Zed Capital Demo Account — same MT5 environment, zero risk.</div>
-        </div>
-        </div>
-
-        <!-- Q15 -->
-        <div class="faq-item" data-cat="broker">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">15</div>
-            <div class="faq-q-text">Is my money safe with Zed Capital?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Zed Capital International Limited takes fund security seriously:<br><br>
-            <strong>Regulated:</strong> Licensed by the Financial Services Commission (FSC) of Mauritius, regulatory number GB24203133.<br>
-            <strong>Segregated accounts:</strong> Client funds are held separately from company operating funds in top-tier bank accounts.<br>
-            <strong>Negative balance protection:</strong> You cannot lose more than your deposited funds.<br>
-            <strong>Nominee fund protection:</strong> In the event of a client's unavailability, their nominated beneficiary can claim the account balance.<br>
-            <strong>Bank-level encryption:</strong> All data and transactions are protected with institutional-grade security.
-        </div>
-        </div>
-
-        <!-- Q16 -->
-        <div class="faq-item" data-cat="sessions">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">16</div>
-            <div class="faq-q-text">When is the Forex market open and what are the trading sessions?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            The Forex market is open <strong>24 hours a day, Monday to Friday</strong> across four global sessions:<br><br>
-            <table>
-            <tr><th>Session</th><th>GMT Hours</th><th>Best Pairs</th><th>Volatility</th></tr>
-            <tr><td>Sydney</td><td>22:00–07:00</td><td>AUD/USD, NZD/USD</td><td>Low</td></tr>
-            <tr><td>Tokyo</td><td>00:00–09:00</td><td>USD/JPY, GBP/JPY</td><td>Low–Moderate</td></tr>
-            <tr><td>London</td><td>07:00–16:00</td><td>EUR/USD, GBP/USD</td><td>HIGH</td></tr>
-            <tr><td>New York</td><td>12:00–21:00</td><td>All USD pairs</td><td>HIGH</td></tr>
-            </table>
-            <div class="highlight">The <strong>London–New York overlap (12:00–16:00 GMT)</strong> is the most liquid and volatile window — the best time to trade for most strategies.</div>
-        </div>
-        </div>
-
-        <!-- Q17 -->
-        <div class="faq-item" data-cat="sessions">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">17</div>
-            <div class="faq-q-text">What are the best trading hours for traders based in Dubai (UAE)?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Zed Capital has a representative office in Dubai (Media City). For UAE-based traders (GMT+4):<br><br>
-            <strong>London Open (best for trend starters):</strong> 11:00–13:00 UAE time<br>
-            <strong>London–NY Overlap (highest volatility):</strong> 16:00–20:00 UAE time<br>
-            <strong>NFP release (first Friday of each month):</strong> 16:30 UAE time<br>
-            <strong>FOMC decisions:</strong> ~22:00 UAE time<br><br>
-            <div class="highlight">Avoid trading between 02:00–10:00 UAE time — this is the late US/early Tokyo session with thin liquidity, wide spreads, and unpredictable price action.</div>
-        </div>
-        </div>
-
-        <!-- Q18 -->
-        <div class="faq-item" data-cat="market">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">18</div>
-            <div class="faq-q-text">What is a Stop Loss and Take Profit — and why are they essential?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            <strong>Stop Loss (SL)</strong> is a price level at which your trade automatically closes to prevent further loss. It is your safety net.<br><br>
-            <strong>Take Profit (TP)</strong> is a price level at which your trade automatically closes to lock in your profit.<br><br>
-            <strong>Example:</strong><br>
-            Buy EUR/USD at 1.0850 → SL at 1.0820 (30 pips risk) → TP at 1.0910 (60 pips reward) → Risk:Reward = 1:2<br><br>
-            <div class="highlight">Never open a trade without a Stop Loss. Even one unprotected trade during a major news event can wipe an entire account. Zed Capital's MT5 allows you to set both SL and TP at the moment of order placement.</div>
-        </div>
-        </div>
-
-        <!-- Q19 -->
-        <div class="faq-item" data-cat="broker">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">19</div>
-            <div class="faq-q-text">How do I start trading on Zed Capital — step by step?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            Getting started on Zed Capital takes less than 3 minutes:<br><br>
-            <strong>Step 1 — Register:</strong> Visit zedcapital.com and fill in your basic personal details to open an account.<br>
-            <strong>Step 2 — Verify:</strong> Submit your identity documents (KYC) to comply with FSC regulations.<br>
-            <strong>Step 3 — Demo first:</strong> Open a free Demo account to practise on MT5 with virtual funds — no risk.<br>
-            <strong>Step 4 — Deposit:</strong> Once confident, fund your live account (minimum $100) via bank transfer or crypto.<br>
-            <strong>Step 5 — Download MT5:</strong> Available for Windows, macOS, iOS, Android, and Web Browser — all with the same login.<br>
-            <strong>Step 6 — Trade:</strong> Start with micro lots (0.01), apply your Stop Loss on every trade, and track your progress.<br><br>
-            <div class="tip"><i class="ti ti-school" aria-hidden="true"></i> Complete Zed Academy's beginner course before going live. Education first — profits follow.</div>
-        </div>
-        </div>
-
-        <!-- Q20 -->
-        <div class="faq-item" data-cat="market">
-        <div class="faq-q" onclick="toggle(this)">
-            <div class="faq-q-left">
-            <div class="faq-num">20</div>
-            <div class="faq-q-text">What is the most important rule for beginner Forex traders?</div>
-            </div>
-            <i class="ti ti-chevron-down faq-arrow" aria-hidden="true"></i>
-        </div>
-        <div class="faq-a">
-            The single most important rule: <strong>protect your capital first.</strong><br><br>
-            Most beginners focus on making money. Professionals focus on not losing money. If you preserve your capital, you stay in the game long enough to develop a real edge.<br><br>
-            The three non-negotiable rules for every Zed Capital trader:<br><br>
-            <strong>1.</strong> Never risk more than 1–2% of your account on a single trade.<br>
-            <strong>2.</strong> Always use a Stop Loss — no exceptions, no matter how confident you feel.<br>
-            <strong>3.</strong> Practise on demo for at least 3 consistent profitable months before going live.<br><br>
-            <div class="highlight">"Your edge isn't your indicator or your pattern — it's your ability to execute the same process consistently despite losses, despite boredom, despite the inevitable streaks. The market doesn't reward brilliance. It rewards discipline."</div>
-        </div>
-        </div>
-
-    </div>
-
-</div>
 
     </div>
  
