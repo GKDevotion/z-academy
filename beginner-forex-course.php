@@ -1077,9 +1077,10 @@ include_once ('elements/header.php');
             color: #fff;
         }
         .sec-sub {   
-            font-size: 1.4rem;
-            font-weight: 300; 
-            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif; 
+            letter-spacing: 1px;
             /* max-width: 480px;  */
         }
         .sec-dark .sec-sub { 
@@ -2757,7 +2758,7 @@ include_once ('elements/header.php');
                         border-radius: 50%;
                         background: rgba(232,17,26,.08); 
                         color: var(--zed-primary);
-                        font-size: 11px; 
+                        font-size: 15px; 
                         font-weight: 500;
                         display: flex; 
                         align-items: center; 
@@ -2832,9 +2833,30 @@ include_once ('elements/header.php');
                         font-weight: 500; 
                     }
                     .faq-a td { padding: 7px 10px; border-bottom: 0.5px solid var(--zed-secondary); }
-                    .faq-a .tag-g { display: inline-block; background: #e8f5ef; color: var(--zed-primary); font-size: 11px; padding: 2px 8px; border-radius: 20px; }
-                    .faq-a .tag-r { display: inline-block; background: #fdeaea; color: var(--zed-primary); font-size: 11px; padding: 2px 8px; border-radius: 20px; }
-                    .faq-a .tag-b { display: inline-block; background: #e8f1fc; color: var(--zed-primary); font-size: 11px; padding: 2px 8px; border-radius: 20px; }
+                    .faq-a .tag-g { 
+                        display: inline-block; 
+                        background: #fdeaea; 
+                        color: var(--zed-primary); 
+                        font-size: 11px; 
+                        padding: 2px 8px; 
+                        border-radius: 20px; 
+                    }
+                    .faq-a .tag-r { 
+                        display: inline-block; 
+                        background: #fdeaea; 
+                        color: var(--zed-primary); 
+                        font-size: 11px; 
+                        padding: 2px 8px; 
+                        border-radius: 20px; 
+                    }
+                    .faq-a .tag-b { 
+                        display: inline-block; 
+                        background: #fdeaea; 
+                        color: var(--zed-primary); 
+                        font-size: 11px; 
+                        padding: 2px 8px; 
+                        border-radius: 20px; 
+                    }
 
                     .count-bar { 
                         display: flex; 
@@ -2843,14 +2865,16 @@ include_once ('elements/header.php');
                         margin-bottom: 10px; 
                         }
                     .count-text { 
-                        font-size: 12px; 
-                        color: var(--zed-secondary); 
+                        font-size: 15px;
+                        color: var(--zed-dark-text);
+                        letter-spacing: 1px;
                     }
                     .zed-link { 
-                        font-size: 12px; 
-                        color: var(--zed-primary); 
-                        text-decoration: none; 
-                        font-weight: 500; 
+                        font-size: 15px;
+                        color: var(--zed-primary);
+                        text-decoration: none;
+                        font-weight: 500;
+                        letter-spacing: 1px;
                         }
                     .zed-link:hover { 
                         text-decoration: underline; 
@@ -3290,7 +3314,7 @@ include_once ('elements/header.php');
             </div>
 
         </div>
-        
+
         <!-- ═══ MINDSET FOOTER ═══ -->
         <div class="mindset-footer">
             <div class="container">
