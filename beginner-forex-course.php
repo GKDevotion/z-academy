@@ -677,7 +677,7 @@ include_once ('elements/header.php');
         .step-item {
             display: flex;
             gap: 16px;
-            padding: 0 0 22px;
+            /* padding: 0 0 22px; */
             position: relative;
         }
 
@@ -1500,47 +1500,7 @@ include_once ('elements/header.php');
 
     </style>
 
-    <div class="container pt-5">
-        <div class="stat-grid">
 
-            <div class="stat-card">
-                <div class="stat-label">Daily Volume</div>
-                <div class="stat-val">$7.5T</div>
-                <div class="stat-sub">Larger than all stock markets combined</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-label">Market Hours</div>
-                <div class="stat-val">24/5</div>
-                <div class="stat-sub">Mon open Sydney → Fri close NY</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-label">Major Pairs</div>
-                <div class="stat-val">7+</div>
-                <div class="stat-sub">EUR/USD = 28% of all trades</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-label">Standard Lot</div>
-                <div class="stat-val">100K</div>
-                <div class="stat-sub">Units of base currency</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-label">Retail % of Market</div>
-                <div class="stat-val">~5%</div>
-                <div class="stat-sub">Banks control ~40%, hedgers ~55%</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-label">Countries</div>
-                <div class="stat-val">180+</div>
-                <div class="stat-sub">Currencies traded globally</div>
-            </div>
-
-        </div>
-    </div>
      <!-- ═══ SECTION 1: WHAT IS FOREX ═══ -->
 
     <section class="zed-section" style="background:var(--zed-light-bg)">
@@ -1548,9 +1508,47 @@ include_once ('elements/header.php');
             <div class="zed-sec-head reveal"> 
                 <h2 class="zed-sec-title">Forex Market Fundamentals | Complete Guide</h2> 
                 <div class="underline mb-3"></div>
-                  <!-- MARKET OVERVIEW -->
-        
+                <!-- MARKET OVERVIEW -->  
                 <p style="color: var(--zed-secondary) !important; line-height:1.82; margin-bottom:14px;">The foreign exchange market (Forex/FX) is the world's largest and most liquid financial market — trading currencies 24 hours a day, 5 days a week. This module covers everything from scratch: what forex is, who trades it, how it works, all terminology, market structure, broker types, leverage, margin, lot sizes, orders and how trades actually flow. Read every word.</p>
+                <div class="stat-grid py-3">
+
+                    <div class="stat-card">
+                        <div class="stat-label">Daily Volume</div>
+                        <div class="stat-val">$7.5T</div>
+                        <div class="stat-sub">Larger than all stock markets combined</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Market Hours</div>
+                        <div class="stat-val">24/5</div>
+                        <div class="stat-sub">Mon open Sydney → Fri close NY</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Major Pairs</div>
+                        <div class="stat-val">7+</div>
+                        <div class="stat-sub">EUR/USD = 28% of all trades</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Standard Lot</div>
+                        <div class="stat-val">100K</div>
+                        <div class="stat-sub">Units of base currency</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Retail % of Market</div>
+                        <div class="stat-val">~5%</div>
+                        <div class="stat-sub">Banks control ~40%, hedgers ~55%</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-label">Countries</div>
+                        <div class="stat-val">180+</div>
+                        <div class="stat-sub">Currencies traded globally</div>
+                    </div>
+
+                </div>  
             </div>
 
             <style>
@@ -1930,118 +1928,178 @@ include_once ('elements/header.php');
 
         <section class="zed-section" style="background:var(--zed-light-bg)">
             <div class="container">
-            <div class="zed-sec-head reveal"> 
-                <h2 class="zed-sec-title">Core Terminology | Every Term Explained</h2>
-                <div class="underline"></div> 
-            </div>
-            <div class="row g-4 mb-4">
-                <div class="col-md-6 reveal">
-                <div class="zed-card zed-card-accent" style="--ac:var(--zed-primary)">
-                    <div class="zed-eyebrow">PIP — Price Interest Point</div>
-                    <div class="zed-card-title">What is a Pip?</div>
-                    <p class="zed-card-text">A pip is the <strong>smallest standardised unit</strong> in a currency pair. For
-                    most pairs: <code
-                        style="background:var(--zed-card-back); padding:1px 5px; border-radius:3px; ">1 pip = 0.0001 (the 4th decimal place)</code>.
-                    For JPY pairs: <code
-                        style="background:var(--zed-card-back); padding:1px 5px; border-radius:3px;">1 pip = 0.01 (the 2nd decimal place)</code>.
-                    </p>
-                    <div
-                    style="margin-top:12px; background:var(--zed-card-back); border:1px solid var(--zed-border-color); padding:12px; border-radius:6px;">
-                    <div
-                        style="letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;">
-                        Examples</div>
-                    <div style=" color:var(--zed-secondary); line-height:1.8;">
-                        EUR/USD moves from 1.0800 → 1.0830 = <strong style="color:var(--zed-primary)">30 pips</strong><br>
-                        GBP/JPY moves from 192.40 → 193.10 = <strong style="color:var(--zed-primary)">70 pips</strong><br>
-                        Pip value (1 lot) = <strong>$10 per pip</strong> on EUR/USD
+
+                <div class="zed-sec-head reveal"> 
+                    <h2 class="zed-sec-title">Core Terminology | Every Term Explained</h2>
+                    <div class="underline"></div> 
+                </div>
+                
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6 reveal">
+                    <div class="zed-card zed-card-accent" style="--ac:var(--zed-primary)">
+                        <div class="zed-eyebrow">PIP — Price Interest Point</div>
+                        <div class="zed-card-title">What is a Pip?</div>
+                        <p class="zed-card-text">A pip is the <strong>smallest standardised unit</strong> in a currency pair. For
+                        most pairs: <code
+                            style="background:var(--zed-card-back); padding:1px 5px; border-radius:3px; ">1 pip = 0.0001 (the 4th decimal place)</code>.
+                        For JPY pairs: <code
+                            style="background:var(--zed-card-back); padding:1px 5px; border-radius:3px;">1 pip = 0.01 (the 2nd decimal place)</code>.
+                        </p>
+                        <div
+                        style="margin-top:12px; background:var(--zed-card-back); border:1px solid var(--zed-border-color); padding:12px; border-radius:6px;">
+                        <div
+                            style="letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;">
+                            Examples</div>
+                        <div style=" color:var(--zed-secondary); line-height:1.8;">
+                            EUR/USD moves from 1.0800 → 1.0830 = <strong style="color:var(--zed-primary)">30 pips</strong><br>
+                            GBP/JPY moves from 192.40 → 193.10 = <strong style="color:var(--zed-primary)">70 pips</strong><br>
+                            Pip value (1 lot) = <strong>$10 per pip</strong> on EUR/USD
+                        </div>
+                        </div>
+                        <p class="zed-card-text mt-2">Modern brokers quote <strong>5 decimal places (pipettes)</strong> — the 5th
+                        digit = 0.1 pip. Pip value in dollars depends on lot size.</p>
                     </div>
                     </div>
-                    <p class="zed-card-text mt-2">Modern brokers quote <strong>5 decimal places (pipettes)</strong> — the 5th
-                    digit = 0.1 pip. Pip value in dollars depends on lot size.</p>
-                </div>
-                </div>
-                <div class="col-md-6 reveal">
-                <div class="zed-card zed-card-accent">
-                    <div class="zed-eyebrow">LOT SIZE — Full Breakdown with Values</div>
-                    <div class="zed-card-title">Lot Sizes Explained</div>
-                    <div class="table-responsive">
-                    <table class="zed-table">
-                        <thead>
-                        <tr>
-                            <th>Lot Type</th>
-                            <th>Units</th>
-                            <th>Pip Value (EUR/USD)</th>
-                            <th>For accounts</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="highlight">Standard</td>
-                            <td>100,000</td>
-                            <td class="green-val">$10 per pip</td>
-                            <td>$10,000+</td>
-                        </tr>
-                        <tr>
-                            <td class="highlight">Mini</td>
-                            <td>10,000</td>
-                            <td class="green-val">$1 per pip</td>
-                            <td>$500–10,000</td>
-                        </tr>
-                        <tr>
-                            <td class="highlight">Micro</td>
-                            <td>1,000</td>
-                            <td class="green-val">$0.10 per pip</td>
-                            <td>$50–$1,000</td>
-                        </tr>
-                        <tr>
-                            <td class="highlight">Nano</td>
-                            <td>100</td>
-                            <td class="green-val">$0.01 per pip</td>
-                            <td>Practice</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                    <div
-                    style="margin-top:12px;background:var(--zed-card-back);border:1px solid var(--zed-border-color);padding:12px;border-radius:6px;">
-                    <div
-                        style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:6px;">
-                        Practical Example</div>
-                    <div style="font-size:.9rem;color:var(--zed-secondary);">You have $500. If you risk 1% = <strong>$5 risk per
-                        trade.</strong> With 30-pip SL: lot size = 5÷(30×1) = <strong>0.17 mini lots</strong></div>
+                    <div class="col-md-6 reveal">
+                        <div class="zed-card zed-card-accent">
+                            <div class="zed-eyebrow">LOT SIZE — Full Breakdown with Values</div>
+                            <div class="zed-card-title">Lot Sizes Explained</div>
+                            <div class="table-responsive">
+                            <table class="zed-table">
+                                <thead>
+                                <tr>
+                                    <th>Lot Type</th>
+                                    <th>Units</th>
+                                    <th>Pip Value (EUR/USD)</th>
+                                    <th>For accounts</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="highlight">Standard</td>
+                                    <td>100,000</td>
+                                    <td class="green-val">$10 per pip</td>
+                                    <td>$10,000+</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight">Mini</td>
+                                    <td>10,000</td>
+                                    <td class="green-val">$1 per pip</td>
+                                    <td>$500–10,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight">Micro</td>
+                                    <td>1,000</td>
+                                    <td class="green-val">$0.10 per pip</td>
+                                    <td>$50–$1,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight">Nano</td>
+                                    <td>100</td>
+                                    <td class="green-val">$0.01 per pip</td>
+                                    <td>Practice</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div
+                            style="margin-top:12px;background:var(--zed-card-back);border:1px solid var(--zed-border-color);padding:12px;border-radius:6px;">
+                            <div
+                                style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:6px;">
+                                Practical Example</div>
+                            <div style="font-size:.9rem;color:var(--zed-secondary);">You have $500. If you risk 1% = <strong>$5 risk per
+                                trade.</strong> With 30-pip SL: lot size = 5÷(30×1) = <strong>0.17 mini lots</strong></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-6 reveal">
+                        <div class="zed-card zed-card-accent" style="--ac:var(--zed-primary)">
+                            <div class="zed-eyebrow">Base Currency vs Quote Currency</div>
+                            <!-- <div class="zed-card-title">What is a Pip?</div> -->
+                            <p class="zed-card-text">In any currency pair: <strong>BASE/QUOTE</strong></p>
+                            <div
+                            style="margin-top:12px; background:var(--zed-card-back); border:1px solid var(--zed-border-color); padding:12px; border-radius:6px;">
+                             
+                            <div style=" color:var(--zed-secondary); line-height:1.8;">
+                                <strong style="color:var(--zed-primary)">EUR/USD = 1.0850 means: </strong> 
+                                <div> → 1 EUR (base) = 1.0850 USD (quote)</div> 
+                                <div>→ To BUY 1 EUR, you PAY 1.0850 USD </div>
+
+                                <strong style="color:var(--zed-primary)"> USD/JPY = 150.00 means: </strong> 
+                                <div> → 1 USD (base) = 150.00 JPY (quote)</div>
+                                <div>→ To BUY 1 USD, you PAY 150 JPY </div>
+ 
+                            </div>
+                            </div>
+                            <p class="zed-card-text mt-2"><strong>When you BUY EUR/USD:</strong>  You are simultaneously BUYING EUR and SELLING USD.</p>
+                             <p class="zed-card-text mt-2"><strong>When you SELL EUR/USD:</strong>  You are simultaneously SELLING EUR and BUYING USD.</p>
+                                <p class="zed-card-text mt-2">This is why forex is always traded in pairs — you can never buy one currency without selling another.</p>
+                        </div>
+                    </div>
+
+                     <div class="col-md-6 reveal">
+                        <div class="zed-card zed-card-accent" style="--ac:var(--zed-primary)">
+                            <div class="zed-eyebrow"> Long vs Short — Both Directions</div>
+                            <!-- <div class="zed-card-title">What is a Pip?</div> -->
+                            <p class="zed-card-text">Unlike stocks (where you can only profit when price goes UP), forex allows profit in BOTH directions.</p>
+                            <div
+                            style="margin-top:12px; background:var(--zed-card-back); border:1px solid var(--zed-border-color); padding:12px; border-radius:6px;">
+                             
+                            <div style=" color:var(--zed-secondary); line-height:1.8;">
+                                <strong style="color:var(--zed-primary)">LONG (Buy): </strong> 
+                                <div>→ You believe the base currency will RISE vs the quote.</div> 
+                                <div>→ Buy EUR/USD at 1.0800, sell at 1.0900 → +100 pips profit</div>
+                                <div>→ You benefit from EUR strengthening OR USD weakening.</div>
+
+                                <strong style="color:var(--zed-primary)">SHORT (Sell): </strong> 
+                                <div>→ You believe the base currency will FALL vs the quote.</div>
+                                <div>→ Sell EUR/USD at 1.0900, buy back at 1.0800 → +100 pips profit</div>
+                                <div>→ You benefit from EUR weakening OR USD strengthening.</div>
+
+                                
+                            </div>
+                            </div>
+                            <p class="zed-card-text mt-2"><strong> Key insight: </strong> In a downtrend, shorting is just as natural as buying in an uptrend. Professional traders are completely comfortable going short — most beginners only think about buying.</p> 
+                        </div>
+                    </div>
+
+                     
                 </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 reveal">
-                <div class="zed-card">
-                    <div class="zed-eyebrow">Spread</div>
-                    <div class="zed-card-title">Bid / Ask Spread</div>
-                    <p class="zed-card-text">The spread is the difference between the <strong>Bid price</strong> (sell) and
-                    <strong>Ask price</strong> (buy). This is your broker's cost. <strong>ECN brokers</strong> offer raw
-                    spreads (0.0–0.3 pips) + commission. <strong>MM brokers</strong> include markup in the spread.</p>
+
+                <div class="row g-4">
+                    <div class="col-md-4 reveal">
+                    <div class="zed-card">
+                        <div class="zed-eyebrow">Spread</div>
+                        <div class="zed-card-title">Bid / Ask Spread</div>
+                        <p class="zed-card-text">The spread is the difference between the <strong>Bid price</strong> (sell) and
+                        <strong>Ask price</strong> (buy). This is your broker's cost. <strong>ECN brokers</strong> offer raw
+                        spreads (0.0–0.3 pips) + commission. <strong>MM brokers</strong> include markup in the spread.</p>
+                    </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                    <div class="zed-card">
+                        <div class="zed-eyebrow">Leverage &amp; Margin</div>
+                        <div class="zed-card-title">Leverage &amp; Margin</div>
+                        <p class="zed-card-text"><strong>Leverage</strong> = how much capital your broker multiplies. 1:100 leverage
+                        = $1,000 controls $100,000. <strong>Margin</strong> = the deposit required. A 1% margin means $1,000 for a
+                        $100,000 position. <strong>Free margin = Equity − Used margin.</strong></p>
+                    </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                    <div class="zed-card">
+                        <div class="zed-eyebrow">Swap / Rollover</div>
+                        <div class="zed-card-title">Overnight Swap Rate</div>
+                        <p class="zed-card-text">When you hold a position past <strong>5:00 PM New York time</strong>, your broker
+                        applies a swap charge or credit based on the interest rate differential between the two currencies.
+                        Wednesday swap is 3× (for weekend). <strong>Some brokers offer swap-free accounts.</strong></p>
+                    </div>
+                    </div>
                 </div>
-                </div>
-                <div class="col-md-4 reveal">
-                <div class="zed-card">
-                    <div class="zed-eyebrow">Leverage &amp; Margin</div>
-                    <div class="zed-card-title">Leverage &amp; Margin</div>
-                    <p class="zed-card-text"><strong>Leverage</strong> = how much capital your broker multiplies. 1:100 leverage
-                    = $1,000 controls $100,000. <strong>Margin</strong> = the deposit required. A 1% margin means $1,000 for a
-                    $100,000 position. <strong>Free margin = Equity − Used margin.</strong></p>
-                </div>
-                </div>
-                <div class="col-md-4 reveal">
-                <div class="zed-card">
-                    <div class="zed-eyebrow">Swap / Rollover</div>
-                    <div class="zed-card-title">Overnight Swap Rate</div>
-                    <p class="zed-card-text">When you hold a position past <strong>5:00 PM New York time</strong>, your broker
-                    applies a swap charge or credit based on the interest rate differential between the two currencies.
-                    Wednesday swap is 3× (for weekend). <strong>Some brokers offer swap-free accounts.</strong></p>
-                </div>
-                </div>
-            </div>
+
             </div>
         </section>
 
@@ -2182,49 +2240,118 @@ include_once ('elements/header.php');
         <!-- ═══ SECTION 6: HOW A TRADE WORKS ═══ -->
         <section class="zed-section" style="background:var(--zed-background-color)">
             <div class="container">
-            <div class="zed-sec-head reveal"> 
-                <h2 class="zed-sec-title">How a Forex Trade Works | Step by Step</h2> 
-                <div class="underline"></div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                <div class="step-wrap">
-                    <div class="step-line"></div>
-
-                    <div class="step-item reveal">
-
-                        <div class="step-num">1</div>
-                        <div>
-                            <div class="step-title">Analyse the Market</div>
-                            <p class="step-text">Use top-down analysis — start Monthly/Weekly for the macro trend, Daily for key
-                            levels, H4/H1 for trade setup. Identify whether you're in a <strong>trending, ranging, or
-                                transitioning market.</strong></p>
-                        </div>
-                    </div>
-
-                    <div class="step-item reveal">
-                        <div class="step-num">2</div>
-                        <div>
-                        <div class="step-title">Calculate Position Size</div>
-                            <p class="step-text"><strong>Practical example (Lot Size Formula):</strong><br>
-                            You have $500 account. Risk 1% = $5 per trade. SL = 20 pips → Lot size = 5 ÷ (20 × 1) = <strong
-                                style="color:var(--zed-primary)">0.25 mini lots</strong></p>
-                        </div>
-                    </div>
-
-                    <div class="step-item reveal">
-                        <div class="step-num">3</div>
-                        <div>
-                            <div class="step-title">Calculate lot size: Run = $20 – SL = 20 pips/trade setup</div>
-                                <p class="step-text">Set SL: $20.00 at market or as a limit order. TP at next key level. Set the R:R
-                                before placing the trade — <strong>minimum 1:2 RRR.</strong> If you can't find a clean 1:2 setup, skip
-                                the trade.</p>
-                            </div>
-                        </div>
-                    </div>
-    
+                
+                <div class="zed-sec-head reveal"> 
+                    <h2 class="zed-sec-title">How a Forex Trade Works | Step by Step</h2> 
+                    <div class="underline"></div>
                 </div>
-            </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="step-wrap"> 
+
+                            <div class="step-item reveal">
+                                <div class="step-line"></div>
+                                <div class="step-num">1</div>
+                                <div>
+                                    <div class="step-title">Analyse the Market</div>
+                                    <p class="step-text">Use top-down analysis — start Monthly/Weekly for the macro trend, Daily for key
+                                    levels, H4/H1 for trade setup. Identify whether you're in a <strong>trending, ranging, or
+                                        transitioning market.</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="step-item reveal">
+                                <div class="step-line"></div>
+                                <div class="step-num">2</div>
+                                <div>
+                                    <div class="step-title">Calculate Position Size</div>
+                                        <p class="step-text"><strong>Practical example (Lot Size Formula):</strong><br>
+                                        You have $500 account. Risk 1% = $5 per trade. SL = 20 pips → Lot size = 5 ÷ (20 × 1) = <strong
+                                            style="color:var(--zed-primary)">0.25 mini lots</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-item reveal">
+                                <div class="step-line"></div>
+                                <div class="step-num">3</div>
+                                <div>
+                                    <div class="step-title">Calculate lot size: Run = $20 – SL = 20 pips/trade setup</div>
+                                        <p class="step-text">Set SL: $20.00 at market or as a limit order. TP at next key level. Set the R:R
+                                        before placing the trade — <strong>minimum 1:2 RRR.</strong> If you can't find a clean 1:2 setup, skip
+                                        the trade.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-item reveal">  
+                                <div class="step-line" style="margin-left:10px;"></div>
+                                <div class="step-num">4</div>
+                                    <div>
+                                        <div class="step-title">Place order</div>
+                                        <p class="step-text">Buy 0.33 lots EUR/USD at market price 1.08502 (ask)</p>
+                                    </div>
+                            </div>
+
+                              <div class="step-item reveal">  
+                                <div class="step-line" style="margin-left:10px;"></div>
+                                <div class="step-num">5</div>
+                                    <div>
+                                        <div class="step-title">Set SL</div>
+                                        <p class="step-text"> 1.0820 (30 pips below entry)</p>
+                                    </div>
+                            </div>
+
+                              <div class="step-item reveal">  
+                                <div class="step-line" style="margin-left:10px;"></div>
+                                <div class="step-num">6</div>
+                                    <div>
+                                        <div class="step-title">Set TP</div>
+                                        <p class="step-text">1.0940 (90 pips above entry → 3:1 RRR)</p>
+                                    </div>
+                            </div>
+
+                              <div class="step-item reveal">  
+                                <div class="step-line" style="margin-left:10px;"></div>
+                                <div class="step-num">7</div>
+                                    <div>
+                                        <div class="step-title">Margin used</div>
+                                        <p class="step-text">0.33 × 100,000 × 1.0850 ÷ 100 = $357.55 locked up</p>
+                                    </div>
+                            </div>
+
+                            <div class="step-item reveal">  
+                                <div class="step-line" style="margin-left:10px;"></div>
+                                <div class="step-num">8</div>
+                                    <div>
+                                        <div class="step-title">Free margin</div>
+                                        <p class="step-text">$10,000 − $357.55 = $9,642 still available</p>
+                                    </div>
+                            </div>
+
+                            <div class="step-item reveal">  
+                                <div class="step-line" style="margin-left:10px;"></div>
+                                <div class="step-num">9</div>
+                                    <div>
+                                        <div class="step-title">Trade outcome A</div>
+                                        <p class="step-text">Price hits TP at 1.0940 → 90 pips × $0.33/pip (mini) × 10 = +$297 profit (+2.97%)</p>
+                                    </div>
+                            </div>
+
+                             <div class="step-item reveal">   
+                                <div class="step-num">10</div>
+                                    <div>
+                                        <div class="step-title">Trade outcome B</div>
+                                        <p class="step-text">Price hits SL at 1.0820 → −30 pips × $3.30 = −$99 loss (−0.99% of account ✅ within 1% risk)</p>
+                                    </div>
+                            </div>
+
+                        </div> 
+                    
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -2247,24 +2374,45 @@ include_once ('elements/header.php');
                     You need instant fill and precise price isn't critical. Risk: Slippage during fast market moves.</p>
                 </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4 reveal">
-                <div class="order-card">
-                    <div class="order-label"><i class="fas fa-arrow-down"></i> Buy Limit</div>
-                    <div class="order-title">Buy Limit</div>
-                    <p class="order-text">Place a buy order at a <strong>lower price than current.</strong> Refer to your broker
-                    at a fixed value for slippage → guaranteed fill at your price or better. Use: When you want to buy at
-                    support, a fair value gap, or discount zone.</p>
+                    <div class="order-card">
+                        <div class="order-label"><i class="fas fa-arrow-down"></i> Buy Limit</div>
+                        <div class="order-title">Buy Limit</div>
+                        <p class="order-text">Place a buy order at a <strong>lower price than current.</strong> Refer to your broker
+                        at a fixed value for slippage → guaranteed fill at your price or better. Use: When you want to buy at
+                        support, a fair value gap, or discount zone.</p>
+                    </div>
                 </div>
+
+                 <div class="col-md-6 col-lg-4 reveal">
+                    <div class="order-card">
+                        <div class="order-label"><i class="fas fa-arrow-down"></i> Sell Limit </div>
+                        <div class="order-title">Sell Limit</div>
+                        <p class="order-text">Places a sell order at a <strong> price ABOVE current market price</strong>. Waits for price to rally to your resistance level. Use when: You want to sell at resistance without chasing price. Patient entry strategy.</p>
+                    </div>
                 </div>
+                
                 <div class="col-md-6 col-lg-4 reveal">
-                <div class="order-card">
-                    <div class="order-label"><i class="fas fa-chart-line"></i> Buy Stop</div>
-                    <div class="order-title">Buy Stop</div>
-                    <p class="order-text">Place a buy order <strong>above current price.</strong> Executes when price rises to
-                    that level. Use: When a breakout above resistance confirms your bias — guaranteed fill once level is hit.
-                    </p>
+                    <div class="order-card">
+                        <div class="order-label"><i class="fas fa-chart-line"></i> Buy Stop</div>
+                        <div class="order-title">Buy Stop</div>
+                        <p class="order-text">Place a buy order <strong>above current price.</strong> Executes when price rises to
+                        that level. Use: When a breakout above resistance confirms your bias — guaranteed fill once level is hit.
+                        </p>
+                    </div>
                 </div>
+
+                 <div class="col-md-6 col-lg-4 reveal">
+                    <div class="order-card">
+                        <div class="order-label"><i class="fas fa-chart-line"></i>Sell Stop</div>
+                        <div class="order-title">Sell Stop</div>
+                        <p class="order-text">Places a sell order at a <strong>price BELOW current market price</strong>. Triggers on a downside breakout.
+                            Use when: You want to short only if price breaks below a key support level.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4 reveal">
                 <div class="order-card">
                     <div class="order-label"><i class="fas fa-stop"></i> Stop Loss (SL)</div>
@@ -2284,13 +2432,21 @@ include_once ('elements/header.php');
                 </div>
                 </div>
                 <div class="col-md-6 col-lg-4 reveal">
-                <div class="order-card">
-                    <div class="order-label"><i class="fas fa-shield-alt"></i> Trailing Stop</div>
-                    <div class="order-title">Trailing Stop</div>
-                    <p class="order-text">A <strong>dynamic stop loss</strong> that moves with price as it goes in your favour —
-                    but stays locked if price reverses. Use on strong trend trades to lock in profit while letting winners
-                    run.</p>
+                    <div class="order-card">
+                        <div class="order-label"><i class="fas fa-shield-alt"></i> Trailing Stop</div>
+                        <div class="order-title">Trailing Stop</div>
+                        <p class="order-text">A <strong>dynamic stop loss</strong> that moves with price as it goes in your favour —
+                        but stays locked if price reverses. Use on strong trend trades to lock in profit while letting winners
+                        run.</p>
+                    </div>
                 </div>
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="order-card">
+                        <div class="order-label"><i class="fas fa-shield-alt"></i> OCO — One Cancels Other </div>
+                        <div class="order-title">OCO — One Cancels Other</div>
+                        <p class="order-text">Two pending orders placed simultaneously. When one triggers, the other is automatically cancelled. Use when: You don't know which direction price will break. Place Buy Stop above resistance AND Sell Stop below support → whichever breaks first, that trade executes and the other cancels.</p>
+                    </div>
                 </div>
             </div>
             </div>
