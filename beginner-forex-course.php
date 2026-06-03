@@ -2387,7 +2387,7 @@ include_once ('elements/header.php');
 
                  <div class="col-md-6 col-lg-4 reveal">
                     <div class="order-card">
-                        <div class="order-label"><i class="fas fa-arrow-down"></i> Sell Limit </div>
+                        <div class="order-label"><i class="fas fa-tags"></i> Sell Limit </div>
                         <div class="order-title">Sell Limit</div>
                         <p class="order-text">Places a sell order at a <strong> price ABOVE current market price</strong>. Waits for price to rally to your resistance level. Use when: You want to sell at resistance without chasing price. Patient entry strategy.</p>
                     </div>
@@ -2405,7 +2405,7 @@ include_once ('elements/header.php');
 
                  <div class="col-md-6 col-lg-4 reveal">
                     <div class="order-card">
-                        <div class="order-label"><i class="fas fa-chart-line"></i>Sell Stop</div>
+                        <div class="order-label"><i class="fas fa-arrow-trend-down"></i>Sell Stop</div>
                         <div class="order-title">Sell Stop</div>
                         <p class="order-text">Places a sell order at a <strong>price BELOW current market price</strong>. Triggers on a downside breakout.
                             Use when: You want to short only if price breaks below a key support level.
@@ -2424,7 +2424,7 @@ include_once ('elements/header.php');
                 </div>
                 <div class="col-md-6 col-lg-4 reveal">
                 <div class="order-card">
-                    <div class="order-label"><i class="fas fa-bullseye"></i> Take Profit (TP)</div>
+                    <div class="order-label"><i class="fas fa-coins"></i> Take Profit (TP)</div>
                     <div class="order-title">Take Profit</div>
                     <p class="order-text">Automatically closes your trade at a <strong>target profit level.</strong> Place at
                     the next key level of S/R. TP1 = 50% partial close. TP2 = full close. This locks in profits without
@@ -2433,7 +2433,7 @@ include_once ('elements/header.php');
                 </div>
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="order-card">
-                        <div class="order-label"><i class="fas fa-shield-alt"></i> Trailing Stop</div>
+                        <div class="order-label"><i class="fas fa-route"></i> Trailing Stop</div>
                         <div class="order-title">Trailing Stop</div>
                         <p class="order-text">A <strong>dynamic stop loss</strong> that moves with price as it goes in your favour —
                         but stays locked if price reverses. Use on strong trend trades to lock in profit while letting winners
@@ -2443,7 +2443,7 @@ include_once ('elements/header.php');
 
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="order-card">
-                        <div class="order-label"><i class="fas fa-shield-alt"></i> OCO — One Cancels Other </div>
+                        <div class="order-label"><i class="fas fa-code-branch"></i> OCO — One Cancels Other </div>
                         <div class="order-title">OCO — One Cancels Other</div>
                         <p class="order-text">Two pending orders placed simultaneously. When one triggers, the other is automatically cancelled. Use when: You don't know which direction price will break. Place Buy Stop above resistance AND Sell Stop below support → whichever breaks first, that trade executes and the other cancels.</p>
                     </div>
